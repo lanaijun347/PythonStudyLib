@@ -1,0 +1,236 @@
+ID_STR_READ_DTC	读取故障码	Read DTC
+ID_STR_CLEAR_DTC	清除故障码	Clear DTC
+ID_STR_READ_CURRENT_DTC	当前故障码	Current DTC
+ID_STR_READ_HISTORY_DTC	历史故障码	History DTC
+ID_STR_DATA_STREAM	读数据流	Data Stream
+ID_STR_DS_FREEZE	冻结帧数据	Freeze Data Stream
+ID_STR_ACTUATOR_TEST	元件测试	Actuator Test
+ID_STR_ECU_INFORMATION	版本信息	Version Information
+ID_STR_SPECIAL_TEST	特殊功能	Special Function
+
+ID_STR_TIME_OUT	系统通讯已超时中断，建议退出系统重新激活！是否退出系统？	system communication time out and interrupted,please exit to re-activate.whether to exit?
+ID_STR_SUCCESS	执行成功！	Success!
+ID_STR_FRAME_TIME_OUT	帧超时！	Fram time out!
+ID_STR_PROTOCOL_ERROR	程序错误！	Procotol error!
+ID_STR_FAILE	失败！	Faile!
+ID_STR_FORMAT_ERORR	格式错误！	Format erorr!
+ID_STR_NULL_POINT	空指针！	Null point!
+ID_STR_NEGATIVE	消极响应！	Negative!
+ID_STR_MATCH_ERROE	匹配错误！	Match error!
+ID_STR_SYSTEM_NOT_REPLY	系统无响应！	System not replay!
+ID_STR_NO_FREEZE_DS	无冻结帧数据流！	No freeze data stream!
+ID_STR_NO_FREEZE_DTC	无冻结帧故障码！	No freeze DTC!
+ID_STR_NO_CURRENT_DTC	无故障码！	No current DTC!
+ID_STR_NO_HISTORY_DTC	无故障码！	No history DTC!
+ID_STR_RECEIVE_FRAME_TYPE_ERROR	回收帧类型错误！	Receive frame type error!
+ID_STR_MESSAGE_TYPE_ERROR	消息类型错误！	Message type error!
+ID_STR_INVALID_INPUT	输入错误！	Input error!
+ID_STR_ECU_RECV_FAIL	数据单元格式错误！	data unit format error!
+ID_STR_ACTIVE	正在执行，请稍候...	operating,please wait...
+Input_data	提示: 没有输入数据或者数据长度不对,请再次输入数据,谢谢!	Tip:no data input or data length incorrect,Input data again!
+ID_STR_SECURITY_THROUGH	正在进行安全验证...	Safety verification in progress...
+
+ID_STR_NEGATIVE_7F	汽车回复数据无效，ECU负反应！	Data invalid,ECU negative response!
+ID_STR_NEGATIVE_7F11	服务不支持！	Service not supported!
+ID_STR_NEGATIVE_7F12	子功能不支持！	Subfunction not supported!
+ID_STR_NEGATIVE_7F13	不正确的信息格式或无效帧！	Incorrect info or inavlid frame!
+ID_STR_NEGATIVE_7F14	应答过长！	Response too long!
+ID_STR_NEGATIVE_7F21	ECU忙，请重复请求！	ECU busy, please repeat the request!
+ID_STR_NEGATIVE_7F22	条件不正确	Condition incorrect
+ID_STR_NEGATIVE_7F24	请求序列错误	Requested sequence wrong
+ID_STR_NEGATIVE_7F25	子网络组件无响应	Subnetwork component no response
+ID_STR_NEGATIVE_7F26	阻止执行功能请求失败	Request to stop operation failed
+ID_STR_NEGATIVE_7F31	请求超出范围	Request out of range
+ID_STR_NEGATIVE_7F33	拒绝安全访问	Security access rejected
+ID_STR_NEGATIVE_7F35	无效的秘钥	Invalid key
+ID_STR_NEGATIVE_7F36	尝试超出次数	Attempts exceeded
+ID_STR_NEGATIVE_7F37	所需延时时间未到	Delay time not available
+ID_STR_NEGATIVE_7F70	上传/下载不许可	Upload/download not allowed
+ID_STR_NEGATIVE_7F71	数据转换中断	Data conversion interrupted
+ID_STR_NEGATIVE_7F72	常规编程失败	Regular programming failed
+ID_STR_NEGATIVE_7F73	块序列计算器错误	Block sequence calculator error
+ID_STR_NEGATIVE_7F78	请求收到-应答挂起	Request received,response hang
+ID_STR_NEGATIVE_7F7E	活动对象子功能不支持	Subfunction of active object not supported
+ID_STR_NEGATIVE_7F7F	活动对象服务不支持	Service of active object not supported
+ID_STR_NEGATIVE_7F81	rpm过高	RPM too high
+ID_STR_NEGATIVE_7F82	rpm过低	RPM too low
+ID_STR_NEGATIVE_7F83	发动机运行中	Engine running
+ID_STR_NEGATIVE_7F84	发动机未运行	Engine not running
+ID_STR_NEGATIVE_7F85	电动机运行时间过低	Motor running time too short
+ID_STR_NEGATIVE_7F86	温度过高	Temp too high
+ID_STR_NEGATIVE_7F87	温度过低	Temp too low
+ID_STR_NEGATIVE_7F88	车速过高	Vehicle speed too high
+ID_STR_NEGATIVE_7F89	车速过低	Vehicle speed too low
+ID_STR_NEGATIVE_7F8A	油门踏板过高	Accel pedal too high
+ID_STR_NEGATIVE_7F8B	油门踏板过低	Accel pedal too low
+ID_STR_NEGATIVE_7F8C	变速器未在空挡上	Transmission not in neutral
+ID_STR_NEGATIVE_7F8D	变速器未在齿轮上	Transmission not in gear
+ID_STR_NEGATIVE_7F8F	制动开关未关闭	Brake switch open
+ID_STR_NEGATIVE_7F90	变速杆未停好	Shift lever not parked
+ID_STR_NEGATIVE_7F91	扭转离合器已锁定	Torque clutch locked
+ID_STR_NEGATIVE_7F92	电压过高	The voltage is too high
+ID_STR_NEGATIVE_7F93	电压过低	The voltage is too low
+
+;读码清码
+ID_STR_CLEARDTC_NOTE0	请关闭点火开关！	Please turn off the ignition switch!
+ID_STR_CLEARDTC_NOTE1	请打开点火开关！	Please turn on the ignition switch!
+ID_STR_TIP_READ_DTC	正在读取故障码，请稍候...	Reading DTC,please wait...
+ID_STR_TIP_IF_CLEAR_DTC	是否清除故障码？	Whether to clear DTC?
+ID_STR_TIP_CLEAR_DTC	正在清除故障码，请稍候...	Clearing DTC,please wait...
+ID_STR_CLEAR_DTC_SUCCESS	清除故障码完成，\n是否读取故障码？	Clearing DTC completed,whether to read DTC?
+ID_STR_CURRENT_DTC	读取故障码	Read DTC
+
+ID_STR_GROUP_CAPTION	普通数据流	Common data stream
+ID_STR_CAPTION	提示	Tip
+ID_STR_READ_ECUINFOR	正在读取，请稍候...	Reading,please wait...
+ID_STR_SET_IDLE_LINK_FAIL	空闲链接设置失败	Set idle link fail!
+ID_STR_READ_DATASTREAM	正在扫描数据流，请稍候...	The data flow is being scanned. Please wait a moment...
+
+;主动测试
+ID_STR_EXCUTING	正在执行，请稍候...	Operating,please wait...
+ID_STR_STOP	正在取消，请稍候...	Cancelling,please wait...
+ID_STR_TEST_RETURN	正在退出，请稍候...	Exitting,please wait...
+ID_STR_SGD_OPERATION_COMPLETE	执行完成！	Operation completed!
+ID_STR_SGD_STOP_COMPLETE	取消完成！	Cancellation completed!
+ID_STR_DIFF_RETURE	请输入范围内的数值	Please input value within the range
+INVALID_INPUT	请输入范围内的数值	Please input value within the range
+
+;读码
+ID_STR_RDTC_GROUP_00	读当前故障码	X
+ID_STR_RDTC_GROUP_01	读历史故障码	X
+
+;清码
+
+;数据流
+ID_STR_DS_GROUP_00	数据流	X
+
+ID_STR_DS_ITEM_0000	离合开关状态	X
+ID_STR_DS_ITEM_0001	制动激活状态	X
+ID_STR_DS_ITEM_0002	制动测试开关状态	X
+ID_STR_DS_ITEM_0003	空调压缩机离合器状态	X
+ID_STR_DS_ITEM_0004	主继电器控制指令状态	X
+ID_STR_DS_ITEM_0005	电动燃油泵状态	X
+ID_STR_DS_ITEM_0006	启动继电器状态	X
+ID_STR_DS_ITEM_0007	可变进气歧管驱动器激活标示位状态	X
+ID_STR_DS_ITEM_0008	故障指示灯状态	X
+ID_STR_DS_ITEM_0009	氧传感器控制的激活标志状态	X
+ID_STR_DS_ITEM_0010	空调压力开关状态	X
+ID_STR_DS_ITEM_0011	爆震标示位状态	X
+ID_STR_DS_ITEM_0012	VVT的状态	X
+ID_STR_DS_ITEM_0013	VVT的驱动PWM状态	X
+ID_STR_DS_ITEM_0014	节气门位置传感器1原始电压	X
+ID_STR_DS_ITEM_0015	节气门位置传感器2原始电压	X
+ID_STR_DS_ITEM_0016	加速踏板传感器1电压	X
+ID_STR_DS_ITEM_0017	加速踏板传感器2电压	X
+ID_STR_DS_ITEM_0018	所有可用冷却液温度传感器的原始电压	X
+ID_STR_DS_ITEM_0019	进气温度温度传感器电压	X
+ID_STR_DS_ITEM_0020	参数返回数字化电压值	X
+ID_STR_DS_ITEM_0021	点火开关后电池电压	X
+ID_STR_DS_ITEM_0022	空气压力传感器电压	X
+ID_STR_DS_ITEM_0023	PSTE压力传感器电压	X
+ID_STR_DS_ITEM_0024	节气门位置传感器	X
+ID_STR_DS_ITEM_0025	油门踏板值	X
+ID_STR_DS_ITEM_0026	发动机冷却液温度	X
+ID_STR_DS_ITEM_0027	进气温度	X
+ID_STR_DS_ITEM_0028	环境(大气)压力	X
+ID_STR_DS_ITEM_0029	歧管空气压力	X
+ID_STR_DS_ITEM_0030	节气门上游压力	X
+ID_STR_DS_ITEM_0031	电瓶电压	X
+ID_STR_DS_ITEM_0032	上游氧传感器信号电压	X
+ID_STR_DS_ITEM_0033	下游氧传感器信号电压	X
+ID_STR_DS_ITEM_0034	变速箱档位	X
+ID_STR_DS_ITEM_0035	空调压力	X
+ID_STR_DS_ITEM_0036	动力转向	X
+ID_STR_DS_ITEM_0037	爆震控制信号[0]	X
+ID_STR_DS_ITEM_0038	爆震控制信号[1]	X
+ID_STR_DS_ITEM_0039	爆震控制信号[2]	X
+ID_STR_DS_ITEM_0040	爆震控制信号[3]	X
+ID_STR_DS_ITEM_0041	车辆速度	X
+ID_STR_DS_ITEM_0042	交流发电机PWM(脉宽调制)	X
+ID_STR_DS_ITEM_0043	发动机转速	X
+ID_STR_DS_ITEM_0044	上游氧传感器加热器PWM(脉宽调制)	X
+ID_STR_DS_ITEM_0045	下游氧传感器加热器	X
+ID_STR_DS_ITEM_0046	修正后碳罐电磁阀开启PWM(脉宽调制)信号	X
+ID_STR_DS_ITEM_0047	可变气门正时的脉宽调制(进气侧)	X
+ID_STR_DS_ITEM_0048	所有可用的冷却风扇的功率输出	X
+ID_STR_DS_ITEM_0049	发动机目标怠速	X
+ID_STR_DS_ITEM_0050	实际执行的气缸独立喷射时间[0]	X
+ID_STR_DS_ITEM_0051	实际执行的气缸独立喷射时间[1]	X
+ID_STR_DS_ITEM_0052	实际执行的气缸独立喷射时间[2]	X
+ID_STR_DS_ITEM_0053	实际执行的气缸独立喷射时间[3]	X
+ID_STR_DS_ITEM_0054	来自氧传感器自适应输出的燃油质量设定值系数	X
+ID_STR_DS_ITEM_0055	所有气缸点火角度实际值的平均值	X
+ID_STR_DS_ITEM_0056	带有自适应的爆震控制的总点火延迟[0]	X
+ID_STR_DS_ITEM_0057	带有自适应的爆震控制的总点火延迟[1]	X
+ID_STR_DS_ITEM_0058	带有自适应的爆震控制的总点火延迟[2]	X
+ID_STR_DS_ITEM_0059	带有自适应的爆震控制的总点火延迟[3]	X
+ID_STR_DS_ITEM_0060	空调蒸发器温度传感器电压值	X
+ID_STR_DS_ITEM_0061	空调蒸发温度	X
+ID_STR_DS_ITEM_0062	进气量	X
+ID_STR_DS_ITEM_0063	进气量	X
+ID_STR_DS_ITEM_0064	基本充气效率偏移量的高原修正量	X
+ID_STR_DS_ITEM_0065	基本充气效率斜率的高原修正量	X
+ID_STR_DS_ITEM_0066	1缸的空燃比修正量	X
+ID_STR_DS_ITEM_0067	空燃比修正的燃油量	X
+ID_STR_DS_ITEM_0068	ETC执行器的占空比	X
+ID_STR_DS_ITEM_0069	碳罐负荷	X
+ID_STR_DS_ITEM_0070	节气门位置的目标值	X
+ID_STR_DS_ITEM_0071	点火线圈初级线圈的通电时间	X
+ID_STR_DS_ITEM_0072	车辆累计总里程	X
+ID_STR_DS_ITEM_0073	机油温度(模型)	X
+ID_STR_DS_ITEM_0074	VVT的实际位置	X
+ID_STR_DS_ITEM_0075	VVT的目标位置	X
+ID_STR_DS_ITEM_0076	停机时刻的冷却液温度	X
+ID_STR_DS_ITEM_0077	额外的节气门进气量修正量	X
+ID_STR_DS_ITEM_0078	节气门位置自学习的总修正	X
+ID_STR_DS_ITEM_0079	空燃比的修正量	X
+ID_STR_DS_ITEM_0080	空燃比修正的燃油修正量	X
+ID_STR_DS_ITEM_0081	基本怠速控制的扭矩学习值	X
+ID_STR_DS_ITEM_0082	空调压缩机引起的扭矩损失	X
+
+;版本信息
+ID_STR_ECU_GROUP_00	版本信息	X
+
+ID_STR_ECU_ITEM_0000	ECU 序列号	X
+ID_STR_ECU_ITEM_0001	ECU 硬件号	X
+ID_STR_ECU_ITEM_0002	ECU 出厂码	X
+ID_STR_ECU_ITEM_0003	引导程序版本号	X
+ID_STR_ECU_ITEM_0004	适用软件版本号	X
+ID_STR_ECU_ITEM_0005	标定版本号	X
+ID_STR_ECU_ITEM_0006	VIN码	X
+
+;数据流或者版本信息switch使用的字符串
+ID_DS_STRING_000	被动	X
+ID_DS_STRING_001	准备	X
+ID_DS_STRING_002	行动自适应	X
+ID_DS_STRING_003	使用	X
+ID_DS_STRING_004	跛行回家	X
+ID_DS_STRING_005	-	X
+ID_DS_STRING_006	保持	X
+ID_DS_STRING_007	行动	X
+
+;数据流或者版本信息用到的其他字符串
+IMS_DSSTRING_0199	离合器开关未开启	X
+IMS_DSSTRING_0200	离合器开关已开启	X
+IMS_DSSTRING_0201	制动激活标志未激活	X
+IMS_DSSTRING_0202	制动激活标志激活	X
+IMS_DSSTRING_0203	制动测试开关未激活	X
+IMS_DSSTRING_0204	制动测试开关激活	X
+IMS_DSSTRING_0205	空调压缩机离合器未吸合	X
+IMS_DSSTRING_0206	空调压缩机离合器吸合	X
+IMS_DSSTRING_0207	主继电器控制指令状态未吸合	X
+IMS_DSSTRING_0208	主继电器控制指令状态吸合	X
+IMS_DSSTRING_0209	电动燃油泵未激活	X
+IMS_DSSTRING_0210	电动燃油泵激活	X
+IMS_DSSTRING_0211	启动器继电器未激活	X
+IMS_DSSTRING_0212	启动器继电器激活	X
+IMS_DSSTRING_0213	可变进气歧管驱动器未激活标示位未激活	X
+IMS_DSSTRING_0214	可变进气歧管驱动器激活标示位激活	X
+IMS_DSSTRING_0215	MIL（故障指示灯）灭	X
+IMS_DSSTRING_0216	MIL（故障指示灯）开	X
+IMS_DSSTRING_0217	氧传感器控制的激活标志未激活	X
+IMS_DSSTRING_0218	氧传感器控制的激活标志激活	X
+IMS_DSSTRING_0219	空调压力开关（高低压）关闭	X
+IMS_DSSTRING_0220	空调压力开关（高低压）打开	X
+IMS_DSSTRING_0221	未发生爆震	X
+IMS_DSSTRING_0222	发生爆震	X

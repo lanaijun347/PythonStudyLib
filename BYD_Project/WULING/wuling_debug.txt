@@ -1,0 +1,2 @@
+N310_1.2_2008_SDM_DL_K 未找到该配置文件，车型路径：wuling\五菱荣光\1.2L\2008\SDM（安全气囊模块-大陆）\N310_1.2_2008_SDM_DL_K
+CN180S MCE_2019_AC_RY_CAN 未找到该配置文件，车型路径：newbaojun\RS-3\N15A-CVT\2019\AC（空调控制模块-重庆瑞阳）\CN180S MCE_2019_AC_RY_CAN

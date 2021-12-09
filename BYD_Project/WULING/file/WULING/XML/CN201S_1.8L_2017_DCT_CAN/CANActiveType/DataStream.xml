@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0">
+	<function ID="ID_FUNCTION_DATASTREAM">
+		<!--选择数据流，并把选择的数据流ID保存到ui_data_buffer中-->
+		<show label="" type="data_stream_select">
+			<param type="function" value="ID_FUNCTION_READ_DATASTREAM"/>
+			<param label="data_stream_id" type="ui_data_buffer" value=""/>
+			<param label="GROUP" type="string" value="0"/>
+		</show>
+	</function>
+	<function ID="ID_FUNCTION_READ_DATASTREAM">
+		<call_protocol label="data_stream" function="read_data_stream">
+			<param type="ui_data_buffer" value="data_stream_id"/>
+		</call_protocol>
+		<judge_tip_jump use_label="data_stream"/>
+		<show label="" type="read_data_stream">
+			<param type="protocol_data" value="data_stream"/>
+		</show>
+	</function>
+	<data_stream_lib>
+		<!-- 数据流 -->
+		<group ID="0" caption="ID_STR_DS_GROUP_00">
+			<!-- 离合器转速 -->
+			<data_stream ID="0" caption="ID_STR_DS_ITEM_0000" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 奇数轴转速 -->
+			<data_stream ID="1" caption="ID_STR_DS_ITEM_0001" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*32</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 偶数轴转速 -->
+			<data_stream ID="2" caption="ID_STR_DS_ITEM_0002" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*32</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 输出轴转速 -->
+			<data_stream ID="3" caption="ID_STR_DS_ITEM_0003" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*32</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 奇数离合器压力 -->
+			<data_stream ID="4" caption="ID_STR_DS_ITEM_0004" unit="bar" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.125</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- 偶数离合器压力 -->
+			<data_stream ID="5" caption="ID_STR_DS_ITEM_0005" unit="bar" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_005</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.125</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- /1/3拨叉位置 -->
+			<data_stream ID="6" caption="ID_STR_DS_ITEM_0006" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_006</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 2/4拨叉位置 -->
+			<data_stream ID="7" caption="ID_STR_DS_ITEM_0007" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_007</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 5/N拨叉位置 -->
+			<data_stream ID="8" caption="ID_STR_DS_ITEM_0008" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_008</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 6/R拨叉位置 -->
+			<data_stream ID="9" caption="ID_STR_DS_ITEM_0009" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_009</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 离合器温度 -->
+			<data_stream ID="10" caption="ID_STR_DS_ITEM_0010" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 阀体温度 -->
+			<data_stream ID="11" caption="ID_STR_DS_ITEM_0011" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_011</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电磁阀油温 -->
+			<data_stream ID="12" caption="ID_STR_DS_ITEM_0012" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 奇数档电磁阀控制电流 -->
+			<data_stream ID="13" caption="ID_STR_DS_ITEM_0013" unit="A" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_013</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0001</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- 偶数档电磁阀控制电流 -->
+			<data_stream ID="14" caption="ID_STR_DS_ITEM_0014" unit="A" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_014</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0001</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- 主油路压力电磁阀控制电流 -->
+			<data_stream ID="15" caption="ID_STR_DS_ITEM_0015" unit="A" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_015</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0001</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- 润滑油路压力电磁阀控制电流 -->
+			<data_stream ID="16" caption="ID_STR_DS_ITEM_0016" unit="A" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_016</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0001</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- 奇数离合器压力电磁阀控制电流 -->
+			<data_stream ID="17" caption="ID_STR_DS_ITEM_0017" unit="A" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_017</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0001</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- 偶数离合器压力电磁阀控制电流 -->
+			<data_stream ID="18" caption="ID_STR_DS_ITEM_0018" unit="A" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_018</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0001</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- 多路阀1电磁阀状态 -->
+			<data_stream ID="19" caption="ID_STR_DS_ITEM_0019" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_019</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(0,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 多路阀1电磁阀状态 -->
+			<data_stream ID="20" caption="ID_STR_DS_ITEM_0020" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_020</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(0,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 奇数离合器1扭矩状态 -->
+			<data_stream ID="21" caption="ID_STR_DS_ITEM_0021" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_021</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(1,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 偶数离合器扭矩状态 -->
+			<data_stream ID="22" caption="ID_STR_DS_ITEM_0022" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_022</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(1,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 奇数轴结合档位 -->
+			<data_stream ID="23" caption="ID_STR_DS_ITEM_0023" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_023</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(2,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 偶数轴结合档位 -->
+			<data_stream ID="24" caption="ID_STR_DS_ITEM_0024" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_024</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(2,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 待上档档位 -->
+			<data_stream ID="25" caption="ID_STR_DS_ITEM_0025" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_025</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(2,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 待退档档位 -->
+			<data_stream ID="26" caption="ID_STR_DS_ITEM_0026" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_026</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(2,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 发动机状态 -->
+			<data_stream ID="27" caption="ID_STR_DS_ITEM_0027" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_027</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(3,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 制动系统变速箱档位请求 -->
+			<data_stream ID="28" caption="ID_STR_DS_ITEM_0028" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_028</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(4,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 换挡杆锁止状态 -->
+			<data_stream ID="29" caption="ID_STR_DS_ITEM_0029" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_029</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(5,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 不受变速箱调节发动机稳态扭矩 -->
+			<data_stream ID="30" caption="ID_STR_DS_ITEM_0030" unit="Nm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_030</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.5-848</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 驾驶员请求发动机扭矩 -->
+			<data_stream ID="31" caption="ID_STR_DS_ITEM_0031" unit="Nm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_031</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.5-848</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 发动机机械损失扭矩 -->
+			<data_stream ID="32" caption="ID_STR_DS_ITEM_0032" unit="Nm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_032</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.5-848</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 发动机转速 -->
+			<data_stream ID="33" caption="ID_STR_DS_ITEM_0033" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_033</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 变速箱输出平均车速 -->
+			<data_stream ID="34" caption="ID_STR_DS_ITEM_0034" unit="kph" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_034</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.015625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- 电子驻车状态 -->
+			<data_stream ID="35" caption="ID_STR_DS_ITEM_0035" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_035</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(6,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 里程数 -->
+			<data_stream ID="36" caption="ID_STR_DS_ITEM_0036" unit="km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_036</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)*0.015625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- 点火钥匙位置 -->
+			<data_stream ID="37" caption="ID_STR_DS_ITEM_0037" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_037</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(7,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 油门踏板位置 -->
+			<data_stream ID="38" caption="ID_STR_DS_ITEM_0038" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_038</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.392157</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- 换挡杆位置 -->
+			<data_stream ID="39" caption="ID_STR_DS_ITEM_0039" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_039</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(8,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 纵向加速度 -->
+			<data_stream ID="40" caption="ID_STR_DS_ITEM_0040" unit="m/s*s" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_040</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.015625+0,0x8000,0xFFFF,((A*256+B)-65535)*0.015625+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- 刹车压力 -->
+			<data_stream ID="41" caption="ID_STR_DS_ITEM_0041" unit="bar" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_041</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 发动机水温 -->
+			<data_stream ID="42" caption="ID_STR_DS_ITEM_0042" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_042</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 蓄电池电压 -->
+			<data_stream ID="43" caption="ID_STR_DS_ITEM_0043" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_043</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 5V传感器供电1电压 -->
+			<data_stream ID="44" caption="ID_STR_DS_ITEM_0044" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_044</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 5V传感器供电2电压 -->
+			<data_stream ID="45" caption="ID_STR_DS_ITEM_0045" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_045</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 9V传感器供电1电压 -->
+			<data_stream ID="46" caption="ID_STR_DS_ITEM_0046" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_046</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 9V传感器供电2电压 -->
+			<data_stream ID="47" caption="ID_STR_DS_ITEM_0047" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_047</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 电磁阀供电1电压 -->
+			<data_stream ID="48" caption="ID_STR_DS_ITEM_0048" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_048</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 电磁阀供电2电压 -->
+			<data_stream ID="49" caption="ID_STR_DS_ITEM_0049" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_049</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 电磁阀供电3电压 -->
+			<data_stream ID="50" caption="ID_STR_DS_ITEM_0050" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_050</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 离合器状态 -->
+			<data_stream ID="51" caption="ID_STR_DS_ITEM_0051" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_051</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(9,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 实际档位 -->
+			<data_stream ID="52" caption="ID_STR_DS_ITEM_0052" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_052</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(10,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 目标档位 -->
+			<data_stream ID="53" caption="ID_STR_DS_ITEM_0053" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_053</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(10,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 变速箱请求发动机转速 -->
+			<data_stream ID="54" caption="ID_STR_DS_ITEM_0054" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_054</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 变速箱请求发动机怠速 -->
+			<data_stream ID="55" caption="ID_STR_DS_ITEM_0055" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_055</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 变速箱控制模式 -->
+			<data_stream ID="56" caption="ID_STR_DS_ITEM_0056" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_056</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(11,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 变速箱请求发动机扭矩 -->
+			<data_stream ID="57" caption="ID_STR_DS_ITEM_0057" unit="Nm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_057</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.5-848</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 发动机限扭值 -->
+			<data_stream ID="58" caption="ID_STR_DS_ITEM_0058" unit="Nm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_058</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.5-848</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 仪表盘显示档位 -->
+			<data_stream ID="59" caption="ID_STR_DS_ITEM_0059" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_059</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(10,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 变速箱故障灯状态 -->
+			<data_stream ID="60" caption="ID_STR_DS_ITEM_0060" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_060</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(12,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 大气压力 -->
+			<data_stream ID="61" caption="ID_STR_DS_ITEM_0061" unit="hpa" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_061</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.08291752</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- 低速离合器请求扭矩 -->
+			<data_stream ID="62" caption="ID_STR_DS_ITEM_0062" unit="Nm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_062</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.5-848</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+		</group>
+	</data_stream_lib>
+	<switchs>
+		<!-- 00:OFF 01:ON 其他:-  -->
+		<switch ID="0">
+			<case value="0x00">ID_DS_STRING_000</case>
+			<case value="0x01">ID_DS_STRING_001</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:初始化状态 01:离合器稳态控制 02:离合器扭矩下降控制 03:离合器打开控制 04:离合器扭矩上升控制 05:预留状态 06:转速调节 07:离合器预充油状态控制 08:转速调节 09:转速调节 0A:转速调节 0B:转速调节 0C:转速调节 其他:-  -->
+		<switch ID="1">
+			<case value="0x00">ID_DS_STRING_003</case>
+			<case value="0x01">ID_DS_STRING_004</case>
+			<case value="0x02">ID_DS_STRING_005</case>
+			<case value="0x03">ID_DS_STRING_006</case>
+			<case value="0x04">ID_DS_STRING_007</case>
+			<case value="0x05">ID_DS_STRING_008</case>
+			<case value="0x06">ID_DS_STRING_009</case>
+			<case value="0x07">ID_DS_STRING_010</case>
+			<case value="0x08">ID_DS_STRING_009</case>
+			<case value="0x09">ID_DS_STRING_009</case>
+			<case value="0x0A">ID_DS_STRING_009</case>
+			<case value="0x0B">ID_DS_STRING_009</case>
+			<case value="0x0C">ID_DS_STRING_009</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:N 01:1档 02:2档 03:3档 04:4档 05:5档 06:6档 07:未知档位 08:倒档 其他:-  -->
+		<switch ID="2">
+			<case value="0x00">ID_DS_STRING_011</case>
+			<case value="0x01">ID_DS_STRING_012</case>
+			<case value="0x02">ID_DS_STRING_013</case>
+			<case value="0x03">ID_DS_STRING_014</case>
+			<case value="0x04">ID_DS_STRING_015</case>
+			<case value="0x05">ID_DS_STRING_016</case>
+			<case value="0x06">ID_DS_STRING_017</case>
+			<case value="0x07">ID_DS_STRING_018</case>
+			<case value="0x08">ID_DS_STRING_019</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:未上电 01:起动 02:发动机怠速 03:上电未启动 其他:-  -->
+		<switch ID="3">
+			<case value="0x00">ID_DS_STRING_020</case>
+			<case value="0x01">ID_DS_STRING_021</case>
+			<case value="0x02">ID_DS_STRING_022</case>
+			<case value="0x03">ID_DS_STRING_023</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:无要求 01:预留 02:预留 其他:-  -->
+		<switch ID="4">
+			<case value="0x00">ID_DS_STRING_024</case>
+			<case value="0x01">ID_DS_STRING_025</case>
+			<case value="0x02">ID_DS_STRING_025</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:未锁定 01:锁定 03:故障 其他:-  -->
+		<switch ID="5">
+			<case value="0x00">ID_DS_STRING_026</case>
+			<case value="0x01">ID_DS_STRING_027</case>
+			<case value="0x03">ID_DS_STRING_028</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:未知 01:释放 02:夹紧 03:释放过程中 04:夹紧过程中 05:预留 06:预留 07:预留 其他:-  -->
+		<switch ID="6">
+			<case value="0x00">ID_DS_STRING_029</case>
+			<case value="0x01">ID_DS_STRING_030</case>
+			<case value="0x02">ID_DS_STRING_031</case>
+			<case value="0x03">ID_DS_STRING_032</case>
+			<case value="0x04">ID_DS_STRING_033</case>
+			<case value="0x05">ID_DS_STRING_025</case>
+			<case value="0x06">ID_DS_STRING_025</case>
+			<case value="0x07">ID_DS_STRING_025</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:OFF 01:ACC 02:ON 03:Start 其他:-  -->
+		<switch ID="7">
+			<case value="0x00">ID_DS_STRING_000</case>
+			<case value="0x01">ID_DS_STRING_034</case>
+			<case value="0x02">ID_DS_STRING_001</case>
+			<case value="0x03">ID_DS_STRING_035</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:错误 01:运动模式 02:预留 03:M 05:D 06:N 07:R 08:P 09:M型升一档 0A:M型降一档 其他:-  -->
+		<switch ID="8">
+			<case value="0x00">ID_DS_STRING_036</case>
+			<case value="0x01">ID_DS_STRING_037</case>
+			<case value="0x02">ID_DS_STRING_025</case>
+			<case value="0x03">ID_DS_STRING_038</case>
+			<case value="0x05">ID_DS_STRING_039</case>
+			<case value="0x06">ID_DS_STRING_011</case>
+			<case value="0x07">ID_DS_STRING_040</case>
+			<case value="0x08">ID_DS_STRING_041</case>
+			<case value="0x09">ID_DS_STRING_042</case>
+			<case value="0x0A">ID_DS_STRING_043</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:奇、偶数离合器同时打开 01:离合器滑磨状态 02:预留 03:一个离合器结合,另一个打开 其他:-  -->
+		<switch ID="9">
+			<case value="0x00">ID_DS_STRING_044</case>
+			<case value="0x01">ID_DS_STRING_045</case>
+			<case value="0x02">ID_DS_STRING_025</case>
+			<case value="0x03">ID_DS_STRING_046</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:不支持 01:1档 02:2档 03:3档 04:4档 05:5档 06:6档 0D:N档 0E:R档 0F:P档 其他:-  -->
+		<switch ID="10">
+			<case value="0x00">ID_DS_STRING_047</case>
+			<case value="0x01">ID_DS_STRING_012</case>
+			<case value="0x02">ID_DS_STRING_013</case>
+			<case value="0x03">ID_DS_STRING_014</case>
+			<case value="0x04">ID_DS_STRING_015</case>
+			<case value="0x05">ID_DS_STRING_016</case>
+			<case value="0x06">ID_DS_STRING_017</case>
+			<case value="0x0D">ID_DS_STRING_048</case>
+			<case value="0x0E">ID_DS_STRING_049</case>
+			<case value="0x0F">ID_DS_STRING_050</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:不显示 01:经济型 02:运动型 其他:-  -->
+		<switch ID="11">
+			<case value="0x00">ID_DS_STRING_051</case>
+			<case value="0x01">ID_DS_STRING_052</case>
+			<case value="0x02">ID_DS_STRING_053</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:不显示 01:闪烁 02:常亮 其他:-  -->
+		<switch ID="12">
+			<case value="0x00">ID_DS_STRING_051</case>
+			<case value="0x01">ID_DS_STRING_054</case>
+			<case value="0x02">ID_DS_STRING_055</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+	</switchs>
+</root>

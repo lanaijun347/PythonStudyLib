@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ECUConfig>
+  <SAConfig Platform="Default">
+    <SALevels>
+      <SALevel SubFunc="01" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="39da1b3c" />
+      <SALevel SubFunc="05" DllName="CN200_BCM_REFRESH_SATURN.dll" Type="SA_TYPE_SATURN" Mask="39da1b3c" />
+      <SALevel SubFunc="07" DllName="CN200_IMMO.dll" Type="SA_TYPE_SATURN" Mask="FFFFFFFFA0" />
+    </SALevels>
+  </SAConfig>
+</ECUConfig>

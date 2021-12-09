@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0">
+	<function ID="ID_FUNCTION_DATASTREAM">
+		<!--选择数据流，并把选择的数据流ID保存到ui_data_buffer中-->
+		<show label="" type="data_stream_select">
+			<param type="function" value="ID_FUNCTION_READ_DATASTREAM"/>
+			<param label="data_stream_id" type="ui_data_buffer" value=""/>
+			<param label="GROUP" type="string" value="0"/>
+		</show>
+	</function>
+	<function ID="ID_FUNCTION_READ_DATASTREAM">
+		<call_protocol label="data_stream" function="read_data_stream">
+			<param type="ui_data_buffer" value="data_stream_id"/>
+		</call_protocol>
+		<judge_tip_jump use_label="data_stream"/>
+		<show label="" type="read_data_stream">
+			<param type="protocol_data" value="data_stream"/>
+		</show>
+	</function>
+	<data_stream_lib>
+		<!-- 数据流 -->
+		<group ID="0" caption="ID_STR_DS_GROUP_00">
+			<!-- 车速 -->
+			<data_stream ID="0" caption="ID_STR_DS_ITEM_0000" unit="km/h" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 方向盘扭力 -->
+			<data_stream ID="1" caption="ID_STR_DS_ITEM_0001" unit="Nm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0009766-32</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- 方向盘转角 -->
+			<data_stream ID="2" caption="ID_STR_DS_ITEM_0002" unit="°" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0625-2048</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- 故障灯状态 -->
+			<data_stream ID="3" caption="ID_STR_DS_ITEM_0003" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(0,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+		</group>
+	</data_stream_lib>
+	<switchs>
+		<!-- 00:关闭 01:黄灯亮起 02:红灯亮起 其他:-  -->
+		<switch ID="0">
+			<case value="0x00">ID_DS_STRING_000</case>
+			<case value="0x01">ID_DS_STRING_001</case>
+			<case value="0x02">ID_DS_STRING_002</case>
+			<default>ID_DS_STRING_003</default>
+		</switch>
+	</switchs>
+</root>

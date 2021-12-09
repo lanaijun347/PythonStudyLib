@@ -1,0 +1,1902 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0">
+	<function ID="ID_FUNCTION_DATASTREAM">
+		<!--选择数据流，并把选择的数据流ID保存到ui_data_buffer中-->
+		<show label="" type="data_stream_select">
+			<param type="function" value="ID_FUNCTION_READ_DATASTREAM"/>
+			<param label="data_stream_id" type="ui_data_buffer" value=""/>
+			<param label="GROUP" type="string" value="0"/>
+		</show>
+	</function>
+	<function ID="ID_FUNCTION_READ_DATASTREAM">
+		<call_protocol label="data_stream" function="read_data_stream">
+			<param type="ui_data_buffer" value="data_stream_id"/>
+		</call_protocol>
+		<judge_tip_jump use_label="data_stream"/>
+		<show label="" type="read_data_stream">
+			<param type="protocol_data" value="data_stream"/>
+		</show>
+	</function>
+	<data_stream_lib>
+		<!-- 数据流 -->
+		<group ID="0" caption="ID_STR_DS_GROUP_00">
+			<!-- Vehicle Battery Voltage -->
+			<data_stream ID="0" caption="ID_STR_DS_ITEM_0000" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- Engine Speed -->
+			<data_stream ID="1" caption="ID_STR_DS_ITEM_0001" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Vehicle Speed -->
+			<data_stream ID="2" caption="ID_STR_DS_ITEM_0002" unit="km/h" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.015625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- Odometer -->
+			<data_stream ID="3" caption="ID_STR_DS_ITEM_0003" unit="Km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)*0.015625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- System coolant temperature with 1℃resolution -->
+			<data_stream ID="4" caption="ID_STR_DS_ITEM_0004" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Outiside ambient air temperature filtered -->
+			<data_stream ID="5" caption="ID_STR_DS_ITEM_0005" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_005</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0078125</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- ECU time stamps (RAM) -->
+			<data_stream ID="6" caption="ID_STR_DS_ITEM_0006" unit="min" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_006</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- ECU time stamps from KeyOn (RAM) -->
+			<data_stream ID="7" caption="ID_STR_DS_ITEM_0007" unit="s" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_007</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*15</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Inlet Diesel Particulate Filter Exhaust gas temperature -->
+			<data_stream ID="8" caption="ID_STR_DS_ITEM_0008" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_008</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0625-273.15</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Power latch time -->
+			<data_stream ID="9" caption="ID_STR_DS_ITEM_0009" unit="s" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_009</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Intake air temperature -->
+			<data_stream ID="10" caption="ID_STR_DS_ITEM_0010" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Ambient pressure -->
+			<data_stream ID="11" caption="ID_STR_DS_ITEM_0011" unit="hPa" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_011</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*5</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Odometer content to the last F-ROM updating -->
+			<data_stream ID="12" caption="ID_STR_DS_ITEM_0012" unit="km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>3</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*65536+B*256+C)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- Number of FlashRom re-writings (F-ROM) -->
+			<data_stream ID="13" caption="ID_STR_DS_ITEM_0013" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_013</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- ECU time stamps (EEPROM) -->
+			<data_stream ID="14" caption="ID_STR_DS_ITEM_0014" unit="min" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_014</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- ECU time stamps from KeyOn (EEPROM) -->
+			<data_stream ID="15" caption="ID_STR_DS_ITEM_0015" unit="s" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_015</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*15</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- KeyOn counter (EEPROM) -->
+			<data_stream ID="16" caption="ID_STR_DS_ITEM_0016" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_016</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- ECU Time first DTC detection (EEPROM) -->
+			<data_stream ID="17" caption="ID_STR_DS_ITEM_0017" unit="min" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_017</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- ECU Time Stamps from KeyOn first DTC detection (EEPROM) -->
+			<data_stream ID="18" caption="ID_STR_DS_ITEM_0018" unit="s" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_018</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*15</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Event Counter -->
+			<data_stream ID="19" caption="ID_STR_DS_ITEM_0019" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_019</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Failure Type -->
+			<data_stream ID="20" caption="ID_STR_DS_ITEM_0020" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_020</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Switch state -->
+			<data_stream ID="21" caption="ID_STR_DS_ITEM_0021" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_021</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(0,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Engine operation status -->
+			<data_stream ID="22" caption="ID_STR_DS_ITEM_0022" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_022</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(1,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Urea mass flow quantity request -->
+			<data_stream ID="23" caption="ID_STR_DS_ITEM_0023" unit="mg/s" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_023</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.015625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- Exhaust back pressure -->
+			<data_stream ID="24" caption="ID_STR_DS_ITEM_0024" unit="mbar" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_024</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Cooling fan average speed -->
+			<data_stream ID="25" caption="ID_STR_DS_ITEM_0025" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_025</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Actuator test injector -->
+			<data_stream ID="26" caption="ID_STR_DS_ITEM_0026" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_026</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0061</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- Actuator Test Pump -->
+			<data_stream ID="27" caption="ID_STR_DS_ITEM_0027" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_027</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0061</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- Actuator Test Inverse Pump -->
+			<data_stream ID="28" caption="ID_STR_DS_ITEM_0028" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_028</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0061</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- Reducing agent volume in tank -->
+			<data_stream ID="29" caption="ID_STR_DS_ITEM_0029" unit="l" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_029</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0009765625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.10f</format>
+			</data_stream>
+			<!-- Overall consumed reducing agent quantity with Low Resolution -->
+			<data_stream ID="30" caption="ID_STR_DS_ITEM_0030" unit="g" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_030</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*32.7674865722656</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.13f</format>
+			</data_stream>
+			<!-- Reducing agent temperatures at tank -->
+			<data_stream ID="31" caption="ID_STR_DS_ITEM_0031" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_031</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0625-273,15</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!--  Reducing agent Tank system heating is active -->
+			<data_stream ID="32" caption="ID_STR_DS_ITEM_0032" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_032</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(2,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Reducing agent Tube system heating is active -->
+			<data_stream ID="33" caption="ID_STR_DS_ITEM_0033" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_033</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(3,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- engine running time (since engine start) in [s] -->
+			<data_stream ID="34" caption="ID_STR_DS_ITEM_0034" unit="s" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_034</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- Engine shut-off time -->
+			<data_stream ID="35" caption="ID_STR_DS_ITEM_0035" unit="min" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_035</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Fuel temperature -->
+			<data_stream ID="36" caption="ID_STR_DS_ITEM_0036" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_036</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1-50</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Raw vehicle acceleration received from communication network -->
+			<data_stream ID="37" caption="ID_STR_DS_ITEM_0037" unit="m/s²" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_037</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.08-10.24</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Raw traversal vehicle acceleration received from communication network -->
+			<data_stream ID="38" caption="ID_STR_DS_ITEM_0038" unit="m/s²" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_038</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.08-10.24</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Measured current feedback of reducing agent injector -->
+			<data_stream ID="39" caption="ID_STR_DS_ITEM_0039" unit="A" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_039</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0009765625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.10f</format>
+			</data_stream>
+			<!-- Reducing agent tank urea concentration -->
+			<data_stream ID="40" caption="ID_STR_DS_ITEM_0040" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_040</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01-10</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Remaining distance calculated from reducing agent tank volume -->
+			<data_stream ID="41" caption="ID_STR_DS_ITEM_0041" unit="km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_041</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*2</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Frequency of the PWM signal to control the reducing agent injector -->
+			<data_stream ID="42" caption="ID_STR_DS_ITEM_0042" unit="Hz" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_042</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.015625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- Exhaust gas temperature ahead of oxidation catalyst -->
+			<data_stream ID="43" caption="ID_STR_DS_ITEM_0043" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_043</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0625-273.15</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Enabling of reducing agent supply system -->
+			<data_stream ID="44" caption="ID_STR_DS_ITEM_0044" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_044</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(4,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- General MIL on request -->
+			<data_stream ID="45" caption="ID_STR_DS_ITEM_0045" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_045</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(5,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Power latch phase active -->
+			<data_stream ID="46" caption="ID_STR_DS_ITEM_0046" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_046</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(6,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Cavity flag validity status -->
+			<data_stream ID="47" caption="ID_STR_DS_ITEM_0047" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_047</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(7,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Flag to indicate the tank is frozen or not -->
+			<data_stream ID="48" caption="ID_STR_DS_ITEM_0048" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_048</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(8,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Refilling detected for the reducing agent at the tank -->
+			<data_stream ID="49" caption="ID_STR_DS_ITEM_0049" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_049</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(9,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Reducing agent realized injected mass -->
+			<data_stream ID="50" caption="ID_STR_DS_ITEM_0050" unit="g" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_050</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.001</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- Exhaust mass flow after EGR -->
+			<data_stream ID="51" caption="ID_STR_DS_ITEM_0051" unit="kg/h" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_051</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- Feedback of injected adblue mass flow -->
+			<data_stream ID="52" caption="ID_STR_DS_ITEM_0052" unit="mg/s" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_052</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.015625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- Maximum allowed reducing agent mass flow for dosing -->
+			<data_stream ID="53" caption="ID_STR_DS_ITEM_0053" unit="mg/s" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_053</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- Measured reducing agent pump speed -->
+			<data_stream ID="54" caption="ID_STR_DS_ITEM_0054" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_054</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Setpoint for spped controller in [rpm] -->
+			<data_stream ID="55" caption="ID_STR_DS_ITEM_0055" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_055</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Filtered reducing agent pressure sensor signal -->
+			<data_stream ID="56" caption="ID_STR_DS_ITEM_0056" unit="bar" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_056</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.0009765625+0,0x8000,0xFFFF,((A*256+B)-65535)*0.0009765625+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.10f</format>
+			</data_stream>
+			<!-- Reducing agent pressure setpoint -->
+			<data_stream ID="57" caption="ID_STR_DS_ITEM_0057" unit="bar" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_057</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.0009765625+0,0x8000,0xFFFF,((A*256+B)-65535)*0.0009765625+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.10f</format>
+			</data_stream>
+			<!-- Reducing agent temperature value coming from the tank sensor -->
+			<data_stream ID="58" caption="ID_STR_DS_ITEM_0058" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_058</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0625-273.15</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Reducing agent volume downstream to pump -->
+			<data_stream ID="59" caption="ID_STR_DS_ITEM_0059" unit="ml" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_059</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Maximum fillable reducing agent tank volume -->
+			<data_stream ID="60" caption="ID_STR_DS_ITEM_0060" unit="l" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_060</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0009765625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.10f</format>
+			</data_stream>
+			<!-- Reducing agent nominal fill capacity as a percent of maximum -->
+			<data_stream ID="61" caption="ID_STR_DS_ITEM_0061" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_061</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.390625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- Vector for direct Reducing agent tank levels measured by a continuous level sensor -->
+			<data_stream ID="62" caption="ID_STR_DS_ITEM_0062" unit="l" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_062</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- Vector for combi Reducing agent tank levels measured by a continuous level sensor -->
+			<data_stream ID="63" caption="ID_STR_DS_ITEM_0063" unit="l" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_063</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- Fast Filtered reducing agent tank level measurement -->
+			<data_stream ID="64" caption="ID_STR_DS_ITEM_0064" unit="mm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_064</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Slow Filtered reducing agent tank level measurement -->
+			<data_stream ID="65" caption="ID_STR_DS_ITEM_0065" unit="mm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_065</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Fast filtered reducing agent tank volume in high resolution -->
+			<data_stream ID="66" caption="ID_STR_DS_ITEM_0066" unit="l" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_066</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0009765625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.10f</format>
+			</data_stream>
+			<!-- Slow filtered reducing agent tank volume in high resolution -->
+			<data_stream ID="67" caption="ID_STR_DS_ITEM_0067" unit="l" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_067</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0009765625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.10f</format>
+			</data_stream>
+			<!-- SCRM state machine activated -->
+			<data_stream ID="68" caption="ID_STR_DS_ITEM_0068" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_068</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(10,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Reducing agent temperature measured by pressure sensor -->
+			<data_stream ID="69" caption="ID_STR_DS_ITEM_0069" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_069</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0625-273.15</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Reducing agent injector coil temperature -->
+			<data_stream ID="70" caption="ID_STR_DS_ITEM_0070" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_070</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0625-273.15</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Indicated torque for combustion setpoint -->
+			<data_stream ID="71" caption="ID_STR_DS_ITEM_0071" unit="Nm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_071</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.03125+0,0x8000,0xFFFF,((A*256+B)-65535)*0.03125+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.5f</format>
+			</data_stream>
+			<!-- Adaption factor for reducing agent pump -->
+			<data_stream ID="72" caption="ID_STR_DS_ITEM_0072" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_072</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0001220703125</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.13f</format>
+			</data_stream>
+			<!-- Volume of the reducing agent pump per stroke filtered -->
+			<data_stream ID="73" caption="ID_STR_DS_ITEM_0073" unit="µl" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_073</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- Reducing agent purging during power latch is successful -->
+			<data_stream ID="74" caption="ID_STR_DS_ITEM_0074" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_074</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(11,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Intervention for the injector protection in case of high exhaust gas temperature for SCR interface -->
+			<data_stream ID="75" caption="ID_STR_DS_ITEM_0075" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_075</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(12,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Exhaust gas temperature at the reducing agent injector for cylinder bank 1 -->
+			<data_stream ID="76" caption="ID_STR_DS_ITEM_0076" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_076</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.0625+0,0x8000,0xFFFF,((A*256+B)-65535)*0.0625+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- Driver warning and inducement active -->
+			<data_stream ID="77" caption="ID_STR_DS_ITEM_0077" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_077</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(13,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Power-latch phase is ended : begining of system shutdown mechanism -->
+			<data_stream ID="78" caption="ID_STR_DS_ITEM_0078" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_078</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(13,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- First reducing agent refilling of the system completed -->
+			<data_stream ID="79" caption="ID_STR_DS_ITEM_0079" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_079</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(14,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Injector heating is active -->
+			<data_stream ID="80" caption="ID_STR_DS_ITEM_0080" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_080</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(15,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Realized air mass correction -->
+			<data_stream ID="81" caption="ID_STR_DS_ITEM_0081" unit="mg" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_081</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.0625+0,0x8000,0xFFFF,((A*256+B)-65535)*0.0625+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- Reducing agent mass for air injection correction total -->
+			<data_stream ID="82" caption="ID_STR_DS_ITEM_0082" unit="mg" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_082</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.0625+0,0x8000,0xFFFF,((A*256+B)-65535)*0.0625+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- Reducing agent tank volume without the dead volume -->
+			<data_stream ID="83" caption="ID_STR_DS_ITEM_0083" unit="l" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_083</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0009765625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.10f</format>
+			</data_stream>
+			<!-- Level Direct Piezo in Liter -->
+			<data_stream ID="84" caption="ID_STR_DS_ITEM_0084" unit="l" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_084</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0009765625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.10f</format>
+			</data_stream>
+			<!-- Level Combi Piezo in Liter -->
+			<data_stream ID="85" caption="ID_STR_DS_ITEM_0085" unit="l" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_085</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0009765625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.10f</format>
+			</data_stream>
+			<!-- Lifetime counter for measured reducing agent injector coil temperature (based on current feedback) over maximum limit -->
+			<data_stream ID="86" caption="ID_STR_DS_ITEM_0086" unit="s" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_086</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Rate based monitor general denominator -->
+			<data_stream ID="87" caption="ID_STR_DS_ITEM_0087" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_087</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Rate based monitor ignition cycle counter -->
+			<data_stream ID="88" caption="ID_STR_DS_ITEM_0088" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_088</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - reducing agent concentration plausibility diagnosis -->
+			<data_stream ID="89" caption="ID_STR_DS_ITEM_0089" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_089</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - reducing agent concentration plausibility diagnosis -->
+			<data_stream ID="90" caption="ID_STR_DS_ITEM_0090" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_090</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - reducing agent concentration stuck diagnosis -->
+			<data_stream ID="91" caption="ID_STR_DS_ITEM_0091" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_091</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - reducing agent concentration stuck diagnosis -->
+			<data_stream ID="92" caption="ID_STR_DS_ITEM_0092" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_092</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Temperature offset between reducing agent pressure sensor temperature and the reference temperatures is too high at cold start -->
+			<data_stream ID="93" caption="ID_STR_DS_ITEM_0093" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_093</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - Temperature offset between reducing agent pressure sensor temperature and the reference temperatures is too high at cold start -->
+			<data_stream ID="94" caption="ID_STR_DS_ITEM_0094" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_094</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Temperature offset between reducing agent pressure sensor temperature and the reference temperatures is too low at cold start -->
+			<data_stream ID="95" caption="ID_STR_DS_ITEM_0095" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_095</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - Temperature offset between reducing agent pressure sensor temperature and the reference temperatures is too low at cold start -->
+			<data_stream ID="96" caption="ID_STR_DS_ITEM_0096" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_096</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Temperature offset between reducing agent tank temperature sensor and the reference temperatures is too high at cold start -->
+			<data_stream ID="97" caption="ID_STR_DS_ITEM_0097" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_097</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - Temperature offset between reducing agent tank temperature sensor and the reference temperatures is too high at cold start -->
+			<data_stream ID="98" caption="ID_STR_DS_ITEM_0098" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_098</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Temperature offset between reducing agent tank temperature sensor and the reference temperatures is too low at cold start -->
+			<data_stream ID="99" caption="ID_STR_DS_ITEM_0099" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_099</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - Temperature offset between reducing agent tank temperature sensor and the reference temperatures is too low at cold start -->
+			<data_stream ID="100" caption="ID_STR_DS_ITEM_0100" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_100</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Temperature offset between reducing agent injector coil temperature and the reference temperatures is too high at cold start -->
+			<data_stream ID="101" caption="ID_STR_DS_ITEM_0101" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_101</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - Temperature offset between reducing agent injector coil temperature and the reference temperatures is too high at cold start -->
+			<data_stream ID="102" caption="ID_STR_DS_ITEM_0102" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_102</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Temperature offset between reducing agent injector coil temperature and the reference temperatures is too low at cold start -->
+			<data_stream ID="103" caption="ID_STR_DS_ITEM_0103" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_103</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - Temperature offset between reducing agent injector coil temperature and the reference temperatures is too low at cold start -->
+			<data_stream ID="104" caption="ID_STR_DS_ITEM_0104" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_104</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Reducing agent system pressure crossing bottom 1 threshold of plausible range -->
+			<data_stream ID="105" caption="ID_STR_DS_ITEM_0105" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_105</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - Reducing agent system pressure crossing bottom 1 threshold of plausible range -->
+			<data_stream ID="106" caption="ID_STR_DS_ITEM_0106" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_106</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Reducing agent low system pressure decrease with disabled pump -->
+			<data_stream ID="107" caption="ID_STR_DS_ITEM_0107" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_107</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - Reducing agent low system pressure decrease with disabled pump -->
+			<data_stream ID="108" caption="ID_STR_DS_ITEM_0108" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_108</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Reducing agent low system pressure increase with an enabled pump -->
+			<data_stream ID="109" caption="ID_STR_DS_ITEM_0109" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_109</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - Reducing agent low system pressure increase with an enabled pump -->
+			<data_stream ID="110" caption="ID_STR_DS_ITEM_0110" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_110</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - High negative deviation between ambient and system pressure before engine start -->
+			<data_stream ID="111" caption="ID_STR_DS_ITEM_0111" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_111</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - High negative deviation between ambient and system pressure before engine start -->
+			<data_stream ID="112" caption="ID_STR_DS_ITEM_0112" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_112</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - High positive deviation between ambient and system pressure before engine start -->
+			<data_stream ID="113" caption="ID_STR_DS_ITEM_0113" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_113</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - High positive deviation between ambient and system pressure before engine start -->
+			<data_stream ID="114" caption="ID_STR_DS_ITEM_0114" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_114</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Reducing agent system pressure crossing top 1 threshold plausible range -->
+			<data_stream ID="115" caption="ID_STR_DS_ITEM_0115" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_115</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - Reducing agent system pressure crossing top 1 threshold plausible range -->
+			<data_stream ID="116" caption="ID_STR_DS_ITEM_0116" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_116</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Reducing agent pump pumping air fault -->
+			<data_stream ID="117" caption="ID_STR_DS_ITEM_0117" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_117</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Reducing agent consumption is implausible high (determined by tank level information) -->
+			<data_stream ID="118" caption="ID_STR_DS_ITEM_0118" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_118</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - Reducing agent consumption is implausible high (determined by tank level information) -->
+			<data_stream ID="119" caption="ID_STR_DS_ITEM_0119" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_119</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Reducing agent consumption is implausible low(determined by tank level information) -->
+			<data_stream ID="120" caption="ID_STR_DS_ITEM_0120" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_120</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - Reducing agent consumption is implausible low (determined by tank level information) -->
+			<data_stream ID="121" caption="ID_STR_DS_ITEM_0121" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_121</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Reducing agent consumption is implausible high -->
+			<data_stream ID="122" caption="ID_STR_DS_ITEM_0122" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_122</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - Reducing agent consumption is implausible high -->
+			<data_stream ID="123" caption="ID_STR_DS_ITEM_0123" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_123</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Reducing agent consumption is implausible low -->
+			<data_stream ID="124" caption="ID_STR_DS_ITEM_0124" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_124</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - Reducing agent consumption is implausible low -->
+			<data_stream ID="125" caption="ID_STR_DS_ITEM_0125" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_125</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Reducing agent system leakage too high -->
+			<data_stream ID="126" caption="ID_STR_DS_ITEM_0126" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_126</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - Reducing agent system leakage too high -->
+			<data_stream ID="127" caption="ID_STR_DS_ITEM_0127" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_127</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - Jammed reducing agent injector detected -->
+			<data_stream ID="128" caption="ID_STR_DS_ITEM_0128" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_128</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - Jammed reducing agent injector detected -->
+			<data_stream ID="129" caption="ID_STR_DS_ITEM_0129" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_129</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - reducing agent level empty diagnosis -->
+			<data_stream ID="130" caption="ID_STR_DS_ITEM_0130" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_130</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - reducing agent level empty diagnosis -->
+			<data_stream ID="131" caption="ID_STR_DS_ITEM_0131" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_131</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - reducing agent level out of range diagnosis -->
+			<data_stream ID="132" caption="ID_STR_DS_ITEM_0132" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_132</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - reducing agent level out of range diagnosis -->
+			<data_stream ID="133" caption="ID_STR_DS_ITEM_0133" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_133</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - reducing agent tank sensor signals comparison diagnosis -->
+			<data_stream ID="134" caption="ID_STR_DS_ITEM_0134" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_134</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - reducing agent tank sensor signals comparison diagnosis -->
+			<data_stream ID="135" caption="ID_STR_DS_ITEM_0135" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_135</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - reducing agent tank sensor not availability diagnosis -->
+			<data_stream ID="136" caption="ID_STR_DS_ITEM_0136" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_136</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - reducing agent tank sensor not availability diagnosis -->
+			<data_stream ID="137" caption="ID_STR_DS_ITEM_0137" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_137</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - reducing agent tank sensor not availability diagnosis 1 -->
+			<data_stream ID="138" caption="ID_STR_DS_ITEM_0138" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_138</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - reducing agent tank sensor not availability diagnosis 1 -->
+			<data_stream ID="139" caption="ID_STR_DS_ITEM_0139" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_139</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - reducing agent level stuck diagnosis -->
+			<data_stream ID="140" caption="ID_STR_DS_ITEM_0140" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_140</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - reducing agent level stuck diagnosis -->
+			<data_stream ID="141" caption="ID_STR_DS_ITEM_0141" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_141</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Numerator - reducing agent level stuck diagnosis 1 -->
+			<data_stream ID="142" caption="ID_STR_DS_ITEM_0142" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_142</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Denominator - reducing agent level stuck diagnosis 1 -->
+			<data_stream ID="143" caption="ID_STR_DS_ITEM_0143" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_143</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Within one driving cycle consumed reducing agent quantity for enviromental data -->
+			<data_stream ID="144" caption="ID_STR_DS_ITEM_0144" unit="mg" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_144</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*16</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Overall consumed reducing agent quantity with High Resolution -->
+			<data_stream ID="145" caption="ID_STR_DS_ITEM_0145" unit="g" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_145</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)*0.001</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- Volume of the reducing agent pump per stroke filtered and normalized -->
+			<data_stream ID="146" caption="ID_STR_DS_ITEM_0146" unit="μl" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_146</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+		</group>
+	</data_stream_lib>
+	<switchs>
+		<!-- 00:Stop position (not used) 01:Inizialization (Key-Off) 02:Accessory position 04:Run position (Key-On) 05:Cranking position 07:Signal not Available 其他:-  -->
+		<switch ID="0">
+			<case value="0x00">ID_DS_STRING_000</case>
+			<case value="0x01">ID_DS_STRING_001</case>
+			<case value="0x02">ID_DS_STRING_002</case>
+			<case value="0x04">ID_DS_STRING_003</case>
+			<case value="0x05">ID_DS_STRING_004</case>
+			<case value="0x07">ID_DS_STRING_005</case>
+			<default>ID_DS_STRING_006</default>
+		</switch>
+		<!-- 00:Engine off 01:Cranking 02:Unused 03:Engine in Idle 04:Engine Running(no overspeed limitation activated) 05:Engine overspeed conditions reached 06:Unused 0F:Signal not Available 其他:-  -->
+		<switch ID="1">
+			<case value="0x00">ID_DS_STRING_007</case>
+			<case value="0x01">ID_DS_STRING_008</case>
+			<case value="0x02">ID_DS_STRING_009</case>
+			<case value="0x03">ID_DS_STRING_010</case>
+			<case value="0x04">ID_DS_STRING_011</case>
+			<case value="0x05">ID_DS_STRING_012</case>
+			<case value="0x06">ID_DS_STRING_009</case>
+			<case value="0x0F">ID_DS_STRING_005</case>
+			<default>ID_DS_STRING_006</default>
+		</switch>
+		<!-- 00:Urea Tank Heater Not Active 01:Urea Tank Heater Active 其他:-  -->
+		<switch ID="2">
+			<case value="0x00">ID_DS_STRING_013</case>
+			<case value="0x01">ID_DS_STRING_014</case>
+			<default>ID_DS_STRING_006</default>
+		</switch>
+		<!-- 00:Urea Tube Heater Not Active 01:Urea Tube Heater Active 其他:-  -->
+		<switch ID="3">
+			<case value="0x00">ID_DS_STRING_015</case>
+			<case value="0x01">ID_DS_STRING_016</case>
+			<default>ID_DS_STRING_006</default>
+		</switch>
+		<!-- 00:Supply System not Enabled 01:Supply System Enabled 其他:-  -->
+		<switch ID="4">
+			<case value="0x00">ID_DS_STRING_017</case>
+			<case value="0x01">ID_DS_STRING_018</case>
+			<default>ID_DS_STRING_006</default>
+		</switch>
+		<!-- 00:MIL on not request 01:MIL on request 其他:-  -->
+		<switch ID="5">
+			<case value="0x00">ID_DS_STRING_019</case>
+			<case value="0x01">ID_DS_STRING_020</case>
+			<default>ID_DS_STRING_006</default>
+		</switch>
+		<!-- 00:Pawer latch phase not active 01:Pawer latch phase active 其他:-  -->
+		<switch ID="6">
+			<case value="0x00">ID_DS_STRING_021</case>
+			<case value="0x01">ID_DS_STRING_022</case>
+			<default>ID_DS_STRING_006</default>
+		</switch>
+		<!-- 00:Not Valid 01:Valid 其他:-  -->
+		<switch ID="7">
+			<case value="0x00">ID_DS_STRING_023</case>
+			<case value="0x01">ID_DS_STRING_024</case>
+			<default>ID_DS_STRING_006</default>
+		</switch>
+		<!-- 00:Not Frozen 01:Frozen 其他:-  -->
+		<switch ID="8">
+			<case value="0x00">ID_DS_STRING_025</case>
+			<case value="0x01">ID_DS_STRING_026</case>
+			<default>ID_DS_STRING_006</default>
+		</switch>
+		<!-- 00:Refill not detected 01:Refill detected 其他:-  -->
+		<switch ID="9">
+			<case value="0x00">ID_DS_STRING_027</case>
+			<case value="0x01">ID_DS_STRING_028</case>
+			<default>ID_DS_STRING_006</default>
+		</switch>
+		<!-- 00:ES_ON 01:ASYN_ON 02:SYN_ON 03:SYN_OFF 04:PWL 05:WAIT 06:DEAC 其他:-  -->
+		<switch ID="10">
+			<case value="0x00">ID_DS_STRING_029</case>
+			<case value="0x01">ID_DS_STRING_030</case>
+			<case value="0x02">ID_DS_STRING_031</case>
+			<case value="0x03">ID_DS_STRING_032</case>
+			<case value="0x04">ID_DS_STRING_033</case>
+			<case value="0x05">ID_DS_STRING_034</case>
+			<case value="0x06">ID_DS_STRING_035</case>
+			<default>ID_DS_STRING_006</default>
+		</switch>
+		<!-- 00:power latch is not successful 01:power latch is not successful 其他:-  -->
+		<switch ID="11">
+			<case value="0x00">ID_DS_STRING_036</case>
+			<case value="0x01">ID_DS_STRING_036</case>
+			<default>ID_DS_STRING_006</default>
+		</switch>
+		<!-- 00:injector protection not active 01:injector protection active 其他:-  -->
+		<switch ID="12">
+			<case value="0x00">ID_DS_STRING_037</case>
+			<case value="0x01">ID_DS_STRING_038</case>
+			<default>ID_DS_STRING_006</default>
+		</switch>
+		<!-- 00:Driver warning and inducement not active 01:Driver warning and inducement not active 其他:-  -->
+		<switch ID="13">
+			<case value="0x00">ID_DS_STRING_039</case>
+			<case value="0x01">ID_DS_STRING_039</case>
+			<default>ID_DS_STRING_006</default>
+		</switch>
+		<!-- 00:First reducing agent refilling of the system not completed 01:First reducing agent refilling of the system not completed 其他:-  -->
+		<switch ID="14">
+			<case value="0x00">ID_DS_STRING_040</case>
+			<case value="0x01">ID_DS_STRING_040</case>
+			<default>ID_DS_STRING_006</default>
+		</switch>
+		<!-- 00:Injector heating is not active 01:Injector heating is active 其他:-  -->
+		<switch ID="15">
+			<case value="0x00">ID_DS_STRING_041</case>
+			<case value="0x01">ID_DS_STRING_042</case>
+			<default>ID_DS_STRING_006</default>
+		</switch>
+	</switchs>
+</root>

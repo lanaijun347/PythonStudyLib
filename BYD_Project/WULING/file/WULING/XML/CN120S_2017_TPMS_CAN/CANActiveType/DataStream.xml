@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0">
+	<function ID="ID_FUNCTION_DATASTREAM">
+		<!--选择数据流，并把选择的数据流ID保存到ui_data_buffer中-->
+		<show label="" type="data_stream_select">
+			<param type="function" value="ID_FUNCTION_READ_DATASTREAM"/>
+			<param label="data_stream_id" type="ui_data_buffer" value=""/>
+			<param label="GROUP" type="string" value="0,1"/>
+		</show>
+	</function>
+	<function ID="ID_FUNCTION_READ_DATASTREAM">
+		<call_protocol label="data_stream" function="read_data_stream">
+			<param type="ui_data_buffer" value="data_stream_id"/>
+		</call_protocol>
+		<judge_tip_jump use_label="data_stream"/>
+		<show label="" type="read_data_stream">
+			<param type="protocol_data" value="data_stream"/>
+		</show>
+	</function>
+	<data_stream_lib>
+		<!-- 传感器ID -->
+		<group ID="0" caption="ID_STR_DS_GROUP_00">
+			<!-- 左前胎压传感器ID -->
+			<data_stream ID="0" caption="ID_STR_DS_ITEM_0000" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula></formula>
+				</caculate>
+				<!--显示控制-->
+				<format>HEX</format>
+			</data_stream>
+			<!-- 右前胎压传感器ID -->
+			<data_stream ID="1" caption="ID_STR_DS_ITEM_0001" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>7</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula></formula>
+				</caculate>
+				<!--显示控制-->
+				<format>HEX</format>
+			</data_stream>
+			<!-- 左后胎压传感器ID -->
+			<data_stream ID="2" caption="ID_STR_DS_ITEM_0002" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>11</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula></formula>
+				</caculate>
+				<!--显示控制-->
+				<format>HEX</format>
+			</data_stream>
+			<!-- 右后胎压传感器ID -->
+			<data_stream ID="3" caption="ID_STR_DS_ITEM_0003" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>15</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula></formula>
+				</caculate>
+				<!--显示控制-->
+				<format>HEX</format>
+			</data_stream>
+		</group>
+		<!-- 胎压和胎温 -->
+		<group ID="1" caption="ID_STR_DS_GROUP_01">
+			<!-- 左前轮胎气压 -->
+			<data_stream ID="4" caption="ID_STR_DS_ITEM_0004" unit="kPa" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1.38</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 右前轮胎气压 -->
+			<data_stream ID="5" caption="ID_STR_DS_ITEM_0005" unit="kPa" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_000</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1.38</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 左后轮胎气压 -->
+			<data_stream ID="6" caption="ID_STR_DS_ITEM_0006" unit="kPa" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_000</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1.38</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 右后轮胎气压 -->
+			<data_stream ID="7" caption="ID_STR_DS_ITEM_0007" unit="kPa" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_000</command_id>
+				<valid_byte_offset>6</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1.38</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 左前轮胎温度 -->
+			<data_stream ID="8" caption="ID_STR_DS_ITEM_0008" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.65-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 右前轮胎温度 -->
+			<data_stream ID="9" caption="ID_STR_DS_ITEM_0009" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_001</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.65-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 左后轮胎温度 -->
+			<data_stream ID="10" caption="ID_STR_DS_ITEM_0010" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_001</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.65-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 右后轮胎温度 -->
+			<data_stream ID="11" caption="ID_STR_DS_ITEM_0011" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_001</command_id>
+				<valid_byte_offset>6</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.65-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+		</group>
+	</data_stream_lib>
+	<switchs/>
+</root>

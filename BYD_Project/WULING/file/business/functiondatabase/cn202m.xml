@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VehicleFunctionConfig>
+	<Domain Name="Advance" Type="0">
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_CSM_CN202M" />     
+			<ProcessUnit Name="Refresh_GW_HD" />
+			<ProcessUnit Name="Refresh_PEPS_NAEN" />
+			<ProcessUnit Name="Refresh_CVT_PIN" />
+			<ProcessUnit Name="Refresh_ECM_UAES_MT_G6" />
+			<ProcessUnit Name="Refresh_IC_BOSCH" />
+			<ProcessUnit Name="Refresh_RSM" />
+			<ProcessUnit Name="Refresh_SMM_CN202M" />
+			<ProcessUnit Name="Refresh_BCM_UAES_210" />
+			<ProcessUnit Name="Refresh_ECM_Con_G6" />
+		</ProcessGroup>		
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="ABSOLConfiguration_IN" />
+			<ProcessUnit Name="EPSOLConfiguration_C101" />
+			<ProcessUnit Name="BCMOLConfiguration_C101" />
+			<ProcessUnit Name="TPMSConfiguration" />
+			<ProcessUnit Name="SDMOnlineConfiguration" />
+			<ProcessUnit Name="GWOnlineConfiguration" />
+			<ProcessUnit Name="ICOnlineConfiguration" />
+			<ProcessUnit Name="T-ICEOnlineConfiguration" />
+			<ProcessUnit Name="ICEOnlineConfiguration" />
+			<ProcessUnit Name="TBOXOnlineConfiguration" />
+			<ProcessUnit Name="RSMOnlineConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="Calibration" LD="Proc_Calibration" Type="Calibration" Lv="1">
+			<ProcessUnit Name="ESPYawRateSensorCalibration" />			
+			<ProcessUnit Name="DV360Calibration_CN210S" />
+			<ProcessUnit Name="SCUCalibration" />
+		</ProcessGroup>
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN" />
+		</ProcessGroup>
+		<ProcessGroup Name="IMMO" LD="Proc_IMMO" Type="IMMO" Lv="1">
+			<ProcessUnit Name="IMMO" />
+		</ProcessGroup>
+		<ProcessGroup Name="PEPSConfiguration" LD="Proc_PEPSConfiguration" Type="PEPSConfiguration" Lv="1">
+			<ProcessUnit Name="PEPSConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="ZeroPositionLearning" LD="Proc_ZeroPositionLearning" Type="ZeroPositionLearning" Lv="1">
+			<ProcessUnit Name="ZeroPositionLearning_NAI" />
+		</ProcessGroup>
+		<ProcessGroup Name="Replace" LD="Proc_Replace" Type="Replace" Lv="1">
+			<ProcessUnit Name="ReplaceTBOX" />
+			<ProcessUnit Name="ReplaceTICE_202S" />
+			<ProcessUnit Name="ReplaceTCM" />
+		</ProcessGroup>
+		<ProcessGroup Name="AftermarketTesting" LD="Proc_AftermarketTesting" Type="AftermarketTesting" Lv="1">
+			<ProcessUnit Name="RSMInstructions" />
+			<ProcessUnit Name="CSMInstructions" />
+		</ProcessGroup>
+		<ProcessGroup Name="VTWrite" LD="Proc_VTWrite" Type="VTWrite" Lv="1">
+			<ProcessUnit Name="BCMWrite" />
+		</ProcessGroup>
+		<ProcessGroup Name="Learning" LD="Proc_Learning" Type="Learning" Lv="1">
+			<ProcessUnit Name="VVTLearning" />
+		</ProcessGroup>
+		<ProcessGroup Name="EPBRepair" LD="Proc_EPBRepair" Type="Repair" Lv="1">
+			<ProcessUnit Name="EPBRepair_ABS" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Code" Value="CN202M_N15T_2019_ECM_CAN" />
+		</Conditions>
+		<ProcessGroup Name="Learning" LD="Proc_Learning" Type="Learning" Lv="1">
+			<ProcessUnit Name="ThrottleLearning" />
+		</ProcessGroup>
+	</Domain>
+	<Data Name="TPMSCFGDATA">
+		<TyreSize Name="225/55R17" Value="A7A74646" />
+		<TyreSize Name="215/55R16" Value="A7B64637" />
+	</Data>
+</VehicleFunctionConfig>

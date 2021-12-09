@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ECUConfig>
+  <SAConfig Platform="Default">
+    <SALevels>
+      <SALevel SubFunc="01" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="39DA1B3C" />
+      <SALevel SubFunc="05" DllName="CN210S_BCM.dll" Type="SA_TYPE_SATURN" Mask="39DA1B3C" />
+      <SALevel SubFunc="07" DllName="CN200_IMMO.dll" Type="SA_TYPE_SATURN" Mask="6267027CA0" />
+      <SALevel SubFunc="09" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="2ab23cda" />
+      <SALevel SubFunc="0A" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="2ab23cda" />
+    </SALevels>
+  </SAConfig>
+</ECUConfig>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0">
+	<DTC_configs>
+		<DTC_config ID="0" template_number="0">
+			<!--有效回复中保存DTC起始偏移，从SID回复开始-->
+			<DTC_start_offset>3</DTC_start_offset>
+			<!--命令中几个字节表示一个故障码-->
+			<DTC_bytes_in_cmd>4</DTC_bytes_in_cmd>
+			<!--故障码状态在一个完整故障码中的偏移-->
+			<status_offset>3</status_offset>
+			<!--一个故障码需要显示几个字节-->
+			<DTC_bytes_in_display>3</DTC_bytes_in_display>
+			<!--当前故障码mask-->
+			<current_DTC_mask>0</current_DTC_mask>
+			<!--历史故障码mask-->
+			<history_DTC_mask>0</history_DTC_mask>
+		</DTC_config>
+	</DTC_configs>
+	<function ID="ID_FUNCTION_READ_DTC">
+		<!--显示"正在读取故障码"提示-->
+		<dlg label="wait_dlg" type="wait_dlg" caption="ID_STR_CAPTION" note="ID_STR_TIP_READ_DTC"/>
+		<call_protocol label="read_current_Dtc" function="read_current_Dtc">
+			<param type="DTC_config_ID" value="0"/>
+			<param type="DTC_config_template_number" value="0"/>
+			<param type="command" value="RDTC_CMD_00_000"/>
+		</call_protocol>
+		<close label="" use_label="wait_dlg"/>
+		<judge_tip_jump label="" use_label="read_current_Dtc"/>
+		<show type="show_dtc">
+			<param type="protocol_data" value="read_current_Dtc"/>
+		</show>
+		<return label="return"/>
+	</function>
+	<function ID="ID_FUNCTION_CLEAR_DTC">
+		<dlg label="yes|no" type="yes|no" caption="ID_STR_CAPTION" note="ID_STR_TIP_IF_CLEAR_DTC" yes_jump="wait_dlg" no_jump="return"/>
+		<dlg label="wait_dlg" type="wait_dlg" caption="ID_STR_CAPTION" note="ID_STR_TIP_CLEAR_DTC"/>
+		<call_protocol label="clear_Dtc" function="clear_Dtc">
+			<param type="command" value="CDTC_CMD_00_000"/>
+		</call_protocol>
+		<close label="" use_label="wait_dlg"/>
+		<judge_tip_jump label="" use_label="clear_Dtc"/>
+		<dlg label="yes|no" type="yes|no" caption="ID_STR_CAPTION" note="ID_STR_CLEAR_DTC_SUCCESS" yes_jump="read_current_Dtc_jump" no_jump="return"/>
+		<call_function label="read_current_Dtc_jump" function="ID_FUNCTION_READ_DTC"/>
+		<return label="return"/>
+	</function>
+	<DTC_lib>
+		<!--公共码库(name:码库名称,path:码库路径)-->
+		<public_lib name="public_dtc_lib.xml" path="DTC_lib"/>
+		<!--系统私有码库(name:码库名称,path:码库路径)-->
+		<private_lib name="ALLDTCCODE.xml" path="DTC_lib/DTC"/>
+	</DTC_lib>
+</root>

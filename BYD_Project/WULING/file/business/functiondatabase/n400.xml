@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VehicleFunctionConfig>
+	<Domain Name="Advance" Type="0">
+        <ProcessGroup Name="ZeroPositionLearning" LD="Proc_ZeroPositionLearning" Type="ZeroPositionLearning" Lv="1">
+			<ProcessUnit Name="ZeroPositionLearning_NAI_NoTest" />
+		</ProcessGroup>
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="SDMConfiguration" />
+		</ProcessGroup>
+	</Domain>	
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="1.5L" />
+		</Conditions>
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN_15T" />
+		</ProcessGroup>
+		<ProcessGroup Name="RKE" LD="Proc_RKE" Type="RKE" Lv="1">
+			<ProcessUnit Name="RKE" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="1.8L" /> 
+		</Conditions>
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN" />
+		</ProcessGroup>
+		<ProcessGroup Name="RKE_N400" LD="Proc_RKE_N400" Type="RKE" Lv="1">
+			<ProcessUnit Name="RKE_N400" />
+		</ProcessGroup>
+	</Domain>
+</VehicleFunctionConfig>

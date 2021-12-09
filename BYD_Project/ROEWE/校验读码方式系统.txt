@@ -1,0 +1,45 @@
+校验读码  case 2 -- >350\EMS (发动机管理系统)\00004038
+350-ETC (电子空调)00004037-->未编写该读码方式 case 20 return_dtc_case_str.py
+ROEWE 750-IPK (仪表单元)000040EA-->未编写该读码方式 case 4 return_dtc_case_str.py
+ROEWE 750-RS (雨量传感器)000040F0-->未编写该读码方式 case 5 return_dtc_case_str.py                                                 
+ROEWE 750-SM (带记忆的座椅模块)000040F1-->未编写该读码方式 case 19 return_dtc_case_str.py
+W5-BCM (车身控制模块 3.2T)000042B6-->未编写该读码方式 case 19 return_dtc_case_str.py   ***  没有激活，关注
+ROEWE 750-ATC (空调系统)000040F2-->未编写该读码方式 case 3 return_dtc_case_str.py
+MG7 (2009)-FLSM (左前智能电机模块)000040C5-->未编写该读码方式 case 3 return_dtc_case_str.py
+ROEWE 750-BCM (车身控制模块)000040E7-->未编写该读码方式 case 6 return_dtc_case_str.py
+ROEWE 750-EMS (发动机管理系统)000040EC-->未编写该读码方式 case 14 return_dtc_case_str.py
+ROEWE 750-TCM (波箱控制模块)000040EE-->未编写该读码方式 case 18 return_dtc_case_str.py
+NEW 750-SRS (安全气囊系统)000040F8-->未编写该读码方式 case 22 return_dtc_case_str.py
+550-PDC (泊车辅助系统)00004152-->未编写该读码方式 case 21 return_dtc_case_str.py
+MG3-TCM (波箱控制模块)000040BB-->未编写该读码方式 case 15 return_dtc_case_str.py
+MG7 (2008)-ATC (空调系统)000040B5-->未编写该读码方式 case 8 return_dtc_case_str.py
+
+
+
+550-SDM (安全气囊系统)00004159-->未编写该读码方式 case 1 return_dtc_case_str.py
+W5-TCM (波箱控制模块)0000419C-->未编写该读码方式 case 1 return_dtc_case_str.py
+MG6-SRS (安全气囊系统)00004179-->未编写该读码方式 case 1 return_dtc_case_str.py
+
+
+
+MG7 (2008)-ABS (汽车防抱死制动系统)000040B1-->未编写该读码方式 case 1 return_dtc_case_str.py
+MG7 (2008)-ABS (汽车防抱死制动系统)000040B2-->未编写该读码方式 case 1 return_dtc_case_str.py
+MG7 (2009)-GIM (网关防盗模块)000040CC-->未编写该读码方式 case 1 return_dtc_case_str.py
+MG7 (2009)-ABS (汽车防抱死制动系统)000040BF-->未编写该读码方式 case 1 return_dtc_case_str.py
+MG7 (2009)-ESP (电子稳定系统)000040C1-->未编写该读码方式 case 1 return_dtc_case_str.py
+MG3 Zero-RLS (雨量_光亮传感器)000041A5-->未编写该读码方式 case 1 return_dtc_case_str.py
+MG3 Zero-EMS (发动机管理系统)000041A1-->未编写该读码方式 case 1 return_dtc_case_str.py
+
+
+
+
+W5-SRS (安全气囊系统)0000419A-->没有激活命令...
+W5-TCCU (分动箱控制单元)0000419B-->没有激活命令...
+W5-BCM (车身控制模块 3.2T)000042B6-->没有激活命令...
+MG7 (2009)\ABS (汽车防抱死制动系统)--> 多版本号，两种协议（KWP2000， CAN）
+
+
+MG3-EMS (发动机管理系统)000040B8-->'MG3EngPassWord' 请确认该加密命令...
+
+NEW 550 HYBRID-MBB (电池监控模块)00004113-->没有激活命令...    X431 进不去
+NEW 550 HYBRID-CSM (电流传感器模块)00004114-->没有激活命令...  X431 进不去

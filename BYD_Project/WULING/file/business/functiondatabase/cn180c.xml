@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VehicleFunctionConfig>
+	<Domain Name="Advance">
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_CON_Single" />
+			<ProcessUnit Name="Refresh_ECM_UAES_B15D" />
+			<ProcessUnit Name="Refresh_ECM_UAES_N12A" />
+			<ProcessUnit Name="Refresh_BCM_UAES_FT1" />
+			<ProcessUnit Name="Refresh_ECM_Con_2FILE" />
+		</ProcessGroup>
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN" />
+		</ProcessGroup>
+		<ProcessGroup Name="IMMO" LD="Proc_IMMO" Type="IMMO" Lv="1">
+			<ProcessUnit Name="IMMO" />
+		</ProcessGroup>
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="BCMOLConfiguration" />
+			<ProcessUnit Name="EPSOLConfiguration" />
+			<ProcessUnit Name="ABSOLConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="ZeroPositionLearning" LD="Proc_ZeroPositionLearning" Type="ZeroPositionLearning" Lv="1">
+			<ProcessUnit Name="ZeroPositionLearning_Long" />
+			<ProcessUnit Name="ZeroPositionLearning_Dong" />
+		</ProcessGroup>
+		<ProcessGroup Name="Calibration" LD="Proc_Calibration" Type="Calibration" Lv="1">
+			<ProcessUnit Name="ESPYawRateSensorCalibration" />
+		</ProcessGroup>
+		<ProcessGroup Name="Exhaust" LD="Proc_Exhaust" Type="Exhaust" Lv="1">
+			<ProcessUnit Name="Exhaust" LD="Proc_Exhaust" />
+		</ProcessGroup>
+		<ProcessGroup Name="DCTRoutineControl" LD="Proc_DCTRoutineControl" Type="DCTRoutineControl" Lv="1">
+			<ProcessUnit Name="DCTRoutineControl" />
+			<ProcessUnit Name="AMTRoutineControl" />
+		</ProcessGroup>
+		<ProcessGroup Name="ECMReset" LD="Proc_ECMSelfLearningValueClear" Type="Reset" Lv="1">
+		<ProcessUnit Name="ECMReset" />
+		</ProcessGroup>
+	</Domain>
+</VehicleFunctionConfig>

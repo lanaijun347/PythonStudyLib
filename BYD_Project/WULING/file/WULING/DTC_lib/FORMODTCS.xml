@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0">
+	<DTC_lib>
+		<link_file>Default.html</link_file>
+		<DTC ID="001100"     caption="P001100"    zh_CN="进气凸轮轴位置与VVT设定值偏移" en_US="wait translete"/>
+		<DTC ID="001400"     caption="P001400"    zh_CN="排气凸轮轴位置与VVT设定值偏移" en_US="wait translete"/>
+		<DTC ID="001600"     caption="P001600"    zh_CN="进气凸轮轴位置偏移" en_US="wait translete"/>
+		<DTC ID="001700"     caption="P001700"    zh_CN="排气凸轮轴位置偏移" en_US="wait translete"/>
+		<DTC ID="003000"     caption="P003000"    zh_CN="上游氧传感器加热器控制电路开路" en_US="wait translete"/>
+		<DTC ID="003100"     caption="P003100"    zh_CN="上游氧传感器加热器控制电路对地短路" en_US="wait translete"/>
+		<DTC ID="003200"     caption="P003200"    zh_CN="上游氧传感器加热器控制电路对电源短路" en_US="wait translete"/>
+		<DTC ID="003300"     caption="P003300"    zh_CN="增压器泄压阀开路" en_US="wait translete"/>
+		<DTC ID="003400"     caption="P003400"    zh_CN="增压器泄压阀对地短路" en_US="wait translete"/>
+		<DTC ID="003500"     caption="P003500"    zh_CN="增压器泄压阀对电源短路" en_US="wait translete"/>
+		<DTC ID="003700"     caption="P003700"    zh_CN="下游氧传感器加热器控制电路对地短路" en_US="wait translete"/>
+		<DTC ID="003800"     caption="P003800"    zh_CN="下游氧传感器加热器控制电路对电源短路" en_US="wait translete"/>
+		<DTC ID="003A00"     caption="P003A00"    zh_CN="增压器控制学习值过高" en_US="wait translete"/>
+		<DTC ID="003B00"     caption="P003B00"    zh_CN="增压器控制学习值过低" en_US="wait translete"/>
+		<DTC ID="004900"     caption="P004900"    zh_CN="增压器涡轮机超速" en_US="wait translete"/>
+		<DTC ID="007500"     caption="P007500"    zh_CN="进气VVT阀螺线管开路" en_US="wait translete"/>
+		<DTC ID="007600"     caption="P007600"    zh_CN="进气VVT阀螺线管对地短路" en_US="wait translete"/>
+		<DTC ID="007700"     caption="P007700"    zh_CN="进气VVT阀螺线管对电源短路" en_US="wait translete"/>
+		<DTC ID="007800"     caption="P007800"    zh_CN="排气VVT阀螺线管开路" en_US="wait translete"/>
+		<DTC ID="007900"     caption="P007900"    zh_CN="排气VVT阀螺线管对地短路" en_US="wait translete"/>
+		<DTC ID="008000"     caption="P008000"    zh_CN="排气VVT阀螺线管对电源短路" en_US="wait translete"/>
+		<DTC ID="010600"     caption="P010600"    zh_CN="进气岐管压力传感器信号不合理" en_US="wait translete"/>
+		<DTC ID="010700"     caption="P010700"    zh_CN="进气岐管压力传感器电路对地短路" en_US="wait translete"/>
+		<DTC ID="010800"     caption="P010800"    zh_CN="进气岐管压力传感器电路对电源短路" en_US="wait translete"/>
+		<DTC ID="011200"     caption="P011200"    zh_CN="进气温度传感器电路对地短路" en_US="wait translete"/>
+		<DTC ID="011300"     caption="P011300"    zh_CN="进气温度传感器电路对电源短路" en_US="wait translete"/>
+		<DTC ID="011700"     caption="P011700"    zh_CN="发动机冷却液温度传感器对地短路" en_US="wait translete"/>
+		<DTC ID="011800"     caption="P011800"    zh_CN="发动机冷却液温度传感器对电源短路或线路开路" en_US="wait translete"/>
+		<DTC ID="011900"     caption="P011900"    zh_CN="发动机冷却液温度传感器信号梯度故障" en_US="wait translete"/>
+		<DTC ID="012100"     caption="P012100"    zh_CN="节气门位置传感器1信号不合理" en_US="wait translete"/>
+		<DTC ID="012200"     caption="P012200"    zh_CN="节气门位置传感器1电压过低" en_US="wait translete"/>
+		<DTC ID="012300"     caption="P012300"    zh_CN="节气门位置传感器1电压过高" en_US="wait translete"/>
+		<DTC ID="013000"     caption="P013000"    zh_CN="上游氧传感器电路开路" en_US="wait translete"/>
+		<DTC ID="013100"     caption="P013100"    zh_CN="上游氧传感器线对地短路" en_US="wait translete"/>
+		<DTC ID="013200"     caption="P013200"    zh_CN="上游氧传感器线对电源短路" en_US="wait translete"/>
+		<DTC ID="013300"     caption="P013300"    zh_CN="上游氧传感器转换时间响应慢" en_US="wait translete"/>
+		<DTC ID="013400"     caption="P013400"    zh_CN="上游氧传感器未能准备完成" en_US="wait translete"/>
+		<DTC ID="013500"     caption="P013500"    zh_CN="上游氧传感器加热电路不合理" en_US="wait translete"/>
+		<DTC ID="013600"     caption="P013600"    zh_CN="下游氧传感器电路开路" en_US="wait translete"/>
+		<DTC ID="013700"     caption="P013700"    zh_CN="下游氧传感器线路对地短路" en_US="wait translete"/>
+		<DTC ID="013800"     caption="P013800"    zh_CN="下游氧传感器线路对电源短路" en_US="wait translete"/>
+		<DTC ID="013A00"     caption="P013A00"    zh_CN="下游氧传感器响应不合理" en_US="wait translete"/>
+		<DTC ID="014100"     caption="P014100"    zh_CN="下游氧传感器加热电路不合理" en_US="wait translete"/>
+		<DTC ID="014C00"     caption="P014C00"    zh_CN="上游氧传感器响应不合理" en_US="wait translete"/>
+		<DTC ID="017100"     caption="P017100"    zh_CN="燃油系统诊断过稀" en_US="wait translete"/>
+		<DTC ID="017200"     caption="P017200"    zh_CN="燃油系统诊断过浓" en_US="wait translete"/>
+		<DTC ID="020100"     caption="P020100"    zh_CN="一缸喷油器电路开路" en_US="wait translete"/>
+		<DTC ID="020200"     caption="P020200"    zh_CN="二缸喷油器电路开路" en_US="wait translete"/>
+		<DTC ID="020300"     caption="P020300"    zh_CN="三缸喷油器电路开路" en_US="wait translete"/>
+		<DTC ID="020400"     caption="P020400"    zh_CN="四缸喷油器电路开路" en_US="wait translete"/>
+		<DTC ID="022100"     caption="P022100"    zh_CN="节气门位置传感器2信号不合理" en_US="wait translete"/>
+		<DTC ID="022200"     caption="P022200"    zh_CN="节气门位置传感器2电压过低" en_US="wait translete"/>
+		<DTC ID="022300"     caption="P022300"    zh_CN="节气门位置传感器2电压过高" en_US="wait translete"/>
+		<DTC ID="023400"     caption="P023400"    zh_CN="增压压力过高" en_US="wait translete"/>
+		<DTC ID="023600"     caption="P023600"    zh_CN="增压压力不合理" en_US="wait translete"/>
+		<DTC ID="023700"     caption="P023700"    zh_CN="增压压力传感器对地短路" en_US="wait translete"/>
+		<DTC ID="023800"     caption="P023800"    zh_CN="增压压力传感器对电源短路" en_US="wait translete"/>
+		<DTC ID="024300"     caption="P024300"    zh_CN="增压器开路" en_US="wait translete"/>
+		<DTC ID="024500"     caption="P024500"    zh_CN="增压器对地短路" en_US="wait translete"/>
+		<DTC ID="024600"     caption="P024600"    zh_CN="增压器对电源短路" en_US="wait translete"/>
+		<DTC ID="026100"     caption="P026100"    zh_CN="一缸喷油器电路对地短路" en_US="wait translete"/>
+		<DTC ID="026200"     caption="P026200"    zh_CN="一缸喷油器电路对电源短路" en_US="wait translete"/>
+		<DTC ID="026400"     caption="P026400"    zh_CN="二缸喷油器电路对地短路" en_US="wait translete"/>
+		<DTC ID="026500"     caption="P026500"    zh_CN="二缸喷油器电路对电源短路" en_US="wait translete"/>
+		<DTC ID="026700"     caption="P026700"    zh_CN="三缸喷油器电路对地短路" en_US="wait translete"/>
+		<DTC ID="026800"     caption="P026800"    zh_CN="三缸喷油器电路对电源短路" en_US="wait translete"/>
+		<DTC ID="027000"     caption="P027000"    zh_CN="四缸喷油器电路对地短路" en_US="wait translete"/>
+		<DTC ID="027100"     caption="P027100"    zh_CN="四缸喷油器电路对电源短路" en_US="wait translete"/>
+		<DTC ID="029900"     caption="P029900"    zh_CN="增压压力过低" en_US="wait translete"/>
+		<DTC ID="030000"     caption="P030000"    zh_CN="多次失火" en_US="wait translete"/>
+		<DTC ID="030100"     caption="P030100"    zh_CN="1 缸失火" en_US="wait translete"/>
+		<DTC ID="030200"     caption="P030200"    zh_CN="2 缸失火" en_US="wait translete"/>
+		<DTC ID="030300"     caption="P030300"    zh_CN="3 缸失火" en_US="wait translete"/>
+		<DTC ID="030400"     caption="P030400"    zh_CN="4 缸失火" en_US="wait translete"/>
+		<DTC ID="031500"     caption="P031500"    zh_CN="飞轮自适应周期时间处于极限" en_US="wait translete"/>
+		<DTC ID="032400"     caption="P032400"    zh_CN="爆震传感器故障-信号拾取故障" en_US="wait translete"/>
+		<DTC ID="032500"     caption="P032500"    zh_CN="爆震传感器故障-信号绝对值错误" en_US="wait translete"/>
+		<DTC ID="032600"     caption="P032600"    zh_CN="爆震传感器故障-信号相对值错误" en_US="wait translete"/>
+		<DTC ID="033500"     caption="P033500"    zh_CN="曲轴传感器无信号" en_US="wait translete"/>
+		<DTC ID="033600"     caption="P033600"    zh_CN="曲轴传感器信号不合理" en_US="wait translete"/>
+		<DTC ID="033900"     caption="P033900"    zh_CN="曲轴传感器信号失去同步" en_US="wait translete"/>
+		<DTC ID="034000"     caption="P034000"    zh_CN="进气凸轮轴位置同步信号不合理" en_US="wait translete"/>
+		<DTC ID="034100"     caption="P034100"    zh_CN="进气凸轮轴位置相对曲轴同步信号不合理" en_US="wait translete"/>
+		<DTC ID="034400"     caption="P034400"    zh_CN="进气凸轮轴位置传感器信号周期超限" en_US="wait translete"/>
+		<DTC ID="035100"     caption="P035100"    zh_CN="1缸点火线圈开路" en_US="wait translete"/>
+		<DTC ID="035200"     caption="P035200"    zh_CN="2缸点火线圈开路" en_US="wait translete"/>
+		<DTC ID="035300"     caption="P035300"    zh_CN="3缸点火线圈开路" en_US="wait translete"/>
+		<DTC ID="035400"     caption="P035400"    zh_CN="4缸点火线圈开路" en_US="wait translete"/>
+		<DTC ID="036500"     caption="P036500"    zh_CN="排气凸轮轴位置同步信号不合理" en_US="wait translete"/>
+		<DTC ID="036600"     caption="P036600"    zh_CN="排气凸轮轴位置相对曲轴同步信号不合理" en_US="wait translete"/>
+		<DTC ID="036900"     caption="P036900"    zh_CN="排气凸轮轴位置传感器信号周期超限" en_US="wait translete"/>
+		<DTC ID="037300"     caption="P037300"    zh_CN="曲轴齿信号周期不合理" en_US="wait translete"/>
+		<DTC ID="040500"     caption="P040500"    zh_CN="Voltage of EGR valve actuator position sensor low" en_US="wait translete"/>
+		<DTC ID="040600"     caption="P040600"    zh_CN="Voltage of EGR valve actuator position sensor high" en_US="wait translete"/>
+		<DTC ID="042000"     caption="P042000"    zh_CN="催化剂转化效率过低" en_US="wait translete"/>
+		<DTC ID="044400"     caption="P044400"    zh_CN="碳罐控制阀电路开路" en_US="wait translete"/>
+		<DTC ID="045800"     caption="P045800"    zh_CN="碳罐控制阀电路对地短路" en_US="wait translete"/>
+		<DTC ID="045900"     caption="P045900"    zh_CN="碳罐控制阀电路对电源短路" en_US="wait translete"/>
+		<DTC ID="046200"     caption="P046200"    zh_CN="油位传感器对开路或对地短路" en_US="wait translete"/>
+		<DTC ID="046300"     caption="P046300"    zh_CN="油位传感器对电源短路" en_US="wait translete"/>
+		<DTC ID="048000"     caption="P048000"    zh_CN="冷却风扇继电器1线路开路" en_US="wait translete"/>
+		<DTC ID="048100"     caption="P048100"    zh_CN="冷却风扇继电器2线路开路" en_US="wait translete"/>
+		<DTC ID="048700"     caption="P048700"    zh_CN="EGR valve power stage diagnosis open circuit" en_US="wait translete"/>
+		<DTC ID="048800"     caption="P048800"    zh_CN="EGR position control error" en_US="wait translete"/>
+		<DTC ID="048900"     caption="P048900"    zh_CN="EGR valve power stage diagonsis short circuit ground" en_US="wait translete"/>
+		<DTC ID="049000"     caption="P049000"    zh_CN="EGR valve power stage diagnosis short circuit plus" en_US="wait translete"/>
+		<DTC ID="050000"     caption="P050000"    zh_CN="轮速传感器信号不合理" en_US="wait translete"/>
+		<DTC ID="050400"     caption="P050400"    zh_CN="刹车灯和刹车信号相关性不合理" en_US="wait translete"/>
+		<DTC ID="050600"     caption="P050600"    zh_CN="怠速控制速度过低" en_US="wait translete"/>
+		<DTC ID="050700"     caption="P050700"    zh_CN="怠速控制速度过高" en_US="wait translete"/>
+		<DTC ID="053700"     caption="P053700"    zh_CN="空调蒸发器温度传感器对地短路" en_US="wait translete"/>
+		<DTC ID="053800"     caption="P053800"    zh_CN="空调蒸发器温度传感器对电源短路或线路开路" en_US="wait translete"/>
+		<DTC ID="056200"     caption="P056200"    zh_CN="电源电压过低" en_US="wait translete"/>
+		<DTC ID="056300"     caption="P056300"    zh_CN="电源电压过高" en_US="wait translete"/>
+		<DTC ID="056400"     caption="P056400"    zh_CN="巡航开关复位/打开按键卡死" en_US="wait translete"/>
+		<DTC ID="060600"     caption="P060600"    zh_CN="TLE8110芯片通讯故障" en_US="wait translete"/>
+		<DTC ID="060A00"     caption="P060A00"    zh_CN="监控故障" en_US="wait translete"/>
+		<DTC ID="060C00"     caption="P060C00"    zh_CN="主控制器的监控系统电压过低" en_US="wait translete"/>
+		<DTC ID="061A00"     caption="P061A00"    zh_CN="实际扭矩与计算扭矩偏差监控" en_US="wait translete"/>
+		<DTC ID="061B00"     caption="P061B00"    zh_CN="实际或需求扭矩高于允许值" en_US="wait translete"/>
+		<DTC ID="061C00"     caption="P061C00"    zh_CN="对发动机转速限制的监控故障" en_US="wait translete"/>
+		<DTC ID="062700"     caption="P062700"    zh_CN="油泵继电器线路开路" en_US="wait translete"/>
+		<DTC ID="062800"     caption="P062800"    zh_CN="油泵继电器线路对地短路" en_US="wait translete"/>
+		<DTC ID="062900"     caption="P062900"    zh_CN="油泵继电器线路对电源短路" en_US="wait translete"/>
+		<DTC ID="063000"     caption="P063000"    zh_CN="VIN码未写入" en_US="wait translete"/>
+		<DTC ID="063300"     caption="P063300"    zh_CN="ECU未写入防盗信息" en_US="wait translete"/>
+		<DTC ID="063800"     caption="P063800"    zh_CN="ETC_1位置控制器输出信号不合理" en_US="wait translete"/>
+		<DTC ID="063900"     caption="P063900"    zh_CN="ETC_2位置控制器输出信号不合理" en_US="wait translete"/>
+		<DTC ID="064200"     caption="P064200"    zh_CN="传感器电源电压1电路电压低" en_US="wait translete"/>
+		<DTC ID="064300"     caption="P064300"    zh_CN="传感器电源电压1电路电压高" en_US="wait translete"/>
+		<DTC ID="064500"     caption="P064500"    zh_CN="空调压缩机继电器线路开路" en_US="wait translete"/>
+		<DTC ID="064600"     caption="P064600"    zh_CN="空调压缩机继电器线路对地短路" en_US="wait translete"/>
+		<DTC ID="064700"     caption="P064700"    zh_CN="空调压缩机继电器线路对电源短路" en_US="wait translete"/>
+		<DTC ID="065200"     caption="P065200"    zh_CN="传感器电源电压2电路电压低" en_US="wait translete"/>
+		<DTC ID="065300"     caption="P065300"    zh_CN="传感器电源电压2电路电压高" en_US="wait translete"/>
+		<DTC ID="066000"     caption="P066000"    zh_CN="可变进气总管驱动电路开路" en_US="wait translete"/>
+		<DTC ID="066100"     caption="P066100"    zh_CN="可变进气总管驱动电路对地短路" en_US="wait translete"/>
+		<DTC ID="066200"     caption="P066200"    zh_CN="可变进气总管驱动电路对电源短路" en_US="wait translete"/>
+		<DTC ID="068500"     caption="P068500"    zh_CN="主继电器电路对地断路" en_US="wait translete"/>
+		<DTC ID="068600"     caption="P068600"    zh_CN="主继电器电路对地短路" en_US="wait translete"/>
+		<DTC ID="068700"     caption="P068700"    zh_CN="主继电器电路对电源短路" en_US="wait translete"/>
+		<DTC ID="069100"     caption="P069100"    zh_CN="冷却风扇继电器1线路对地短路" en_US="wait translete"/>
+		<DTC ID="069200"     caption="P069200"    zh_CN="冷却风扇继电器1线路对电源短路" en_US="wait translete"/>
+		<DTC ID="069300"     caption="P069300"    zh_CN="冷却风扇继电器2线路对地短路" en_US="wait translete"/>
+		<DTC ID="069400"     caption="P069400"    zh_CN="冷却风扇继电器2线路对电源短路" en_US="wait translete"/>
+		<DTC ID="06EF00"     caption="P06EF00"    zh_CN="发动机启动逻辑变量错误" en_US="wait translete"/>
+		<DTC ID="070000"     caption="P070000"    zh_CN="变速箱请求点亮MIL灯" en_US="wait translete"/>
+		<DTC ID="083100"     caption="P083100"    zh_CN="离合器传感器对地短路" en_US="wait translete"/>
+		<DTC ID="083200"     caption="P083200"    zh_CN="离合器传感器对电源短路" en_US="wait translete"/>
+		<DTC ID="100016"     caption="P100016"    zh_CN="电源电压过低" en_US="wait translete"/>
+		<DTC ID="100017"     caption="P100017"    zh_CN="电源电压过高" en_US="wait translete"/>
+		<DTC ID="100149"     caption="P100149"    zh_CN="5V OUT OF RANGE LCU" en_US="wait translete"/>
+		<DTC ID="100298"     caption="P100298"    zh_CN="OVERLOAD CL" en_US="wait translete"/>
+		<DTC ID="100398"     caption="P100398"    zh_CN="PRE OVERLOAD CL" en_US="wait translete"/>
+		<DTC ID="100498"     caption="P100498"    zh_CN="THERMO SHOCK CL" en_US="wait translete"/>
+		<DTC ID="100527"     caption="P100527"    zh_CN="INCR OUT OF RANGE LCU" en_US="wait translete"/>
+		<DTC ID="100698"     caption="P100698"    zh_CN="OVERLOAD EC MOT CL" en_US="wait translete"/>
+		<DTC ID="100792"     caption="P100792"    zh_CN="REFILL FAILED CL" en_US="wait translete"/>
+		<DTC ID="100871"     caption="P100871"    zh_CN="BLOCK DET CL" en_US="wait translete"/>
+		<DTC ID="10097A"     caption="P10097A"    zh_CN="LEAKAGE CL" en_US="wait translete"/>
+		<DTC ID="100A93"     caption="P100A93"    zh_CN="END OF LIFE CLUTCH" en_US="wait translete"/>
+		<DTC ID="100B54"     caption="P100B54"    zh_CN="END OF LINE INCOMPLETE" en_US="wait translete"/>
+		<DTC ID="100C79"     caption="P100C79"    zh_CN="POS OUT OF RANGE CL" en_US="wait translete"/>
+		<DTC ID="100D92"     caption="P100D92"    zh_CN="POWERHOLD ERR LCU" en_US="wait translete"/>
+		<DTC ID="100E29"     caption="P100E29"    zh_CN="TRAVEL OUT OF RANGE LCU" en_US="wait translete"/>
+		<DTC ID="100F62"     caption="P100F62"    zh_CN="IGNITION IMPLAUSIBLE" en_US="wait translete"/>
+		<DTC ID="101092"     caption="P101092"    zh_CN="LCU ON IGN OFF" en_US="wait translete"/>
+		<DTC ID="101197"     caption="P101197"    zh_CN="OVERPRESSURE CL" en_US="wait translete"/>
+		<DTC ID="101292"     caption="P101292"    zh_CN="OVSPD IPS" en_US="wait translete"/>
+		<DTC ID="101362"     caption="P101362"    zh_CN="CORR FAILED IPS OPS" en_US="wait translete"/>
+		<DTC ID="101497"     caption="P101497"    zh_CN="REFILL NOT PERfromED" en_US="wait translete"/>
+		<DTC ID="101597"     caption="P101597"    zh_CN="TARGET POS NOT REACHED" en_US="wait translete"/>
+		<DTC ID="101664"     caption="P101664"    zh_CN="SHIFT SIGNAL PLAUSIBILITY CHECK" en_US="wait translete"/>
+		<DTC ID="101782"     caption="P101782"    zh_CN="NO PRESS NO TRAVEL ACU" en_US="wait translete"/>
+		<DTC ID="101864"     caption="P101864"    zh_CN="GBPSELECT PLAUSIBILITY CHECK" en_US="wait translete"/>
+		<DTC ID="101964"     caption="P101964"    zh_CN="GBPSHIFT PLAUSIBILITY CHECK" en_US="wait translete"/>
+		<DTC ID="102064"     caption="P102064"    zh_CN="GRLSHIFT PLAUSIBILITY CHECK" en_US="wait translete"/>
+		<DTC ID="107055"     caption="P107055"    zh_CN="LCU SW VERIFICATION" en_US="wait translete"/>
+		<DTC ID="107277"     caption="P107277"    zh_CN="NOT OPENING AT DELAYED CREEPING" en_US="wait translete"/>
+		<DTC ID="107504"     caption="P107504"    zh_CN="TRQ REQ ABORTED" en_US="wait translete"/>
+		<DTC ID="107604"     caption="P107604"    zh_CN="STARTER RELEASE NOT ALLOWED" en_US="wait translete"/>
+		<DTC ID="109242"     caption="P109242"    zh_CN="MEMORY FAILURE" en_US="wait translete"/>
+		<DTC ID="109347"     caption="P109347"    zh_CN="ECC NOT ACTIVE" en_US="wait translete"/>
+		<DTC ID="109447"     caption="P109447"    zh_CN="SCM SOPC" en_US="wait translete"/>
+		<DTC ID="109547"     caption="P109547"    zh_CN="SCM ADC" en_US="wait translete"/>
+		<DTC ID="109647"     caption="P109647"    zh_CN="SCM MC TRAP" en_US="wait translete"/>
+		<DTC ID="109747"     caption="P109747"    zh_CN="SCM PFM" en_US="wait translete"/>
+		<DTC ID="109847"     caption="P109847"    zh_CN="SCM OS TASK NOK" en_US="wait translete"/>
+		<DTC ID="109947"     caption="P109947"    zh_CN="SCM RAM PROT" en_US="wait translete"/>
+		<DTC ID="109A47"     caption="P109A47"    zh_CN="SCM MU" en_US="wait translete"/>
+		<DTC ID="109B47"     caption="P109B47"    zh_CN="SCM HW PSBC" en_US="wait translete"/>
+		<DTC ID="109C47"     caption="P109C47"    zh_CN="SAFETY LIB ERR" en_US="wait translete"/>
+		<DTC ID="109D46"     caption="P109D46"    zh_CN="EEPROM FAILURE" en_US="wait translete"/>
+		<DTC ID="109E17"     caption="P109E17"    zh_CN="HALL SENS SUPP DIAG OV" en_US="wait translete"/>
+		<DTC ID="109F16"     caption="P109F16"    zh_CN="HALL SENS SUPP DIAG UV" en_US="wait translete"/>
+		<DTC ID="10A014"     caption="P10A014"    zh_CN="AD BRIDGE TEMP SCG" en_US="wait translete"/>
+		<DTC ID="10A112"     caption="P10A112"    zh_CN="AD BRIDGE TEMP SCB" en_US="wait translete"/>
+		<DTC ID="10A214"     caption="P10A214"    zh_CN="AD TEMP SCG" en_US="wait translete"/>
+		<DTC ID="10A312"     caption="P10A312"    zh_CN="AD TEMP SCB" en_US="wait translete"/>
+		<DTC ID="10A723"     caption="P10A723"    zh_CN="IPS STUCK LOW" en_US="wait translete"/>
+		<DTC ID="10AB64"     caption="P10AB64"    zh_CN="KL30 IMPLAUSIBLE" en_US="wait translete"/>
+		<DTC ID="10AC17"     caption="P10AC17"    zh_CN="KL30 OV SAFE STATE" en_US="wait translete"/>
+		<DTC ID="10AD17"     caption="P10AD17"    zh_CN="3V3 MC ERR" en_US="wait translete"/>
+		<DTC ID="10AE11"     caption="P10AE11"    zh_CN="GBPSELM STUCK LOW" en_US="wait translete"/>
+		<DTC ID="10AF12"     caption="P10AF12"    zh_CN="GBPSELM STUCK HIGH" en_US="wait translete"/>
+		<DTC ID="10B011"     caption="P10B011"    zh_CN="GBPSELR STUCK LOW" en_US="wait translete"/>
+		<DTC ID="10B112"     caption="P10B112"    zh_CN="GBPSELR STUCK HIGH" en_US="wait translete"/>
+		<DTC ID="10B211"     caption="P10B211"    zh_CN="GBPSHIFT STUCK LOW" en_US="wait translete"/>
+		<DTC ID="10B312"     caption="P10B312"    zh_CN="GBPSHIFT STUCK HIGH" en_US="wait translete"/>
+		<DTC ID="10B411"     caption="P10B411"    zh_CN="GRLSHIFT STUCK LOW" en_US="wait translete"/>
+		<DTC ID="10B512"     caption="P10B512"    zh_CN="GRLSHIFT STUCK HIGH" en_US="wait translete"/>
+		<DTC ID="10B633"     caption="P10B633"    zh_CN="GBPSELM DC TOO LOW" en_US="wait translete"/>
+		<DTC ID="10B735"     caption="P10B735"    zh_CN="GBPSELM DC TOO HIGH" en_US="wait translete"/>
+		<DTC ID="10B833"     caption="P10B833"    zh_CN="GBPSELR DC TOO LOW" en_US="wait translete"/>
+		<DTC ID="10B935"     caption="P10B935"    zh_CN="GBPSELR DC TOO HIGH" en_US="wait translete"/>
+		<DTC ID="10BA33"     caption="P10BA33"    zh_CN="GBPSHIFT DC TOO LOW" en_US="wait translete"/>
+		<DTC ID="10BB35"     caption="P10BB35"    zh_CN="GBPSHIFT DC TOO HIGH" en_US="wait translete"/>
+		<DTC ID="10BC33"     caption="P10BC33"    zh_CN="GRLSHIFT DC TOO LOW" en_US="wait translete"/>
+		<DTC ID="10BD35"     caption="P10BD35"    zh_CN="GRLSHIFT DC TOO HIGH" en_US="wait translete"/>
+		<DTC ID="10BE36"     caption="P10BE36"    zh_CN="GBPSELM FR TOO LOW" en_US="wait translete"/>
+		<DTC ID="10BF37"     caption="P10BF37"    zh_CN="GBPSELM FR TOO HIGH" en_US="wait translete"/>
+		<DTC ID="10C036"     caption="P10C036"    zh_CN="GBPSELR FR TOO LOW" en_US="wait translete"/>
+		<DTC ID="10C137"     caption="P10C137"    zh_CN="GBPSELR FR TOO HIGH" en_US="wait translete"/>
+		<DTC ID="10C236"     caption="P10C236"    zh_CN="GBPSHIFT FR TOO LOW" en_US="wait translete"/>
+		<DTC ID="10C337"     caption="P10C337"    zh_CN="GBPSHIFT FR TOO HIGH" en_US="wait translete"/>
+		<DTC ID="10C436"     caption="P10C436"    zh_CN="GRLSHIFT FR TOO LOW" en_US="wait translete"/>
+		<DTC ID="10C537"     caption="P10C537"    zh_CN="GRLSHIFT FR TOO HIGH" en_US="wait translete"/>
+		<DTC ID="10E081"     caption="P10E081"    zh_CN="ANGULAR SENS INVLDSIG LCU" en_US="wait translete"/>
+		<DTC ID="10E142"     caption="P10E142"    zh_CN="MICRO STATE INVALID LCU" en_US="wait translete"/>
+		<DTC ID="10E212"     caption="P10E212"    zh_CN="EMOT STG STB LCU" en_US="wait translete"/>
+		<DTC ID="10E316"     caption="P10E316"    zh_CN="EMOT UNDERVOLT BOTSTP LCU" en_US="wait translete"/>
+		<DTC ID="10E498"     caption="P10E498"    zh_CN="OVERTEMP SWMODEL LCU" en_US="wait translete"/>
+		<DTC ID="10E598"     caption="P10E598"    zh_CN="OVERTEMP BRIDGEB6 LCU" en_US="wait translete"/>
+		<DTC ID="10E61C"     caption="P10E61C"    zh_CN="UBAT INVALID SIG LCU" en_US="wait translete"/>
+		<DTC ID="10E74B"     caption="P10E74B"    zh_CN="PCBTEMPSENS INVLDSIG LCU" en_US="wait translete"/>
+		<DTC ID="10E829"     caption="P10E829"    zh_CN="PRESS SENS INVLDSIG LCU" en_US="wait translete"/>
+		<DTC ID="10E938"     caption="P10E938"    zh_CN="TRAVEL SENS INVLDSIG LCU" en_US="wait translete"/>
+		<DTC ID="10EA62"     caption="P10EA62"    zh_CN="ADC MICRO INVLDSIG LCU" en_US="wait translete"/>
+		<DTC ID="10EB16"     caption="P10EB16"    zh_CN="UBAT UNDERVOLT LCU" en_US="wait translete"/>
+		<DTC ID="165600"     caption="P165600"    zh_CN="工厂模式与客户模式(开启)" en_US="wait translete"/>
+		<DTC ID="166100"     caption="P166100"    zh_CN="ECU未写入防盗信息" en_US="wait translete"/>
+		<DTC ID="210000"     caption="P210000"    zh_CN="ETC电气故障开路" en_US="wait translete"/>
+		<DTC ID="210100"     caption="P210100"    zh_CN="ETC过热保护" en_US="wait translete"/>
+		<DTC ID="210200"     caption="P210200"    zh_CN="ETC电气故障短路" en_US="wait translete"/>
+		<DTC ID="211800"     caption="P211800"    zh_CN="节气门位置信号偏差过大" en_US="wait translete"/>
+		<DTC ID="212000"     caption="P212000"    zh_CN="油门踏板未联接诊断" en_US="wait translete"/>
+		<DTC ID="212200"     caption="P212200"    zh_CN="油门位置传感器1电压过低" en_US="wait translete"/>
+		<DTC ID="212300"     caption="P212300"    zh_CN="油门位置传感器1电压过高" en_US="wait translete"/>
+		<DTC ID="212700"     caption="P212700"    zh_CN="油门位置传感器2电压过低" en_US="wait translete"/>
+		<DTC ID="212800"     caption="P212800"    zh_CN="油门位置传感器2电压过高" en_US="wait translete"/>
+		<DTC ID="213500"     caption="P213500"    zh_CN="节气门位置传感器1/2电压相关性不合理" en_US="wait translete"/>
+		<DTC ID="213800"     caption="P213800"    zh_CN="油门位置传感器1/2电压相关性不合理" en_US="wait translete"/>
+		<DTC ID="215800"     caption="P215800"    zh_CN="轮速传感器信号不合理" en_US="wait translete"/>
+		<DTC ID="217600"     caption="P217600"    zh_CN="上截止位自学习弹簧故障" en_US="wait translete"/>
+		<DTC ID="222700"     caption="P222700"    zh_CN="大气压力传感器信号不合理" en_US="wait translete"/>
+		<DTC ID="226100"     caption="P226100"    zh_CN="增压器废气旁通阀控制故障" en_US="wait translete"/>
+		<DTC ID="226200"     caption="P226200"    zh_CN="增压器工作的临界压力过低" en_US="wait translete"/>
+		<DTC ID="229900"     caption="P229900"    zh_CN="刹车位置和油门踏板位置矛盾" en_US="wait translete"/>
+		<DTC ID="230000"     caption="P230000"    zh_CN="1缸点火线圈对地短路" en_US="wait translete"/>
+		<DTC ID="230100"     caption="P230100"    zh_CN="1缸点火线圈对电源短路" en_US="wait translete"/>
+		<DTC ID="230300"     caption="P230300"    zh_CN="2缸点火线圈对地短路" en_US="wait translete"/>
+		<DTC ID="230400"     caption="P230400"    zh_CN="2缸点火线圈对电源短路" en_US="wait translete"/>
+		<DTC ID="230600"     caption="P230600"    zh_CN="3缸点火线圈对地短路" en_US="wait translete"/>
+		<DTC ID="230700"     caption="P230700"    zh_CN="3缸点火线圈对电源短路" en_US="wait translete"/>
+		<DTC ID="230900"     caption="P230900"    zh_CN="4缸点火线圈对地短路" en_US="wait translete"/>
+		<DTC ID="231000"     caption="P231000"    zh_CN="4缸点火线圈对电源短路" en_US="wait translete"/>
+		<DTC ID="241300"     caption="P241300"    zh_CN="EGR阀位置自学习错误" en_US="wait translete"/>
+		<DTC ID="401004"     caption="C001004"    zh_CN="valve fault, inlet valve FL" en_US="wait translete"/>
+		<DTC ID="401104"     caption="C001104"    zh_CN="valve fault, outlet valve FL" en_US="wait translete"/>
+		<DTC ID="401404"     caption="C001404"    zh_CN="valve fault, inlet valve FR" en_US="wait translete"/>
+		<DTC ID="401504"     caption="C001504"    zh_CN="valve fault, outlet valve FR" en_US="wait translete"/>
+		<DTC ID="401804"     caption="C001804"    zh_CN="valve fault, inlet valve RL" en_US="wait translete"/>
+		<DTC ID="401904"     caption="C001904"    zh_CN="valve fault, outlet valve RL" en_US="wait translete"/>
+		<DTC ID="401C04"     caption="C001C04"    zh_CN="valve fault, inlet valve RR" en_US="wait translete"/>
+		<DTC ID="401D04"     caption="C001D04"    zh_CN="valve fault, outlet valve RR" en_US="wait translete"/>
+		<DTC ID="402004"     caption="C002004"    zh_CN="Return pump fault" en_US="wait translete"/>
+		<DTC ID="403108"     caption="C003108"    zh_CN="Wheel-speed sensor, front left: signal failure (out of range,  noise, Intermittent)" en_US="wait translete"/>
+		<DTC ID="403200"     caption="C003200"    zh_CN="Wheel-speed sensor, front left: Signal Line short to GND/Open;Supply Line open" en_US="wait translete"/>
+		<DTC ID="403408"     caption="C003408"    zh_CN="Wheel-speed sensor, front right:signal failure (out of range,  noise, Intermittent)" en_US="wait translete"/>
+		<DTC ID="403500"     caption="C003500"    zh_CN="Wheel-speed sensor, front right: Signal Line short to GND/Open;Supply Line open" en_US="wait translete"/>
+		<DTC ID="403708"     caption="C003708"    zh_CN="Wheel-speed sensor, rear left: signal failure (out of range,  noise, Intermittent)" en_US="wait translete"/>
+		<DTC ID="403800"     caption="C003800"    zh_CN="Wheel-speed sensor, rear left: Signal Line short to GND/Open;Supply Line open" en_US="wait translete"/>
+		<DTC ID="403A08"     caption="C003A08"    zh_CN="Wheel-speed sensor, rear right: signal failure (out of range,  noise, Intermittent)" en_US="wait translete"/>
+		<DTC ID="403B00"     caption="C003B00"    zh_CN="Wheel-speed sensor, rear right: Signal Line short to GND/Open;Supply Line open" en_US="wait translete"/>
+		<DTC ID="406B06"     caption="C006B06"    zh_CN="ABS/ESP implausible control (control time too long, etc.)" en_US="wait translete"/>
+		<DTC ID="407208"     caption="C007208"    zh_CN="General Valve fault (overheat protection, signal invalid, hardware fault )" en_US="wait translete"/>
+		<DTC ID="40A000"     caption="C00A000"    zh_CN="Wheel-speed sensor, front left: Supply Line short to GND" en_US="wait translete"/>
+		<DTC ID="40A100"     caption="C00A100"    zh_CN="Wheel-speed sensor, front left: Signal Line short to UBATT" en_US="wait translete"/>
+		<DTC ID="40A200"     caption="C00A200"    zh_CN="Wheel-speed sensor, front right: Supply Line short to GND" en_US="wait translete"/>
+		<DTC ID="40A300"     caption="C00A300"    zh_CN="Wheel-speed sensor, front right: Signal Line short to UBATT" en_US="wait translete"/>
+		<DTC ID="40A400"     caption="C00A400"    zh_CN="Wheel-speed sensor, rear left: Supply Line short to GND" en_US="wait translete"/>
+		<DTC ID="40A500"     caption="C00A500"    zh_CN="Wheel-speed sensor, rear left: Signal Line short to UBATT" en_US="wait translete"/>
+		<DTC ID="40A600"     caption="C00A600"    zh_CN="Wheel-speed sensor, rear right: Supply Line short to GND" en_US="wait translete"/>
+		<DTC ID="40A700"     caption="C00A700"    zh_CN="Wheel-speed sensor, rear right: Signal Line short to UBATT" en_US="wait translete"/>
+		<DTC ID="40A900"     caption="C00A900"    zh_CN="Wheel-speed sensor, front left: general error" en_US="wait translete"/>
+		<DTC ID="40AA00"     caption="C00AA00"    zh_CN="Wheel-speed sensor, front right: general error" en_US="wait translete"/>
+		<DTC ID="40AB00"     caption="C00AB00"    zh_CN="Wheel-speed sensor, rear left: general error" en_US="wait translete"/>
+		<DTC ID="40AC00"     caption="C00AC00"    zh_CN="Wheel-speed sensor, rear right: General error" en_US="wait translete"/>
+		<DTC ID="500004"     caption="C100004"    zh_CN="ECU error (hardware, Micro-controller error)" en_US="wait translete"/>
+		<DTC ID="500104"     caption="C100104"    zh_CN="CAN hardware error" en_US="wait translete"/>
+		<DTC ID="501008"     caption="C101008"    zh_CN="ECU error (general software problem)" en_US="wait translete"/>
+		<DTC ID="509504"     caption="C109504"    zh_CN="Valve relay error" en_US="wait translete"/>
+		<DTC ID="509904"     caption="C109904"    zh_CN="Wheel-speed sensor generic error (sensor swap, multiple sensors error )" en_US="wait translete"/>
+		<DTC ID="521208"     caption="C121208"    zh_CN="Variant Coding Error" en_US="wait translete"/>
+		<DTC ID="521308"     caption="C121308"    zh_CN="HW Code Block Error" en_US="wait translete"/>
+		<DTC ID="521343"     caption="C121343"    zh_CN="HW Code Mismatch Error" en_US="wait translete"/>
+		<DTC ID="521408"     caption="C121408"    zh_CN="Vehicle Type Block  Error" en_US="wait translete"/>
+		<DTC ID="521443"     caption="C121443"    zh_CN="Vehicle Type Mismatch Error" en_US="wait translete"/>
+		<DTC ID="590004"     caption="C190004"    zh_CN="ECU Voltage supply: high voltage" en_US="wait translete"/>
+		<DTC ID="590104"     caption="C190104"    zh_CN="ECU Voltage supply: low voltage" en_US="wait translete"/>
+		<DTC ID="900016"     caption="B100016"    zh_CN="电源电压低" en_US="wait translete"/>
+		<DTC ID="900017"     caption="B100017"    zh_CN="电源电压高" en_US="wait translete"/>
+		<DTC ID="900055"     caption="B100055"    zh_CN="射频芯片未配置或配置失败" en_US="wait translete"/>
+		<DTC ID="900116"     caption="B100116"    zh_CN="左前轮发射机电池电量低" en_US="wait translete"/>
+		<DTC ID="900131"     caption="B100131"    zh_CN="左前轮发射机丢失" en_US="wait translete"/>
+		<DTC ID="900216"     caption="B100216"    zh_CN="右前轮发射机电池电量低" en_US="wait translete"/>
+		<DTC ID="900231"     caption="B100231"    zh_CN="右前轮发射机丢失" en_US="wait translete"/>
+		<DTC ID="900316"     caption="B100316"    zh_CN="左后轮发射机电池电量低" en_US="wait translete"/>
+		<DTC ID="900331"     caption="B100331"    zh_CN="左后轮发射机丢失" en_US="wait translete"/>
+		<DTC ID="900416"     caption="B100416"    zh_CN="右后轮发射机电池电量低" en_US="wait translete"/>
+		<DTC ID="900431"     caption="B100431"    zh_CN="右后轮发射机丢失" en_US="wait translete"/>
+		<DTC ID="900555"     caption="B100555"    zh_CN="标准压力未配置" en_US="wait translete"/>
+		<DTC ID="900616"     caption="B100616"    zh_CN="输入电压低" en_US="wait translete"/>
+		<DTC ID="900617"     caption="B100617"    zh_CN="输入电压高" en_US="wait translete"/>
+		<DTC ID="900655"     caption="B100655"    zh_CN="高压报警补偿值未配置" en_US="wait translete"/>
+		<DTC ID="900754"     caption="B100754"    zh_CN="发射机未学习" en_US="wait translete"/>
+		<DTC ID="901300"     caption="B101300"    zh_CN="驾驶员前气囊点爆控制 电路对地短路" en_US="wait translete"/>
+		<DTC ID="901500"     caption="B101500"    zh_CN="副驾驶员前气囊点爆控制 电路对地短路" en_US="wait translete"/>
+		<DTC ID="902400"     caption="B102400"    zh_CN="驾驶员前气囊点爆控制 电路对电源短路" en_US="wait translete"/>
+		<DTC ID="902600"     caption="B102600"    zh_CN="副驾驶员前气囊点爆控制 电路对电源短路" en_US="wait translete"/>
+		<DTC ID="903500"     caption="B103500"    zh_CN="驾驶员前气囊点爆控制 电路电阻低于下限" en_US="wait translete"/>
+		<DTC ID="903700"     caption="B103700"    zh_CN="副驾驶员前气囊点爆控制 电路电阻低于下限" en_US="wait translete"/>
+		<DTC ID="904600"     caption="B104600"    zh_CN="驾驶员前气囊点爆控制 电路电阻高于上限" en_US="wait translete"/>
+		<DTC ID="904800"     caption="B104800"    zh_CN="副驾驶员前气囊点爆控制 电路电阻高于上限" en_US="wait translete"/>
+		<DTC ID="905A00"     caption="B105A00"    zh_CN="乘员负载检测开关 电路对电源短路或开路" en_US="wait translete"/>
+		<DTC ID="906400"     caption="B106400"    zh_CN="乘员负载检测开关 电路对地短路或短路或电阻范围错误" en_US="wait translete"/>
+		<DTC ID="908600"     caption="B108600"    zh_CN="供电电压 电路电压低于下限" en_US="wait translete"/>
+		<DTC ID="908700"     caption="B108700"    zh_CN="供电电压 电路电压高于上限" en_US="wait translete"/>
+		<DTC ID="908800"     caption="B108800"    zh_CN="ECU内部错误" en_US="wait translete"/>
+		<DTC ID="908900"     caption="B108900"    zh_CN="气囊与其它回路串联故障" en_US="wait translete"/>
+		<DTC ID="909100"     caption="B109100"    zh_CN="仪表盘气囊灯故障" en_US="wait translete"/>
+		<DTC ID="909500"     caption="B109500"    zh_CN="安全带预紧碰撞" en_US="wait translete"/>
+		<DTC ID="909800"     caption="B109800"    zh_CN="前碰撞" en_US="wait translete"/>
+		<DTC ID="90D000"     caption="B10D000"    zh_CN="碰撞记录锁定" en_US="wait translete"/>
+		<DTC ID="90E400"     caption="B10E400"    zh_CN="碰撞输出故障" en_US="wait translete"/>
+		<DTC ID="910112"     caption="B110112"    zh_CN="位置灯继电器短路到电源" en_US="wait translete"/>
+		<DTC ID="910113"     caption="B110113"    zh_CN="位置灯继电器开路" en_US="wait translete"/>
+		<DTC ID="910312"     caption="B110312"    zh_CN="近光灯继电器短路到电源" en_US="wait translete"/>
+		<DTC ID="910313"     caption="B110313"    zh_CN="近光灯继电器开路" en_US="wait translete"/>
+		<DTC ID="910412"     caption="B110412"    zh_CN="远光灯继电器短路到电源" en_US="wait translete"/>
+		<DTC ID="910413"     caption="B110413"    zh_CN="远光灯继电器开路或短路到地" en_US="wait translete"/>
+		<DTC ID="910511"     caption="B110511"    zh_CN="左转向灯过载或短路到地" en_US="wait translete"/>
+		<DTC ID="910513"     caption="B110513"    zh_CN="左转向灯开路" en_US="wait translete"/>
+		<DTC ID="910611"     caption="B110611"    zh_CN="右转向灯过载或短路到地" en_US="wait translete"/>
+		<DTC ID="910613"     caption="B110613"    zh_CN="右转向灯开路" en_US="wait translete"/>
+		<DTC ID="910712"     caption="B110712"    zh_CN="前雾灯继电器短路到电源" en_US="wait translete"/>
+		<DTC ID="910713"     caption="B110713"    zh_CN="前雾灯继电器开路" en_US="wait translete"/>
+		<DTC ID="910811"     caption="B110811"    zh_CN="后雾灯短路到地或过载" en_US="wait translete"/>
+		<DTC ID="910813"     caption="B110813"    zh_CN="后雾灯开路" en_US="wait translete"/>
+		<DTC ID="910912"     caption="B110912"    zh_CN="前雨刮低速继电器短路到电源" en_US="wait translete"/>
+		<DTC ID="910913"     caption="B110913"    zh_CN="前雨刮低速继电器开路" en_US="wait translete"/>
+		<DTC ID="910A12"     caption="B110A12"    zh_CN="内灯过载或短路到电源" en_US="wait translete"/>
+		<DTC ID="910B11"     caption="B110B11"    zh_CN="节电过载或短路到地" en_US="wait translete"/>
+		<DTC ID="910C12"     caption="B110C12"    zh_CN="前雨刮高速继电器短路到电源" en_US="wait translete"/>
+		<DTC ID="910C13"     caption="B110C13"    zh_CN="前雨刮高速继电器开路" en_US="wait translete"/>
+		<DTC ID="910D12"     caption="B110D12"    zh_CN="电动车窗电源继电器短路到电源" en_US="wait translete"/>
+		<DTC ID="910D13"     caption="B110D13"    zh_CN="电动车窗电源继电器开路" en_US="wait translete"/>
+		<DTC ID="910F12"     caption="B110F12"    zh_CN="电动车窗降窗使能短路到电源" en_US="wait translete"/>
+		<DTC ID="911011"     caption="B111011"    zh_CN="白昼运行灯短路到地或过载" en_US="wait translete"/>
+		<DTC ID="911412"     caption="B111412"    zh_CN="后雨刮继电器短路到电源" en_US="wait translete"/>
+		<DTC ID="911413"     caption="B111413"    zh_CN="后雨刮继电器开路" en_US="wait translete"/>
+		<DTC ID="913112"     caption="B113112"    zh_CN="喇叭继电器短路到电源" en_US="wait translete"/>
+		<DTC ID="932001"     caption="B132001"    zh_CN="收到来自SDM的安全气囊碰撞硬线信息" en_US="wait translete"/>
+		<DTC ID="950013"     caption="B150013"    zh_CN="IMMO天线开路或短路" en_US="wait translete"/>
+		<DTC ID="950129"     caption="B150129"    zh_CN="钥匙认证失败" en_US="wait translete"/>
+		<DTC ID="950251"     caption="B150251"    zh_CN="IMMO未存储任何钥匙信息" en_US="wait translete"/>
+		<DTC ID="950351"     caption="B150351"    zh_CN="未写入PIN" en_US="wait translete"/>
+		<DTC ID="950451"     caption="B150451"    zh_CN="未生成SK" en_US="wait translete"/>
+		<DTC ID="950555"     caption="B150555"    zh_CN="IMMO 未锁定" en_US="wait translete"/>
+		<DTC ID="950662"     caption="B150662"    zh_CN="ECM 认证失败" en_US="wait translete"/>
+		<DTC ID="950708"     caption="B150708"    zh_CN="基站通信错误" en_US="wait translete"/>
+		<DTC ID="C00100"     caption="U000100"    zh_CN="CAN 总线断路" en_US="wait translete"/>
+		<DTC ID="C00187"     caption="U000187"    zh_CN="LCU ABSENT CAN ACU" en_US="wait translete"/>
+		<DTC ID="C00287"     caption="U000287"    zh_CN="ACU ABSENT CAN LCU" en_US="wait translete"/>
+		<DTC ID="C00300"     caption="U000300"    zh_CN="CAN2 BUS OFF" en_US="wait translete"/>
+		<DTC ID="C00483"     caption="U000483"    zh_CN="CAN 0x0AF MSG INVALID" en_US="wait translete"/>
+		<DTC ID="C00500"     caption="U000500"    zh_CN="CAN Bus overvoltage" en_US="wait translete"/>
+		<DTC ID="C00700"     caption="U000700"    zh_CN="CAN Bus under voltage" en_US="wait translete"/>
+		<DTC ID="C07300"     caption="U007300"    zh_CN="CAN 总线关闭(Bus Off)" en_US="wait translete"/>
+		<DTC ID="C07700"     caption="U007700"    zh_CN="安全气囊CAN通讯校验错误" en_US="wait translete"/>
+		<DTC ID="C08700"     caption="U008700"    zh_CN="安全气囊CAN通讯校验错误" en_US="wait translete"/>
+		<DTC ID="C10000"     caption="U010000"    zh_CN="ESM CAN通讯接受/发送失败" en_US="wait translete"/>
+		<DTC ID="C12200"     caption="U012200"    zh_CN="ABS CAN通讯接受/发送失败" en_US="wait translete"/>
+		<DTC ID="C13100"     caption="U013100"    zh_CN="EPS CAN通讯接受/发送失败" en_US="wait translete"/>
+		<DTC ID="C14000"     caption="U014000"    zh_CN="BCM CAN通讯接受/发送失败" en_US="wait translete"/>
+		<DTC ID="C15100"     caption="U015100"    zh_CN="ACU CAN通讯接受/发送失败" en_US="wait translete"/>
+		<DTC ID="C16700"     caption="U016700"    zh_CN="防盗器未发送计算结果或认证结果" en_US="wait translete"/>
+		<DTC ID="C16800"     caption="U016800"    zh_CN="通过CAN线的碰撞信号合理性检测" en_US="wait translete"/>
+		<DTC ID="C32600"     caption="U032600"    zh_CN="防盗器发送的算法的结果跟ECU计算的结果不一样" en_US="wait translete"/>
+		<DTC ID="C41500"     caption="U041500"    zh_CN="CAN上车速信号错误" en_US="wait translete"/>
+		<DTC ID="C42000"     caption="U042000"    zh_CN="Invalid Data Received From Power Steering Control Module" en_US="wait translete"/>
+		<DTC ID="C42300"     caption="U042300"    zh_CN="CAN data corrupt Odometer" en_US="wait translete"/>
+		<DTC ID="D00081"     caption="U100081"    zh_CN="ACC POS INVALID" en_US="wait translete"/>
+		<DTC ID="D00087"     caption="U100087"    zh_CN="来自ECM的瞬时燃油消耗率信息报文#3D1丢失" en_US="wait translete"/>
+		<DTC ID="D00181"     caption="U100181"    zh_CN="来自ECM的冷却液温度信息报文#4C1无效" en_US="wait translete"/>
+		<DTC ID="D00187"     caption="U100187"    zh_CN="来自ECM的冷却液温度信息报文#4C1丢失" en_US="wait translete"/>
+		<DTC ID="D00281"     caption="U100281"    zh_CN="来自ECM的发动机转速信息报文#0C9无效" en_US="wait translete"/>
+		<DTC ID="D00283"     caption="U100283"    zh_CN="CAN 0x0C9 MSG INVALID" en_US="wait translete"/>
+		<DTC ID="D00287"     caption="U100287"    zh_CN="来自ECM的发动机转速信息报文#0C9丢失" en_US="wait translete"/>
+		<DTC ID="D00487"     caption="U100487"    zh_CN="来自ECM的燃油量百分比信息报文#4D1丢失" en_US="wait translete"/>
+		<DTC ID="D00581"     caption="U100581"    zh_CN="来自ECM的车速信息报文#3E9无效" en_US="wait translete"/>
+		<DTC ID="D00587"     caption="U100587"    zh_CN="来自ECM的车速信息报文#3E9丢失" en_US="wait translete"/>
+		<DTC ID="D00781"     caption="U100781"    zh_CN="INT AIR TEMP INVALID" en_US="wait translete"/>
+		<DTC ID="D00881"     caption="U100881"    zh_CN="ACC_POS_INVALID" en_US="wait translete"/>
+		<DTC ID="D00F81"     caption="U100F81"    zh_CN="PWR TRAIN BRAKE INVALID" en_US="wait translete"/>
+		<DTC ID="D01583"     caption="U101583"    zh_CN="CAN 0x191 MSG INVALID" en_US="wait translete"/>
+		<DTC ID="D01587"     caption="U101587"    zh_CN="CAN ECM 0x191 LOST" en_US="wait translete"/>
+		<DTC ID="D01687"     caption="U101687"    zh_CN="CAN ECM 0x1A1 LOST" en_US="wait translete"/>
+		<DTC ID="D02100"     caption="U102100"    zh_CN="ESP扭矩增加请求干预不合理" en_US="wait translete"/>
+		<DTC ID="D02200"     caption="U102200"    zh_CN="当车速过低时ESP扭矩增加请求干预" en_US="wait translete"/>
+		<DTC ID="D02281"     caption="U102281"    zh_CN="ENGINE TRQ ACT INVALID" en_US="wait translete"/>
+		<DTC ID="D02300"     caption="U102300"    zh_CN="ESP扭矩降低请求干预不合理" en_US="wait translete"/>
+		<DTC ID="D02381"     caption="U102381"    zh_CN="ENGINE TRQ EST INVALID" en_US="wait translete"/>
+		<DTC ID="D20087"     caption="U120087"    zh_CN="来自TCM的档位显示信息报文#4C9丢失" en_US="wait translete"/>
+		<DTC ID="D20187"     caption="U120187"    zh_CN="来自TCM的换挡信息报文#1F5丢失" en_US="wait translete"/>
+		<DTC ID="D20287"     caption="U120287"    zh_CN="来自TCM的车速信息报文#3E5丢失" en_US="wait translete"/>
+		<DTC ID="D20682"     caption="U120682"    zh_CN="#19D 报文通讯计数错误" en_US="wait translete"/>
+		<DTC ID="D20683"     caption="U120683"    zh_CN="#19D 报文通讯校验错误" en_US="wait translete"/>
+		<DTC ID="D20687"     caption="U120687"    zh_CN="来自TCM的变速箱转速保护需求值信息报文#19D丢失" en_US="wait translete"/>
+		<DTC ID="D20882"     caption="U120882"    zh_CN="TCU ETTR2 #19B的CAN通讯计数错误" en_US="wait translete"/>
+		<DTC ID="D20883"     caption="U120883"    zh_CN="TCU ETTR2 #19B 的CAN通讯校验错误" en_US="wait translete"/>
+		<DTC ID="D20887"     caption="U120887"    zh_CN="来自TCM的扭矩请求信号报文#19B丢失" en_US="wait translete"/>
+		<DTC ID="D20982"     caption="U120982"    zh_CN="TCU ETGS1 #19E 的CAN通讯计数错误" en_US="wait translete"/>
+		<DTC ID="D20983"     caption="U120983"    zh_CN="TCU ETGS1 #19E 的CAN通讯校验错误" en_US="wait translete"/>
+		<DTC ID="D20987"     caption="U120987"    zh_CN="来自TCM的变速箱转速需求、离合器状态号报文#19E丢失" en_US="wait translete"/>
+		<DTC ID="D28187"     caption="U128187"    zh_CN="来自ACU的变速箱仪表显示档位、变速箱排放相关MIL灯状态、对不合理档位警示信息报文#4C9丢失" en_US="wait translete"/>
+		<DTC ID="D40087"     caption="U140087"    zh_CN="来自ABS的工作状态、车身稳定系统变速箱挡位请求、牵引力控制系统、车身稳定系统、坡道保持系统工作状态报文#1E9丢失" en_US="wait translete"/>
+		<DTC ID="D40281"     caption="U140281"    zh_CN="来自ABS的车速信息报文#17D无效" en_US="wait translete"/>
+		<DTC ID="D40287"     caption="U140287"    zh_CN="来自ABS的车速、故障指示、EBD故障指示报文#17D丢失" en_US="wait translete"/>
+		<DTC ID="D40381"     caption="U140381"    zh_CN="WHEEL LEFT INVALID" en_US="wait translete"/>
+		<DTC ID="D40382"     caption="U140382"    zh_CN="ABS驱动车轮#348 CAN通讯计数错误" en_US="wait translete"/>
+		<DTC ID="D40383"     caption="U140383"    zh_CN="ABS驱动车轮#348 CAN通讯校验错误" en_US="wait translete"/>
+		<DTC ID="D40387"     caption="U140387"    zh_CN="来自ABS的左、右驱动轮对地速度信息报文丢失#348" en_US="wait translete"/>
+		<DTC ID="D40481"     caption="U140481"    zh_CN="WHEEL LEFT NON INVALID" en_US="wait translete"/>
+		<DTC ID="D40482"     caption="U140482"    zh_CN="ABS非驱动车轮#34A CAN通讯计数错误" en_US="wait translete"/>
+		<DTC ID="D40483"     caption="U140483"    zh_CN="ABS非驱动车轮#34A CAN通讯校验错误" en_US="wait translete"/>
+		<DTC ID="D40487"     caption="U140487"    zh_CN="来自ABS的左、右从动轮对地速度信息报文丢失#34A" en_US="wait translete"/>
+		<DTC ID="D40582"     caption="U140582"    zh_CN="ESP PCETR1 #1C6 的CAN通讯计数错误" en_US="wait translete"/>
+		<DTC ID="D40583"     caption="U140583"    zh_CN="ESP PCETR1 #1C6 的CAN通讯校验错误" en_US="wait translete"/>
+		<DTC ID="D40587"     caption="U140587"    zh_CN="来自ESP的底盘请求电动机扭矩值快、慢速增加/降低、底盘系统扭矩干预类型的信息报文#1C6丢失" en_US="wait translete"/>
+		<DTC ID="D40682"     caption="U140682"    zh_CN="ESP EPBS #230 的CAN通讯计数错误" en_US="wait translete"/>
+		<DTC ID="D40683"     caption="U140683"    zh_CN="ESP EPBS #230 的CAN通讯校验错误" en_US="wait translete"/>
+		<DTC ID="D40687"     caption="U140687"    zh_CN="来自ESP的EPB(电子手刹)指示灯报文#230丢失" en_US="wait translete"/>
+		<DTC ID="D40781"     caption="U140781"    zh_CN="WHEEL RIGHT INVALID" en_US="wait translete"/>
+		<DTC ID="D40787"     caption="U140787"    zh_CN="CAN ESC 0x128 LOST" en_US="wait translete"/>
+		<DTC ID="D40881"     caption="U140881"    zh_CN="WHEEL RIGHT NON INVALID" en_US="wait translete"/>
+		<DTC ID="D40E82"     caption="U140E82"    zh_CN="ESP PCGS1 #1E9 的CAN通讯计数错误" en_US="wait translete"/>
+		<DTC ID="D40E83"     caption="U140E83"    zh_CN="ESP PCGS1 #1E9 的CAN通讯校验错误" en_US="wait translete"/>
+		<DTC ID="D41381"     caption="U141381"    zh_CN="MASTER CYL BRAKE PRESS INVALID" en_US="wait translete"/>
+		<DTC ID="D41881"     caption="U141881"    zh_CN="AUTO VEHICLE HOLD INVALID" en_US="wait translete"/>
+		<DTC ID="D41F81"     caption="U141F81"    zh_CN="VSE LONG ACC INVALID" en_US="wait translete"/>
+		<DTC ID="D60037"     caption="U160037"    zh_CN="EPS #1E5 CAN通讯校验错误" en_US="wait translete"/>
+		<DTC ID="D60087"     caption="U160087"    zh_CN="来自EPS的故障码指示及工作状态信息、工作电流、方向盘角度报文#1E5丢失" en_US="wait translete"/>
+		<DTC ID="D80087"     caption="U180087"    zh_CN="来自SDM的安全气囊指示灯信息报文#141丢失" en_US="wait translete"/>
+		<DTC ID="D80181"     caption="U180181"    zh_CN="DRIVER SEATBELT INVALID" en_US="wait translete"/>
+		<DTC ID="D80182"     caption="U180182"    zh_CN="SDM #0E1 的CAN通讯计数错误" en_US="wait translete"/>
+		<DTC ID="D80183"     caption="U180183"    zh_CN="SDM #0E1 CAN通讯校验错误" en_US="wait translete"/>
+		<DTC ID="D80187"     caption="U180187"    zh_CN="来自SDM的碰撞、后撞检测状态、驾驶员安全带状态信息报文#0E1丢失" en_US="wait translete"/>
+		<DTC ID="D80481"     caption="U180481"    zh_CN="收到来自SDM的安全气囊点爆信息" en_US="wait translete"/>
+		<DTC ID="E00087"     caption="U200087"    zh_CN="来自BCM的点火钥匙位置报文#1F1丢失" en_US="wait translete"/>
+		<DTC ID="E00387"     caption="U200387"    zh_CN="来自BCM的照明灯、指示灯状态信息报文#140丢失" en_US="wait translete"/>
+		<DTC ID="E00487"     caption="U200487"    zh_CN="来自BCM的门锁、门碰状态信息报文#12A丢失" en_US="wait translete"/>
+		<DTC ID="E40087"     caption="U240087"    zh_CN="来自TPMS的胎压信息报文#52A丢失" en_US="wait translete"/>
+		<DTC ID="E60081"     caption="U260081"    zh_CN="ODOMETER INVALID" en_US="wait translete"/>
+		<DTC ID="E60087"     caption="U260087"    zh_CN="来自IC的车辆行驶里程信息报文#120丢失" en_US="wait translete"/>
+		<DTC ID="F00316"     caption="U300316"    zh_CN="电源电压欠压" en_US="wait translete"/>
+		<DTC ID="F00317"     caption="U300317"    zh_CN="电源电压过压" en_US="wait translete"/>
+	</DTC_lib>
+</root>

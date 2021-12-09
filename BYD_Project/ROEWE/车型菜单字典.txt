@@ -1,0 +1,13 @@
+{'1': '350', '5': '360(1.5L)', '6': '360(1.4T)', '9': 'RX5', 'a': 'eRX5', 'b': 'ROEWE 750', 'c': 'NEW 750', 'd': 'NEW 750 HYBRID', 
+'e': 'e50', 'f': '550', '21': 'NEW 550', '13': 'NEW 550 HYBRID', '17': 'i6', '2c': 'ei5', '2d': 'RX8', '19': 'W5', '25': '新950', 
+'26': 'e950', '24': 'ERX5', '28': 'ei6', '32': 'ei6 Plus','2b': 'RX3', '2f': 'Marvel X', '2e': 'i5', '35': 'RX5 MAX', '36': 'EP21H', 
+'3e': 'RX5 eMAX', '41': 'i6 MAX', '3b': 'i6 PLUS', '3c': 'RX5 PLUS', '3d': 'RX5 ePLUS', '3a': 'ei6 MAX', '44': 'CLEVER', '45': 'iMAX8', 
+'3f': 'i5 GL'}
+
+{'2': 'MG5', '2a': 'MG ZS', '3': 'MG GT(1.5L)', '4': 'MG GT(1.4T)', '7': 'MG GS', '8': 'MG GS(EU)', '10': 'MG6', '11': 'MG6 EU', 
+'12': 'MG6 EU Diesel', '14': 'MG6 MY14', '15': 'MG6 MY13', '16': 'MG6 TT', '1a': 'MG3', '1b': 'MG7 (2008)', '1c': 'MG7 (2009)', 
+'1d': 'MG7L', '1e': 'MG3 Zero', '1f': 'MG3 EU', '20': 'MG3 Zero 2013', '23': 'NEW MG GS', '27': '新MG6', '30': 'MG HS', '31': 'EZS', 
+'34': 'eMG6', '37': 'MG ZS(EU)', '38': 'EZS(EU)', '39': 'EZS(TT)', '40': 'MG EHS', '42': '新MG6 MY19', '46': 'eMG6 MY19', 
+'43': 'MG ZS 19', '4a': 'EZS(INDIA)', '47': 'MG EHS(EU)', '48': 'MG HS(EU)', '49': 'MG HS(TT)'}
+
+{'29': 'ZP11MCE3', '33': 'IP32P_CN6'}

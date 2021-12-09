@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0">
+	<function ID="ID_FUNCTION_DATASTREAM">
+		<!--选择数据流，并把选择的数据流ID保存到ui_data_buffer中-->
+		<show label="" type="data_stream_select">
+			<param type="function" value="ID_FUNCTION_READ_DATASTREAM"/>
+			<param label="data_stream_id" type="ui_data_buffer" value=""/>
+			<param label="GROUP" type="string" value="0,1,2,3,4,5"/>
+		</show>
+	</function>
+	<function ID="ID_FUNCTION_READ_DATASTREAM">
+		<call_protocol label="data_stream" function="read_data_stream">
+			<param type="ui_data_buffer" value="data_stream_id"/>
+		</call_protocol>
+		<judge_tip_jump use_label="data_stream"/>
+		<show label="" type="read_data_stream">
+			<param type="protocol_data" value="data_stream"/>
+		</show>
+	</function>
+	<data_stream_lib>
+		<!-- 所有数据 -->
+		<group ID="0" caption="ID_STR_DS_GROUP_00">
+			<!-- KL30模拟电压输入 -->
+			<data_stream ID="0" caption="ID_STR_DS_ITEM_0000" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.1+5</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 车速表输出 -->
+			<data_stream ID="1" caption="ID_STR_DS_ITEM_0001" unit="km/h" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.015625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- 行驶里程输出 -->
+			<data_stream ID="2" caption="ID_STR_DS_ITEM_0002" unit="km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)*0.015625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- Trip1输出 -->
+			<data_stream ID="3" caption="ID_STR_DS_ITEM_0003" unit="km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.015257</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- 续驶里程 -->
+			<data_stream ID="4" caption="ID_STR_DS_ITEM_0004" unit="km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电机输出转速 -->
+			<data_stream ID="5" caption="ID_STR_DS_ITEM_0005" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_005</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*1-16384</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- SOC输出 -->
+			<data_stream ID="6" caption="ID_STR_DS_ITEM_0006" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_006</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.4</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 电流输出 -->
+			<data_stream ID="7" caption="ID_STR_DS_ITEM_0007" unit="A" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_007</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1-1000</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 电压输出 -->
+			<data_stream ID="8" caption="ID_STR_DS_ITEM_0008" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_008</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 主驾驶员安全带未系提醒 -->
+			<data_stream ID="9" caption="ID_STR_DS_ITEM_0009" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_009</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 主驾驶员安全带未系指示灯 -->
+			<data_stream ID="10" caption="ID_STR_DS_ITEM_0010" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 远光指示灯 -->
+			<data_stream ID="11" caption="ID_STR_DS_ITEM_0011" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X20)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 左转向指示灯 -->
+			<data_stream ID="12" caption="ID_STR_DS_ITEM_0012" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X10)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 右转向指示灯 -->
+			<data_stream ID="13" caption="ID_STR_DS_ITEM_0013" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X8)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 前雾指示灯 -->
+			<data_stream ID="14" caption="ID_STR_DS_ITEM_0014" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X4)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 后雾指示灯 -->
+			<data_stream ID="15" caption="ID_STR_DS_ITEM_0015" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X2)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 安全气囊故障指示灯 -->
+			<data_stream ID="16" caption="ID_STR_DS_ITEM_0016" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- ESC警告指示灯 -->
+			<data_stream ID="17" caption="ID_STR_DS_ITEM_0017" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X40)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- ESC开关指示灯 -->
+			<data_stream ID="18" caption="ID_STR_DS_ITEM_0018" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X20)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- EPS故障指示灯 -->
+			<data_stream ID="19" caption="ID_STR_DS_ITEM_0019" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X10)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- EBD故障指示灯 -->
+			<data_stream ID="20" caption="ID_STR_DS_ITEM_0020" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X8)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- SDM模块故障指示灯 -->
+			<data_stream ID="21" caption="ID_STR_DS_ITEM_0021" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电子手刹工作指示灯 -->
+			<data_stream ID="22" caption="ID_STR_DS_ITEM_0022" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_011</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电子手刹故障指示灯 -->
+			<data_stream ID="23" caption="ID_STR_DS_ITEM_0023" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_011</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X40)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- AUTOHOLD工作指示灯 -->
+			<data_stream ID="24" caption="ID_STR_DS_ITEM_0024" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_011</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X20)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- AUTOHOLD故障指示灯 -->
+			<data_stream ID="25" caption="ID_STR_DS_ITEM_0025" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_011</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X10)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 12V蓄电池充电状态指示灯 -->
+			<data_stream ID="26" caption="ID_STR_DS_ITEM_0026" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 手刹指示灯 -->
+			<data_stream ID="27" caption="ID_STR_DS_ITEM_0027" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X40)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电机过热指示灯 -->
+			<data_stream ID="28" caption="ID_STR_DS_ITEM_0028" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X20)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- READY指示灯 -->
+			<data_stream ID="29" caption="ID_STR_DS_ITEM_0029" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X10)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 车辆充电状态指示灯 -->
+			<data_stream ID="30" caption="ID_STR_DS_ITEM_0030" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X8)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 充电线连接指示灯 -->
+			<data_stream ID="31" caption="ID_STR_DS_ITEM_0031" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X4)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 动力电池切断指示 -->
+			<data_stream ID="32" caption="ID_STR_DS_ITEM_0032" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X2)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 整车绝缘报警指示 -->
+			<data_stream ID="33" caption="ID_STR_DS_ITEM_0033" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 动力电池故障指示灯 -->
+			<data_stream ID="34" caption="ID_STR_DS_ITEM_0034" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 整车故障指示灯 -->
+			<data_stream ID="35" caption="ID_STR_DS_ITEM_0035" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X40)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 动力蓄电池荷电状态指示灯 -->
+			<data_stream ID="36" caption="ID_STR_DS_ITEM_0036" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X10)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 动力电池温度异常指示灯 -->
+			<data_stream ID="37" caption="ID_STR_DS_ITEM_0037" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X4)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 车辆低速警示音关闭指示灯 -->
+			<data_stream ID="38" caption="ID_STR_DS_ITEM_0038" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X2)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 真空泵故障报警指示灯 -->
+			<data_stream ID="39" caption="ID_STR_DS_ITEM_0039" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电机故障指示灯 -->
+			<data_stream ID="40" caption="ID_STR_DS_ITEM_0040" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 驾驶员离开提醒 -->
+			<data_stream ID="41" caption="ID_STR_DS_ITEM_0041" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_013</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+		</group>
+		<!-- 嗡鸣器 -->
+		<group ID="1" caption="ID_STR_DS_GROUP_01">
+			<!-- 主驾驶员安全带未系提醒 -->
+			<data_stream ID="42" caption="ID_STR_DS_ITEM_0042" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 驾驶员离开提醒 -->
+			<data_stream ID="43" caption="ID_STR_DS_ITEM_0043" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+		</group>
+		<!-- 车辆状态输出 -->
+		<group ID="2" caption="ID_STR_DS_GROUP_02">
+			<!-- KL30模拟电压输入 -->
+			<data_stream ID="44" caption="ID_STR_DS_ITEM_0044" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_02_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.1+5</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 车速表输出 -->
+			<data_stream ID="45" caption="ID_STR_DS_ITEM_0045" unit="km/h" min="" max="" self_learn="0">
+				<command_id>DS_CMD_02_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.015625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- 行驶里程输出 -->
+			<data_stream ID="46" caption="ID_STR_DS_ITEM_0046" unit="km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_02_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)*0.015625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- 续驶里程 -->
+			<data_stream ID="47" caption="ID_STR_DS_ITEM_0047" unit="km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_02_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+		</group>
+		<!-- 指示灯输出 -->
+		<group ID="3" caption="ID_STR_DS_GROUP_03">
+			<!-- 主驾驶员安全带未系指示灯 -->
+			<data_stream ID="48" caption="ID_STR_DS_ITEM_0048" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 远光指示灯 -->
+			<data_stream ID="49" caption="ID_STR_DS_ITEM_0049" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X20)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 左转向指示灯 -->
+			<data_stream ID="50" caption="ID_STR_DS_ITEM_0050" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X10)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 右转向指示灯 -->
+			<data_stream ID="51" caption="ID_STR_DS_ITEM_0051" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X8)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 前雾指示灯 -->
+			<data_stream ID="52" caption="ID_STR_DS_ITEM_0052" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X4)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 后雾指示灯 -->
+			<data_stream ID="53" caption="ID_STR_DS_ITEM_0053" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X2)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 安全气囊故障指示灯 -->
+			<data_stream ID="54" caption="ID_STR_DS_ITEM_0054" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_000</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- ESC警告指示灯 -->
+			<data_stream ID="55" caption="ID_STR_DS_ITEM_0055" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_000</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X40)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- ESC开关指示灯 -->
+			<data_stream ID="56" caption="ID_STR_DS_ITEM_0056" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_000</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X20)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- EPS故障指示灯 -->
+			<data_stream ID="57" caption="ID_STR_DS_ITEM_0057" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_000</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X10)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- EBD故障指示灯 -->
+			<data_stream ID="58" caption="ID_STR_DS_ITEM_0058" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_000</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X8)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- SDM模块故障指示灯 -->
+			<data_stream ID="59" caption="ID_STR_DS_ITEM_0059" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_000</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电子手刹工作指示灯 -->
+			<data_stream ID="60" caption="ID_STR_DS_ITEM_0060" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电子手刹故障指示灯 -->
+			<data_stream ID="61" caption="ID_STR_DS_ITEM_0061" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X40)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- AUTOHOLD工作指示灯 -->
+			<data_stream ID="62" caption="ID_STR_DS_ITEM_0062" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X20)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- AUTOHOLD故障指示灯 -->
+			<data_stream ID="63" caption="ID_STR_DS_ITEM_0063" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X10)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 12V蓄电池充电状态指示灯 -->
+			<data_stream ID="64" caption="ID_STR_DS_ITEM_0064" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 手刹指示灯 -->
+			<data_stream ID="65" caption="ID_STR_DS_ITEM_0065" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X40)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电机过热指示灯 -->
+			<data_stream ID="66" caption="ID_STR_DS_ITEM_0066" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X20)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- READY指示灯 -->
+			<data_stream ID="67" caption="ID_STR_DS_ITEM_0067" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X10)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 车辆充电状态指示灯 -->
+			<data_stream ID="68" caption="ID_STR_DS_ITEM_0068" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X8)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 充电线连接指示灯 -->
+			<data_stream ID="69" caption="ID_STR_DS_ITEM_0069" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X4)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 动力电池切断指示 -->
+			<data_stream ID="70" caption="ID_STR_DS_ITEM_0070" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X2)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 整车绝缘报警指示 -->
+			<data_stream ID="71" caption="ID_STR_DS_ITEM_0071" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 动力电池故障指示灯 -->
+			<data_stream ID="72" caption="ID_STR_DS_ITEM_0072" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_002</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 整车故障指示灯 -->
+			<data_stream ID="73" caption="ID_STR_DS_ITEM_0073" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_002</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X40)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 动力蓄电池荷电状态指示灯 -->
+			<data_stream ID="74" caption="ID_STR_DS_ITEM_0074" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_002</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X10)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 动力电池温度异常指示灯 -->
+			<data_stream ID="75" caption="ID_STR_DS_ITEM_0075" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_002</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X4)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 车辆低速警示音关闭指示灯 -->
+			<data_stream ID="76" caption="ID_STR_DS_ITEM_0076" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_002</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X2)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 真空泵故障报警指示灯 -->
+			<data_stream ID="77" caption="ID_STR_DS_ITEM_0077" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_002</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电机故障指示灯 -->
+			<data_stream ID="78" caption="ID_STR_DS_ITEM_0078" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_002</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+		</group>
+		<!-- 动力系统输出显示 -->
+		<group ID="4" caption="ID_STR_DS_GROUP_04">
+			<!-- Trip1输出 -->
+			<data_stream ID="79" caption="ID_STR_DS_ITEM_0079" unit="km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.015257</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- 电机输出转速 -->
+			<data_stream ID="80" caption="ID_STR_DS_ITEM_0080" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*1-16384</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电机过热指示灯 -->
+			<data_stream ID="81" caption="ID_STR_DS_ITEM_0081" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X20)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 动力电池切断指示 -->
+			<data_stream ID="82" caption="ID_STR_DS_ITEM_0082" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X2)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 动力电池故障指示灯 -->
+			<data_stream ID="83" caption="ID_STR_DS_ITEM_0083" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_002</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 动力蓄电池荷电状态指示灯 -->
+			<data_stream ID="84" caption="ID_STR_DS_ITEM_0084" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_002</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X10)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 动力电池温度异常指示灯 -->
+			<data_stream ID="85" caption="ID_STR_DS_ITEM_0085" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_002</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X4)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电机故障指示灯 -->
+			<data_stream ID="86" caption="ID_STR_DS_ITEM_0086" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_002</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0041;ELSE Y=@0040;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+		</group>
+		<!-- 电池输出 -->
+		<group ID="5" caption="ID_STR_DS_GROUP_05">
+			<!-- SOC输出 -->
+			<data_stream ID="87" caption="ID_STR_DS_ITEM_0087" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_05_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.4</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 电流输出 -->
+			<data_stream ID="88" caption="ID_STR_DS_ITEM_0088" unit="A" min="" max="" self_learn="0">
+				<command_id>DS_CMD_05_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1-1000</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 电压输出 -->
+			<data_stream ID="89" caption="ID_STR_DS_ITEM_0089" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_05_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+		</group>
+	</data_stream_lib>
+	<switchs/>
+</root>

@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VehicleFunctionConfig>
+	<Domain Name="Advance" Type="0">
+		<ProcessGroup Name="Learning" LD="Proc_Learning" Type="Learning" Lv="1">
+			<ProcessUnit Name="VVTLearning" />
+			<ProcessUnit Name="ThrottleLearning" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Year" Value="2017" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_BCM_UAES_FT1" />
+			<ProcessUnit Name="Refresh_PEPS" />
+			<ProcessUnit Name="Refresh_AGS" />
+			<ProcessUnit Name="Refresh_DCT_UAES_DCT" />
+			<ProcessUnit Name="Refresh_SCU" />
+			<ProcessUnit Name="Refresh_IC_BOSCH" />
+			<ProcessUnit Name="Refresh_AC" />
+			<ProcessUnit Name="Refresh_ECM_UAES_NP18" />
+		</ProcessGroup>
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="ABSOLConfiguration" />
+			<ProcessUnit Name="TPMSConfiguration" />
+			<ProcessUnit Name="BCMOLConfiguration" />
+			<ProcessUnit Name="GWOnlineConfigurationF1B9" />
+		</ProcessGroup>
+		<ProcessGroup Name="Calibration" LD="Proc_Calibration" Type="Calibration" Lv="1">
+			<ProcessUnit Name="ESPYawRateSensorCalibration" />
+			<ProcessUnit Name="DV360Calibration" />
+		</ProcessGroup>		
+		<ProcessGroup Name="IMMO" LD="Proc_IMMO" Type="IMMO" Lv="1">
+			<ProcessUnit Name="IMMO" />
+		</ProcessGroup>
+		<ProcessGroup Name="PEPSConfiguration" LD="Proc_PEPSConfiguration" Type="PEPSConfiguration" Lv="1">
+			<ProcessUnit Name="PEPSConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="ZeroPositionLearning" LD="Proc_ZeroPositionLearning" Type="ZeroPositionLearning" Lv="1">
+			<ProcessUnit Name="ZeroPositionLearning_NAI" />
+		</ProcessGroup>
+		<ProcessGroup Name="Exhaust" LD="Proc_Exhaust" Type="Exhaust" Lv="1">
+			<ProcessUnit Name="Exhaust" LD="Proc_Exhaust" />
+		</ProcessGroup>
+		<ProcessGroup Name="EPBRepair" LD="Proc_EPBRepair" Type="Repair" Lv="1">
+			<ProcessUnit Name="EPBRepair_ABS" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="1.5L" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_Con" />
+			<ProcessUnit Name="Refresh_ECM_Con_G6" />
+		</ProcessGroup>
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="B15T" />
+		</Conditions>
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN_15T" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="B15T-MT" />
+		</Conditions>
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN_15T" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="B15T-AMT" />
+		</Conditions>
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN_15T" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="B15T-DCT" />
+		</Conditions>
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN_15T" />
+		</ProcessGroup>
+		
+		<ProcessGroup Name="DCTRoutineControl" LD="Proc_DCTRoutineControl" Type="DCTRoutineControl" Lv="1">
+			<ProcessUnit Name="DCTRoutineControl" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="1.8-AMT" /> 
+		</Conditions>
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="N15T-CVT" />
+		</Conditions>
+		<ProcessGroup Name="Replace" LD="Proc_Replace" Type="Replace" Lv="1">
+			<ProcessUnit Name="ReplaceTCM" />
+		</ProcessGroup>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_BCM_UAES_FT1" />
+			<ProcessUnit Name="Refresh_PEPS" />
+			<ProcessUnit Name="Refresh_AGS" />
+			<ProcessUnit Name="Refresh_SCU" />
+			<ProcessUnit Name="Refresh_IC_BOSCH" />
+			<ProcessUnit Name="Refresh_AC" />
+			<ProcessUnit Name="Refresh_CVT_PIN" />
+			<ProcessUnit Name="Refresh_ECM_UAES_G6" />
+			<ProcessUnit Name="Refresh_ECM_UAES_N15T" />
+		</ProcessGroup>
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="ABSOLConfiguration" />
+			<ProcessUnit Name="TPMSConfiguration" />
+			<ProcessUnit Name="BCMOLConfiguration" />
+			<ProcessUnit Name="GWOnlineConfigurationF1B9" />
+		</ProcessGroup>
+		<ProcessGroup Name="Calibration" LD="Proc_Calibration" Type="Calibration" Lv="1">
+			<ProcessUnit Name="ESPYawRateSensorCalibration" />
+			<ProcessUnit Name="DV360Calibration" />
+		</ProcessGroup>		
+		<ProcessGroup Name="IMMO" LD="Proc_IMMO" Type="IMMO" Lv="1">
+			<ProcessUnit Name="IMMO" />
+		</ProcessGroup>
+		<ProcessGroup Name="PEPSConfiguration" LD="Proc_PEPSConfiguration" Type="PEPSConfiguration" Lv="1">
+			<ProcessUnit Name="PEPSConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="ZeroPositionLearning" LD="Proc_ZeroPositionLearning" Type="ZeroPositionLearning" Lv="1">
+			<ProcessUnit Name="ZeroPositionLearning_NAI" />
+		</ProcessGroup>
+		<ProcessGroup Name="Exhaust" LD="Proc_Exhaust" Type="Exhaust" Lv="1">
+			<ProcessUnit Name="Exhaust" LD="Proc_Exhaust" />
+		</ProcessGroup>
+		<ProcessGroup Name="EPBRepair" LD="Proc_EPBRepair" Type="Repair" Lv="1">
+			<ProcessUnit Name="EPBRepair_ABS" />
+		</ProcessGroup>
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN" />
+		</ProcessGroup>
+	</Domain>
+		<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="N15T-MT" />
+		</Conditions>
+		<ProcessGroup Name="Replace" LD="Proc_Replace" Type="Replace" Lv="1">
+			<ProcessUnit Name="ReplaceTCM" />
+		</ProcessGroup>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_BCM_UAES_FT1" />
+			<ProcessUnit Name="Refresh_PEPS" />
+			<ProcessUnit Name="Refresh_AGS" />
+			<ProcessUnit Name="Refresh_SCU" />
+			<ProcessUnit Name="Refresh_IC_BOSCH" />
+			<ProcessUnit Name="Refresh_AC" />
+			<ProcessUnit Name="Refresh_CVT_PIN" />
+			<ProcessUnit Name="Refresh_ECM_UAES_MT_G6" />
+			<ProcessUnit Name="Refresh_ECM_UAES_N15T" />
+		</ProcessGroup>
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="ABSOLConfiguration" />
+			<ProcessUnit Name="TPMSConfiguration" />
+			<ProcessUnit Name="BCMOLConfiguration" />
+			<ProcessUnit Name="GWOnlineConfigurationF1B9" />
+		</ProcessGroup>
+		<ProcessGroup Name="Calibration" LD="Proc_Calibration" Type="Calibration" Lv="1">
+			<ProcessUnit Name="ESPYawRateSensorCalibration" />
+			<ProcessUnit Name="DV360Calibration" />
+		</ProcessGroup>		
+		<ProcessGroup Name="IMMO" LD="Proc_IMMO" Type="IMMO" Lv="1">
+			<ProcessUnit Name="IMMO" />
+		</ProcessGroup>
+		<ProcessGroup Name="PEPSConfiguration" LD="Proc_PEPSConfiguration" Type="PEPSConfiguration" Lv="1">
+			<ProcessUnit Name="PEPSConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="ZeroPositionLearning" LD="Proc_ZeroPositionLearning" Type="ZeroPositionLearning" Lv="1">
+			<ProcessUnit Name="ZeroPositionLearning_NAI" />
+		</ProcessGroup>
+		<ProcessGroup Name="Exhaust" LD="Proc_Exhaust" Type="Exhaust" Lv="1">
+			<ProcessUnit Name="Exhaust" LD="Proc_Exhaust" />
+		</ProcessGroup>
+		<ProcessGroup Name="EPBRepair" LD="Proc_EPBRepair" Type="Repair" Lv="1">
+			<ProcessUnit Name="EPBRepair_ABS" />
+		</ProcessGroup>
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN" />
+		</ProcessGroup>
+	</Domain>
+	<Data Name="TPMSCFGDATA">
+		<TyreSize Name="205/55R16" Value="A7A74646" />
+	</Data>
+</VehicleFunctionConfig>

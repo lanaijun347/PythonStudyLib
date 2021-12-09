@@ -1,0 +1,3 @@
+警告：超出列表范围,车型ID为：0xe10c 串型 命令获取错误，请查看程序basics.py-> get_command()['0101800007d080acf1013e5c']
+警告：车型ID为：0xe10c进入命令部分，命令有空值，请查看程序SubsystemInterface.py。
+警告：车型ID为：0xe10c未找到空闲命令，请查看程序SubsystemInterface.py 296行！

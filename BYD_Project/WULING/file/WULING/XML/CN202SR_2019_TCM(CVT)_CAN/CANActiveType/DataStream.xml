@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0">
+	<function ID="ID_FUNCTION_DATASTREAM">
+		<!--选择数据流，并把选择的数据流ID保存到ui_data_buffer中-->
+		<show label="" type="data_stream_select">
+			<param type="function" value="ID_FUNCTION_READ_DATASTREAM"/>
+			<param label="data_stream_id" type="ui_data_buffer" value=""/>
+			<param label="GROUP" type="string" value="0"/>
+		</show>
+	</function>
+	<function ID="ID_FUNCTION_READ_DATASTREAM">
+		<call_protocol label="data_stream" function="read_data_stream">
+			<param type="ui_data_buffer" value="data_stream_id"/>
+		</call_protocol>
+		<judge_tip_jump use_label="data_stream"/>
+		<show label="" type="read_data_stream">
+			<param type="protocol_data" value="data_stream"/>
+		</show>
+	</function>
+	<data_stream_lib>
+		<!-- 数据流 -->
+		<group ID="0" caption="ID_STR_DS_GROUP_00">
+			<!-- Battery Voltage -->
+			<data_stream ID="0" caption="ID_STR_DS_ITEM_0000" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- HSD1 Voltage (Primary Secondary DNR solenoid ) -->
+			<data_stream ID="1" caption="ID_STR_DS_ITEM_0001" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- HSD2 Voltage (TC Line solenoid supply) -->
+			<data_stream ID="2" caption="ID_STR_DS_ITEM_0002" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- HSD3 Voltage (Start lock solenoid supply) -->
+			<data_stream ID="3" caption="ID_STR_DS_ITEM_0003" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 9V Sensor Supply 1 (Primary Secondary speed sensor) -->
+			<data_stream ID="4" caption="ID_STR_DS_ITEM_0004" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 9V Sensor Supply 2 (Turbine speed sensor) -->
+			<data_stream ID="5" caption="ID_STR_DS_ITEM_0005" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_005</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 5V Sensor Supply 1 (Primary pressure & Gear position sensor) -->
+			<data_stream ID="6" caption="ID_STR_DS_ITEM_0006" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_006</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 5V Sensor Supply 2 (Secondary pressure sensor) -->
+			<data_stream ID="7" caption="ID_STR_DS_ITEM_0007" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_007</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- input for brake 2 signal status -->
+			<data_stream ID="8" caption="ID_STR_DS_ITEM_0008" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_008</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(0,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- input for start key signal status -->
+			<data_stream ID="9" caption="ID_STR_DS_ITEM_0009" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_009</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(0,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- output for start lock control pin status -->
+			<data_stream ID="10" caption="ID_STR_DS_ITEM_0010" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(1,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Primary pressure -->
+			<data_stream ID="11" caption="ID_STR_DS_ITEM_0011" unit="Bar" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_011</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.125</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- Secondary  pressure -->
+			<data_stream ID="12" caption="ID_STR_DS_ITEM_0012" unit="Bar" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.125</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- Primary speed -->
+			<data_stream ID="13" caption="ID_STR_DS_ITEM_0013" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_013</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Secondary speed -->
+			<data_stream ID="14" caption="ID_STR_DS_ITEM_0014" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_014</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Line valve current -->
+			<data_stream ID="15" caption="ID_STR_DS_ITEM_0015" unit="mA" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_015</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- DNR valve current -->
+			<data_stream ID="16" caption="ID_STR_DS_ITEM_0016" unit="mA" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_016</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- Secondary valve current -->
+			<data_stream ID="17" caption="ID_STR_DS_ITEM_0017" unit="mA" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_017</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- TC valve current -->
+			<data_stream ID="18" caption="ID_STR_DS_ITEM_0018" unit="mA" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_018</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- Forward clutch status -->
+			<data_stream ID="19" caption="ID_STR_DS_ITEM_0019" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_019</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(2,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Reverse clutch status -->
+			<data_stream ID="20" caption="ID_STR_DS_ITEM_0020" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_020</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(2,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- TC lockup clutch status -->
+			<data_stream ID="21" caption="ID_STR_DS_ITEM_0021" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_021</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(3,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Gear lever position -->
+			<data_stream ID="22" caption="ID_STR_DS_ITEM_0022" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_022</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(4,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Drive program master status -->
+			<data_stream ID="23" caption="ID_STR_DS_ITEM_0023" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_023</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(5,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Transmission oil temperature -->
+			<data_stream ID="24" caption="ID_STR_DS_ITEM_0024" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_024</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Request of MIL Active -->
+			<data_stream ID="25" caption="ID_STR_DS_ITEM_0025" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_025</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(6,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Limp home status -->
+			<data_stream ID="26" caption="ID_STR_DS_ITEM_0026" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_026</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(7,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Wheel Speed front left -->
+			<data_stream ID="27" caption="ID_STR_DS_ITEM_0027" unit="km/h" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_027</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Wheel Speed front right -->
+			<data_stream ID="28" caption="ID_STR_DS_ITEM_0028" unit="km/h" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_028</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Wheel Speed rear left -->
+			<data_stream ID="29" caption="ID_STR_DS_ITEM_0029" unit="km/h" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_029</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Wheel Speed rear right -->
+			<data_stream ID="30" caption="ID_STR_DS_ITEM_0030" unit="km/h" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_030</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Brake Pedal status -->
+			<data_stream ID="31" caption="ID_STR_DS_ITEM_0031" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_031</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(8,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Accelerator pedal position -->
+			<data_stream ID="32" caption="ID_STR_DS_ITEM_0032" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_032</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.392157</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- Variator ratio -->
+			<data_stream ID="33" caption="ID_STR_DS_ITEM_0033" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_033</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.005</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+		</group>
+	</data_stream_lib>
+	<switchs>
+		<!-- 00:Low level 01:High level 其他:-  -->
+		<switch ID="0">
+			<case value="0x00">ID_DS_STRING_000</case>
+			<case value="0x01">ID_DS_STRING_001</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:High level (relay OFF) 01:Low level (relay ON) 其他:-  -->
+		<switch ID="1">
+			<case value="0x00">ID_DS_STRING_003</case>
+			<case value="0x01">ID_DS_STRING_004</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:Undefined 01:Open 02:Filling 03:Ramp down 04:Touch 05:Ramp up 06:Closed, 其他:-  -->
+		<switch ID="2">
+			<case value="0x00">ID_DS_STRING_005</case>
+			<case value="0x01">ID_DS_STRING_006</case>
+			<case value="0x02">ID_DS_STRING_007</case>
+			<case value="0x03">ID_DS_STRING_008</case>
+			<case value="0x04">ID_DS_STRING_009</case>
+			<case value="0x05">ID_DS_STRING_010</case>
+			<case value="0x06">ID_DS_STRING_011</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:Undefined 01:Released 02:Filling 03:Lock Ramp 04:Locked 05:Release Ramp 其他:-  -->
+		<switch ID="3">
+			<case value="0x00">ID_DS_STRING_005</case>
+			<case value="0x01">ID_DS_STRING_012</case>
+			<case value="0x02">ID_DS_STRING_007</case>
+			<case value="0x03">ID_DS_STRING_013</case>
+			<case value="0x04">ID_DS_STRING_014</case>
+			<case value="0x05">ID_DS_STRING_015</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:Undefined 01:Park 02:Reverse 03:Neutral 04:Drive 05:Low, 其他:-  -->
+		<switch ID="4">
+			<case value="0x00">ID_DS_STRING_005</case>
+			<case value="0x01">ID_DS_STRING_016</case>
+			<case value="0x02">ID_DS_STRING_017</case>
+			<case value="0x03">ID_DS_STRING_018</case>
+			<case value="0x04">ID_DS_STRING_019</case>
+			<case value="0x05">ID_DS_STRING_020</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:Undefined 01:Economy 02:Sport 03:Tip 04:Warm Up 05:Cool Down 06:Not used 07:Reverse, 其他:-  -->
+		<switch ID="5">
+			<case value="0x00">ID_DS_STRING_005</case>
+			<case value="0x01">ID_DS_STRING_021</case>
+			<case value="0x02">ID_DS_STRING_022</case>
+			<case value="0x03">ID_DS_STRING_023</case>
+			<case value="0x04">ID_DS_STRING_024</case>
+			<case value="0x05">ID_DS_STRING_025</case>
+			<case value="0x06">ID_DS_STRING_026</case>
+			<case value="0x07">ID_DS_STRING_027</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:False 01:True, 其他:-  -->
+		<switch ID="6">
+			<case value="0x00">ID_DS_STRING_028</case>
+			<case value="0x01">ID_DS_STRING_029</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:not active 01:active 02:pre-active 其他:-  -->
+		<switch ID="7">
+			<case value="0x00">ID_DS_STRING_030</case>
+			<case value="0x01">ID_DS_STRING_031</case>
+			<case value="0x02">ID_DS_STRING_032</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+		<!-- 00:False 01:True 其他:-  -->
+		<switch ID="8">
+			<case value="0x00">ID_DS_STRING_028</case>
+			<case value="0x01">ID_DS_STRING_033</case>
+			<default>ID_DS_STRING_002</default>
+		</switch>
+	</switchs>
+</root>

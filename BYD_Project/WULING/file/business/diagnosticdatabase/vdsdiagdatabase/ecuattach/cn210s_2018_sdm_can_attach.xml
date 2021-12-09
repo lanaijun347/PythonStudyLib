@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ECUConfig>
+  <SAConfig Platform="Default">
+    <SALevels>
+      <SALevel SubFunc="01" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="4a3f8b29" />
+      <SALevel SubFunc="03" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="32dadc23" />
+      <SALevel SubFunc="05" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="32dadc23" />
+      <SALevel SubFunc="07" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="32dadc23" />
+    </SALevels>
+  </SAConfig>
+</ECUConfig>

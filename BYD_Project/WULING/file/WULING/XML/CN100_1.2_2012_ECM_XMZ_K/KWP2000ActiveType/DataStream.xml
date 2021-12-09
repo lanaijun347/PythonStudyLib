@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0">
+	<function ID="ID_FUNCTION_DATASTREAM">
+		<!--选择数据流，并把选择的数据流ID保存到ui_data_buffer中-->
+		<show label="" type="data_stream_select">
+			<param type="function" value="ID_FUNCTION_READ_DATASTREAM"/>
+			<param label="data_stream_id" type="ui_data_buffer" value=""/>
+			<param label="GROUP" type="string" value="0"/>
+		</show>
+	</function>
+	<function ID="ID_FUNCTION_READ_DATASTREAM">
+		<call_protocol label="data_stream" function="read_data_stream">
+			<param type="ui_data_buffer" value="data_stream_id"/>
+		</call_protocol>
+		<judge_tip_jump use_label="data_stream"/>
+		<show label="" type="read_data_stream">
+			<param type="protocol_data" value="data_stream"/>
+		</show>
+	</function>
+	<data_stream_lib>
+		<!-- 数据流 -->
+		<group ID="0" caption="ID_STR_DS_GROUP_00">
+			<!-- 离合开关状态 -->
+			<data_stream ID="0" caption="ID_STR_DS_ITEM_0000" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>74</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0200;ELSE Y=@0199;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 制动激活状态 -->
+			<data_stream ID="1" caption="ID_STR_DS_ITEM_0001" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>74</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X2)Y=@0202;ELSE Y=@0201;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 制动测试开关状态 -->
+			<data_stream ID="2" caption="ID_STR_DS_ITEM_0002" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>74</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X4)Y=@0204;ELSE Y=@0203;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 空调压缩机离合器状态 -->
+			<data_stream ID="3" caption="ID_STR_DS_ITEM_0003" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>75</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0206;ELSE Y=@0205;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 主继电器控制指令状态 -->
+			<data_stream ID="4" caption="ID_STR_DS_ITEM_0004" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>75</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X8)Y=@0208;ELSE Y=@0207;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电动燃油泵状态 -->
+			<data_stream ID="5" caption="ID_STR_DS_ITEM_0005" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>75</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X10)Y=@0210;ELSE Y=@0209;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 启动继电器状态 -->
+			<data_stream ID="6" caption="ID_STR_DS_ITEM_0006" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>75</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X20)Y=@0212;ELSE Y=@0211;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 可变进气歧管驱动器激活标示位状态 -->
+			<data_stream ID="7" caption="ID_STR_DS_ITEM_0007" unit="0" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>75</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X40)Y=@0214;ELSE Y=@0213;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 故障指示灯状态 -->
+			<data_stream ID="8" caption="ID_STR_DS_ITEM_0008" unit="0" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>76</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X2)Y=@0216;ELSE Y=@0215;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 氧传感器控制的激活标志状态 -->
+			<data_stream ID="9" caption="ID_STR_DS_ITEM_0009" unit="0" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>76</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X20)Y=@0218;ELSE Y=@0217;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 空调压力开关状态 -->
+			<data_stream ID="10" caption="ID_STR_DS_ITEM_0010" unit="0" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>133</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X10)Y=@0220;ELSE Y=@0219;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 爆震标示位状态 -->
+			<data_stream ID="11" caption="ID_STR_DS_ITEM_0011" unit="0" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>155</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0222;ELSE Y=@0221;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- VVT的状态 -->
+			<data_stream ID="12" caption="ID_STR_DS_ITEM_0012" unit="0" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>169</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(0,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- VVT的驱动PWM状态 -->
+			<data_stream ID="13" caption="ID_STR_DS_ITEM_0013" unit="0" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>170</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(1,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 节气门位置传感器1原始电压 -->
+			<data_stream ID="14" caption="ID_STR_DS_ITEM_0014" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>2</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.0001526+0,0x8000,0xFFFF,((A*256+B)-65535)*0.0001526+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- 节气门位置传感器2原始电压 -->
+			<data_stream ID="15" caption="ID_STR_DS_ITEM_0015" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.0001526+0,0x8000,0xFFFF,((A*256+B)-65535)*0.0001526+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- 加速踏板传感器1电压 -->
+			<data_stream ID="16" caption="ID_STR_DS_ITEM_0016" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>6</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0048828125</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.10f</format>
+			</data_stream>
+			<!-- 加速踏板传感器2电压 -->
+			<data_stream ID="17" caption="ID_STR_DS_ITEM_0017" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>8</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0048828125</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.10f</format>
+			</data_stream>
+			<!-- 所有可用冷却液温度传感器的原始电压 -->
+			<data_stream ID="18" caption="ID_STR_DS_ITEM_0018" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>10</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.000152588</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.9f</format>
+			</data_stream>
+			<!-- 进气温度温度传感器电压 -->
+			<data_stream ID="19" caption="ID_STR_DS_ITEM_0019" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>14</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.000152588</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.9f</format>
+			</data_stream>
+			<!-- 参数返回数字化电压值 -->
+			<data_stream ID="20" caption="ID_STR_DS_ITEM_0020" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>16</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.000152588</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.9f</format>
+			</data_stream>
+			<!-- 点火开关后电池电压 -->
+			<data_stream ID="21" caption="ID_STR_DS_ITEM_0021" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>22</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.00062561</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- 空气压力传感器电压 -->
+			<data_stream ID="22" caption="ID_STR_DS_ITEM_0022" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>28</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0001526</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- PSTE压力传感器电压 -->
+			<data_stream ID="23" caption="ID_STR_DS_ITEM_0023" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>30</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0001526</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- 节气门位置传感器 -->
+			<data_stream ID="24" caption="ID_STR_DS_ITEM_0024" unit="oTPS" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>38</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.4668254</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- 油门踏板值 -->
+			<data_stream ID="25" caption="ID_STR_DS_ITEM_0025" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>39</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0976562</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- 发动机冷却液温度 -->
+			<data_stream ID="26" caption="ID_STR_DS_ITEM_0026" unit="C°" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>41</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.75-48</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 进气温度 -->
+			<data_stream ID="27" caption="ID_STR_DS_ITEM_0027" unit="C°" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>43</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.75-48</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 环境(大气)压力 -->
+			<data_stream ID="28" caption="ID_STR_DS_ITEM_0028" unit="hPa" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>44</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.08291752</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- 歧管空气压力 -->
+			<data_stream ID="29" caption="ID_STR_DS_ITEM_0029" unit="hPa" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>46</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.08291752</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- 节气门上游压力 -->
+			<data_stream ID="30" caption="ID_STR_DS_ITEM_0030" unit="hPa" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>48</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.08291752</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- 电瓶电压 -->
+			<data_stream ID="31" caption="ID_STR_DS_ITEM_0031" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>50</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.1015625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- 上游氧传感器信号电压 -->
+			<data_stream ID="32" caption="ID_STR_DS_ITEM_0032" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>51</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.00488281</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- 下游氧传感器信号电压 -->
+			<data_stream ID="33" caption="ID_STR_DS_ITEM_0033" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>53</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.00488281</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- 变速箱档位 -->
+			<data_stream ID="34" caption="ID_STR_DS_ITEM_0034" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>55</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 空调压力 -->
+			<data_stream ID="35" caption="ID_STR_DS_ITEM_0035" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>57</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*12.156863</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- 动力转向 -->
+			<data_stream ID="36" caption="ID_STR_DS_ITEM_0036" unit="[bar]" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>58</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.25</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 爆震控制信号[0] -->
+			<data_stream ID="37" caption="ID_STR_DS_ITEM_0037" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>62</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0000763</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- 爆震控制信号[1] -->
+			<data_stream ID="38" caption="ID_STR_DS_ITEM_0038" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>64</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0000763</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- 爆震控制信号[2] -->
+			<data_stream ID="39" caption="ID_STR_DS_ITEM_0039" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>66</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0000763</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- 爆震控制信号[3] -->
+			<data_stream ID="40" caption="ID_STR_DS_ITEM_0040" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>68</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0000763</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- 车辆速度 -->
+			<data_stream ID="41" caption="ID_STR_DS_ITEM_0041" unit="km/h" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>70</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 交流发电机PWM(脉宽调制) -->
+			<data_stream ID="42" caption="ID_STR_DS_ITEM_0042" unit="[%]" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>71</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.390625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- 发动机转速 -->
+			<data_stream ID="43" caption="ID_STR_DS_ITEM_0043" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>72</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 上游氧传感器加热器PWM(脉宽调制) -->
+			<data_stream ID="44" caption="ID_STR_DS_ITEM_0044" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>77</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.3906</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- 下游氧传感器加热器 -->
+			<data_stream ID="45" caption="ID_STR_DS_ITEM_0045" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>78</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.3906</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- 修正后碳罐电磁阀开启PWM(脉宽调制)信号 -->
+			<data_stream ID="46" caption="ID_STR_DS_ITEM_0046" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>79</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.390625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- 可变气门正时的脉宽调制(进气侧) -->
+			<data_stream ID="47" caption="ID_STR_DS_ITEM_0047" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>82</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0061035156</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.10f</format>
+			</data_stream>
+			<!-- 所有可用的冷却风扇的功率输出 -->
+			<data_stream ID="48" caption="ID_STR_DS_ITEM_0048" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>90</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.392</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- 发动机目标怠速 -->
+			<data_stream ID="49" caption="ID_STR_DS_ITEM_0049" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>95</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 实际执行的气缸独立喷射时间[0] -->
+			<data_stream ID="50" caption="ID_STR_DS_ITEM_0050" unit="ms" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>97</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.004</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- 实际执行的气缸独立喷射时间[1] -->
+			<data_stream ID="51" caption="ID_STR_DS_ITEM_0051" unit="ms" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>99</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.004</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- 实际执行的气缸独立喷射时间[2] -->
+			<data_stream ID="52" caption="ID_STR_DS_ITEM_0052" unit="ms" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>101</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.004</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- 实际执行的气缸独立喷射时间[3] -->
+			<data_stream ID="53" caption="ID_STR_DS_ITEM_0053" unit="ms" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>103</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.004</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- 来自氧传感器自适应输出的燃油质量设定值系数 -->
+			<data_stream ID="54" caption="ID_STR_DS_ITEM_0054" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>107</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.00152588+0,0x8000,0xFFFF,((A*256+B)-65535)*0.00152588+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- 所有气缸点火角度实际值的平均值 -->
+			<data_stream ID="55" caption="ID_STR_DS_ITEM_0055" unit="℃RK" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>109</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.375-35.625</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- 带有自适应的爆震控制的总点火延迟[0] -->
+			<data_stream ID="56" caption="ID_STR_DS_ITEM_0056" unit="℃RK" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>110</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.375-48</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- 带有自适应的爆震控制的总点火延迟[1] -->
+			<data_stream ID="57" caption="ID_STR_DS_ITEM_0057" unit="℃RK" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>111</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.375-48</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- 带有自适应的爆震控制的总点火延迟[2] -->
+			<data_stream ID="58" caption="ID_STR_DS_ITEM_0058" unit="℃RK" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>112</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.375-48</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- 带有自适应的爆震控制的总点火延迟[3] -->
+			<data_stream ID="59" caption="ID_STR_DS_ITEM_0059" unit="℃RK" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>113</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.375-48</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- 空调蒸发器温度传感器电压值 -->
+			<data_stream ID="60" caption="ID_STR_DS_ITEM_0060" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>114</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.000152588</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.9f</format>
+			</data_stream>
+			<!-- 空调蒸发温度 -->
+			<data_stream ID="61" caption="ID_STR_DS_ITEM_0061" unit="C°" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>116</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.75-48</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 进气量 -->
+			<data_stream ID="62" caption="ID_STR_DS_ITEM_0062" unit="kg/h" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>125</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.03125</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.5f</format>
+			</data_stream>
+			<!-- 进气量 -->
+			<data_stream ID="63" caption="ID_STR_DS_ITEM_0063" unit="mg/stk" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>127</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.02119478</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- 基本充气效率偏移量的高原修正量 -->
+			<data_stream ID="64" caption="ID_STR_DS_ITEM_0064" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>129</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.000030517578125</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.15f</format>
+			</data_stream>
+			<!-- 基本充气效率斜率的高原修正量 -->
+			<data_stream ID="65" caption="ID_STR_DS_ITEM_0065" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>131</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.000030517578125</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.15f</format>
+			</data_stream>
+			<!-- 1缸的空燃比修正量 -->
+			<data_stream ID="66" caption="ID_STR_DS_ITEM_0066" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>143</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.001525878+0,0x8000,0xFFFF,((A*256+B)-65535)*0.001525878+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.9f</format>
+			</data_stream>
+			<!-- 空燃比修正的燃油量 -->
+			<data_stream ID="67" caption="ID_STR_DS_ITEM_0067" unit="mg/stk" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>145</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.021194781+0,0x8000,0xFFFF,((A*256+B)-65535)*0.021194781+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.9f</format>
+			</data_stream>
+			<!-- ETC执行器的占空比 -->
+			<data_stream ID="68" caption="ID_STR_DS_ITEM_0068" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>147</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.00305175+0,0x8000,0xFFFF,((A*256+B)-65535)*0.00305175+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- 碳罐负荷 -->
+			<data_stream ID="69" caption="ID_STR_DS_ITEM_0069" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>149</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.000030517578125</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.15f</format>
+			</data_stream>
+			<!-- 节气门位置的目标值 -->
+			<data_stream ID="70" caption="ID_STR_DS_ITEM_0070" unit="°TPS" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>151</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.00729414</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- 点火线圈初级线圈的通电时间 -->
+			<data_stream ID="71" caption="ID_STR_DS_ITEM_0071" unit="ms" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>153</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.004</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- 车辆累计总里程 -->
+			<data_stream ID="72" caption="ID_STR_DS_ITEM_0072" unit="Km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>156</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 机油温度(模型) -->
+			<data_stream ID="73" caption="ID_STR_DS_ITEM_0073" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>165</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- VVT的实际位置 -->
+			<data_stream ID="74" caption="ID_STR_DS_ITEM_0074" unit="℃RK" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>166</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.0078125+0,0x8000,0xFFFF,((A*256+B)-65535)*0.0078125+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- VVT的目标位置 -->
+			<data_stream ID="75" caption="ID_STR_DS_ITEM_0075" unit="℃RK" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>168</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.5</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 停机时刻的冷却液温度 -->
+			<data_stream ID="76" caption="ID_STR_DS_ITEM_0076" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>55</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.75-48</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 额外的节气门进气量修正量 -->
+			<data_stream ID="77" caption="ID_STR_DS_ITEM_0077" unit="cm²" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>56</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.00089407+0,0x8000,0xFFFF,((A*256+B)-65535)*0.00089407+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- 节气门位置自学习的总修正 -->
+			<data_stream ID="78" caption="ID_STR_DS_ITEM_0078" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>62</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.00152588+0,0x8000,0xFFFF,((A*256+B)-65535)*0.00152588+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- 空燃比的修正量 -->
+			<data_stream ID="79" caption="ID_STR_DS_ITEM_0079" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>171</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.00305176+0,0x8000,0xFFFF,((A*256+B)-65535)*0.00305176+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- 空燃比修正的燃油修正量 -->
+			<data_stream ID="80" caption="ID_STR_DS_ITEM_0080" unit="mg/stk" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>177</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.0211948+0,0x8000,0xFFFF,((A*256+B)-65535)*0.0211948+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- 基本怠速控制的扭矩学习值 -->
+			<data_stream ID="81" caption="ID_STR_DS_ITEM_0081" unit="Nm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>181</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>4,1,0x00000000,0x7FFFFFFF,(A*16777216+B*65536+C*256+D)*0.000000476837+0,0x800000,0xFFFFFF,((A*16777216+B*65536+C*256+D)-4294967295)*0.000000476837+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.12f</format>
+			</data_stream>
+			<!-- 空调压缩机引起的扭矩损失 -->
+			<data_stream ID="82" caption="ID_STR_DS_ITEM_0082" unit="Nm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>189</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>4,1,0x00000000,0x7FFFFFFF,(A*16777216+B*65536+C*256+D)*0.000000476837+0,0x800000,0xFFFFFF,((A*16777216+B*65536+C*256+D)-4294967295)*0.000000476837+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.12f</format>
+			</data_stream>
+		</group>
+	</data_stream_lib>
+	<switchs>
+		<!-- 00:被动 01:准备 02:行动自适应 03:使用 04:跛行回家 其他:-  -->
+		<switch ID="0">
+			<case value="0x00">ID_DS_STRING_000</case>
+			<case value="0x01">ID_DS_STRING_001</case>
+			<case value="0x02">ID_DS_STRING_002</case>
+			<case value="0x03">ID_DS_STRING_003</case>
+			<case value="0x04">ID_DS_STRING_004</case>
+			<default>ID_DS_STRING_005</default>
+		</switch>
+		<!-- 00:保持 01:行动 02:被动 其他:-  -->
+		<switch ID="1">
+			<case value="0x00">ID_DS_STRING_006</case>
+			<case value="0x01">ID_DS_STRING_007</case>
+			<case value="0x02">ID_DS_STRING_000</case>
+			<default>ID_DS_STRING_005</default>
+		</switch>
+	</switchs>
+</root>

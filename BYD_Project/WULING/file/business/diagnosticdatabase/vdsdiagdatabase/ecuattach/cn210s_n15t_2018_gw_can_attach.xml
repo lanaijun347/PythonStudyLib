@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ECUConfig>
+  <SAConfig Platform="Default">
+    <SALevels>
+      <SALevel SubFunc="01" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="8783A435" />
+	  <SALevel SubFunc="05" DllName="GW_UAES.dll" Type="SA_TYPE_SATURN" Mask="12345678" />
+    </SALevels>
+  </SAConfig>
+</ECUConfig>

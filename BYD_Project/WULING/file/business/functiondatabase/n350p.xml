@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VehicleFunctionConfig>
+	<Domain Name="Advance">	
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN" />
+		</ProcessGroup>
+		<ProcessGroup Name="ZeroPositionLearning" LD="Proc_ZeroPositionLearning" Type="ZeroPositionLearning" Lv="1">
+			<ProcessUnit Name="ZeroPositionLearning_NAI_NoTest" />
+			<ProcessUnit Name="ZeroPositionLearning_Long" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Code" Value="N350P_1.8L_ECM_G6_CAN" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_LIUJI_NP18" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Code" Value="CN180S_1.5L_2016_ECM_CAN" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_Con" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Code" Value="N350P_1.8L_ECM_G5_CAN" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_UAES_NP18" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Code" Value="N300PPS_B15_2019_ECM_G6_CAN" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_Con_G6" />
+		</ProcessGroup>
+	</Domain>
+</VehicleFunctionConfig>

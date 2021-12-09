@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VehicleFunctionConfig>
+	<Domain Name="Advance" Type="0">
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_BCM_UAES_FT1" />
+			<ProcessUnit Name="Refresh_CVT_PIN" />
+			<ProcessUnit Name="Refresh_PEPS" />
+			<ProcessUnit Name="Refresh_ECM_Con" />
+			<ProcessUnit Name="Refresh_IC_BOSCH_IN" />
+		</ProcessGroup>
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="ABSOLConfiguration" />
+			<ProcessUnit Name="GWOnlineConfiguration" />
+			<ProcessUnit Name="BCMOLConfiguration" />
+			<ProcessUnit Name="TPMSConfiguration" />
+			<ProcessUnit Name="PEPSOnlineConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="Calibration" LD="Proc_Calibration" Type="Calibration" Lv="1">
+			<ProcessUnit Name="ESPYawRateSensorCalibration" />		
+			<ProcessUnit Name="DV360Calibration_CN202SR" />			
+		</ProcessGroup>
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN" />
+		</ProcessGroup>
+		<ProcessGroup Name="ECMReset" LD="Proc_ECMSelfLearningValueClear" Type="Reset" Lv="1">
+			<ProcessUnit Name="ECMReset" />
+		</ProcessGroup>
+		<ProcessGroup Name="IMMO" LD="Proc_IMMO" Type="IMMO" Lv="1">
+			<ProcessUnit Name="IMMO" />
+		</ProcessGroup>
+		<ProcessGroup Name="PEPSConfiguration" LD="Proc_PEPSConfiguration" Type="PEPSConfiguration" Lv="1">
+			<ProcessUnit Name="PEPSConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="ZeroPositionLearning" LD="Proc_ZeroPositionLearning" Type="ZeroPositionLearning" Lv="1">
+			<ProcessUnit Name="ZeroPositionLearning_NAI" />
+		</ProcessGroup>
+		<ProcessGroup Name="Calibration" LD="Proc_Calibration" Type="Calibration" Lv="1">
+			<ProcessUnit Name="SCUCalibration" />
+		</ProcessGroup>
+		<ProcessGroup Name="EPBRepair" LD="Proc_EPBRepair" Type="Repair" Lv="1">
+			<ProcessUnit Name="EPBRepair_ABS" />
+		</ProcessGroup>
+		<ProcessGroup Name="DCTRoutineControl" LD="Proc_DCTRoutineControl" Type="DCTRoutineControl" Lv="1">
+			<ProcessUnit Name="DCTRoutineControl" />
+		</ProcessGroup>
+	</Domain>
+	<Data Name="TPMSCFGDATA">
+		<TyreSize Name="215/60R17" Value="A7A74646" />
+	</Data>
+</VehicleFunctionConfig>

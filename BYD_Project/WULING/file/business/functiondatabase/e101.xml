@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VehicleFunctionConfig>
+	<Domain Name="Advance">
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_PLG" />
+			<ProcessUnit Name="Refresh_GW_UAES" />	
+			<ProcessUnit Name="Refresh_BCM_UAES_210" />				
+			<ProcessUnit Name="Refresh_RSM" />
+			<ProcessUnit Name="Refresh_CVT_PIN" />
+		</ProcessGroup>
+	</Domain>
+</VehicleFunctionConfig>

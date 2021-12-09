@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0">
+	<function ID="ID_FUNCTION_DATASTREAM">
+		<!--选择数据流，并把选择的数据流ID保存到ui_data_buffer中-->
+		<show label="" type="data_stream_select">
+			<param type="function" value="ID_FUNCTION_READ_DATASTREAM"/>
+			<param label="data_stream_id" type="ui_data_buffer" value=""/>
+			<param label="GROUP" type="string" value="0"/>
+		</show>
+	</function>
+	<function ID="ID_FUNCTION_READ_DATASTREAM">
+		<call_protocol label="data_stream" function="read_data_stream">
+			<param type="ui_data_buffer" value="data_stream_id"/>
+		</call_protocol>
+		<judge_tip_jump use_label="data_stream"/>
+		<show label="" type="read_data_stream">
+			<param type="protocol_data" value="data_stream"/>
+		</show>
+	</function>
+	<data_stream_lib>
+		<!-- 数据流 -->
+		<group ID="0" caption="ID_STR_DS_GROUP_00">
+			<!-- 当前时间 -->
+			<data_stream ID="0" caption="ID_STR_DS_ITEM_0000" unit="Second" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>6</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula></formula>
+				</caculate>
+				<!--显示控制-->
+				<format>HEX</format>
+			</data_stream>
+			<!-- 当前时间 -->
+			<data_stream ID="1" caption="ID_STR_DS_ITEM_0001" unit="Minute" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>6</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula></formula>
+				</caculate>
+				<!--显示控制-->
+				<format>HEX</format>
+			</data_stream>
+			<!-- 当前时间 -->
+			<data_stream ID="2" caption="ID_STR_DS_ITEM_0002" unit="Hour" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>5</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula></formula>
+				</caculate>
+				<!--显示控制-->
+				<format>HEX</format>
+			</data_stream>
+			<!-- 当前时间 -->
+			<data_stream ID="3" caption="ID_STR_DS_ITEM_0003" unit="Day" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>6</valid_byte_offset>
+				<valid_byte_number>5</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula></formula>
+				</caculate>
+				<!--显示控制-->
+				<format>HEX</format>
+			</data_stream>
+			<!-- 当前时间 -->
+			<data_stream ID="4" caption="ID_STR_DS_ITEM_0004" unit="Month" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>7</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 当前时间 -->
+			<data_stream ID="5" caption="ID_STR_DS_ITEM_0005" unit="Year" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>8</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1+2010</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- ADAS功能设置状态 -->
+			<data_stream ID="6" caption="ID_STR_DS_ITEM_0006" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(0,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 车道偏离报警方式 -->
+			<data_stream ID="7" caption="ID_STR_DS_ITEM_0007" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(1,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 限速报警偏移量设置状态 -->
+			<data_stream ID="8" caption="ID_STR_DS_ITEM_0008" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*(-)-</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 车道偏离报警设置状态 -->
+			<data_stream ID="9" caption="ID_STR_DS_ITEM_0009" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0120;ELSE Y=@0119;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 自动远光灯设置状态 -->
+			<data_stream ID="10" caption="ID_STR_DS_ITEM_0010" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X40)Y=@0120;ELSE Y=@0119;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 交通标志识别设置状态 -->
+			<data_stream ID="11" caption="ID_STR_DS_ITEM_0011" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X20)Y=@0120;ELSE Y=@0119;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 限速报警设置状态 -->
+			<data_stream ID="12" caption="ID_STR_DS_ITEM_0012" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X10)Y=@0120;ELSE Y=@0119;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+		</group>
+	</data_stream_lib>
+	<switchs>
+		<!-- 00:预留 01:低灵敏度 02:高灵敏度 其他:-  -->
+		<switch ID="0">
+			<case value="0x00">ID_DS_STRING_000</case>
+			<case value="0x01">ID_DS_STRING_001</case>
+			<case value="0x02">ID_DS_STRING_002</case>
+			<default>ID_DS_STRING_003</default>
+		</switch>
+		<!-- 00:预留 01:预留 02:显示报警 03:声音报警 04:方向盘振动报警 05:声音报警+方向盘振动报警 其他:-  -->
+		<switch ID="1">
+			<case value="0x00">ID_DS_STRING_000</case>
+			<case value="0x01">ID_DS_STRING_000</case>
+			<case value="0x02">ID_DS_STRING_004</case>
+			<case value="0x03">ID_DS_STRING_005</case>
+			<case value="0x04">ID_DS_STRING_006</case>
+			<case value="0x05">ID_DS_STRING_007</case>
+			<default>ID_DS_STRING_003</default>
+		</switch>
+	</switchs>
+</root>

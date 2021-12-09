@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VehicleFunctionConfig>
+	<Domain Name="Advance" Type="0">
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_IC_BOSCH_India" />
+			<ProcessUnit Name="Refresh_AC_180S" />
+			<ProcessUnit Name="Refresh_PEPS" />
+			<ProcessUnit Name="Refresh_MCU" />
+			<ProcessUnit Name="Refresh_PLG" />
+			<ProcessUnit Name="Refresh_DCT_UAES_DCT_PIN" />
+			<ProcessUnit Name="Refresh_BCM_UAES_210" />
+			<ProcessUnit Name="Refresh_PEPS_BS6" />
+		</ProcessGroup>
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="ABSOLConfiguration_IN" />
+			<ProcessUnit Name="GWOnlineConfiguration" />
+			<ProcessUnit Name="BCMOLConfiguration_C101" />
+			<ProcessUnit Name="TPMSConfiguration" />
+			<ProcessUnit Name="TBOXOnlineConfiguration" />
+			<ProcessUnit Name="ICEOnlineConfiguration_INDIA" />
+			<ProcessUnit Name="PLGOnlineConfiguration" />
+			<ProcessUnit Name="ICOnlineConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="Calibration" LD="Proc_Calibration" Type="Calibration" Lv="1">
+			<ProcessUnit Name="ESPYawRateSensorCalibration" />		
+			<ProcessUnit Name="DV360Calibration_CN202SR" />
+			<ProcessUnit Name="PLGCalibration" />			
+		</ProcessGroup>
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN" />
+		</ProcessGroup>
+		<ProcessGroup Name="IMMO" LD="Proc_IMMO" Type="IMMO" Lv="1">
+			<ProcessUnit Name="IMMO" />
+		</ProcessGroup>
+		<ProcessGroup Name="PEPSConfiguration" LD="Proc_PEPSConfiguration" Type="PEPSConfiguration" Lv="1">
+			<ProcessUnit Name="PEPSConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="ZeroPositionLearning" LD="Proc_ZeroPositionLearning" Type="ZeroPositionLearning" Lv="1">
+			<ProcessUnit Name="ZeroPositionLearning_NAI" />
+		</ProcessGroup>
+		<ProcessGroup Name="Calibration" LD="Proc_Calibration" Type="Calibration" Lv="1">
+			<ProcessUnit Name="SCUCalibration" />
+		</ProcessGroup>
+		<ProcessGroup Name="Replace" LD="Proc_Replace" Type="Replace" Lv="1">
+			<ProcessUnit Name="ReplaceTBOX" />
+		</ProcessGroup>
+		<ProcessGroup Name="EPBRepair" LD="Proc_EPBRepair" Type="Repair" Lv="1">
+			<ProcessUnit Name="EPBRepair_ABS" />
+		</ProcessGroup>
+		<ProcessGroup Name="VTWrite" LD="Proc_VTWrite" Type="VTWrite" Lv="1">
+			<ProcessUnit Name="BCMWrite" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="2.0D MT" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_Diesel_BS4" />
+		</ProcessGroup>
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="ECMOnlineConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="Replace" LD="Proc_Replace" Type="Replace" Lv="1">
+			<ProcessUnit Name="DPFRegenerationRoutine" />
+			<ProcessUnit Name="ECMLockInCustomerMode" />
+		</ProcessGroup>
+		<ProcessGroup Name="VTWrite" LD="Proc_VTWrite" Type="VTWrite" Lv="1">
+			<ProcessUnit Name="IMAWrite" />
+		</ProcessGroup>
+		<ProcessGroup Name="ECMReset" LD="Proc_ECMSelfLearningValueClear" Type="Reset" Lv="1">
+			<ProcessUnit Name="ECMDieselReset" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="2.0D DCT" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_Diesel_BS4" />
+		</ProcessGroup>
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="ECMOnlineConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="Replace" LD="Proc_Replace" Type="Replace" Lv="1">
+			<ProcessUnit Name="DPFRegenerationRoutine" />
+			<ProcessUnit Name="ECMLockInCustomerMode" />
+		</ProcessGroup>
+		<ProcessGroup Name="DCTRoutineControl" LD="Proc_DCTRoutineControl" Type="DCTRoutineControl" Lv="1">
+			<ProcessUnit Name="DCTRoutineControl" />
+		</ProcessGroup>
+		<ProcessGroup Name="VTWrite" LD="Proc_VTWrite" Type="VTWrite" Lv="1">
+			<ProcessUnit Name="IMAWrite" />
+		</ProcessGroup>
+		<ProcessGroup Name="ECMReset" LD="Proc_ECMSelfLearningValueClear" Type="Reset" Lv="1">
+			<ProcessUnit Name="ECMDieselReset" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="N15T DCT" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_Con_G6" />
+		</ProcessGroup>
+		<ProcessGroup Name="DCTRoutineControl" LD="Proc_DCTRoutineControl" Type="DCTRoutineControl" Lv="1">
+			<ProcessUnit Name="DCTRoutineControl" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="N15T MT" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_Con_G6" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="BSG DCT" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_UAES_BSG" />
+		</ProcessGroup>
+		<ProcessGroup Name="DCTRoutineControl" LD="Proc_DCTRoutineControl" Type="DCTRoutineControl" Lv="1">
+			<ProcessUnit Name="DCTRoutineControl" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="BSG MT" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_UAES_BSG" />
+		</ProcessGroup>
+	</Domain>
+
+
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="2.0D MT(BS6)" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_Diesel_BS4" />
+		</ProcessGroup>
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="ECMOnlineConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="Replace" LD="Proc_Replace" Type="Replace" Lv="1">
+			<ProcessUnit Name="DPFRegenerationRoutine" />
+			<ProcessUnit Name="ECMLockInCustomerMode" />
+		</ProcessGroup>
+		<ProcessGroup Name="VTWrite" LD="Proc_VTWrite" Type="VTWrite" Lv="1">
+			<ProcessUnit Name="IMAWrite" />
+		</ProcessGroup>
+		<ProcessGroup Name="ECMReset" LD="Proc_ECMSelfLearningValueClear" Type="Reset" Lv="1">
+			<ProcessUnit Name="ECMDieselReset" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="N15T DCT(BS6)" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_Con_G6" />
+		</ProcessGroup>
+		<ProcessGroup Name="DCTRoutineControl" LD="Proc_DCTRoutineControl" Type="DCTRoutineControl" Lv="1">
+			<ProcessUnit Name="DCTRoutineControl" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="N15T MT(BS6)" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_Con_G6" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="BSG DCT(BS6)" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_UAES_BSG" />
+		</ProcessGroup>
+		<ProcessGroup Name="DCTRoutineControl" LD="Proc_DCTRoutineControl" Type="DCTRoutineControl" Lv="1">
+			<ProcessUnit Name="DCTRoutineControl" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="BSG MT(BS6)" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_UAES_BSG" />
+		</ProcessGroup>
+	</Domain>
+	<Data Name="TPMSCFGDATA">
+		<TyreSize Name="215/60R17" Value="A7A74646" />
+	</Data>
+</VehicleFunctionConfig>

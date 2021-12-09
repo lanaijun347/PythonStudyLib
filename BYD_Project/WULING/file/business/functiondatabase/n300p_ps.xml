@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VehicleFunctionConfig>
+	<Domain Name="Advance">
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN" />
+		</ProcessGroup>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_Con_G6" />
+		</ProcessGroup>		
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="N12" />
+		</Conditions>
+		<ProcessGroup Name="Replace" LD="Proc_Replace" Type="Replace" Lv="1">
+			<ProcessUnit Name="ReplaceGPF" />
+		</ProcessGroup>
+	</Domain>
+</VehicleFunctionConfig>

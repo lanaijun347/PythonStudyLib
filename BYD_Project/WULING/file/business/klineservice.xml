@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+  <KLineService>
+	<SERVICE N="ReadVIN" T="SERVICE" RespType="0" GPN="">
+        <Req N="Request" T="DIAGMESSAGE" I="1856" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ServiceID" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="1">
+              <V>26</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>144</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Req>
+        <Resp N="Response" T="DIAGMESSAGE" I="1864" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ReadDataByIdentifier Response Service Id" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="0">
+              <V>90</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>144</V>
+            </DIAGSIGNAL>
+            <ARRAYSIGNAL N="VIN" T="ARRAYSIGNAL" SB="23" BL="136" BO="0" S="3" DT="4" UT="5">
+              <V>
+              </V>
+            </ARRAYSIGNAL>
+          </Ss>
+        </Resp>
+    </SERVICE>
+	<SERVICE N="ReadVIN2180" T="SERVICE" RespType="0" GPN="">
+        <Req N="Request" T="DIAGMESSAGE" I="1856" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ServiceID" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="1">
+              <V>33</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>128</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Req>
+        <Resp N="Response" T="DIAGMESSAGE" I="1864" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ReadDataByIdentifier Response Service Id" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="0">
+              <V>90</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>144</V>
+            </DIAGSIGNAL>
+            <ARRAYSIGNAL N="VIN" T="ARRAYSIGNAL" SB="663" BL="136" BO="0" S="3" DT="4" UT="5">
+              <V></V>
+            </ARRAYSIGNAL>
+          </Ss>
+        </Resp>
+    </SERVICE>
+	<SERVICE N="EnterSession" T="SERVICE" RespType="0" GPN="">
+        <Req N="Request" T="DIAGMESSAGE" I="1856" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ServiceID" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="1">
+              <V>16</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>133</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Req>
+        <Resp N="Response" T="DIAGMESSAGE" I="1864" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ReadDataByIdentifier Response Service Id" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="0">
+              <V>90</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>144</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Resp>
+    </SERVICE>
+	<SERVICE N="EnterSession1083" T="SERVICE" RespType="0" GPN="">
+        <Req N="Request" T="DIAGMESSAGE" I="1856" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ServiceID" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="1">
+              <V>16</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>131</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Req>
+        <Resp N="Response" T="DIAGMESSAGE" I="1864" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ReadDataByIdentifier Response Service Id" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="0">
+              <V>90</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>144</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Resp>
+    </SERVICE>
+	<SERVICE N="SA01" T="SERVICE" RespType="0" GPN="">
+        <Req N="Request" T="DIAGMESSAGE" I="1856" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ServiceID" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="1">
+              <V>39</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>1</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Req>
+        <Resp N="Response" T="DIAGMESSAGE" I="1864" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ReadDataByIdentifier Response Service Id" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="0">
+              <V>90</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>144</V>
+            </DIAGSIGNAL>
+			<ARRAYSIGNAL N="Seed" SB="23" BL="32" BO="0" S="3" F="1" O="0" MI="-100000" MA="100000" U="" T="ARRAYSIGNAL">
+              <V>0</V>
+            </ARRAYSIGNAL>
+          </Ss>
+        </Resp>
+    </SERVICE>
+	<SERVICE N="SA02" T="SERVICE" RespType="0" GPN="">
+        <Req N="Request" T="DIAGMESSAGE" I="1856" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ServiceID" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="1">
+              <V>39</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>2</V>
+            </DIAGSIGNAL>
+			<ARRAYSIGNAL N="LocalIdentifier" T="ARRAYSIGNAL" SB="23" BL="32" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>0</V>
+            </ARRAYSIGNAL>
+          </Ss>
+        </Req>
+        <Resp N="Response" T="DIAGMESSAGE" I="1864" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ReadDataByIdentifier Response Service Id" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="0">
+              <V>90</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>144</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Resp>
+    </SERVICE>
+	<SERVICE N="Routine" T="SERVICE" RespType="0" GPN="">
+        <Req N="Request" T="DIAGMESSAGE" I="1856" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ServiceID" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="1">
+              <V>49</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>4</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Req>
+        <Resp N="Response" T="DIAGMESSAGE" I="1864" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ReadDataByIdentifier Response Service Id" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="0">
+              <V>90</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>144</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Resp>
+    </SERVICE>
+	<SERVICE N="WriteVIN" T="SERVICE" RespType="0" GPN="">
+        <Req N="Request" T="DIAGMESSAGE" I="1856" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ServiceID" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="1">
+              <V>59</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>144</V>
+            </DIAGSIGNAL>
+			<ARRAYSIGNAL N="VIN" T="ARRAYSIGNAL" SB="23" BL="136" BO="0" S="3" DT="4" UT="5">
+              <V>0</V>
+			 </ARRAYSIGNAL>
+          </Ss>
+        </Req>
+        <Resp N="Response" T="DIAGMESSAGE" I="1864" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ReadDataByIdentifier Response Service Id" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="0">
+              <V>90</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>144</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Resp>
+    </SERVICE>
+	<SERVICE N="ECUReset" T="SERVICE" RespType="0" GPN="">
+        <Req N="Request" T="DIAGMESSAGE" I="1856" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ServiceID" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="1">
+              <V>17</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>1</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Req>
+        <Resp N="Response" T="DIAGMESSAGE" I="1864" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ReadDataByIdentifier Response Service Id" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="0">
+              <V>90</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>144</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Resp>
+    </SERVICE>
+	<SERVICE N="BW4Reset" T="SERVICE" RespType="0" GPN="">
+        <Req N="Request" T="DIAGMESSAGE" I="1856" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ServiceID" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="1">
+              <V>16</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>129</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Req>
+        <Resp N="Response" T="DIAGMESSAGE" I="1864" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ReadDataByIdentifier Response Service Id" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="0">
+              <V>90</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>144</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Resp>
+    </SERVICE>
+	<SERVICE N="UAESReset" T="SERVICE" RespType="0" GPN="">
+        <Req N="Request" T="DIAGMESSAGE" I="1856" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ServiceID" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="1">
+              <V>49</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>251</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Req>
+        <Resp N="Response" T="DIAGMESSAGE" I="1864" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ReadDataByIdentifier Response Service Id" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="0">
+              <V>90</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>144</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Resp>
+    </SERVICE>
+	<SERVICE N="PowerOff" T="SERVICE" RespType="0" GPN="">
+        <Req N="Request" T="DIAGMESSAGE" I="1856" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ServiceID" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="1">
+              <V>48</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="16" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>53248</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Req>
+        <Resp N="Response" T="DIAGMESSAGE" I="1864" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ReadDataByIdentifier Response Service Id" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="0">
+              <V>90</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>144</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Resp>
+    </SERVICE>
+	<SERVICE N="Communication" T="SERVICE" RespType="0" GPN="">
+        <Req N="Request" T="DIAGMESSAGE" I="1856" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ServiceID" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="1">
+              <V>129</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Req>
+        <Resp N="Response" T="DIAGMESSAGE" I="1864" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ReadDataByIdentifier Response Service Id" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="0">
+              <V>90</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>144</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Resp>
+    </SERVICE>
+	<SERVICE N="ClearSensor31E0" T="SERVICE" RespType="0" GPN="">
+        <Req N="Request" T="DIAGMESSAGE" I="1856" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ServiceID" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="1">
+              <V>49</V>
+            </DIAGSIGNAL>
+			<DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>224</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Req>
+        <Resp N="Response" T="DIAGMESSAGE" I="1864" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ReadDataByIdentifier Response Service Id" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="0">
+              <V>90</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>144</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Resp>
+    </SERVICE>
+	<SERVICE N="ReadSenseor21D0" T="SERVICE" RespType="0" GPN="">
+        <Req N="Request" T="DIAGMESSAGE" I="1856" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ServiceID" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="1">
+              <V>33</V>
+            </DIAGSIGNAL>
+			<DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>208</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Req>
+        <Resp N="Response" T="DIAGMESSAGE" I="1864" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ReadDataByIdentifier Response Service Id" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="0">
+              <V>97</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>208</V>
+            </DIAGSIGNAL>
+			<DIAGSIGNAL N="ID1" T="DIAGSIGNAL" SB="23" BL="32" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>0</V>
+            </DIAGSIGNAL>
+			<DIAGSIGNAL N="ID2" T="DIAGSIGNAL" SB="55" BL="32" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>0</V>
+            </DIAGSIGNAL>
+			<DIAGSIGNAL N="ID3" T="DIAGSIGNAL" SB="87" BL="32" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>0</V>
+            </DIAGSIGNAL>
+			<DIAGSIGNAL N="ID4" T="DIAGSIGNAL" SB="119" BL="32" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>0</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Resp>
+    </SERVICE>
+	<SERVICE N="LearnSensor31E1" T="SERVICE" RespType="0" GPN="">
+        <Req N="Request" T="DIAGMESSAGE" I="1856" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ServiceID" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="1">
+              <V>49</V>
+            </DIAGSIGNAL>
+			<DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>225</V>
+            </DIAGSIGNAL>
+			<DIAGSIGNAL N="ID" T="DIAGSIGNAL" SB="23" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>0</V>
+            </DIAGSIGNAL>
+          </Ss>
+        </Req>
+        <Resp N="Response" T="DIAGMESSAGE" I="1864" L="0" P="1" ID="34">
+          <Ss>
+            <DIAGSIGNAL N="ReadDataByIdentifier Response Service Id" T="DIAGSIGNAL" SB="7" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="0">
+              <V>97</V>
+            </DIAGSIGNAL>
+            <DIAGSIGNAL N="LocalIdentifier" T="DIAGSIGNAL" SB="15" BL="8" BO="0" S="1" F="1" O="0" MI="-100000" MA="100000" U="" DT="0" UT="2">
+              <V>208</V>
+            </DIAGSIGNAL>			
+          </Ss>
+        </Resp>
+    </SERVICE>
+  </KLineService>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VehicleFunctionConfig>
+	<Domain Name="Advance">
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_EPS_DONGHUA_FT1" />
+			<ProcessUnit Name="Refresh_MCU" />
+		</ProcessGroup>
+		<ProcessGroup Name="ZeroPositionLearning" LD="Proc_ZeroPositionLearning" Type="ZeroPositionLearning" Lv="1">
+			<ProcessUnit Name="ZeroPositionLearning_Dong" />
+			<ProcessUnit Name="ZeroPositionLearning_Long" />
+		</ProcessGroup>
+		<ProcessGroup Name="IMMO" LD="Proc_IMMO" Type="IMMO" Lv="1">
+			<ProcessUnit Name="IMMO_E" />
+		</ProcessGroup>
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="ABSOLConfiguration_E" />
+			<ProcessUnit Name="EPSOLConfiguration_E" />
+			<ProcessUnit Name="BCMOLConfiguration_E" />
+			<ProcessUnit Name="VTOnlineConfiguration_E" />
+		</ProcessGroup>
+		<ProcessGroup Name="Calibration" LD="Proc_Calibration" Type="Calibration" Lv="1">
+			<ProcessUnit Name="ESPYawRateSensorCalibration_E" />
+		</ProcessGroup>
+		<ProcessGroup Name="EPBRepair" LD="Proc_EPBRepair" Type="Repair" Lv="1">
+			<ProcessUnit Name="EPBRepair_E" />
+		</ProcessGroup>
+		<ProcessGroup Name="PEPSConfiguration" LD="Proc_PEPSConfiguration" Type="PEPSConfiguration" Lv="1">
+			<ProcessUnit Name="PEPSConfiguration_E" />
+		</ProcessGroup>
+		<ProcessGroup Name="RKE" LD="Proc_RKE" Type="RKE" Lv="1">
+			<ProcessUnit Name="RKE" />
+		</ProcessGroup>
+		<ProcessGroup Name="TransferFile" LD="Proc_TransferFile" Type="TransferFile" Lv="1">
+			<ProcessUnit Name="TransferFile" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="Lv2" />
+			<Condition Name="Year" Value="2016" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_EPP" />
+		</ProcessGroup>    
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="TPMSConfiguration" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="Lv1" />
+			<Condition Name="Year" Value="2016" />
+		</Conditions>
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="TPMSConfiguration" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="LV1共享车" />
+		</Conditions>
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="TPMSConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="VTWrite" LD="Proc_VTWrite" Type="VTWrite" Lv="1">
+			<ProcessUnit Name="VTWrite" />
+		</ProcessGroup>
+	</Domain>
+	<Data Name="TPMSCFGDATA">
+		<TyreSize Name="145/70R12" Value="A7A74646" />
+	</Data>
+</VehicleFunctionConfig>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ECUConfig pin="7" DTC="true">
+  <SAConfig Platform="Default">
+    <SALevels>
+      <SALevel SubFunc="01" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="53325c22" />
+    </SALevels>
+  </SAConfig>
+  <IOCBI>
+	<PreCondition Session="03" SA="01" />
+  </IOCBI>
+</ECUConfig>

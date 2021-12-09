@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ECUConfig ModuleType="CVT">
+  <SAConfig Platform="Default">
+    <SALevels>
+      <SALevel SubFunc="01" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="93e753ba" />
+	  <SALevel SubFunc="05" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="94321cda" />
+    </SALevels>
+  </SAConfig>
+</ECUConfig>

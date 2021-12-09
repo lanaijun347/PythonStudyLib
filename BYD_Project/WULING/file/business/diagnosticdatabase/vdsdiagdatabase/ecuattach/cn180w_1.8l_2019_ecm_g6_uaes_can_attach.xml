@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ECUConfig ModuleType="B15D">
+  <SAConfig Platform="Default">
+    <SALevels>
+      <SALevel SubFunc="01" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="38D61B2C" />
+      <!--UEAS ECM REFRESH-->
+      <SALevel SubFunc="03" DllName="CN180_SATURN.dll" Type="SA_TYPE_SATURN" Mask="64C52F7B" />
+      <SALevel SubFunc="05" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="7253EB32" />
+	  <SALevel SubFunc="07" DllName="CN202S_ECM_ME1788_SB.dll" Type="SA_TYPE_SATURN" Mask="7253EB32" />
+    </SALevels>
+  </SAConfig>
+  <SAConfig Platform="CN200S" ModuleType="NP18" Module_Code="N/A">
+    <SALevels>
+      <SALevel SubFunc="01" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="38D61B2C" />
+      <!--UEAS ECM REFRESH-->
+      <SALevel SubFunc="03" DllName="CN180_SATURN.dll" Type="SA_TYPE_SATURN" Mask="64C52F7B" />
+      <SALevel SubFunc="05" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="7253EB32" />
+	  <SALevel SubFunc="07" DllName="CN202S_ECM_ME1788_SB.dll" Type="SA_TYPE_SATURN" Mask="7253EB32" />
+    </SALevels>
+  </SAConfig>
+  <SAConfig Platform="CN180C" ModuleType="N12A/B15D">
+    <SALevels>
+      <SALevel SubFunc="01" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="38D61B2C" />
+      <!--UEAS ECM REFRESH-->
+      <SALevel SubFunc="03" DllName="CN180_SATURN.dll" Type="SA_TYPE_SATURN" Mask="64C52F7B" />
+      <SALevel SubFunc="05" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="7253EB32" />
+	  <SALevel SubFunc="07" DllName="CN202S_ECM_ME1788_SB.dll" Type="SA_TYPE_SATURN" Mask="7253EB32" />
+    </SALevels>
+  </SAConfig>
+</ECUConfig>

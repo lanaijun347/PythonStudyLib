@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0">
+	<DTC_lib>
+		<link_file>Default.html</link_file>
+		<DTC ID="000A"       caption="P000A"      zh_CN="进气VVT运动迟滞" en_US="wait translete"/>
+		<DTC ID="000B"       caption="P000B"      zh_CN="排气VVT运动迟滞" en_US="wait translete"/>
+		<DTC ID="0010"       caption="P0010"      zh_CN="VVT进气控制电磁阀电路开路" en_US="wait translete"/>
+		<DTC ID="0012"       caption="P0012"      zh_CN="起动时进气VVT不在默认位置" en_US="wait translete"/>
+		<DTC ID="0013"       caption="P0013"      zh_CN="VVT排气控制电磁阀电路开路" en_US="wait translete"/>
+		<DTC ID="0015"       caption="P0015"      zh_CN="起动时排气VVT不在默认位置" en_US="wait translete"/>
+		<DTC ID="0016"       caption="P0016"      zh_CN="进气凸轮轴与曲轴安装相对位置不合理" en_US="wait translete"/>
+		<DTC ID="0018"       caption="P0018"      zh_CN="排气凸轮轴与曲轴安装相对位置不合理" en_US="wait translete"/>
+		<DTC ID="0030"       caption="P0030"      zh_CN="上游氧传感器加热控制电路故障" en_US="wait translete"/>
+		<DTC ID="0031"       caption="P0031"      zh_CN="上游氧传感器加热控制电路电压过低" en_US="wait translete"/>
+		<DTC ID="0032"       caption="P0032"      zh_CN="上游氧传感器加热控制电路电压过高" en_US="wait translete"/>
+		<DTC ID="0036"       caption="P0036"      zh_CN="下游氧传感器加热控制电路故障" en_US="wait translete"/>
+		<DTC ID="0037"       caption="P0037"      zh_CN="下游氧传感器加热控制电路电压过低" en_US="wait translete"/>
+		<DTC ID="0038"       caption="P0038"      zh_CN="下游氧传感器加热控制电路电压过高" en_US="wait translete"/>
+		<DTC ID="0053"       caption="P0053"      zh_CN="上游氧传感器加热内阻不合理" en_US="wait translete"/>
+		<DTC ID="0054"       caption="P0054"      zh_CN="下游氧传感器加热内阻不合理" en_US="wait translete"/>
+		<DTC ID="0105"       caption="P0105"      zh_CN="进气压力传感器信号无波动" en_US="wait translete"/>
+		<DTC ID="0106"       caption="P0106"      zh_CN="进气压力传感器/大气压力传感器不合理" en_US="wait translete"/>
+		<DTC ID="0107"       caption="P0107"      zh_CN="进气压力传感器对地短路" en_US="wait translete"/>
+		<DTC ID="0108"       caption="P0108"      zh_CN="进气压力传感器对电源短路" en_US="wait translete"/>
+		<DTC ID="0111"       caption="P0111"      zh_CN="进气温度传感器合理性故障" en_US="wait translete"/>
+		<DTC ID="0112"       caption="P0112"      zh_CN="进气温度传感器信号电路电压过低" en_US="wait translete"/>
+		<DTC ID="0113"       caption="P0113"      zh_CN="进气温度传感器信号电路电压过高" en_US="wait translete"/>
+		<DTC ID="0116"       caption="P0116"      zh_CN="发动机冷却液温度传感器冷却水温固定信号" en_US="wait translete"/>
+		<DTC ID="0117"       caption="P0117"      zh_CN="发动机冷却液温度传感器电路电压过低" en_US="wait translete"/>
+		<DTC ID="0118"       caption="P0118"      zh_CN="发动机冷却液温度传感器电路电压过高" en_US="wait translete"/>
+		<DTC ID="0119"       caption="P0119"      zh_CN="发动机冷却液温度传感器信号梯度故障" en_US="wait translete"/>
+		<DTC ID="0121"       caption="P0121"      zh_CN="电子节气门位置传感器1信号不合理" en_US="wait translete"/>
+		<DTC ID="0122"       caption="P0122"      zh_CN="电子节气门位置传感器1信号电路电压过低" en_US="wait translete"/>
+		<DTC ID="0123"       caption="P0123"      zh_CN="电子节气门位置传感器1信号电路电压过高" en_US="wait translete"/>
+		<DTC ID="0125"       caption="P0125"      zh_CN="发动机冷却液温度传感器闭环控制中冷却水温过低" en_US="wait translete"/>
+		<DTC ID="0128"       caption="P0128"      zh_CN="节温器卡死在打开位" en_US="wait translete"/>
+		<DTC ID="0130"       caption="P0130"      zh_CN="上游氧传感器信号不合理" en_US="wait translete"/>
+		<DTC ID="0131"       caption="P0131"      zh_CN="上游氧传感器信号低电压" en_US="wait translete"/>
+		<DTC ID="0132"       caption="P0132"      zh_CN="上游氧传感器信号电路电压过高" en_US="wait translete"/>
+		<DTC ID="0133"       caption="P0133"      zh_CN="上游氧传感器老化" en_US="wait translete"/>
+		<DTC ID="0134"       caption="P0134"      zh_CN="上游氧传感器电路信号电路故障" en_US="wait translete"/>
+		<DTC ID="0136"       caption="P0136"      zh_CN="下游氧传感器信号不合理" en_US="wait translete"/>
+		<DTC ID="0137"       caption="P0137"      zh_CN="下游氧传感器信号低电压" en_US="wait translete"/>
+		<DTC ID="0138"       caption="P0138"      zh_CN="下游氧传感器信号电路电压过高" en_US="wait translete"/>
+		<DTC ID="0139"       caption="P0139"      zh_CN="下游氧传感器1混合气浓/稀切换时间电路响应缓慢" en_US="wait translete"/>
+		<DTC ID="0140"       caption="P0140"      zh_CN="下游氧传感器电路信号故障" en_US="wait translete"/>
+		<DTC ID="0170"       caption="P0170"      zh_CN="下线检测空燃比闭环控制自学习不合理" en_US="wait translete"/>
+		<DTC ID="0171"       caption="P0171"      zh_CN="下线检测空燃比闭环控制自学习过稀" en_US="wait translete"/>
+		<DTC ID="0172"       caption="P0172"      zh_CN="下线检测空燃比闭环控制自学习过浓" en_US="wait translete"/>
+		<DTC ID="0201"       caption="P0201"      zh_CN="一缸喷油器控制电路开路" en_US="wait translete"/>
+		<DTC ID="0202"       caption="P0202"      zh_CN="二缸喷油器控制电路开路" en_US="wait translete"/>
+		<DTC ID="0203"       caption="P0203"      zh_CN="三缸喷油器控制电路开路" en_US="wait translete"/>
+		<DTC ID="0204"       caption="P0204"      zh_CN="四缸喷油器控制电路开路" en_US="wait translete"/>
+		<DTC ID="0219"       caption="P0219"      zh_CN="发动机转速超过最高转速限制" en_US="wait translete"/>
+		<DTC ID="0221"       caption="P0221"      zh_CN="电子节气门位置传感器2信号不合理" en_US="wait translete"/>
+		<DTC ID="0222"       caption="P0222"      zh_CN="电子节气门位置传感器2信号电路电压过低" en_US="wait translete"/>
+		<DTC ID="0223"       caption="P0223"      zh_CN="电子节气门位置传感器2信号电路电压过高" en_US="wait translete"/>
+		<DTC ID="0230"       caption="P0230"      zh_CN="油泵电路/继电器故障" en_US="wait translete"/>
+		<DTC ID="0261"       caption="P0261"      zh_CN="一缸喷油器控制电路对地短路" en_US="wait translete"/>
+		<DTC ID="0262"       caption="P0262"      zh_CN="一缸喷油器控制电路对电源短路" en_US="wait translete"/>
+		<DTC ID="0264"       caption="P0264"      zh_CN="二缸喷油器控制电路对地短路" en_US="wait translete"/>
+		<DTC ID="0265"       caption="P0265"      zh_CN="二缸喷油器控制电路对电源短路" en_US="wait translete"/>
+		<DTC ID="0267"       caption="P0267"      zh_CN="三缸喷油器控制电路对地短路" en_US="wait translete"/>
+		<DTC ID="0268"       caption="P0268"      zh_CN="三缸喷油器控制电路对电源短路" en_US="wait translete"/>
+		<DTC ID="0270"       caption="P0270"      zh_CN="四缸喷油器控制电路对地短路" en_US="wait translete"/>
+		<DTC ID="0271"       caption="P0271"      zh_CN="四缸喷油器控制电路对电源短路" en_US="wait translete"/>
+		<DTC ID="0300"       caption="P0300"      zh_CN="多缸发生失火" en_US="wait translete"/>
+		<DTC ID="0301"       caption="P0301"      zh_CN="一缸发生失火" en_US="wait translete"/>
+		<DTC ID="0302"       caption="P0302"      zh_CN="二缸发生失火" en_US="wait translete"/>
+		<DTC ID="0303"       caption="P0303"      zh_CN="三缸发生失火" en_US="wait translete"/>
+		<DTC ID="0304"       caption="P0304"      zh_CN="四缸发生失火" en_US="wait translete"/>
+		<DTC ID="0317"       caption="P0317"      zh_CN="坏路检测ABS信号故障" en_US="wait translete"/>
+		<DTC ID="0321"       caption="P0321"      zh_CN="曲轴上止点齿缺信号不合理" en_US="wait translete"/>
+		<DTC ID="0322"       caption="P0322"      zh_CN="转速传感器信号故障" en_US="wait translete"/>
+		<DTC ID="0325"       caption="P0325"      zh_CN="爆震传感器电路故障" en_US="wait translete"/>
+		<DTC ID="0327"       caption="P0327"      zh_CN="爆震传感器信号电路电压过低" en_US="wait translete"/>
+		<DTC ID="0328"       caption="P0328"      zh_CN="爆震传感器信号电路电压过高" en_US="wait translete"/>
+		<DTC ID="0335"       caption="P0335"      zh_CN="曲轴传感器(电磁式传感器)" en_US="wait translete"/>
+		<DTC ID="0336"       caption="P0336"      zh_CN="曲轴传感器不合理信号" en_US="wait translete"/>
+		<DTC ID="0337"       caption="P0337"      zh_CN="曲轴传感器无信号" en_US="wait translete"/>
+		<DTC ID="0340"       caption="P0340"      zh_CN="进气相位传感器安装位置不当" en_US="wait translete"/>
+		<DTC ID="0341"       caption="P0341"      zh_CN="进气相位传感器信号不合理" en_US="wait translete"/>
+		<DTC ID="0342"       caption="P0342"      zh_CN="进气相位传感器信号电路对地短路" en_US="wait translete"/>
+		<DTC ID="0343"       caption="P0343"      zh_CN="进气相位传感器信号电路对电源短路" en_US="wait translete"/>
+		<DTC ID="0345"       caption="P0345"      zh_CN="排气相位传感器安装位置不当" en_US="wait translete"/>
+		<DTC ID="0346"       caption="P0346"      zh_CN="排气相位传感器信号不合理" en_US="wait translete"/>
+		<DTC ID="0347"       caption="P0347"      zh_CN="排气相位传感器信号电路对地短路" en_US="wait translete"/>
+		<DTC ID="0348"       caption="P0348"      zh_CN="排气相位传感器信号电路对电源短路" en_US="wait translete"/>
+		<DTC ID="0351"       caption="P0351"      zh_CN="一缸点火线圈电路故障" en_US="wait translete"/>
+		<DTC ID="0352"       caption="P0352"      zh_CN="二缸点火线圈电路故障" en_US="wait translete"/>
+		<DTC ID="0353"       caption="P0353"      zh_CN="三缸点火线圈电路故障" en_US="wait translete"/>
+		<DTC ID="0354"       caption="P0354"      zh_CN="四缸点火线圈电路故障" en_US="wait translete"/>
+		<DTC ID="0400"       caption="P0400"      zh_CN="EGR 流量超过极限" en_US="wait translete"/>
+		<DTC ID="0401"       caption="P0401"      zh_CN="EGR 阻塞" en_US="wait translete"/>
+		<DTC ID="0402"       caption="P0402"      zh_CN="EGR 系统泄漏" en_US="wait translete"/>
+		<DTC ID="0403"       caption="P0403"      zh_CN="EGR电气故障" en_US="wait translete"/>
+		<DTC ID="0404"       caption="P0404"      zh_CN="EGR 阀故障" en_US="wait translete"/>
+		<DTC ID="0405"       caption="P0405"      zh_CN="EGR 阀对地短路" en_US="wait translete"/>
+		<DTC ID="0406"       caption="P0406"      zh_CN="EGR 阀对电源短路或线路断路" en_US="wait translete"/>
+		<DTC ID="0420"       caption="P0420"      zh_CN="三元催化器储氧能力老化(排放超限)" en_US="wait translete"/>
+		<DTC ID="0441"       caption="P0441"      zh_CN="碳罐净化电磁阀堵塞" en_US="wait translete"/>
+		<DTC ID="0442"       caption="P0442"      zh_CN="EVAP 汽油蒸发系统检测到少量泄漏(1mm)" en_US="wait translete"/>
+		<DTC ID="0444"       caption="P0444"      zh_CN="碳罐控制阀控制电路开路" en_US="wait translete"/>
+		<DTC ID="0445"       caption="P0445"      zh_CN="碳罐净化电磁阀对电源短路或对地短路" en_US="wait translete"/>
+		<DTC ID="0455"       caption="P0455"      zh_CN="EVAP 汽油蒸发系统油箱盖丢失或泄漏严重" en_US="wait translete"/>
+		<DTC ID="0456"       caption="P0456"      zh_CN="EVAP 汽油蒸发系统检测到少量泄漏 (0.5mm)" en_US="wait translete"/>
+		<DTC ID="0458"       caption="P0458"      zh_CN="碳罐控制阀控制电路电压过低" en_US="wait translete"/>
+		<DTC ID="0459"       caption="P0459"      zh_CN="碳罐控制阀控制电路电压过高" en_US="wait translete"/>
+		<DTC ID="0461"       caption="P0461"      zh_CN="油箱油位传感器输入合理性检查故障" en_US="wait translete"/>
+		<DTC ID="0462"       caption="P0462"      zh_CN="油箱油位传感器输入接地" en_US="wait translete"/>
+		<DTC ID="0463"       caption="P0463"      zh_CN="油箱油位传感器输入对电源短路或开路" en_US="wait translete"/>
+		<DTC ID="0480"       caption="P0480"      zh_CN="冷却风扇继电器电路故障(开路或对地短路)--(低速)" en_US="wait translete"/>
+		<DTC ID="0481"       caption="P0481"      zh_CN="冷却风扇继电器电路故障(开路或对地短路)--(高速)" en_US="wait translete"/>
+		<DTC ID="0482"       caption="P0482"      zh_CN="低速冷却风扇继电器线路故障" en_US="wait translete"/>
+		<DTC ID="0501"       caption="P0501"      zh_CN="车速传感器信号故障" en_US="wait translete"/>
+		<DTC ID="0505"       caption="P0505"      zh_CN="怠速控制阀诊断(步进电机)电路故障" en_US="wait translete"/>
+		<DTC ID="0506"       caption="P0506"      zh_CN="怠速控制转速低于目标怠速" en_US="wait translete"/>
+		<DTC ID="0507"       caption="P0507"      zh_CN="怠速控制转速高于目标怠速" en_US="wait translete"/>
+		<DTC ID="0532"       caption="P0532"      zh_CN="空调压力传感器接地短路或线路断路" en_US="wait translete"/>
+		<DTC ID="0533"       caption="P0533"      zh_CN="空调压力传感器对电源短路" en_US="wait translete"/>
+		<DTC ID="0537"       caption="P0537"      zh_CN="空调蒸发器温度传感器电路电压过低" en_US="wait translete"/>
+		<DTC ID="0538"       caption="P0538"      zh_CN="空调蒸发器温度传感器电路电压过高" en_US="wait translete"/>
+		<DTC ID="0560"       caption="P0560"      zh_CN="系统蓄电池电压信号不合理" en_US="wait translete"/>
+		<DTC ID="0562"       caption="P0562"      zh_CN="系统蓄电池电压过低" en_US="wait translete"/>
+		<DTC ID="0563"       caption="P0563"      zh_CN="系统蓄电池电压过高" en_US="wait translete"/>
+		<DTC ID="0571"       caption="P0571"      zh_CN="刹车开关信号电路故障或与刹车灯开关相关性不同步" en_US="wait translete"/>
+		<DTC ID="0601"       caption="P0601"      zh_CN="ECU校验数故障" en_US="wait translete"/>
+		<DTC ID="0602"       caption="P0602"      zh_CN="电子控制单元编码故障" en_US="wait translete"/>
+		<DTC ID="0604"       caption="P0604"      zh_CN="电子控制单元RAM故障" en_US="wait translete"/>
+		<DTC ID="0605"       caption="P0605"      zh_CN="电子控制单元ROM故障" en_US="wait translete"/>
+		<DTC ID="0606"       caption="P0606"      zh_CN="电子节气门安全监控功能故障" en_US="wait translete"/>
+		<DTC ID="0627"       caption="P0627"      zh_CN="油泵继电器电路故障(开路或对地短路)" en_US="wait translete"/>
+		<DTC ID="0628"       caption="P0628"      zh_CN="油泵继电器线路断路或接地短路" en_US="wait translete"/>
+		<DTC ID="0629"       caption="P0629"      zh_CN="油泵继电器控制电路电压过高" en_US="wait translete"/>
+		<DTC ID="0645"       caption="P0645"      zh_CN="A/C压缩机继电器电路故障(开路或对地短路)" en_US="wait translete"/>
+		<DTC ID="0646"       caption="P0646"      zh_CN="空调压缩机继电器接地短路或线路断路" en_US="wait translete"/>
+		<DTC ID="0647"       caption="P0647"      zh_CN="A/C压缩机继电器控制电路电压过高" en_US="wait translete"/>
+		<DTC ID="0650"       caption="P0650"      zh_CN="MIL灯驱动级电路故障" en_US="wait translete"/>
+		<DTC ID="0654"       caption="P0654"      zh_CN="发动机信号输出故障" en_US="wait translete"/>
+		<DTC ID="0656"       caption="P0656"      zh_CN="油箱油位信号输出故障" en_US="wait translete"/>
+		<DTC ID="0660"       caption="P0660"      zh_CN="可变进气道调节阀控制电路开路" en_US="wait translete"/>
+		<DTC ID="0661"       caption="P0661"      zh_CN="可变进气道调节阀控制电路对地短路" en_US="wait translete"/>
+		<DTC ID="0662"       caption="P0662"      zh_CN="可变进气道调节阀控制电路对电源短路" en_US="wait translete"/>
+		<DTC ID="0688"       caption="P0688"      zh_CN="主继电器输出电压不合理" en_US="wait translete"/>
+		<DTC ID="0692"       caption="P0692"      zh_CN="冷却风扇继电器控制电路电压过高(低速)" en_US="wait translete"/>
+		<DTC ID="0694"       caption="P0694"      zh_CN="冷却风扇继电器控制电路电压过高(高速)" en_US="wait translete"/>
+		<DTC ID="0704"       caption="P0704"      zh_CN="离合器踏板开关信号不正确" en_US="wait translete"/>
+		<DTC ID="1171"       caption="P1171"      zh_CN="Lambda 控制器极限诊断大于最大极限" en_US="wait translete"/>
+		<DTC ID="1172"       caption="P1172"      zh_CN="Lambda 控制器极限诊断低于最小极限" en_US="wait translete"/>
+		<DTC ID="1258"       caption="P1258"      zh_CN="发动机温度过热无效信号" en_US="wait translete"/>
+		<DTC ID="1319"       caption="P1319"      zh_CN="低油位时失火诊断关闭" en_US="wait translete"/>
+		<DTC ID="1320"       caption="P1320"      zh_CN="飞轮自适应周期时间处于极限" en_US="wait translete"/>
+		<DTC ID="1321"       caption="P1321"      zh_CN="飞轮曲轴齿信号错误" en_US="wait translete"/>
+		<DTC ID="1336"       caption="P1336"      zh_CN="电子节气门安全监控扭矩限制作用" en_US="wait translete"/>
+		<DTC ID="1390"       caption="P1390"      zh_CN="由电磁传感器来的飞轮速度识别电气故障(颠簸路面检测)" en_US="wait translete"/>
+		<DTC ID="1396"       caption="P1396"      zh_CN="由ABS 来的飞轮速度识别不合理信号(颠簸路面检测)" en_US="wait translete"/>
+		<DTC ID="1502"       caption="P1502"      zh_CN="轮速传感器开路故障(右前轮)" en_US="wait translete"/>
+		<DTC ID="1504"       caption="P1504"      zh_CN="CAN 来的车速信号故障" en_US="wait translete"/>
+		<DTC ID="1535"       caption="P1535"      zh_CN="空调蒸发器温度传感器线路对电源短路或开路" en_US="wait translete"/>
+		<DTC ID="1536"       caption="P1536"      zh_CN="空调蒸发器温度传感器线路对地短路" en_US="wait translete"/>
+		<DTC ID="1545"       caption="P1545"      zh_CN="电子节气门实际位置与目标位置偏差超限" en_US="wait translete"/>
+		<DTC ID="1558"       caption="P1558"      zh_CN="电子节气门开启阻力过大" en_US="wait translete"/>
+		<DTC ID="1559"       caption="P1559"      zh_CN="电子节气门自学习过程故障" en_US="wait translete"/>
+		<DTC ID="1564"       caption="P1564"      zh_CN="系统电压不满足电子节气门自学习条件" en_US="wait translete"/>
+		<DTC ID="1565"       caption="P1565"      zh_CN="电子节气门下限位置初始化自学习故障" en_US="wait translete"/>
+		<DTC ID="1568"       caption="P1568"      zh_CN="电子节气门回位阻力过大" en_US="wait translete"/>
+		<DTC ID="1579"       caption="P1579"      zh_CN="电子节气门自学习条件不满足" en_US="wait translete"/>
+		<DTC ID="1604"       caption="P1604"      zh_CN="电子节气门增益调节自学习故障" en_US="wait translete"/>
+		<DTC ID="1610"       caption="P1610"      zh_CN="主继电器对电源短路" en_US="wait translete"/>
+		<DTC ID="1611"       caption="P1611"      zh_CN="主继电器接地短路或线路断路" en_US="wait translete"/>
+		<DTC ID="1615"       caption="P1615"      zh_CN="丢失变量编码" en_US="wait translete"/>
+		<DTC ID="1650"       caption="P1650"      zh_CN="故障指示灯对电源短路" en_US="wait translete"/>
+		<DTC ID="1668"       caption="P1668"      zh_CN="冷却水温输出故障" en_US="wait translete"/>
+		<DTC ID="2088"       caption="P2088"      zh_CN="VVT进气控制电磁阀电路对地短路" en_US="wait translete"/>
+		<DTC ID="2089"       caption="P2089"      zh_CN="VVT进气控制电磁阀电路对电源短路" en_US="wait translete"/>
+		<DTC ID="2090"       caption="P2090"      zh_CN="VVT排气控制电磁阀电路对地短路" en_US="wait translete"/>
+		<DTC ID="2091"       caption="P2091"      zh_CN="VVT排气控制电磁阀电路对电源短路" en_US="wait translete"/>
+		<DTC ID="2106"       caption="P2106"      zh_CN="电子节气门驱动级故障" en_US="wait translete"/>
+		<DTC ID="2122"       caption="P2122"      zh_CN="电子油门踏板位置传感器1信号电压过低" en_US="wait translete"/>
+		<DTC ID="2123"       caption="P2123"      zh_CN="电子油门踏板位置传感器1信号电压过高" en_US="wait translete"/>
+		<DTC ID="2127"       caption="P2127"      zh_CN="电子油门踏板位置传感器2信号电压过低" en_US="wait translete"/>
+		<DTC ID="2128"       caption="P2128"      zh_CN="电子油门踏板位置传感器2信号电压过高" en_US="wait translete"/>
+		<DTC ID="2138"       caption="P2138"      zh_CN="电子油门踏板位置传感器信号不合理" en_US="wait translete"/>
+		<DTC ID="2177"       caption="P2177"      zh_CN="空燃比闭环控制自学习值超上限(中负荷区)" en_US="wait translete"/>
+		<DTC ID="2178"       caption="P2178"      zh_CN="空燃比闭环控制自学习值超下限(中负荷区)" en_US="wait translete"/>
+		<DTC ID="2187"       caption="P2187"      zh_CN="空燃比闭环控制自学习值超上限(低负荷区)" en_US="wait translete"/>
+		<DTC ID="2188"       caption="P2188"      zh_CN="空燃比闭环控制自学习值超下限(低负荷区)" en_US="wait translete"/>
+		<DTC ID="2195"       caption="P2195"      zh_CN="上游氧传感器老化" en_US="wait translete"/>
+		<DTC ID="2196"       caption="P2196"      zh_CN="上游氧传感器老化" en_US="wait translete"/>
+		<DTC ID="2270"       caption="P2270"      zh_CN="下游氧传感器老化" en_US="wait translete"/>
+		<DTC ID="2271"       caption="P2271"      zh_CN="下游氧传感器老化" en_US="wait translete"/>
+		<DTC ID="4010"       caption="C0010"      zh_CN="左前进气阀故障" en_US="wait translete"/>
+		<DTC ID="4011"       caption="C0011"      zh_CN="左前排气阀故障" en_US="wait translete"/>
+		<DTC ID="4014"       caption="C0014"      zh_CN="右前进气阀故障" en_US="wait translete"/>
+		<DTC ID="4015"       caption="C0015"      zh_CN="右前排气阀故障" en_US="wait translete"/>
+		<DTC ID="4018"       caption="C0018"      zh_CN="左后进气阀故障" en_US="wait translete"/>
+		<DTC ID="4019"       caption="C0019"      zh_CN="左后排气阀故障" en_US="wait translete"/>
+		<DTC ID="401C"       caption="C001C"      zh_CN="右后进气阀故障" en_US="wait translete"/>
+		<DTC ID="401D"       caption="C001D"      zh_CN="右后排气阀故障" en_US="wait translete"/>
+		<DTC ID="4020"       caption="C0020"      zh_CN="排气泵故障(电动马达)" en_US="wait translete"/>
+		<DTC ID="4031"       caption="C0031"      zh_CN="左前轮速传感器信号故障:超出范围、间歇中断;无效信号或无信号" en_US="wait translete"/>
+		<DTC ID="4032"       caption="C0032"      zh_CN="左前轮速传感器开路或短路" en_US="wait translete"/>
+		<DTC ID="4034"       caption="C0034"      zh_CN="右前轮速传感器信号故障:超出范围、间歇中断;无效信号或无信号" en_US="wait translete"/>
+		<DTC ID="4035"       caption="C0035"      zh_CN="前左轮传感器故障 1(电气故障)" en_US="wait translete"/>
+		<DTC ID="4036"       caption="C0036"      zh_CN="前左轮传感器故障 2(包含齿圈)" en_US="wait translete"/>
+		<DTC ID="4037"       caption="C0037"      zh_CN="左后轮速传感器信号故障:超出范围、间歇中断;无效信号或无信号" en_US="wait translete"/>
+		<DTC ID="4038"       caption="C0038"      zh_CN="左后轮速传感器开路或短路" en_US="wait translete"/>
+		<DTC ID="403A"       caption="C003A"      zh_CN="右后轮速传感器信号故障:超出范围、间歇中断;无效信号或无信号" en_US="wait translete"/>
+		<DTC ID="403B"       caption="C003B"      zh_CN="右后轮速传感器开路或短路" en_US="wait translete"/>
+		<DTC ID="4040"       caption="C0040"      zh_CN="前右轮传感器故障 1(电气故障)" en_US="wait translete"/>
+		<DTC ID="4041"       caption="C0041"      zh_CN="前右轮传感器故障 2(包含齿圈)" en_US="wait translete"/>
+		<DTC ID="4045"       caption="C0045"      zh_CN="后左轮传感器故障 1(电气故障)" en_US="wait translete"/>
+		<DTC ID="4046"       caption="C0046"      zh_CN="后左轮传感器故障 2(电气故障)" en_US="wait translete"/>
+		<DTC ID="4050"       caption="C0050"      zh_CN="后右轮传感器故障 1(电气故障)" en_US="wait translete"/>
+		<DTC ID="4051"       caption="C0051"      zh_CN="后右轮传感器故障 2(包含齿圈)" en_US="wait translete"/>
+		<DTC ID="4060"       caption="C0060"      zh_CN="前左轮常开阀线圈故障" en_US="wait translete"/>
+		<DTC ID="4065"       caption="C0065"      zh_CN="前左轮常闭阀线圈故障" en_US="wait translete"/>
+		<DTC ID="4070"       caption="C0070"      zh_CN="前右轮常开阀线圈故障" en_US="wait translete"/>
+		<DTC ID="4072"       caption="C0072"      zh_CN="总阀故障(过热保护)" en_US="wait translete"/>
+		<DTC ID="4075"       caption="C0075"      zh_CN="前右轮常闭阀线圈故障" en_US="wait translete"/>
+		<DTC ID="4080"       caption="C0080"      zh_CN="后左轮常开阀线圈故障" en_US="wait translete"/>
+		<DTC ID="4085"       caption="C0085"      zh_CN="后左轮常闭阀线圈故障" en_US="wait translete"/>
+		<DTC ID="4090"       caption="C0090"      zh_CN="后右轮常开阀线圈故障" en_US="wait translete"/>
+		<DTC ID="4095"       caption="C0095"      zh_CN="后右轮常闭阀线圈故障" en_US="wait translete"/>
+		<DTC ID="4110"       caption="C0110"      zh_CN="泵电机故障" en_US="wait translete"/>
+		<DTC ID="4121"       caption="C0121"      zh_CN="失效保护继电器" en_US="wait translete"/>
+		<DTC ID="4141"       caption="C0141"      zh_CN="TCS1 电磁阀线圈故障" en_US="wait translete"/>
+		<DTC ID="4146"       caption="C0146"      zh_CN="电磁换向阀 1 线圈故障" en_US="wait translete"/>
+		<DTC ID="4151"       caption="C0151"      zh_CN="TCS2 电磁阀线圈故障" en_US="wait translete"/>
+		<DTC ID="4156"       caption="C0156"      zh_CN="电磁换向阀 2 线圈故障" en_US="wait translete"/>
+		<DTC ID="4161"       caption="C0161"      zh_CN="制动灯开关故障" en_US="wait translete"/>
+		<DTC ID="4550"       caption="C0550"      zh_CN="控制单元故障" en_US="wait translete"/>
+		<DTC ID="4800"       caption="C0800"      zh_CN="电池电压故障" en_US="wait translete"/>
+		<DTC ID="4931"       caption="C0931"      zh_CN="制动盘温度过高" en_US="wait translete"/>
+		<DTC ID="5000"       caption="C1000"      zh_CN="ECU 硬件故障" en_US="wait translete"/>
+		<DTC ID="5095"       caption="C1095"      zh_CN="阀继电器故障" en_US="wait translete"/>
+		<DTC ID="5099"       caption="C1099"      zh_CN="轮速传感器频率误差(一般轮速传感器错误,滑动或错齿)" en_US="wait translete"/>
+		<DTC ID="5395"       caption="C1395"      zh_CN="加液排气没有完成(用于 M200 的工厂生产)" en_US="wait translete"/>
+		<DTC ID="5900"       caption="C1900"      zh_CN="ECU 供电电压高" en_US="wait translete"/>
+		<DTC ID="5901"       caption="C1901"      zh_CN="ECU 供电电压低" en_US="wait translete"/>
+		<DTC ID="9015"       caption="B1015"      zh_CN="乘员前安全气囊阻值过高" en_US="wait translete"/>
+		<DTC ID="9016"       caption="B1016"      zh_CN="乘员前安全气囊阻值过低" en_US="wait translete"/>
+		<DTC ID="9018"       caption="B1018"      zh_CN="乘员前安全气囊对地短路" en_US="wait translete"/>
+		<DTC ID="9019"       caption="B1019"      zh_CN="乘员前安全气囊对电源短路" en_US="wait translete"/>
+		<DTC ID="9021"       caption="B1021"      zh_CN="驾驶员前安全气囊阻值过高" en_US="wait translete"/>
+		<DTC ID="9022"       caption="B1022"      zh_CN="驾驶员前安全气囊阻值过低" en_US="wait translete"/>
+		<DTC ID="9024"       caption="B1024"      zh_CN="驾驶员前安全气囊对地短路" en_US="wait translete"/>
+		<DTC ID="9025"       caption="B1025"      zh_CN="驾驶员前安全气囊对电源短路" en_US="wait translete"/>
+		<DTC ID="9031"       caption="B1031"      zh_CN="电池电压过高" en_US="wait translete"/>
+		<DTC ID="9032"       caption="B1032"      zh_CN="电池电压过低" en_US="wait translete"/>
+		<DTC ID="9041"       caption="B1041"      zh_CN="驾驶员安全带预紧器阻值过高" en_US="wait translete"/>
+		<DTC ID="9042"       caption="B1042"      zh_CN="驾驶员安全带预紧器阻值过低" en_US="wait translete"/>
+		<DTC ID="9043"       caption="B1043"      zh_CN="驾驶员安全带预紧器对地短路" en_US="wait translete"/>
+		<DTC ID="9044"       caption="B1044"      zh_CN="驾驶员安全带预紧器对电源短路" en_US="wait translete"/>
+		<DTC ID="9045"       caption="B1045"      zh_CN="乘员安全带预紧器阻值过高" en_US="wait translete"/>
+		<DTC ID="9046"       caption="B1046"      zh_CN="乘员安全带预紧器阻值过低" en_US="wait translete"/>
+		<DTC ID="9047"       caption="B1047"      zh_CN="乘员安全带预紧器对地短路" en_US="wait translete"/>
+		<DTC ID="9048"       caption="B1048"      zh_CN="乘员安全带预紧器对电源短路" en_US="wait translete"/>
+		<DTC ID="9051"       caption="B1051"      zh_CN="前碰撞被记录" en_US="wait translete"/>
+		<DTC ID="9054"       caption="B1054"      zh_CN="超过最大可利用数量" en_US="wait translete"/>
+		<DTC ID="9056"       caption="B1056"      zh_CN="驾驶员侧碰撞被记录" en_US="wait translete"/>
+		<DTC ID="9057"       caption="B1057"      zh_CN="乘员侧碰撞被记录" en_US="wait translete"/>
+		<DTC ID="9058"       caption="B1058"      zh_CN="安全带预紧器碰撞" en_US="wait translete"/>
+		<DTC ID="9061"       caption="B1061"      zh_CN="警告灯故障" en_US="wait translete"/>
+		<DTC ID="9071"       caption="B1071"      zh_CN="SDM内部错误" en_US="wait translete"/>
+	</DTC_lib>
+</root>

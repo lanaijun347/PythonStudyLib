@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ECUConfig>
+  <SAConfig Platform="Default">
+    <SALevels>
+      <SALevel SubFunc="01" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="38d61b2c" />
+      <SALevel SubFunc="03" DllName="CN202S_N15T_VI_ECM_Refresh.dll" Type="SA_TYPE_SATURN" Mask="64c52f7b" />
+      <SALevel SubFunc="05" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="7253eb32" />
+	  <SALevel SubFunc="07" DllName="CN202S_ECM_ME1788_SB.dll" Type="SA_TYPE_SATURN" Mask="7253EB32" />
+    </SALevels>
+  </SAConfig>
+</ECUConfig>

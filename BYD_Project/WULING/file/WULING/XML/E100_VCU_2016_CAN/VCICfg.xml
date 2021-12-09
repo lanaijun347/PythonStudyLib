@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VCI_cfg version="1.0">
+	<protocol_so name="libprotocol_All" path="Protocol_SO"/>
+	<!--命令列表-->
+	<commands>
+		<!--注意：1.buffer_offset范围是0~14；2.标准CAN多帧命令配置类似write_cmd_1；3.版本信息命令的buffer_offset要各不相同-->
+		<command ID="CMD_FC_00_000" buffer_offset="0" reserved="0x00" length="10">0x07,0x42,0x30,0x00,0x00,0x00,0x00,0x00,0x00,0x00</command>
+		<command ID="ENTER_CMD_00_000" buffer_offset="0" reserved="0x00" length="10">0x07,0x42,0x02,0x10,0x01,0x00,0x00,0x00,0x00,0x00</command>
+		<command ID="IDLE_CMD_00_000" buffer_offset="0" reserved="0x00" length="10">0x07,0x42,0x02,0x3E,0x80,0x00,0x00,0x00,0x00,0x00</command>
+	</commands>
+	<!--初始化VCI 对应315通信协议中的3.1 综合设置命令-->
+	<VCI_params>
+		<VCI_param ID="0" template_number="0">
+			<!--通讯类型 取值可参考《通讯协议》中的"综合设置命令"-->
+			<communication_type>0x85</communication_type>
+			<!--电压,取值请参考《通讯协议》中"综合设置命令-->
+			<voltage>0x01</voltage>
+			<!--电平-->
+			<level>0x00</level>
+			<!--逻辑-->
+			<logic>0x00</logic>
+			<!--收数管脚-->
+			<receive_pin>6</receive_pin>
+			<!--发数管脚-->
+			<send_pin>14</send_pin>
+			<!--Can帧模式(标准CAN:0   扩展CAN:1    非CAN模式作为奇偶校验用  00：8位发送  01：9位偶校验 02：9位奇校验)-->
+			<CAN_frame_mode>0x00</CAN_frame_mode>
+			<!--ECU波特率-->
+			<ECU_baud_rate>500000</ECU_baud_rate>
+			<!--VCI波特率-->
+			<VCI_baud_rate>115200</VCI_baud_rate>
+			<!--CAN：采样点；串行：设置接头串行激活前拉高时间(后两个字节的10进制X100ms)-->
+			<CAN_sampling>3,5,1,7</CAN_sampling>
+			<!--CAN滤波ID个数-->
+			<CAN_fiter_id_group_num>1</CAN_fiter_id_group_num>
+			<!--滤波ID-->
+			<CAN_filter_id>0x0000074A</CAN_filter_id>
+		</VCI_param>
+	</VCI_params>
+	<!--激活参数配置 对应315配置详解中 6.3.8和6.3.9-->
+	<active_params>
+		<active_param ID="0" template_number="0">
+			<!--字节与字节间时间-->
+			<time_between_bytes>3</time_between_bytes>
+			<!--激活方式 0：无激活方式  1：高低电平 0x02/0x0B/0x0E：5bps地址码激活(0x02:接头不处理55帧 ，0x0B:接头发3遍地址码，0x0E:接头发一遍地址码)-->
+			<active_mode>0</active_mode>
+			<!--自检标志 0x00:不需要 0x01:需要-->
+			<detect_band_rate_flag>0</detect_band_rate_flag>
+			<!--等待ECU回复的字节超时时间-->
+			<ECU_res_byte_timeout>20</ECU_res_byte_timeout>
+			<!--波特率-->
+			<band_rate>9600</band_rate>
+			<!--激活地址-->
+			<active_address>0x01,0x30</active_address>
+			<!--回复的关键字第一个字节表示地址长度-->
+			<receive_key_byte>2,0x01,0x8a</receive_key_byte>
+			<!--连续高低电平激活的组数-->
+			<level_change_times>1</level_change_times>
+			<!--激活高低电平时间(低电平时间，高电平时间)-->
+			<level_time>0x0019,0x0019</level_time>
+		</active_param>
+	</active_params>
+	<!--协议配置 参见315配置详解中 6.3.10和6.3.11-->
+	<protocols>
+		<protocol ID="0" template_number="0">
+			<!--7F78消极代码的超时时间-->
+			<code_7f78_timeout>5000</code_7f78_timeout>
+			<!--等待ECU回复的超时时间-->
+			<ECU_res_timeout>500</ECU_res_timeout>
+			<!--主动发送时的帧间隔(xml填入的参数并不等于实际帧间隔，有0-40ms左右的误差)-->
+			<time_between_frames>20</time_between_frames>
+			<!--重发次数-->
+			<retrans_time>3</retrans_time>
+			<!--保留字节，对于CAN协议没用-->
+			<reserved>0xaa</reserved>
+			<!--FC帧命令偏移-->
+			<FC_cmd_offset>0</FC_cmd_offset>
+		</protocol>
+	</protocols>
+	<process_fun_configs>
+		<process_fun_config ID="0" template_number="0">
+			<active_ecu_fun_offset>0</active_ecu_fun_offset>
+			<actuator_test_fun_offset>0</actuator_test_fun_offset>
+			<clear_dtc_fun_offset>0</clear_dtc_fun_offset>
+			<ds_fun_offset>0</ds_fun_offset>
+			<current_dtc_fun_offset>0</current_dtc_fun_offset>
+			<history_dtc_fun_offset>0</history_dtc_fun_offset>
+			<freeze_dtc_fun_offset>0</freeze_dtc_fun_offset>
+			<freeze_ds_fun_offset>0</freeze_ds_fun_offset>
+			<infor_fun_offset>0</infor_fun_offset>
+			<quit_system_fun_offset>0</quit_system_fun_offset>
+		</process_fun_config>
+	</process_fun_configs>
+	<security_access_configs>
+		<security_access_config ID="0" template_number="0">
+			<default_session_command_id>01</default_session_command_id>
+			<extend_session_command_id>01</extend_session_command_id>
+			<request_seed_command_id>25</request_seed_command_id>
+			<send_key_command_id>26</send_key_command_id>
+		</security_access_config>
+	</security_access_configs>
+	<!--空闲连接配置-->
+	<idle_links_cfgs>
+		<idle_links_cfg ID="0" template_number="0">
+			<!--空闲命令字节间时间，仅对串行协议有效-->
+			<time_between_bytes>3</time_between_bytes>
+			<!--空闲链接初始状态 0：停止 1：开始-->
+			<idle_link_status>1</idle_link_status>
+			<!--空闲链接组与组的间隔-->
+			<time_between_groups>600</time_between_groups>
+			<!--空闲链接命令为多条时帧与帧的间隔-->
+			<time_between_frames>200</time_between_frames>
+			<!--需不需要接收空闲链接回复的标志 0：不需要 1：需要-->
+			<response_flag>0</response_flag>
+			<!--计算校验和标志 0：不需要计算校验和 非0：需要计算校验和-->
+			<calculate_checksum_flag>0</calculate_checksum_flag>
+		</idle_links_cfg>
+	</idle_links_cfgs>
+	<!--激活ECU-->
+	<activates>
+		<activate quit_function="quit_function" file_load_path="CANActiveType">
+			<!--设置VCI-->
+			<call_protocol label="set_vci" function="setting_vci">
+				<param type="VCI_param_ID" value="0"/>
+				<param type="VCI_param_template_number" value="0"/>
+				<param type="protocol_ID" value="0"/>
+				<param type="protocol_template_number" value="0"/>
+			</call_protocol>
+			<judge_tip_jump use_label="set_vci"/>
+			<!--接头发送30帧配置-->
+			<call_protocol label="Set_CAN_FC" function="Func_SetFC_VciCfg">
+				<param type="command" value="CMD_FC_00_000"/>
+			</call_protocol>
+			<!--激活函数-->
+			<call_protocol label="active_ecu" function="active_ECU">
+				<param type="process_fun_config_ID" value="0"/>
+				<param type="process_fun_config_template_number" value="0"/>
+				<param type="security_access_config_ID" value="0"/>
+				<param type="security_access_config_template_number" value="0"/>
+				<param type="idle_links_cfg_ID" value="0"/>
+				<param type="idle_links_cfg_template_number" value="0"/>
+				<param type="command" value="IDLE_CMD_00_000"/>
+				<param type="active_param_ID" value="0"/>
+				<param type="active_param_template_number" value="0"/>
+				<param type="command" value="ENTER_CMD_00_000"/>
+			</call_protocol>
+			<judge_tip_jump use_label="active_ecu"/>
+		</activate>
+	</activates>
+</VCI_cfg>

@@ -1,0 +1,223 @@
+ID_STR_READ_DTC	读取故障码	Read DTC
+ID_STR_CLEAR_DTC	清除故障码	Clear DTC
+ID_STR_READ_CURRENT_DTC	当前故障码	Current DTC
+ID_STR_READ_HISTORY_DTC	历史故障码	History DTC
+ID_STR_DATA_STREAM	读数据流	Data Stream
+ID_STR_DS_FREEZE	冻结帧数据	Freeze Data Stream
+ID_STR_ACTUATOR_TEST	元件测试	Actuator Test
+ID_STR_ECU_INFORMATION	版本信息	Version Information
+ID_STR_SPECIAL_TEST	特殊功能	Special Function
+
+ID_STR_TIME_OUT	系统通讯已超时中断，建议退出系统重新激活！是否退出系统？	system communication time out and interrupted,please exit to re-activate.whether to exit?
+ID_STR_SUCCESS	执行成功！	Success!
+ID_STR_FRAME_TIME_OUT	帧超时！	Fram time out!
+ID_STR_PROTOCOL_ERROR	程序错误！	Procotol error!
+ID_STR_FAILE	失败！	Faile!
+ID_STR_FORMAT_ERORR	格式错误！	Format erorr!
+ID_STR_NULL_POINT	空指针！	Null point!
+ID_STR_NEGATIVE	消极响应！	Negative!
+ID_STR_MATCH_ERROE	匹配错误！	Match error!
+ID_STR_SYSTEM_NOT_REPLY	系统无响应！	System not replay!
+ID_STR_NO_FREEZE_DS	无冻结帧数据流！	No freeze data stream!
+ID_STR_NO_FREEZE_DTC	无冻结帧故障码！	No freeze DTC!
+ID_STR_NO_CURRENT_DTC	无故障码！	No current DTC!
+ID_STR_NO_HISTORY_DTC	无故障码！	No history DTC!
+ID_STR_RECEIVE_FRAME_TYPE_ERROR	回收帧类型错误！	Receive frame type error!
+ID_STR_MESSAGE_TYPE_ERROR	消息类型错误！	Message type error!
+ID_STR_INVALID_INPUT	输入错误！	Input error!
+ID_STR_ECU_RECV_FAIL	数据单元格式错误！	data unit format error!
+ID_STR_ACTIVE	正在执行，请稍候...	operating,please wait...
+Input_data	提示: 没有输入数据或者数据长度不对,请再次输入数据,谢谢!	Tip:no data input or data length incorrect,Input data again!
+ID_STR_SECURITY_THROUGH	正在进行安全验证...	Safety verification in progress...
+
+ID_STR_NEGATIVE_7F	汽车回复数据无效，ECU负反应！	Data invalid,ECU negative response!
+ID_STR_NEGATIVE_7F11	服务不支持！	Service not supported!
+ID_STR_NEGATIVE_7F12	子功能不支持！	Subfunction not supported!
+ID_STR_NEGATIVE_7F13	不正确的信息格式或无效帧！	Incorrect info or inavlid frame!
+ID_STR_NEGATIVE_7F14	应答过长！	Response too long!
+ID_STR_NEGATIVE_7F21	ECU忙，请重复请求！	ECU busy, please repeat the request!
+ID_STR_NEGATIVE_7F22	条件不正确	Condition incorrect
+ID_STR_NEGATIVE_7F24	请求序列错误	Requested sequence wrong
+ID_STR_NEGATIVE_7F25	子网络组件无响应	Subnetwork component no response
+ID_STR_NEGATIVE_7F26	阻止执行功能请求失败	Request to stop operation failed
+ID_STR_NEGATIVE_7F31	请求超出范围	Request out of range
+ID_STR_NEGATIVE_7F33	拒绝安全访问	Security access rejected
+ID_STR_NEGATIVE_7F35	无效的秘钥	Invalid key
+ID_STR_NEGATIVE_7F36	尝试超出次数	Attempts exceeded
+ID_STR_NEGATIVE_7F37	所需延时时间未到	Delay time not available
+ID_STR_NEGATIVE_7F70	上传/下载不许可	Upload/download not allowed
+ID_STR_NEGATIVE_7F71	数据转换中断	Data conversion interrupted
+ID_STR_NEGATIVE_7F72	常规编程失败	Regular programming failed
+ID_STR_NEGATIVE_7F73	块序列计算器错误	Block sequence calculator error
+ID_STR_NEGATIVE_7F78	请求收到-应答挂起	Request received,response hang
+ID_STR_NEGATIVE_7F7E	活动对象子功能不支持	Subfunction of active object not supported
+ID_STR_NEGATIVE_7F7F	活动对象服务不支持	Service of active object not supported
+ID_STR_NEGATIVE_7F81	rpm过高	RPM too high
+ID_STR_NEGATIVE_7F82	rpm过低	RPM too low
+ID_STR_NEGATIVE_7F83	发动机运行中	Engine running
+ID_STR_NEGATIVE_7F84	发动机未运行	Engine not running
+ID_STR_NEGATIVE_7F85	电动机运行时间过低	Motor running time too short
+ID_STR_NEGATIVE_7F86	温度过高	Temp too high
+ID_STR_NEGATIVE_7F87	温度过低	Temp too low
+ID_STR_NEGATIVE_7F88	车速过高	Vehicle speed too high
+ID_STR_NEGATIVE_7F89	车速过低	Vehicle speed too low
+ID_STR_NEGATIVE_7F8A	油门踏板过高	Accel pedal too high
+ID_STR_NEGATIVE_7F8B	油门踏板过低	Accel pedal too low
+ID_STR_NEGATIVE_7F8C	变速器未在空挡上	Transmission not in neutral
+ID_STR_NEGATIVE_7F8D	变速器未在齿轮上	Transmission not in gear
+ID_STR_NEGATIVE_7F8F	制动开关未关闭	Brake switch open
+ID_STR_NEGATIVE_7F90	变速杆未停好	Shift lever not parked
+ID_STR_NEGATIVE_7F91	扭转离合器已锁定	Torque clutch locked
+ID_STR_NEGATIVE_7F92	电压过高	The voltage is too high
+ID_STR_NEGATIVE_7F93	电压过低	The voltage is too low
+
+;读码清码
+ID_STR_CLEARDTC_NOTE0	请关闭点火开关！	Please turn off the ignition switch!
+ID_STR_CLEARDTC_NOTE1	请打开点火开关！	Please turn on the ignition switch!
+ID_STR_TIP_READ_DTC	正在读取故障码，请稍候...	Reading DTC,please wait...
+ID_STR_TIP_IF_CLEAR_DTC	是否清除故障码？	Whether to clear DTC?
+ID_STR_TIP_CLEAR_DTC	正在清除故障码，请稍候...	Clearing DTC,please wait...
+ID_STR_CLEAR_DTC_SUCCESS	清除故障码完成，\n是否读取故障码？	Clearing DTC completed,whether to read DTC?
+ID_STR_CURRENT_DTC	读取故障码	Read DTC
+
+ID_STR_GROUP_CAPTION	普通数据流	Common data stream
+ID_STR_CAPTION	提示	Tip
+ID_STR_READ_ECUINFOR	正在读取，请稍候...	Reading,please wait...
+ID_STR_SET_IDLE_LINK_FAIL	空闲链接设置失败	Set idle link fail!
+ID_STR_READ_DATASTREAM	正在扫描数据流，请稍候...	The data flow is being scanned. Please wait a moment...
+
+;主动测试
+ID_STR_EXCUTING	正在执行，请稍候...	Operating,please wait...
+ID_STR_STOP	正在取消，请稍候...	Cancelling,please wait...
+ID_STR_TEST_RETURN	正在退出，请稍候...	Exitting,please wait...
+ID_STR_SGD_OPERATION_COMPLETE	执行完成！	Operation completed!
+ID_STR_SGD_STOP_COMPLETE	取消完成！	Cancellation completed!
+ID_STR_DIFF_RETURE	请输入范围内的数值	Please input value within the range
+INVALID_INPUT	请输入范围内的数值	Please input value within the range
+
+;读码
+
+;清码
+
+;数据流
+ID_STR_DS_GROUP_00	Real-time Data	X
+ID_STR_DS_GROUP_01	State Data	X
+
+ID_STR_DS_ITEM_0000	Engine Speed	X
+ID_STR_DS_ITEM_0001	Idle Speed Control	X
+ID_STR_DS_ITEM_0002	Vehicle Speed	X
+ID_STR_DS_ITEM_0003	Ambient Pressure	X
+ID_STR_DS_ITEM_0004	Intake Manifold Pressure	X
+ID_STR_DS_ITEM_0005	Actual Intake Manifold Pressure Sensor Voltage	X
+ID_STR_DS_ITEM_0006	Manifold pressure sensor signal (voltage)	X
+ID_STR_DS_ITEM_0007	Air Mass Flow	X
+ID_STR_DS_ITEM_0008	Inlet flow	X
+ID_STR_DS_ITEM_0009	Intake Air Temperature	X
+ID_STR_DS_ITEM_0010	Water temperature sensor signal (voltage)	X
+ID_STR_DS_ITEM_0011	Desired Throttle Position	X
+ID_STR_DS_ITEM_0012	Throttle Blade Position Dependent on Poti 1	X
+ID_STR_DS_ITEM_0013	Throttle Blade Position Dependent on Poti 2	X
+ID_STR_DS_ITEM_0014	Electronic throttle position signal 1 (voltage)	X
+ID_STR_DS_ITEM_0015	Electronic throttle position signal 2 (voltage)	X
+ID_STR_DS_ITEM_0016	Sensor Voltage from Throttle Potentiometer 1	X
+ID_STR_DS_ITEM_0017	Sensor Voltage from Throttle Potentiometer 2	X
+ID_STR_DS_ITEM_0018	Real Ignition Angle	X
+ID_STR_DS_ITEM_0019	Basic Ignition Angle	X
+ID_STR_DS_ITEM_0020	Maximum Attainable Indicated Torque	X
+ID_STR_DS_ITEM_0021	Desired Indicated Engine Torque	X
+ID_STR_DS_ITEM_0022	Indicated Real Engine Torque	X
+ID_STR_DS_ITEM_0023	Relative Air Mass	X
+ID_STR_DS_ITEM_0024	Engine Temperature	X
+ID_STR_DS_ITEM_0025	Coolant temperature sensor voltage	X
+ID_STR_DS_ITEM_0026	Engine Temperature at Start	X
+ID_STR_DS_ITEM_0027	Throttle Actuator Control Pwm	X
+ID_STR_DS_ITEM_0028	Throttle Angle with Respect to Lower Mechanical Stop	X
+ID_STR_DS_ITEM_0029	Sensor Voltage Poti 1 of Throttle Actuator at (Lower) Mechanical Stop	X
+ID_STR_DS_ITEM_0030	The electronic accelerator pedal position signal 1 (voltage)	X
+ID_STR_DS_ITEM_0031	The electronic accelerator pedal position signal (voltage) 2	X
+ID_STR_DS_ITEM_0032	Normalized Angle Acceleration Pedal	X
+ID_STR_DS_ITEM_0033	Due to knock back the ignition Angle (1) cylinder	X
+ID_STR_DS_ITEM_0034	Due to knock back the ignition Angle (1) cylinder	X
+ID_STR_DS_ITEM_0035	Due to knock back the ignition Angle (2) cylinder	X
+ID_STR_DS_ITEM_0036	Due to knock back the ignition Angle (3) cylinder	X
+ID_STR_DS_ITEM_0037	Reference Level Knock Control, 16bit, Cylinder #1	X
+ID_STR_DS_ITEM_0038	Reference Level Knock Control, 16bit, Cylinder #2	X
+ID_STR_DS_ITEM_0039	Reference Level Knock Control, 16bit, Cylinder #3	X
+ID_STR_DS_ITEM_0040	Reference Level Knock Control, 16bit, Cylinder #4	X
+ID_STR_DS_ITEM_0041	Knock the global self learning value	X
+ID_STR_DS_ITEM_0042	Number Of Misfire:Cylinder#1	X
+ID_STR_DS_ITEM_0043	Number Of Misfire:Cylinder#2	X
+ID_STR_DS_ITEM_0044	Number Of Misfire:Cylinder#3	X
+ID_STR_DS_ITEM_0045	Number Of Misfire:Cylinder#4	X
+ID_STR_DS_ITEM_0046	O2 Sensor Voltage Bank1, Sensor 2	X
+ID_STR_DS_ITEM_0047	Oxygen sensor before heating duty ratio	X
+ID_STR_DS_ITEM_0048	After oxygen heater duty ratio	X
+ID_STR_DS_ITEM_0049	Oxygen sensor lambda controller output	X
+ID_STR_DS_ITEM_0050	The Lambda control output	X
+ID_STR_DS_ITEM_0051	The Lambda control adaptive output	X
+ID_STR_DS_ITEM_0052	The actual injection quantity (1 cylinder)	X
+ID_STR_DS_ITEM_0053	The actual injection quantity (2 cylinder)	X
+ID_STR_DS_ITEM_0054	The actual injection quantity (3 cylinder)	X
+ID_STR_DS_ITEM_0055	The actual injection quantity (4cylinder)	X
+ID_STR_DS_ITEM_0056	VVT duty ratio control signals	X
+ID_STR_DS_ITEM_0057	Canister Purge Solenoid	X
+ID_STR_DS_ITEM_0058	Output Duty Cycle for Canister Purge Valve	X
+ID_STR_DS_ITEM_0059	Carbon adsorption tank	X
+ID_STR_DS_ITEM_0060	The canister purge air flow	X
+ID_STR_DS_ITEM_0061	Temperature of the evaporator	X
+ID_STR_DS_ITEM_0062	The evaporator temperature (voltage)	X
+ID_STR_DS_ITEM_0063	Vehicle mileage	X
+ID_STR_DS_ITEM_0064	Counter for Distance Travelled While Mil Is Activated	X
+ID_STR_DS_ITEM_0065	Generator working load	X
+ID_STR_DS_ITEM_0066	The battery voltage (after the main relay)	X
+ID_STR_DS_ITEM_0067	Cooling fan control PWM signal values	X
+ID_STR_DS_ITEM_0068	Air intake camshaft control	X
+ID_STR_DS_ITEM_0069	Air intake VVT state	X
+ID_STR_DS_ITEM_0070	Air intake VVT control pulse condition	X
+ID_STR_DS_ITEM_0071	Fuel level	X
+ID_STR_DS_ITEM_0072	Fuel Pump Relay	X
+ID_STR_DS_ITEM_0073	Ignition switch state	X
+ID_STR_DS_ITEM_0074	Starter relay status	X
+ID_STR_DS_ITEM_0075	MIL	X
+ID_STR_DS_ITEM_0076	Air conditioning requests	X
+ID_STR_DS_ITEM_0077	Braking test switch state	X
+ID_STR_DS_ITEM_0078	Brake lamp switch state	X
+ID_STR_DS_ITEM_0079	Air conditioning compressor clutch relay status	X
+ID_STR_DS_ITEM_0080	Cooling fan 1 switch state	X
+ID_STR_DS_ITEM_0081	Cooling fan 2 switch state	X
+ID_STR_DS_ITEM_0082	The main relay status	X
+ID_STR_DS_ITEM_0083	Fuel pump relay	X
+ID_STR_DS_ITEM_0084	Air pressure switch state	X
+
+;版本信息
+ID_STR_ECU_GROUP_00	版本信息	X
+
+ID_STR_ECU_ITEM_0000	VIN	X
+ID_STR_ECU_ITEM_0001	Supplier ECU Calibration Data Number	X
+ID_STR_ECU_ITEM_0002	ECU Manufacturing Date	X
+ID_STR_ECU_ITEM_0003	Supplier ECU Hardware Number	X
+ID_STR_ECU_ITEM_0004	Supplier ECU Software Number	X
+ID_STR_ECU_ITEM_0005	End Model Part Number	X
+
+;数据流或者版本信息switch使用的字符串
+ID_DS_STRING_000	initial state	X
+ID_DS_STRING_001	enter HOLD state	X
+ID_DS_STRING_002	hold state	X
+ID_DS_STRING_003	adjust state	X
+ID_DS_STRING_004	-	X
+ID_DS_STRING_005	passive	X
+ID_DS_STRING_006	ready	X
+ID_DS_STRING_007	adaptive	X
+ID_DS_STRING_008	enabled	X
+ID_DS_STRING_009	control	X
+ID_DS_STRING_010	active	X
+
+;数据流或者版本信息用到的其他字符串
+IMS_DSSTRING_0008	OFF	X
+IMS_DSSTRING_0009	ON	X
+IMS_DSSTRING_0010	NO	X
+IMS_DSSTRING_0011	YES	X
+IMS_DSSTRING_0237	NOT connect	X
+IMS_DSSTRING_0238	connect	X
+IMS_DSSTRING_0239	Did not start	X
+IMS_DSSTRING_0240	start	X

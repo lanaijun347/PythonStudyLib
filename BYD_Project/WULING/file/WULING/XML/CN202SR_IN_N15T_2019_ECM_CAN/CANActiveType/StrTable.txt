@@ -1,0 +1,684 @@
+ID_STR_READ_DTC	读取故障码	Read DTC
+ID_STR_CLEAR_DTC	清除故障码	Clear DTC
+ID_STR_READ_CURRENT_DTC	当前故障码	Current DTC
+ID_STR_READ_HISTORY_DTC	历史故障码	History DTC
+ID_STR_DATA_STREAM	读数据流	Data Stream
+ID_STR_DS_FREEZE	冻结帧数据	Freeze Data Stream
+ID_STR_ACTUATOR_TEST	元件测试	Actuator Test
+ID_STR_ECU_INFORMATION	版本信息	Version Information
+ID_STR_SPECIAL_TEST	特殊功能	Special Function
+
+ID_STR_TIME_OUT	系统通讯已超时中断，建议退出系统重新激活！是否退出系统？	system communication time out and interrupted,please exit to re-activate.whether to exit?
+ID_STR_SUCCESS	执行成功！	Success!
+ID_STR_FRAME_TIME_OUT	帧超时！	Fram time out!
+ID_STR_PROTOCOL_ERROR	程序错误！	Procotol error!
+ID_STR_FAILE	失败！	Faile!
+ID_STR_FORMAT_ERORR	格式错误！	Format erorr!
+ID_STR_NULL_POINT	空指针！	Null point!
+ID_STR_NEGATIVE	消极响应！	Negative!
+ID_STR_MATCH_ERROE	匹配错误！	Match error!
+ID_STR_SYSTEM_NOT_REPLY	系统无响应！	System not replay!
+ID_STR_NO_FREEZE_DS	无冻结帧数据流！	No freeze data stream!
+ID_STR_NO_FREEZE_DTC	无冻结帧故障码！	No freeze DTC!
+ID_STR_NO_CURRENT_DTC	无故障码！	No current DTC!
+ID_STR_NO_HISTORY_DTC	无故障码！	No history DTC!
+ID_STR_RECEIVE_FRAME_TYPE_ERROR	回收帧类型错误！	Receive frame type error!
+ID_STR_MESSAGE_TYPE_ERROR	消息类型错误！	Message type error!
+ID_STR_INVALID_INPUT	输入错误！	Input error!
+ID_STR_ECU_RECV_FAIL	数据单元格式错误！	data unit format error!
+ID_STR_ACTIVE	正在执行，请稍候...	operating,please wait...
+Input_data	提示: 没有输入数据或者数据长度不对,请再次输入数据,谢谢!	Tip:no data input or data length incorrect,Input data again!
+ID_STR_SECURITY_THROUGH	正在进行安全验证...	Safety verification in progress...
+
+ID_STR_NEGATIVE_7F	汽车回复数据无效，ECU负反应！	Data invalid,ECU negative response!
+ID_STR_NEGATIVE_7F11	服务不支持！	Service not supported!
+ID_STR_NEGATIVE_7F12	子功能不支持！	Subfunction not supported!
+ID_STR_NEGATIVE_7F13	不正确的信息格式或无效帧！	Incorrect info or inavlid frame!
+ID_STR_NEGATIVE_7F14	应答过长！	Response too long!
+ID_STR_NEGATIVE_7F21	ECU忙，请重复请求！	ECU busy, please repeat the request!
+ID_STR_NEGATIVE_7F22	条件不正确	Condition incorrect
+ID_STR_NEGATIVE_7F24	请求序列错误	Requested sequence wrong
+ID_STR_NEGATIVE_7F25	子网络组件无响应	Subnetwork component no response
+ID_STR_NEGATIVE_7F26	阻止执行功能请求失败	Request to stop operation failed
+ID_STR_NEGATIVE_7F31	请求超出范围	Request out of range
+ID_STR_NEGATIVE_7F33	拒绝安全访问	Security access rejected
+ID_STR_NEGATIVE_7F35	无效的秘钥	Invalid key
+ID_STR_NEGATIVE_7F36	尝试超出次数	Attempts exceeded
+ID_STR_NEGATIVE_7F37	所需延时时间未到	Delay time not available
+ID_STR_NEGATIVE_7F70	上传/下载不许可	Upload/download not allowed
+ID_STR_NEGATIVE_7F71	数据转换中断	Data conversion interrupted
+ID_STR_NEGATIVE_7F72	常规编程失败	Regular programming failed
+ID_STR_NEGATIVE_7F73	块序列计算器错误	Block sequence calculator error
+ID_STR_NEGATIVE_7F78	请求收到-应答挂起	Request received,response hang
+ID_STR_NEGATIVE_7F7E	活动对象子功能不支持	Subfunction of active object not supported
+ID_STR_NEGATIVE_7F7F	活动对象服务不支持	Service of active object not supported
+ID_STR_NEGATIVE_7F81	rpm过高	RPM too high
+ID_STR_NEGATIVE_7F82	rpm过低	RPM too low
+ID_STR_NEGATIVE_7F83	发动机运行中	Engine running
+ID_STR_NEGATIVE_7F84	发动机未运行	Engine not running
+ID_STR_NEGATIVE_7F85	电动机运行时间过低	Motor running time too short
+ID_STR_NEGATIVE_7F86	温度过高	Temp too high
+ID_STR_NEGATIVE_7F87	温度过低	Temp too low
+ID_STR_NEGATIVE_7F88	车速过高	Vehicle speed too high
+ID_STR_NEGATIVE_7F89	车速过低	Vehicle speed too low
+ID_STR_NEGATIVE_7F8A	油门踏板过高	Accel pedal too high
+ID_STR_NEGATIVE_7F8B	油门踏板过低	Accel pedal too low
+ID_STR_NEGATIVE_7F8C	变速器未在空挡上	Transmission not in neutral
+ID_STR_NEGATIVE_7F8D	变速器未在齿轮上	Transmission not in gear
+ID_STR_NEGATIVE_7F8F	制动开关未关闭	Brake switch open
+ID_STR_NEGATIVE_7F90	变速杆未停好	Shift lever not parked
+ID_STR_NEGATIVE_7F91	扭转离合器已锁定	Torque clutch locked
+ID_STR_NEGATIVE_7F92	电压过高	The voltage is too high
+ID_STR_NEGATIVE_7F93	电压过低	The voltage is too low
+
+;读码清码
+ID_STR_CLEARDTC_NOTE0	请关闭点火开关！	Please turn off the ignition switch!
+ID_STR_CLEARDTC_NOTE1	请打开点火开关！	Please turn on the ignition switch!
+ID_STR_TIP_READ_DTC	正在读取故障码，请稍候...	Reading DTC,please wait...
+ID_STR_TIP_IF_CLEAR_DTC	是否清除故障码？	Whether to clear DTC?
+ID_STR_TIP_CLEAR_DTC	正在清除故障码，请稍候...	Clearing DTC,please wait...
+ID_STR_CLEAR_DTC_SUCCESS	清除故障码完成，\n是否读取故障码？	Clearing DTC completed,whether to read DTC?
+ID_STR_CURRENT_DTC	读取故障码	Read DTC
+
+ID_STR_GROUP_CAPTION	普通数据流	Common data stream
+ID_STR_CAPTION	提示	Tip
+ID_STR_READ_ECUINFOR	正在读取，请稍候...	Reading,please wait...
+ID_STR_SET_IDLE_LINK_FAIL	空闲链接设置失败	Set idle link fail!
+ID_STR_READ_DATASTREAM	正在扫描数据流，请稍候...	The data flow is being scanned. Please wait a moment...
+
+;主动测试
+ID_STR_EXCUTING	正在执行，请稍候...	Operating,please wait...
+ID_STR_STOP	正在取消，请稍候...	Cancelling,please wait...
+ID_STR_TEST_RETURN	正在退出，请稍候...	Exitting,please wait...
+ID_STR_SGD_OPERATION_COMPLETE	执行完成！	Operation completed!
+ID_STR_SGD_STOP_COMPLETE	取消完成！	Cancellation completed!
+ID_STR_DIFF_RETURE	请输入范围内的数值	Please input value within the range
+INVALID_INPUT	请输入范围内的数值	Please input value within the range
+
+;读码
+
+;清码
+
+;数据流
+ID_STR_DS_GROUP_00	Engine data	X
+ID_STR_DS_GROUP_01	Air conditioning system data	X
+ID_STR_DS_GROUP_02	Exhaust gas recirculation data	X
+ID_STR_DS_GROUP_03	Evaporative emission data	X
+ID_STR_DS_GROUP_04	The fuel system data	X
+ID_STR_DS_GROUP_05	Fuel adjustment data	X
+ID_STR_DS_GROUP_06	Oxygen sensor data	X
+ID_STR_DS_GROUP_07	Ignition data	X
+ID_STR_DS_GROUP_08	Air intake data	X
+ID_STR_DS_GROUP_09	The instrument shows data	X
+ID_STR_DS_GROUP_10	The fire data	X
+ID_STR_DS_GROUP_11	Throttle data	X
+ID_STR_DS_GROUP_12	All data	X
+
+ID_STR_DS_ITEM_0000	Maximum Attainable Indicated Torque	X
+ID_STR_DS_ITEM_0001	Desired Indicated Engine Torque	X
+ID_STR_DS_ITEM_0002	Indicated Real Engine Torque	X
+ID_STR_DS_ITEM_0003	Relative Air Mass(Calc. Load Value)	X
+ID_STR_DS_ITEM_0004	Engine Temperature	X
+ID_STR_DS_ITEM_0005	Engine temperature sensor voltage(V_TCO)	X
+ID_STR_DS_ITEM_0006	Engine Temperature at Start	X
+ID_STR_DS_ITEM_0007	Engine Speed	X
+ID_STR_DS_ITEM_0008	Idle Speed Control	X
+ID_STR_DS_ITEM_0009	Vehicle Speed	X
+ID_STR_DS_ITEM_0010	Real Ignition Angle	X
+ID_STR_DS_ITEM_0011	Basic Ignition Angle	X
+ID_STR_DS_ITEM_0012	Cylinder#1 ignition advance Angle(IGA_CYL_KNK[0])	X
+ID_STR_DS_ITEM_0013	Cylinder#2 ignition advance Angle(IGA_CYL_KNK[1])	X
+ID_STR_DS_ITEM_0014	Cylinder#3 ignition advance Angle(IGA_CYL_KNK[2])	X
+ID_STR_DS_ITEM_0015	Cylinder#4 ignition advance Angle(IGA_CYL_KNK[3])	X
+ID_STR_DS_ITEM_0016	Reference Level Knock Control, 16bit, Cylinder #1	X
+ID_STR_DS_ITEM_0017	Reference Level Knock Control, 16bit, Cylinder #2	X
+ID_STR_DS_ITEM_0018	Reference Level Knock Control, 16bit, Cylinder #3	X
+ID_STR_DS_ITEM_0019	Reference Level Knock Control, 16bit, Cylinder #4	X
+ID_STR_DS_ITEM_0020	Number Of Misfire:Cylinder#1	X
+ID_STR_DS_ITEM_0021	Number Of Misfire:Cylinder#2	X
+ID_STR_DS_ITEM_0022	Number Of Misfire:Cylinder#3	X
+ID_STR_DS_ITEM_0023	Number Of Misfire:Cylinder#4	X
+ID_STR_DS_ITEM_0024	Cylinde#1 injection time(TI_1)	X
+ID_STR_DS_ITEM_0025	Cylinde#2 injection time(TI_2)	X
+ID_STR_DS_ITEM_0026	Cylinde#3 injection time(TI_3)	X
+ID_STR_DS_ITEM_0027	Cylinde#4 injection time(TI_4)	X
+ID_STR_DS_ITEM_0028	Start time of Cylinde#1 injection(SOI_0)	X
+ID_STR_DS_ITEM_0029	Start time of Cylinde#2 injection(SOI_1)	X
+ID_STR_DS_ITEM_0030	Start time of Cylinde#3 injection(SOI_2)	X
+ID_STR_DS_ITEM_0031	Start time of Cylinde#4 injection(SOI_3)	X
+ID_STR_DS_ITEM_0032	Intake VVT PWM(VVTPWM_IN)	X
+ID_STR_DS_ITEM_0033	Exhaust VVT control PWM	X
+ID_STR_DS_ITEM_0034	Actual exhaust VVT angle	X
+ID_STR_DS_ITEM_0035	Desired exhaust VVT angle	X
+ID_STR_DS_ITEM_0036	Output Duty Cycle for SWP	X
+ID_STR_DS_ITEM_0037	AC Middle Pressure Switch	X
+ID_STR_DS_ITEM_0038	λ closed loop control status	X
+ID_STR_DS_ITEM_0039	Interface for Mode #01+#02 short Term Fuel Trim Bank 1 for PID #06	X
+ID_STR_DS_ITEM_0040	Fuel Pump Relay	X
+ID_STR_DS_ITEM_0041	neutral gear switch	X
+ID_STR_DS_ITEM_0042	Clutch Position Signal	X
+ID_STR_DS_ITEM_0043	Cooling fan PWM(ECFPWM)	X
+ID_STR_DS_ITEM_0044	Maximum Attainable Indicated Torque	X
+ID_STR_DS_ITEM_0045	Desired Indicated Engine Torque	X
+ID_STR_DS_ITEM_0046	Indicated Real Engine Torque	X
+ID_STR_DS_ITEM_0047	Relative Air Mass(Calc. Load Value)	X
+ID_STR_DS_ITEM_0048	Engine Speed	X
+ID_STR_DS_ITEM_0049	Idle Speed Control	X
+ID_STR_DS_ITEM_0050	Vehicle Speed	X
+ID_STR_DS_ITEM_0051	Desired Throttle Position	X
+ID_STR_DS_ITEM_0052	Throttle Blade Position Dependent on Poti 1	X
+ID_STR_DS_ITEM_0053	Throttle Blade Position Dependent on Poti 2	X
+ID_STR_DS_ITEM_0054	Sensor Voltage from Throttle Potentiometer 1	X
+ID_STR_DS_ITEM_0055	Sensor Voltage from Throttle Potentiometer 2	X
+ID_STR_DS_ITEM_0056	Throttle Actuator Control Pwm	X
+ID_STR_DS_ITEM_0057	Throttle Angle with Respect to Lower Mechanical Stop	X
+ID_STR_DS_ITEM_0058	Sensor Voltage Poti 1 of Throttle Actuator at (Lower) Mechanical Stop	X
+ID_STR_DS_ITEM_0059	Acceleration pedal position sensor 1 voltage(V_PVS_1)	X
+ID_STR_DS_ITEM_0060	Acceleration pedal position sensor 2 voltage(V_PVS_2)	X
+ID_STR_DS_ITEM_0061	Normalized Angle Acceleration Pedal	X
+ID_STR_DS_ITEM_0062	Temperature of Air conditioner evaporator(TACE)	X
+ID_STR_DS_ITEM_0063	Temperature of Air conditioner evaporator voltage(VP_TACE_SENSsensor voltage)	X
+ID_STR_DS_ITEM_0064	Electric Fan PWM(ECFPWM)	X
+ID_STR_DS_ITEM_0065	Cooling Fan Relay	X
+ID_STR_DS_ITEM_0066	Air condition request switch(LV_ACIN)	X
+ID_STR_DS_ITEM_0067	Brake test switch(LV_BTS)	X
+ID_STR_DS_ITEM_0068	Brake lamp switch(LV_BLS)	X
+ID_STR_DS_ITEM_0069	Clutch switch(LV_CS)	X
+ID_STR_DS_ITEM_0070	Starter relay(LV_RLY_ST)	X
+ID_STR_DS_ITEM_0071	Air condition compressor relay(LV_ACCRLY_OUT)	X
+ID_STR_DS_ITEM_0072	Main relay(LV_RLY_MAIN)	X
+ID_STR_DS_ITEM_0073	Electronic fuel pump relay(LV_RLY_EFP)	X
+ID_STR_DS_ITEM_0074	Variable intake manifold relay(LV_VIM)	X
+ID_STR_DS_ITEM_0075	Air conditioning pressure switch(LV_PRS_SWT)	X
+ID_STR_DS_ITEM_0076	Maximum Attainable Indicated Torque	X
+ID_STR_DS_ITEM_0077	Desired Indicated Engine Torque	X
+ID_STR_DS_ITEM_0078	Indicated Real Engine Torque	X
+ID_STR_DS_ITEM_0079	Relative Air Mass(Calc. Load Value)	X
+ID_STR_DS_ITEM_0080	Engine Speed	X
+ID_STR_DS_ITEM_0081	Idle Speed Control	X
+ID_STR_DS_ITEM_0082	Vehicle Speed	X
+ID_STR_DS_ITEM_0083	Ambient Pressure	X
+ID_STR_DS_ITEM_0084	Intake Manifold Pressure (Absolute)	X
+ID_STR_DS_ITEM_0085	Actual Intake Manifold Pressure Sensor Voltage	X
+ID_STR_DS_ITEM_0086	Inlet pressure sensor voltage(V_MAP)	X
+ID_STR_DS_ITEM_0087	Air Mass Flow	X
+ID_STR_DS_ITEM_0088	Air Flow(MAF_KGH)	X
+ID_STR_DS_ITEM_0089	Intake Air Temperature	X
+ID_STR_DS_ITEM_0090	Inlet temperature sensor voltage(V_TIA)	X
+ID_STR_DS_ITEM_0091	Ambient Air Temperature	X
+ID_STR_DS_ITEM_0092	Desired Throttle Position	X
+ID_STR_DS_ITEM_0093	Throttle Blade Position Dependent on Poti 1	X
+ID_STR_DS_ITEM_0094	Throttle Blade Position Dependent on Poti 2	X
+ID_STR_DS_ITEM_0095	Sensor Voltage from Throttle Potentiometer 1	X
+ID_STR_DS_ITEM_0096	Sensor Voltage from Throttle Potentiometer 2	X
+ID_STR_DS_ITEM_0097	Throttle Actuator Control Pwm	X
+ID_STR_DS_ITEM_0098	Throttle Angle with Respect to Lower Mechanical Stop	X
+ID_STR_DS_ITEM_0099	Sensor Voltage Poti 1 of Throttle Actuator at (Lower) Mechanical Stop	X
+ID_STR_DS_ITEM_0100	Acceleration pedal position sensor 1 voltage(V_PVS_1)	X
+ID_STR_DS_ITEM_0101	Acceleration pedal position sensor 2 voltage(V_PVS_2)	X
+ID_STR_DS_ITEM_0102	Normalized Angle Acceleration Pedal	X
+ID_STR_DS_ITEM_0103	Canister Purge Solenoid	X
+ID_STR_DS_ITEM_0104	Output Duty Cycle for Canister Purge Valve	X
+ID_STR_DS_ITEM_0105	Canister Load(CL_MMV)	X
+ID_STR_DS_ITEM_0106	Standardized Mass Flow from Canister Purge Control	X
+ID_STR_DS_ITEM_0107	Alternator PWM(ALTPWM)	X
+ID_STR_DS_ITEM_0108	Maximum Attainable Indicated Torque	X
+ID_STR_DS_ITEM_0109	Desired Indicated Engine Torque	X
+ID_STR_DS_ITEM_0110	Indicated Real Engine Torque	X
+ID_STR_DS_ITEM_0111	Relative Air Mass(Calc. Load Value)	X
+ID_STR_DS_ITEM_0112	Engine Speed	X
+ID_STR_DS_ITEM_0113	Idle Speed Control	X
+ID_STR_DS_ITEM_0114	Vehicle Speed	X
+ID_STR_DS_ITEM_0115	Ambient Pressure	X
+ID_STR_DS_ITEM_0116	Intake Manifold Pressure (Absolute)	X
+ID_STR_DS_ITEM_0117	Actual Intake Manifold Pressure Sensor Voltage	X
+ID_STR_DS_ITEM_0118	Inlet pressure sensor voltage(V_MAP)	X
+ID_STR_DS_ITEM_0119	Air Mass Flow	X
+ID_STR_DS_ITEM_0120	Air Flow(MAF_KGH)	X
+ID_STR_DS_ITEM_0121	Intake Air Temperature	X
+ID_STR_DS_ITEM_0122	Inlet temperature sensor voltage(V_TIA)	X
+ID_STR_DS_ITEM_0123	Ambient Air Temperature	X
+ID_STR_DS_ITEM_0124	Desired Throttle Position	X
+ID_STR_DS_ITEM_0125	Throttle Blade Position Dependent on Poti 1	X
+ID_STR_DS_ITEM_0126	Throttle Blade Position Dependent on Poti 2	X
+ID_STR_DS_ITEM_0127	Sensor Voltage from Throttle Potentiometer 1	X
+ID_STR_DS_ITEM_0128	Sensor Voltage from Throttle Potentiometer 2	X
+ID_STR_DS_ITEM_0129	Throttle Actuator Control Pwm	X
+ID_STR_DS_ITEM_0130	Throttle Angle with Respect to Lower Mechanical Stop	X
+ID_STR_DS_ITEM_0131	Sensor Voltage Poti 1 of Throttle Actuator at (Lower) Mechanical Stop	X
+ID_STR_DS_ITEM_0132	Acceleration pedal position sensor 1 voltage(V_PVS_1)	X
+ID_STR_DS_ITEM_0133	Acceleration pedal position sensor 2 voltage(V_PVS_2)	X
+ID_STR_DS_ITEM_0134	Normalized Angle Acceleration Pedal	X
+ID_STR_DS_ITEM_0135	Injection Time	X
+ID_STR_DS_ITEM_0136	Fuel Level	X
+ID_STR_DS_ITEM_0137	Maximum Attainable Indicated Torque	X
+ID_STR_DS_ITEM_0138	Desired Indicated Engine Torque	X
+ID_STR_DS_ITEM_0139	Indicated Real Engine Torque	X
+ID_STR_DS_ITEM_0140	Relative Air Mass(Calc. Load Value)	X
+ID_STR_DS_ITEM_0141	Engine Speed	X
+ID_STR_DS_ITEM_0142	Idle Speed Control	X
+ID_STR_DS_ITEM_0143	Vehicle Speed	X
+ID_STR_DS_ITEM_0144	Ambient Pressure	X
+ID_STR_DS_ITEM_0145	Intake Manifold Pressure (Absolute)	X
+ID_STR_DS_ITEM_0146	Actual Intake Manifold Pressure Sensor Voltage	X
+ID_STR_DS_ITEM_0147	Inlet pressure sensor voltage(V_MAP)	X
+ID_STR_DS_ITEM_0148	Air Mass Flow	X
+ID_STR_DS_ITEM_0149	Air Flow(MAF_KGH)	X
+ID_STR_DS_ITEM_0150	Intake Air Temperature	X
+ID_STR_DS_ITEM_0151	Inlet temperature sensor voltage(V_TIA)	X
+ID_STR_DS_ITEM_0152	Ambient Air Temperature	X
+ID_STR_DS_ITEM_0153	Real Ignition Angle	X
+ID_STR_DS_ITEM_0154	Basic Ignition Angle	X
+ID_STR_DS_ITEM_0155	Cylinder#1 ignition advance Angle(IGA_CYL_KNK[0])	X
+ID_STR_DS_ITEM_0156	Cylinder#2 ignition advance Angle(IGA_CYL_KNK[1])	X
+ID_STR_DS_ITEM_0157	Cylinder#3 ignition advance Angle(IGA_CYL_KNK[2])	X
+ID_STR_DS_ITEM_0158	Cylinder#4 ignition advance Angle(IGA_CYL_KNK[3])	X
+ID_STR_DS_ITEM_0159	Reference Level Knock Control, 16bit, Cylinder #1	X
+ID_STR_DS_ITEM_0160	Reference Level Knock Control, 16bit, Cylinder #2	X
+ID_STR_DS_ITEM_0161	Reference Level Knock Control, 16bit, Cylinder #3	X
+ID_STR_DS_ITEM_0162	Reference Level Knock Control, 16bit, Cylinder #4	X
+ID_STR_DS_ITEM_0163	O2 Sensor Voltage Bank1, Sensor 1	X
+ID_STR_DS_ITEM_0164	O2 Sensor Voltage Bank1, Sensor 2	X
+ID_STR_DS_ITEM_0165	Lambda sensor heat PWM_UP(LSHPWM_UP_1)	X
+ID_STR_DS_ITEM_0166	Lambda sensor heat PWM_DOWN(LSHPWM_DOWN_1)	X
+ID_STR_DS_ITEM_0167	Lambda Controller Output	X
+ID_STR_DS_ITEM_0168	Cylinder#1 Fuel Trim(TI_LAM_1)	X
+ID_STR_DS_ITEM_0169	Fuel Trim factor(FAC_LAM_COR)	X
+ID_STR_DS_ITEM_0170	Fuel AutoLearn factor(FAC_LAM_AD_OUT)	X
+ID_STR_DS_ITEM_0171	Cylinde#1 injection time(TI_1)	X
+ID_STR_DS_ITEM_0172	Cylinde#2 injection time(TI_2)	X
+ID_STR_DS_ITEM_0173	Cylinde#3 injection time(TI_3)	X
+ID_STR_DS_ITEM_0174	Cylinde#4 injection time(TI_4)	X
+ID_STR_DS_ITEM_0175	Start time of Cylinde#1 injection(SOI_0)	X
+ID_STR_DS_ITEM_0176	Start time of Cylinde#2 injection(SOI_1)	X
+ID_STR_DS_ITEM_0177	Start time of Cylinde#3 injection(SOI_2)	X
+ID_STR_DS_ITEM_0178	Start time of Cylinde#4 injection(SOI_3)	X
+ID_STR_DS_ITEM_0179	Intake VVT PWM(VVTPWM_IN)	X
+ID_STR_DS_ITEM_0180	Canister Purge Solenoid	X
+ID_STR_DS_ITEM_0181	Output Duty Cycle for Canister Purge Valve	X
+ID_STR_DS_ITEM_0182	Canister Load(CL_MMV)	X
+ID_STR_DS_ITEM_0183	Standardized Mass Flow from Canister Purge Control	X
+ID_STR_DS_ITEM_0184	Alternator PWM(ALTPWM)	X
+ID_STR_DS_ITEM_0185	Inlet Camshaft Control	X
+ID_STR_DS_ITEM_0186	State of intake VVT(STATE_IVVT)	X
+ID_STR_DS_ITEM_0187	State of intake VVT PMW(STATE_IVVT_PWM_IN)	X
+ID_STR_DS_ITEM_0188	Desired Indicated Engine Torque	X
+ID_STR_DS_ITEM_0189	Indicated Real Engine Torque	X
+ID_STR_DS_ITEM_0190	Relative Air Mass(Calc. Load Value)	X
+ID_STR_DS_ITEM_0191	Engine Speed	X
+ID_STR_DS_ITEM_0192	Idle Speed Control	X
+ID_STR_DS_ITEM_0193	Vehicle Speed	X
+ID_STR_DS_ITEM_0194	Ambient Pressure	X
+ID_STR_DS_ITEM_0195	Intake Manifold Pressure (Absolute)	X
+ID_STR_DS_ITEM_0196	Actual Intake Manifold Pressure Sensor Voltage	X
+ID_STR_DS_ITEM_0197	Inlet pressure sensor voltage(V_MAP)	X
+ID_STR_DS_ITEM_0198	Air Mass Flow	X
+ID_STR_DS_ITEM_0199	Air Flow(MAF_KGH)	X
+ID_STR_DS_ITEM_0200	Intake Air Temperature	X
+ID_STR_DS_ITEM_0201	Inlet temperature sensor voltage(V_TIA)	X
+ID_STR_DS_ITEM_0202	Ambient Air Temperature	X
+ID_STR_DS_ITEM_0203	Desired Throttle Position	X
+ID_STR_DS_ITEM_0204	Throttle Blade Position Dependent on Poti 1	X
+ID_STR_DS_ITEM_0205	Throttle Blade Position Dependent on Poti 2	X
+ID_STR_DS_ITEM_0206	Sensor Voltage from Throttle Potentiometer 1	X
+ID_STR_DS_ITEM_0207	Sensor Voltage from Throttle Potentiometer 2	X
+ID_STR_DS_ITEM_0208	Throttle Actuator Control Pwm	X
+ID_STR_DS_ITEM_0209	Throttle Angle with Respect to Lower Mechanical Stop	X
+ID_STR_DS_ITEM_0210	Sensor Voltage Poti 1 of Throttle Actuator at (Lower) Mechanical Stop	X
+ID_STR_DS_ITEM_0211	Acceleration pedal position sensor 1 voltage(V_PVS_1)	X
+ID_STR_DS_ITEM_0212	Acceleration pedal position sensor 2 voltage(V_PVS_2)	X
+ID_STR_DS_ITEM_0213	Normalized Angle Acceleration Pedal	X
+ID_STR_DS_ITEM_0214	Real Ignition Angle	X
+ID_STR_DS_ITEM_0215	Basic Ignition Angle	X
+ID_STR_DS_ITEM_0216	Cylinder#1 ignition advance Angle(IGA_CYL_KNK[0])	X
+ID_STR_DS_ITEM_0217	Cylinder#2 ignition advance Angle(IGA_CYL_KNK[1])	X
+ID_STR_DS_ITEM_0218	Cylinder#3 ignition advance Angle(IGA_CYL_KNK[2])	X
+ID_STR_DS_ITEM_0219	Cylinder#4 ignition advance Angle(IGA_CYL_KNK[3])	X
+ID_STR_DS_ITEM_0220	Number Of Misfire:Cylinder#1	X
+ID_STR_DS_ITEM_0221	Number Of Misfire:Cylinder#2	X
+ID_STR_DS_ITEM_0222	Number Of Misfire:Cylinder#3	X
+ID_STR_DS_ITEM_0223	Number Of Misfire:Cylinder#4	X
+ID_STR_DS_ITEM_0224	O2 Sensor Voltage Bank1, Sensor 1	X
+ID_STR_DS_ITEM_0225	O2 Sensor Voltage Bank1, Sensor 2	X
+ID_STR_DS_ITEM_0226	Lambda sensor heat PWM_UP(LSHPWM_UP_1)	X
+ID_STR_DS_ITEM_0227	Lambda sensor heat PWM_DOWN(LSHPWM_DOWN_1)	X
+ID_STR_DS_ITEM_0228	Lambda Controller Output	X
+ID_STR_DS_ITEM_0229	Cylinder#1 Fuel Trim(TI_LAM_1)	X
+ID_STR_DS_ITEM_0230	Fuel Trim factor(FAC_LAM_COR)	X
+ID_STR_DS_ITEM_0231	Fuel AutoLearn factor(FAC_LAM_AD_OUT)	X
+ID_STR_DS_ITEM_0232	Cylinde#1 injection time(TI_1)	X
+ID_STR_DS_ITEM_0233	Cylinde#2 injection time(TI_2)	X
+ID_STR_DS_ITEM_0234	Cylinde#3 injection time(TI_3)	X
+ID_STR_DS_ITEM_0235	Cylinde#4 injection time(TI_4)	X
+ID_STR_DS_ITEM_0236	Start time of Cylinde#1 injection(SOI_0)	X
+ID_STR_DS_ITEM_0237	Start time of Cylinde#2 injection(SOI_1)	X
+ID_STR_DS_ITEM_0238	Start time of Cylinde#3 injection(SOI_2)	X
+ID_STR_DS_ITEM_0239	Start time of Cylinde#4 injection(SOI_3)	X
+ID_STR_DS_ITEM_0240	Intake VVT PWM(VVTPWM_IN)	X
+ID_STR_DS_ITEM_0241	Canister Purge Solenoid	X
+ID_STR_DS_ITEM_0242	Output Duty Cycle for Canister Purge Valve	X
+ID_STR_DS_ITEM_0243	Canister Load(CL_MMV)	X
+ID_STR_DS_ITEM_0244	Standardized Mass Flow from Canister Purge Control	X
+ID_STR_DS_ITEM_0245	Alternator PWM(ALTPWM)	X
+ID_STR_DS_ITEM_0246	Inlet Camshaft Control	X
+ID_STR_DS_ITEM_0247	State of intake VVT(STATE_IVVT)	X
+ID_STR_DS_ITEM_0248	State of intake VVT PMW(STATE_IVVT_PWM_IN)	X
+ID_STR_DS_ITEM_0249	Maximum Attainable Indicated Torque	X
+ID_STR_DS_ITEM_0250	Desired Indicated Engine Torque	X
+ID_STR_DS_ITEM_0251	Indicated Real Engine Torque	X
+ID_STR_DS_ITEM_0252	Relative Air Mass(Calc. Load Value)	X
+ID_STR_DS_ITEM_0253	Engine Speed	X
+ID_STR_DS_ITEM_0254	Idle Speed Control	X
+ID_STR_DS_ITEM_0255	Vehicle Speed	X
+ID_STR_DS_ITEM_0256	Desired Throttle Position	X
+ID_STR_DS_ITEM_0257	Throttle Blade Position Dependent on Poti 1	X
+ID_STR_DS_ITEM_0258	Throttle Blade Position Dependent on Poti 2	X
+ID_STR_DS_ITEM_0259	Sensor Voltage from Throttle Potentiometer 1	X
+ID_STR_DS_ITEM_0260	Sensor Voltage from Throttle Potentiometer 2	X
+ID_STR_DS_ITEM_0261	Throttle Actuator Control Pwm	X
+ID_STR_DS_ITEM_0262	Throttle Angle with Respect to Lower Mechanical Stop	X
+ID_STR_DS_ITEM_0263	Sensor Voltage Poti 1 of Throttle Actuator at (Lower) Mechanical Stop	X
+ID_STR_DS_ITEM_0264	Acceleration pedal position sensor 1 voltage(V_PVS_1)	X
+ID_STR_DS_ITEM_0265	Acceleration pedal position sensor 2 voltage(V_PVS_2)	X
+ID_STR_DS_ITEM_0266	Normalized Angle Acceleration Pedal	X
+ID_STR_DS_ITEM_0267	Real Ignition Angle	X
+ID_STR_DS_ITEM_0268	Basic Ignition Angle	X
+ID_STR_DS_ITEM_0269	Cylinder#1 ignition advance Angle(IGA_CYL_KNK[0])	X
+ID_STR_DS_ITEM_0270	Cylinder#2 ignition advance Angle(IGA_CYL_KNK[1])	X
+ID_STR_DS_ITEM_0271	Cylinder#3 ignition advance Angle(IGA_CYL_KNK[2])	X
+ID_STR_DS_ITEM_0272	Cylinder#4 ignition advance Angle(IGA_CYL_KNK[3])	X
+ID_STR_DS_ITEM_0273	Reference Level Knock Control, 16bit, Cylinder #1	X
+ID_STR_DS_ITEM_0274	Reference Level Knock Control, 16bit, Cylinder #2	X
+ID_STR_DS_ITEM_0275	Reference Level Knock Control, 16bit, Cylinder #3	X
+ID_STR_DS_ITEM_0276	Reference Level Knock Control, 16bit, Cylinder #4	X
+ID_STR_DS_ITEM_0277	Number Of Misfire:Cylinder#1	X
+ID_STR_DS_ITEM_0278	Number Of Misfire:Cylinder#2	X
+ID_STR_DS_ITEM_0279	Number Of Misfire:Cylinder#3	X
+ID_STR_DS_ITEM_0280	Number Of Misfire:Cylinder#4	X
+ID_STR_DS_ITEM_0281	Cylinde#1 injection time(TI_1)	X
+ID_STR_DS_ITEM_0282	Cylinde#2 injection time(TI_2)	X
+ID_STR_DS_ITEM_0283	Cylinde#3 injection time(TI_3)	X
+ID_STR_DS_ITEM_0284	Cylinde#4 injection time(TI_4)	X
+ID_STR_DS_ITEM_0285	Start time of Cylinde#1 injection(SOI_0)	X
+ID_STR_DS_ITEM_0286	Start time of Cylinde#2 injection(SOI_1)	X
+ID_STR_DS_ITEM_0287	Start time of Cylinde#3 injection(SOI_2)	X
+ID_STR_DS_ITEM_0288	Start time of Cylinde#4 injection(SOI_3)	X
+ID_STR_DS_ITEM_0289	Intake VVT PWM(VVTPWM_IN)	X
+ID_STR_DS_ITEM_0290	Canister Purge Solenoid	X
+ID_STR_DS_ITEM_0291	Inlet Camshaft Control	X
+ID_STR_DS_ITEM_0292	State of intake VVT(STATE_IVVT)	X
+ID_STR_DS_ITEM_0293	State of intake VVT PMW(STATE_IVVT_PWM_IN)	X
+ID_STR_DS_ITEM_0294	Maximum Attainable Indicated Torque	X
+ID_STR_DS_ITEM_0295	Desired Indicated Engine Torque	X
+ID_STR_DS_ITEM_0296	Indicated Real Engine Torque	X
+ID_STR_DS_ITEM_0297	Relative Air Mass(Calc. Load Value)	X
+ID_STR_DS_ITEM_0298	Engine Speed	X
+ID_STR_DS_ITEM_0299	Idle Speed Control	X
+ID_STR_DS_ITEM_0300	Vehicle Speed	X
+ID_STR_DS_ITEM_0301	Ambient Pressure	X
+ID_STR_DS_ITEM_0302	Intake Manifold Pressure (Absolute)	X
+ID_STR_DS_ITEM_0303	Actual Intake Manifold Pressure Sensor Voltage	X
+ID_STR_DS_ITEM_0304	Inlet pressure sensor voltage(V_MAP)	X
+ID_STR_DS_ITEM_0305	Air Mass Flow	X
+ID_STR_DS_ITEM_0306	Air Flow(MAF_KGH)	X
+ID_STR_DS_ITEM_0307	Intake Air Temperature	X
+ID_STR_DS_ITEM_0308	Inlet temperature sensor voltage(V_TIA)	X
+ID_STR_DS_ITEM_0309	Ambient Air Temperature	X
+ID_STR_DS_ITEM_0310	Desired Throttle Position	X
+ID_STR_DS_ITEM_0311	Throttle Blade Position Dependent on Poti 1	X
+ID_STR_DS_ITEM_0312	Throttle Blade Position Dependent on Poti 2	X
+ID_STR_DS_ITEM_0313	Sensor Voltage from Throttle Potentiometer 1	X
+ID_STR_DS_ITEM_0314	Sensor Voltage from Throttle Potentiometer 2	X
+ID_STR_DS_ITEM_0315	Throttle Actuator Control Pwm	X
+ID_STR_DS_ITEM_0316	Throttle Angle with Respect to Lower Mechanical Stop	X
+ID_STR_DS_ITEM_0317	Sensor Voltage Poti 1 of Throttle Actuator at (Lower) Mechanical Stop	X
+ID_STR_DS_ITEM_0318	Acceleration pedal position sensor 1 voltage(V_PVS_1)	X
+ID_STR_DS_ITEM_0319	Acceleration pedal position sensor 2 voltage(V_PVS_2)	X
+ID_STR_DS_ITEM_0320	Normalized Angle Acceleration Pedal	X
+ID_STR_DS_ITEM_0321	O2 Sensor Voltage Bank1, Sensor 1	X
+ID_STR_DS_ITEM_0322	O2 Sensor Voltage Bank1, Sensor 2	X
+ID_STR_DS_ITEM_0323	Lambda sensor heat PWM_UP(LSHPWM_UP_1)	X
+ID_STR_DS_ITEM_0324	Lambda sensor heat PWM_DOWN(LSHPWM_DOWN_1)	X
+ID_STR_DS_ITEM_0325	Lambda Controller Output	X
+ID_STR_DS_ITEM_0326	Cylinder#1 Fuel Trim(TI_LAM_1)	X
+ID_STR_DS_ITEM_0327	Fuel Trim factor(FAC_LAM_COR)	X
+ID_STR_DS_ITEM_0328	Fuel AutoLearn factor(FAC_LAM_AD_OUT)	X
+ID_STR_DS_ITEM_0329	Canister Purge Solenoid	X
+ID_STR_DS_ITEM_0330	Output Duty Cycle for Canister Purge Valve	X
+ID_STR_DS_ITEM_0331	Canister Load(CL_MMV)	X
+ID_STR_DS_ITEM_0332	Standardized Mass Flow from Canister Purge Control	X
+ID_STR_DS_ITEM_0333	Alternator PWM(ALTPWM)	X
+ID_STR_DS_ITEM_0334	Inlet Camshaft Control	X
+ID_STR_DS_ITEM_0335	State of intake VVT(STATE_IVVT)	X
+ID_STR_DS_ITEM_0336	State of intake VVT PMW(STATE_IVVT_PWM_IN)	X
+ID_STR_DS_ITEM_0337	Engine Temperature	X
+ID_STR_DS_ITEM_0338	Engine temperature sensor voltage(V_TCO)	X
+ID_STR_DS_ITEM_0339	Engine Temperature at Start	X
+ID_STR_DS_ITEM_0340	Engine Speed	X
+ID_STR_DS_ITEM_0341	Idle Speed Control	X
+ID_STR_DS_ITEM_0342	Vehicle Speed	X
+ID_STR_DS_ITEM_0343	Canister Purge Solenoid	X
+ID_STR_DS_ITEM_0344	Output Duty Cycle for Canister Purge Valve	X
+ID_STR_DS_ITEM_0345	Canister Load(CL_MMV)	X
+ID_STR_DS_ITEM_0346	Standardized Mass Flow from Canister Purge Control	X
+ID_STR_DS_ITEM_0347	Engaged Gear	X
+ID_STR_DS_ITEM_0348	vehicle-miles of travel(DIST_LW / DIST_H)	X
+ID_STR_DS_ITEM_0349	Counter for Distance Travelled While Mil Is Activated	X
+ID_STR_DS_ITEM_0350	Battery Voltage	X
+ID_STR_DS_ITEM_0351	Battery voltage(V_VB_BAS)	X
+ID_STR_DS_ITEM_0352	Time Counter At End Of Start	X
+ID_STR_DS_ITEM_0353	Fuel Level	X
+ID_STR_DS_ITEM_0354	MIL	X
+ID_STR_DS_ITEM_0355	Maximum Attainable Indicated Torque	X
+ID_STR_DS_ITEM_0356	Desired Indicated Engine Torque	X
+ID_STR_DS_ITEM_0357	Indicated Real Engine Torque	X
+ID_STR_DS_ITEM_0358	Relative Air Mass(Calc. Load Value)	X
+ID_STR_DS_ITEM_0359	Engine Speed	X
+ID_STR_DS_ITEM_0360	Idle Speed Control	X
+ID_STR_DS_ITEM_0361	Vehicle Speed	X
+ID_STR_DS_ITEM_0362	Desired Throttle Position	X
+ID_STR_DS_ITEM_0363	Throttle Blade Position Dependent on Poti 1	X
+ID_STR_DS_ITEM_0364	Throttle Blade Position Dependent on Poti 2	X
+ID_STR_DS_ITEM_0365	Sensor Voltage from Throttle Potentiometer 1	X
+ID_STR_DS_ITEM_0366	Sensor Voltage from Throttle Potentiometer 2	X
+ID_STR_DS_ITEM_0367	Throttle Actuator Control Pwm	X
+ID_STR_DS_ITEM_0368	Throttle Angle with Respect to Lower Mechanical Stop	X
+ID_STR_DS_ITEM_0369	Sensor Voltage Poti 1 of Throttle Actuator at (Lower) Mechanical Stop	X
+ID_STR_DS_ITEM_0370	Acceleration pedal position sensor 1 voltage(V_PVS_1)	X
+ID_STR_DS_ITEM_0371	Acceleration pedal position sensor 2 voltage(V_PVS_2)	X
+ID_STR_DS_ITEM_0372	Normalized Angle Acceleration Pedal	X
+ID_STR_DS_ITEM_0373	Real Ignition Angle	X
+ID_STR_DS_ITEM_0374	Basic Ignition Angle	X
+ID_STR_DS_ITEM_0375	Cylinder#1 ignition advance Angle(IGA_CYL_KNK[0])	X
+ID_STR_DS_ITEM_0376	Cylinder#2 ignition advance Angle(IGA_CYL_KNK[1])	X
+ID_STR_DS_ITEM_0377	Cylinder#3 ignition advance Angle(IGA_CYL_KNK[2])	X
+ID_STR_DS_ITEM_0378	Cylinder#4 ignition advance Angle(IGA_CYL_KNK[3])	X
+ID_STR_DS_ITEM_0379	Number Of Misfire:Cylinder#1	X
+ID_STR_DS_ITEM_0380	Number Of Misfire:Cylinder#2	X
+ID_STR_DS_ITEM_0381	Number Of Misfire:Cylinder#3	X
+ID_STR_DS_ITEM_0382	Number Of Misfire:Cylinder#4	X
+ID_STR_DS_ITEM_0383	Cylinde#1 injection time(TI_1)	X
+ID_STR_DS_ITEM_0384	Cylinde#2 injection time(TI_2)	X
+ID_STR_DS_ITEM_0385	Cylinde#3 injection time(TI_3)	X
+ID_STR_DS_ITEM_0386	Cylinde#4 injection time(TI_4)	X
+ID_STR_DS_ITEM_0387	Start time of Cylinde#1 injection(SOI_0)	X
+ID_STR_DS_ITEM_0388	Start time of Cylinde#2 injection(SOI_1)	X
+ID_STR_DS_ITEM_0389	Start time of Cylinde#3 injection(SOI_2)	X
+ID_STR_DS_ITEM_0390	Start time of Cylinde#4 injection(SOI_3)	X
+ID_STR_DS_ITEM_0391	Intake VVT PWM(VVTPWM_IN)	X
+ID_STR_DS_ITEM_0392	Canister Purge Solenoid	X
+ID_STR_DS_ITEM_0393	Output Duty Cycle for Canister Purge Valve	X
+ID_STR_DS_ITEM_0394	Canister Load(CL_MMV)	X
+ID_STR_DS_ITEM_0395	Standardized Mass Flow from Canister Purge Control	X
+ID_STR_DS_ITEM_0396	Alternator PWM(ALTPWM)	X
+ID_STR_DS_ITEM_0397	Maximum Attainable Indicated Torque	X
+ID_STR_DS_ITEM_0398	Desired Indicated Engine Torque	X
+ID_STR_DS_ITEM_0399	Indicated Real Engine Torque	X
+ID_STR_DS_ITEM_0400	Relative Air Mass(Calc. Load Value)	X
+ID_STR_DS_ITEM_0401	Engine Speed	X
+ID_STR_DS_ITEM_0402	Idle Speed Control	X
+ID_STR_DS_ITEM_0403	Vehicle Speed	X
+ID_STR_DS_ITEM_0404	Ambient Pressure	X
+ID_STR_DS_ITEM_0405	Intake Manifold Pressure (Absolute)	X
+ID_STR_DS_ITEM_0406	Actual Intake Manifold Pressure Sensor Voltage	X
+ID_STR_DS_ITEM_0407	Inlet pressure sensor voltage(V_MAP)	X
+ID_STR_DS_ITEM_0408	Air Mass Flow	X
+ID_STR_DS_ITEM_0409	Air Flow(MAF_KGH)	X
+ID_STR_DS_ITEM_0410	Intake Air Temperature	X
+ID_STR_DS_ITEM_0411	Inlet temperature sensor voltage(V_TIA)	X
+ID_STR_DS_ITEM_0412	Ambient Air Temperature	X
+ID_STR_DS_ITEM_0413	Desired Throttle Position	X
+ID_STR_DS_ITEM_0414	Throttle Blade Position Dependent on Poti 1	X
+ID_STR_DS_ITEM_0415	Throttle Blade Position Dependent on Poti 2	X
+ID_STR_DS_ITEM_0416	Sensor Voltage from Throttle Potentiometer 1	X
+ID_STR_DS_ITEM_0417	Sensor Voltage from Throttle Potentiometer 2	X
+ID_STR_DS_ITEM_0418	Throttle Actuator Control Pwm	X
+ID_STR_DS_ITEM_0419	Throttle Angle with Respect to Lower Mechanical Stop	X
+ID_STR_DS_ITEM_0420	Sensor Voltage Poti 1 of Throttle Actuator at (Lower) Mechanical Stop	X
+ID_STR_DS_ITEM_0421	Acceleration pedal position sensor 1 voltage(V_PVS_1)	X
+ID_STR_DS_ITEM_0422	Acceleration pedal position sensor 2 voltage(V_PVS_2)	X
+ID_STR_DS_ITEM_0423	Normalized Angle Acceleration Pedal	X
+ID_STR_DS_ITEM_0424	Canister Purge Solenoid	X
+ID_STR_DS_ITEM_0425	Alternator PWM(ALTPWM)	X
+ID_STR_DS_ITEM_0426	Inlet Camshaft Control	X
+ID_STR_DS_ITEM_0427	State of intake VVT(STATE_IVVT)	X
+ID_STR_DS_ITEM_0428	State of intake VVT PMW(STATE_IVVT_PWM_IN)	X
+ID_STR_DS_ITEM_0429	Maximum Attainable Indicated Torque	X
+ID_STR_DS_ITEM_0430	Desired Indicated Engine Torque	X
+ID_STR_DS_ITEM_0431	Indicated Real Engine Torque	X
+ID_STR_DS_ITEM_0432	Relative Air Mass(Calc. Load Value)	X
+ID_STR_DS_ITEM_0433	Engine Temperature	X
+ID_STR_DS_ITEM_0434	Engine temperature sensor voltage(V_TCO)	X
+ID_STR_DS_ITEM_0435	Engine Temperature at Start	X
+ID_STR_DS_ITEM_0436	Engine Speed	X
+ID_STR_DS_ITEM_0437	Idle Speed Control	X
+ID_STR_DS_ITEM_0438	Vehicle Speed	X
+ID_STR_DS_ITEM_0439	Ambient Pressure	X
+ID_STR_DS_ITEM_0440	Intake Manifold Pressure (Absolute)	X
+ID_STR_DS_ITEM_0441	Actual Intake Manifold Pressure Sensor Voltage	X
+ID_STR_DS_ITEM_0442	Inlet pressure sensor voltage(V_MAP)	X
+ID_STR_DS_ITEM_0443	Air Mass Flow	X
+ID_STR_DS_ITEM_0444	Air Flow(MAF_KGH)	X
+ID_STR_DS_ITEM_0445	Intake Air Temperature	X
+ID_STR_DS_ITEM_0446	Inlet temperature sensor voltage(V_TIA)	X
+ID_STR_DS_ITEM_0447	Ambient Air Temperature	X
+ID_STR_DS_ITEM_0448	Desired Throttle Position	X
+ID_STR_DS_ITEM_0449	Throttle Blade Position Dependent on Poti 1	X
+ID_STR_DS_ITEM_0450	Throttle Blade Position Dependent on Poti 2	X
+ID_STR_DS_ITEM_0451	Sensor Voltage from Throttle Potentiometer 1	X
+ID_STR_DS_ITEM_0452	Sensor Voltage from Throttle Potentiometer 2	X
+ID_STR_DS_ITEM_0453	Throttle Actuator Control Pwm	X
+ID_STR_DS_ITEM_0454	Throttle Angle with Respect to Lower Mechanical Stop	X
+ID_STR_DS_ITEM_0455	Sensor Voltage Poti 1 of Throttle Actuator at (Lower) Mechanical Stop	X
+ID_STR_DS_ITEM_0456	Acceleration pedal position sensor 1 voltage(V_PVS_1)	X
+ID_STR_DS_ITEM_0457	Acceleration pedal position sensor 2 voltage(V_PVS_2)	X
+ID_STR_DS_ITEM_0458	Normalized Angle Acceleration Pedal	X
+ID_STR_DS_ITEM_0459	Real Ignition Angle	X
+ID_STR_DS_ITEM_0460	Basic Ignition Angle	X
+ID_STR_DS_ITEM_0461	Cylinder#1 ignition advance Angle(IGA_CYL_KNK[0])	X
+ID_STR_DS_ITEM_0462	Cylinder#2 ignition advance Angle(IGA_CYL_KNK[1])	X
+ID_STR_DS_ITEM_0463	Cylinder#3 ignition advance Angle(IGA_CYL_KNK[2])	X
+ID_STR_DS_ITEM_0464	Cylinder#4 ignition advance Angle(IGA_CYL_KNK[3])	X
+ID_STR_DS_ITEM_0465	Reference Level Knock Control, 16bit, Cylinder #1	X
+ID_STR_DS_ITEM_0466	Reference Level Knock Control, 16bit, Cylinder #2	X
+ID_STR_DS_ITEM_0467	Reference Level Knock Control, 16bit, Cylinder #3	X
+ID_STR_DS_ITEM_0468	Reference Level Knock Control, 16bit, Cylinder #4	X
+ID_STR_DS_ITEM_0469	Number Of Misfire:Cylinder#1	X
+ID_STR_DS_ITEM_0470	Number Of Misfire:Cylinder#2	X
+ID_STR_DS_ITEM_0471	Number Of Misfire:Cylinder#3	X
+ID_STR_DS_ITEM_0472	Number Of Misfire:Cylinder#4	X
+ID_STR_DS_ITEM_0473	O2 Sensor Voltage Bank1, Sensor 1	X
+ID_STR_DS_ITEM_0474	O2 Sensor Voltage Bank1, Sensor 2	X
+ID_STR_DS_ITEM_0475	Lambda sensor heat PWM_UP(LSHPWM_UP_1)	X
+ID_STR_DS_ITEM_0476	Lambda sensor heat PWM_DOWN(LSHPWM_DOWN_1)	X
+ID_STR_DS_ITEM_0477	Lambda Controller Output	X
+ID_STR_DS_ITEM_0478	Cylinder#1 Fuel Trim(TI_LAM_1)	X
+ID_STR_DS_ITEM_0479	Fuel Trim factor(FAC_LAM_COR)	X
+ID_STR_DS_ITEM_0480	Fuel AutoLearn factor(FAC_LAM_AD_OUT)	X
+ID_STR_DS_ITEM_0481	Injection Time	X
+ID_STR_DS_ITEM_0482	Cylinde#1 injection time(TI_1)	X
+ID_STR_DS_ITEM_0483	Cylinde#2 injection time(TI_2)	X
+ID_STR_DS_ITEM_0484	Cylinde#3 injection time(TI_3)	X
+ID_STR_DS_ITEM_0485	Cylinde#4 injection time(TI_4)	X
+ID_STR_DS_ITEM_0486	Start time of Cylinde#1 injection(SOI_0)	X
+ID_STR_DS_ITEM_0487	Start time of Cylinde#2 injection(SOI_1)	X
+ID_STR_DS_ITEM_0488	Start time of Cylinde#3 injection(SOI_2)	X
+ID_STR_DS_ITEM_0489	Start time of Cylinde#4 injection(SOI_3)	X
+ID_STR_DS_ITEM_0490	Intake VVT PWM(VVTPWM_IN)	X
+ID_STR_DS_ITEM_0491	Canister Purge Solenoid	X
+ID_STR_DS_ITEM_0492	Output Duty Cycle for Canister Purge Valve	X
+ID_STR_DS_ITEM_0493	Canister Load(CL_MMV)	X
+ID_STR_DS_ITEM_0494	Standardized Mass Flow from Canister Purge Control	X
+ID_STR_DS_ITEM_0495	Temperature of Air conditioner evaporator(TACE)	X
+ID_STR_DS_ITEM_0496	Temperature of Air conditioner evaporator voltage(VP_TACE_SENSsensor voltage)	X
+ID_STR_DS_ITEM_0497	Engaged Gear	X
+ID_STR_DS_ITEM_0498	vehicle-miles of travel(DIST_LW / DIST_H)	X
+ID_STR_DS_ITEM_0499	Counter for Distance Travelled While Mil Is Activated	X
+ID_STR_DS_ITEM_0500	Alternator PWM(ALTPWM)	X
+ID_STR_DS_ITEM_0501	Battery Voltage	X
+ID_STR_DS_ITEM_0502	Battery voltage(V_VB_BAS)	X
+ID_STR_DS_ITEM_0503	Time Counter At End Of Start	X
+ID_STR_DS_ITEM_0504	Electric Fan PWM(ECFPWM)	X
+ID_STR_DS_ITEM_0505	Inlet Camshaft Control	X
+ID_STR_DS_ITEM_0506	State of intake VVT(STATE_IVVT)	X
+ID_STR_DS_ITEM_0507	State of intake VVT PMW(STATE_IVVT_PWM_IN)	X
+ID_STR_DS_ITEM_0508	Cooling Fan Relay	X
+ID_STR_DS_ITEM_0509	Exhaust VVT control PWM	X
+ID_STR_DS_ITEM_0510	Actual exhaust VVT angle	X
+ID_STR_DS_ITEM_0511	Desired exhaust VVT angle	X
+ID_STR_DS_ITEM_0512	Output Duty Cycle for SWP	X
+ID_STR_DS_ITEM_0513	AC Middle Pressure Switch	X
+ID_STR_DS_ITEM_0514	λ closed loop control status	X
+ID_STR_DS_ITEM_0515	Interface for Mode #01+#02 short Term Fuel Trim Bank 1 for PID #06	X
+ID_STR_DS_ITEM_0516	Fuel Pump Relay	X
+ID_STR_DS_ITEM_0517	neutral gear switch	X
+ID_STR_DS_ITEM_0518	Clutch Position Signal	X
+ID_STR_DS_ITEM_0519	Cooling fan PWM(ECFPWM)	X
+ID_STR_DS_ITEM_0520	MIL	X
+ID_STR_DS_ITEM_0521	Air condition request switch(LV_ACIN)	X
+ID_STR_DS_ITEM_0522	Brake test switch(LV_BTS)	X
+ID_STR_DS_ITEM_0523	Brake lamp switch(LV_BLS)	X
+ID_STR_DS_ITEM_0524	Clutch switch(LV_CS)	X
+ID_STR_DS_ITEM_0525	Starter relay(LV_RLY_ST)	X
+ID_STR_DS_ITEM_0526	Air condition compressor relay(LV_ACCRLY_OUT)	X
+ID_STR_DS_ITEM_0527	Main relay(LV_RLY_MAIN)	X
+ID_STR_DS_ITEM_0528	Electronic fuel pump relay(LV_RLY_EFP)	X
+ID_STR_DS_ITEM_0529	Variable intake manifold relay(LV_VIM)	X
+ID_STR_DS_ITEM_0530	Air conditioning pressure switch(LV_PRS_SWT)	X
+
+;版本信息
+ID_STR_ECU_GROUP_00	版本信息	X
+
+ID_STR_ECU_ITEM_0000	VehicleIdentificationNumber	X
+ID_STR_ECU_ITEM_0001	Supplier Identifier Information	X
+ID_STR_ECU_ITEM_0002	ECUManufacturingDate	X
+ID_STR_ECU_ITEM_0003	EndModelPartNumber (SGMW P/N)	X
+ID_STR_ECU_ITEM_0004	Supplier ECU Hardware Number	X
+ID_STR_ECU_ITEM_0005	Supplier ECU Software Number	X
+ID_STR_ECU_ITEM_0006	Supplier ECU Calibration Data Number	X
+
+;数据流或者版本信息switch使用的字符串
+ID_DS_STRING_000	OFF	X
+ID_DS_STRING_001	ON	X
+ID_DS_STRING_002	-	X
+ID_DS_STRING_003	inactive	X
+ID_DS_STRING_004	active	X
+ID_DS_STRING_005	lowspeedfanoff highspeedfanoff	X
+ID_DS_STRING_006	lowspeedfanon highspeedfanoff	X
+ID_DS_STRING_007	lowspeedfanoff highspeedfanon	X
+ID_DS_STRING_008	lowspeedfanoff highspeedfanon  highspeedfanon	X
+ID_DS_STRING_009	initial state	X
+ID_DS_STRING_010	enter HOLD state	X
+ID_DS_STRING_011	hold state	X
+ID_DS_STRING_012	adjust state	X
+ID_DS_STRING_013	passive	X
+ID_DS_STRING_014	ready	X
+ID_DS_STRING_015	adaptive	X
+ID_DS_STRING_016	enabled	X
+ID_DS_STRING_017	control	X
+
+;数据流或者版本信息用到的其他字符串
+IMS_DSSTRING_0008	OFF	X
+IMS_DSSTRING_0009	ON	X
+IMS_DSSTRING_0239	Did not start	X
+IMS_DSSTRING_0240	start	X

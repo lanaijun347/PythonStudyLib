@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0">
+	<function ID="ID_FUNCTION_DATASTREAM">
+		<!--选择数据流，并把选择的数据流ID保存到ui_data_buffer中-->
+		<show label="" type="data_stream_select">
+			<param type="function" value="ID_FUNCTION_READ_DATASTREAM"/>
+			<param label="data_stream_id" type="ui_data_buffer" value=""/>
+			<param label="GROUP" type="string" value="0"/>
+		</show>
+	</function>
+	<function ID="ID_FUNCTION_READ_DATASTREAM">
+		<call_protocol label="data_stream" function="read_data_stream">
+			<param type="ui_data_buffer" value="data_stream_id"/>
+		</call_protocol>
+		<judge_tip_jump use_label="data_stream"/>
+		<show label="" type="read_data_stream">
+			<param type="protocol_data" value="data_stream"/>
+		</show>
+	</function>
+	<data_stream_lib>
+		<!-- 数据流 -->
+		<group ID="0" caption="ID_STR_DS_GROUP_00">
+			<!-- GNSS经度 -->
+			<data_stream ID="0" caption="ID_STR_DS_ITEM_0000" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>4,1,0x00000000,0x7FFFFFFF,(A*16777216+B*65536+C*256+D)*0.000001+0,0x800000,0xFFFFFF,((A*16777216+B*65536+C*256+D)-4294967295)*0.000001+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- GNSS纬度 -->
+			<data_stream ID="1" caption="ID_STR_DS_ITEM_0001" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>7</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>4,1,0x00000000,0x7FFFFFFF,(A*16777216+B*65536+C*256+D)*0.000001+0,0x800000,0xFFFFFF,((A*16777216+B*65536+C*256+D)-4294967295)*0.000001+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.6f</format>
+			</data_stream>
+			<!-- GNSS定位时间 -->
+			<data_stream ID="2" caption="ID_STR_DS_ITEM_0002" unit="s" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- GNSS水平精度因子 -->
+			<data_stream ID="3" caption="ID_STR_DS_ITEM_0003" unit="HDOP" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>7</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- GNSS速度 -->
+			<data_stream ID="4" caption="ID_STR_DS_ITEM_0004" unit="kph" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>8</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- GNSS方向 -->
+			<data_stream ID="5" caption="ID_STR_DS_ITEM_0005" unit="Degrees" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>9</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*2</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- GNSS卫星数量 -->
+			<data_stream ID="6" caption="ID_STR_DS_ITEM_0006" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>10</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- GNSS信号质量 -->
+			<data_stream ID="7" caption="ID_STR_DS_ITEM_0007" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>14</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(0,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 初始秘钥交换结果 -->
+			<data_stream ID="8" caption="ID_STR_DS_ITEM_0008" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(1,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 最后一个秘钥交换结果 -->
+			<data_stream ID="9" caption="ID_STR_DS_ITEM_0009" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_002</command_id>
+				<valid_byte_offset>5</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(2,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 配置检查状态 -->
+			<data_stream ID="10" caption="ID_STR_DS_ITEM_0010" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_002</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(3,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+		</group>
+	</data_stream_lib>
+	<switchs>
+		<!-- 00:无信号 01:低信号 02:高信号 其他:-  -->
+		<switch ID="0">
+			<case value="0x00">ID_DS_STRING_000</case>
+			<case value="0x01">ID_DS_STRING_001</case>
+			<case value="0x02">ID_DS_STRING_002</case>
+			<default>ID_DS_STRING_003</default>
+		</switch>
+		<!-- 00:未完成 01:完成 其他:-  -->
+		<switch ID="1">
+			<case value="0x00">ID_DS_STRING_004</case>
+			<case value="0x01">ID_DS_STRING_005</case>
+			<default>ID_DS_STRING_003</default>
+		</switch>
+		<!-- 00:没有运行 01:正在进行中 02:失败:没有网络 03:失败:PDP上下文失败 04:TSP连接失败 05:TBoxID不匹配 06:密钥交换处理超时 07:TSP结果错误 08:TSP不会生成公钥 09:TSP拒绝 0A:成功 其他:-  -->
+		<switch ID="2">
+			<case value="0x00">ID_DS_STRING_006</case>
+			<case value="0x01">ID_DS_STRING_007</case>
+			<case value="0x02">ID_DS_STRING_008</case>
+			<case value="0x03">ID_DS_STRING_009</case>
+			<case value="0x04">ID_DS_STRING_010</case>
+			<case value="0x05">ID_DS_STRING_011</case>
+			<case value="0x06">ID_DS_STRING_012</case>
+			<case value="0x07">ID_DS_STRING_013</case>
+			<case value="0x08">ID_DS_STRING_014</case>
+			<case value="0x09">ID_DS_STRING_015</case>
+			<case value="0x0A">ID_DS_STRING_016</case>
+			<default>ID_DS_STRING_003</default>
+		</switch>
+		<!-- 00:闲置 01:正在进行中 其他:-  -->
+		<switch ID="3">
+			<case value="0x00">ID_DS_STRING_017</case>
+			<case value="0x01">ID_DS_STRING_007</case>
+			<default>ID_DS_STRING_003</default>
+		</switch>
+	</switchs>
+</root>

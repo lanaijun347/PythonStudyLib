@@ -1,0 +1,520 @@
+ID_STR_READ_DTC	读取故障码	Read DTC
+ID_STR_CLEAR_DTC	清除故障码	Clear DTC
+ID_STR_READ_CURRENT_DTC	当前故障码	Current DTC
+ID_STR_READ_HISTORY_DTC	历史故障码	History DTC
+ID_STR_DATA_STREAM	读数据流	Data Stream
+ID_STR_DS_FREEZE	冻结帧数据	Freeze Data Stream
+ID_STR_ACTUATOR_TEST	元件测试	Actuator Test
+ID_STR_ECU_INFORMATION	版本信息	Version Information
+ID_STR_SPECIAL_TEST	特殊功能	Special Function
+
+ID_STR_TIME_OUT	系统通讯已超时中断，建议退出系统重新激活！是否退出系统？	system communication time out and interrupted,please exit to re-activate.whether to exit?
+ID_STR_SUCCESS	执行成功！	Success!
+ID_STR_FRAME_TIME_OUT	帧超时！	Fram time out!
+ID_STR_PROTOCOL_ERROR	程序错误！	Procotol error!
+ID_STR_FAILE	失败！	Faile!
+ID_STR_FORMAT_ERORR	格式错误！	Format erorr!
+ID_STR_NULL_POINT	空指针！	Null point!
+ID_STR_NEGATIVE	消极响应！	Negative!
+ID_STR_MATCH_ERROE	匹配错误！	Match error!
+ID_STR_SYSTEM_NOT_REPLY	系统无响应！	System not replay!
+ID_STR_NO_FREEZE_DS	无冻结帧数据流！	No freeze data stream!
+ID_STR_NO_FREEZE_DTC	无冻结帧故障码！	No freeze DTC!
+ID_STR_NO_CURRENT_DTC	无故障码！	No current DTC!
+ID_STR_NO_HISTORY_DTC	无故障码！	No history DTC!
+ID_STR_RECEIVE_FRAME_TYPE_ERROR	回收帧类型错误！	Receive frame type error!
+ID_STR_MESSAGE_TYPE_ERROR	消息类型错误！	Message type error!
+ID_STR_INVALID_INPUT	输入错误！	Input error!
+ID_STR_ECU_RECV_FAIL	数据单元格式错误！	data unit format error!
+ID_STR_ACTIVE	正在执行，请稍候...	operating,please wait...
+Input_data	提示: 没有输入数据或者数据长度不对,请再次输入数据,谢谢!	Tip:no data input or data length incorrect,Input data again!
+ID_STR_SECURITY_THROUGH	正在进行安全验证...	Safety verification in progress...
+
+ID_STR_NEGATIVE_7F	汽车回复数据无效，ECU负反应！	Data invalid,ECU negative response!
+ID_STR_NEGATIVE_7F11	服务不支持！	Service not supported!
+ID_STR_NEGATIVE_7F12	子功能不支持！	Subfunction not supported!
+ID_STR_NEGATIVE_7F13	不正确的信息格式或无效帧！	Incorrect info or inavlid frame!
+ID_STR_NEGATIVE_7F14	应答过长！	Response too long!
+ID_STR_NEGATIVE_7F21	ECU忙，请重复请求！	ECU busy, please repeat the request!
+ID_STR_NEGATIVE_7F22	条件不正确	Condition incorrect
+ID_STR_NEGATIVE_7F24	请求序列错误	Requested sequence wrong
+ID_STR_NEGATIVE_7F25	子网络组件无响应	Subnetwork component no response
+ID_STR_NEGATIVE_7F26	阻止执行功能请求失败	Request to stop operation failed
+ID_STR_NEGATIVE_7F31	请求超出范围	Request out of range
+ID_STR_NEGATIVE_7F33	拒绝安全访问	Security access rejected
+ID_STR_NEGATIVE_7F35	无效的秘钥	Invalid key
+ID_STR_NEGATIVE_7F36	尝试超出次数	Attempts exceeded
+ID_STR_NEGATIVE_7F37	所需延时时间未到	Delay time not available
+ID_STR_NEGATIVE_7F70	上传/下载不许可	Upload/download not allowed
+ID_STR_NEGATIVE_7F71	数据转换中断	Data conversion interrupted
+ID_STR_NEGATIVE_7F72	常规编程失败	Regular programming failed
+ID_STR_NEGATIVE_7F73	块序列计算器错误	Block sequence calculator error
+ID_STR_NEGATIVE_7F78	请求收到-应答挂起	Request received,response hang
+ID_STR_NEGATIVE_7F7E	活动对象子功能不支持	Subfunction of active object not supported
+ID_STR_NEGATIVE_7F7F	活动对象服务不支持	Service of active object not supported
+ID_STR_NEGATIVE_7F81	rpm过高	RPM too high
+ID_STR_NEGATIVE_7F82	rpm过低	RPM too low
+ID_STR_NEGATIVE_7F83	发动机运行中	Engine running
+ID_STR_NEGATIVE_7F84	发动机未运行	Engine not running
+ID_STR_NEGATIVE_7F85	电动机运行时间过低	Motor running time too short
+ID_STR_NEGATIVE_7F86	温度过高	Temp too high
+ID_STR_NEGATIVE_7F87	温度过低	Temp too low
+ID_STR_NEGATIVE_7F88	车速过高	Vehicle speed too high
+ID_STR_NEGATIVE_7F89	车速过低	Vehicle speed too low
+ID_STR_NEGATIVE_7F8A	油门踏板过高	Accel pedal too high
+ID_STR_NEGATIVE_7F8B	油门踏板过低	Accel pedal too low
+ID_STR_NEGATIVE_7F8C	变速器未在空挡上	Transmission not in neutral
+ID_STR_NEGATIVE_7F8D	变速器未在齿轮上	Transmission not in gear
+ID_STR_NEGATIVE_7F8F	制动开关未关闭	Brake switch open
+ID_STR_NEGATIVE_7F90	变速杆未停好	Shift lever not parked
+ID_STR_NEGATIVE_7F91	扭转离合器已锁定	Torque clutch locked
+ID_STR_NEGATIVE_7F92	电压过高	The voltage is too high
+ID_STR_NEGATIVE_7F93	电压过低	The voltage is too low
+
+;读码清码
+ID_STR_CLEARDTC_NOTE0	请关闭点火开关！	Please turn off the ignition switch!
+ID_STR_CLEARDTC_NOTE1	请打开点火开关！	Please turn on the ignition switch!
+ID_STR_TIP_READ_DTC	正在读取故障码，请稍候...	Reading DTC,please wait...
+ID_STR_TIP_IF_CLEAR_DTC	是否清除故障码？	Whether to clear DTC?
+ID_STR_TIP_CLEAR_DTC	正在清除故障码，请稍候...	Clearing DTC,please wait...
+ID_STR_CLEAR_DTC_SUCCESS	清除故障码完成，\n是否读取故障码？	Clearing DTC completed,whether to read DTC?
+ID_STR_CURRENT_DTC	读取故障码	Read DTC
+
+ID_STR_GROUP_CAPTION	普通数据流	Common data stream
+ID_STR_CAPTION	提示	Tip
+ID_STR_READ_ECUINFOR	正在读取，请稍候...	Reading,please wait...
+ID_STR_SET_IDLE_LINK_FAIL	空闲链接设置失败	Set idle link fail!
+ID_STR_READ_DATASTREAM	正在扫描数据流，请稍候...	The data flow is being scanned. Please wait a moment...
+
+;主动测试
+ID_STR_EXCUTING	正在执行，请稍候...	Operating,please wait...
+ID_STR_STOP	正在取消，请稍候...	Cancelling,please wait...
+ID_STR_TEST_RETURN	正在退出，请稍候...	Exitting,please wait...
+ID_STR_SGD_OPERATION_COMPLETE	执行完成！	Operation completed!
+ID_STR_SGD_STOP_COMPLETE	取消完成！	Cancellation completed!
+ID_STR_DIFF_RETURE	请输入范围内的数值	Please input value within the range
+INVALID_INPUT	请输入范围内的数值	Please input value within the range
+
+;读码
+
+;清码
+
+;数据流
+ID_STR_DS_GROUP_00	发动机数据	X
+ID_STR_DS_GROUP_01	空调系统数据	X
+ID_STR_DS_GROUP_02	废气再循环数据	X
+ID_STR_DS_GROUP_03	蒸发排放数据	X
+ID_STR_DS_GROUP_04	燃油系统数据	X
+ID_STR_DS_GROUP_05	燃油调整数据	X
+ID_STR_DS_GROUP_06	氧传感器数据	X
+ID_STR_DS_GROUP_07	点火数据	X
+ID_STR_DS_GROUP_08	进气数据	X
+ID_STR_DS_GROUP_09	仪表显示数据	X
+ID_STR_DS_GROUP_10	失火数据	X
+ID_STR_DS_GROUP_11	节气门数据	X
+
+ID_STR_DS_ITEM_0000	最大指示扭矩	X
+ID_STR_DS_ITEM_0001	期望指示扭矩	X
+ID_STR_DS_ITEM_0002	实际指示扭矩	X
+ID_STR_DS_ITEM_0003	怠速控制引起的期望扭矩变化值	X
+ID_STR_DS_ITEM_0004	发动机负荷	X
+ID_STR_DS_ITEM_0005	发动机冷却液温度	X
+ID_STR_DS_ITEM_0006	发动机冷却液温度(线性化)	X
+ID_STR_DS_ITEM_0007	启动时刻发动机冷却液温度	X
+ID_STR_DS_ITEM_0008	发动机转速	X
+ID_STR_DS_ITEM_0009	期望怠速	X
+ID_STR_DS_ITEM_0010	实际点火角	X
+ID_STR_DS_ITEM_0011	基准点火角度	X
+ID_STR_DS_ITEM_0012	1缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0013	2缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0014	3缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0015	4缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0016	1缸爆震控制参考电平	X
+ID_STR_DS_ITEM_0017	2缸爆震控制参考电平	X
+ID_STR_DS_ITEM_0018	3缸爆震控制参考电平	X
+ID_STR_DS_ITEM_0019	4缸爆震控制参考电平	X
+ID_STR_DS_ITEM_0020	所有气缸失火故障计数器	X
+ID_STR_DS_ITEM_0021	1缸失火次数	X
+ID_STR_DS_ITEM_0022	2缸失火次数	X
+ID_STR_DS_ITEM_0023	3缸失火次数	X
+ID_STR_DS_ITEM_0024	4缸失火次数	X
+ID_STR_DS_ITEM_0025	失火最小负荷	X
+ID_STR_DS_ITEM_0026	失火最大负荷	X
+ID_STR_DS_ITEM_0027	喷油时间	X
+ID_STR_DS_ITEM_0028	发动机冷却液温度超标	X
+ID_STR_DS_ITEM_0029	巡航速度	X
+ID_STR_DS_ITEM_0030	VVT排气控制	X
+ID_STR_DS_ITEM_0031	VVT排气实际角度	X
+ID_STR_DS_ITEM_0032	增压压力传感器	X
+ID_STR_DS_ITEM_0033	增压温度传感器	X
+ID_STR_DS_ITEM_0034	环境压力传感器	X
+ID_STR_DS_ITEM_0035	环境温度	X
+ID_STR_DS_ITEM_0036	废气控制阀	X
+ID_STR_DS_ITEM_0037	EGR电压	X
+ID_STR_DS_ITEM_0038	EGR控制PWM	X
+ID_STR_DS_ITEM_0039	目标进气VVT角度	X
+ID_STR_DS_ITEM_0040	目标排气VVT角度	X
+ID_STR_DS_ITEM_0041	空调中压开关状态	X
+ID_STR_DS_ITEM_0042	离合位置	X
+ID_STR_DS_ITEM_0043	剩余自由启动次数	X
+ID_STR_DS_ITEM_0044	冷却风扇PWM信号	X
+ID_STR_DS_ITEM_0045	上游GPF温度	X
+ID_STR_DS_ITEM_0046	下游GPF温度	X
+ID_STR_DS_ITEM_0047	GPF压力	X
+ID_STR_DS_ITEM_0048	脱附管路压力传感器	X
+ID_STR_DS_ITEM_0049	PCV管路电压	X
+ID_STR_DS_ITEM_0050	GPF故障指示灯状态	X
+ID_STR_DS_ITEM_0051	GPF碳烟值模型值	X
+ID_STR_DS_ITEM_0052	GPF碳烟值计算值	X
+ID_STR_DS_ITEM_0053	基于CCF计算ASh系数	X
+ID_STR_DS_ITEM_0054	用于计算Ash的燃油消耗量	X
+ID_STR_DS_ITEM_0055	用于计算Ash的发动机运行时间	X
+ID_STR_DS_ITEM_0056	颗粒捕集器压差传感器自学习当前值	X
+ID_STR_DS_ITEM_0057	颗粒捕集器压差传感器自学习历史值	X
+ID_STR_DS_ITEM_0058	灰影响因子	X
+ID_STR_DS_ITEM_0059	故障指示灯状态	X
+ID_STR_DS_ITEM_0060	离合器开关状态	X
+ID_STR_DS_ITEM_0061	制动灯开关状态	X
+ID_STR_DS_ITEM_0062	制动测试开关状态	X
+ID_STR_DS_ITEM_0063	主继电器状态	X
+ID_STR_DS_ITEM_0064	泄压阀状态	X
+ID_STR_DS_ITEM_0065	最大指示扭矩	X
+ID_STR_DS_ITEM_0066	期望指示扭矩	X
+ID_STR_DS_ITEM_0067	实际指示扭矩	X
+ID_STR_DS_ITEM_0068	怠速控制引起的期望扭矩变化值	X
+ID_STR_DS_ITEM_0069	发动机负荷	X
+ID_STR_DS_ITEM_0070	发动机转速	X
+ID_STR_DS_ITEM_0071	期望怠速	X
+ID_STR_DS_ITEM_0072	节气门开度(根据传感器1)	X
+ID_STR_DS_ITEM_0073	节气门开度(根据传感器2)	X
+ID_STR_DS_ITEM_0074	低位机械停止位的节气门角度	X
+ID_STR_DS_ITEM_0075	节气门位置传感器1电压	X
+ID_STR_DS_ITEM_0076	节气门位置传感器2电压	X
+ID_STR_DS_ITEM_0077	节气门控制占空比	X
+ID_STR_DS_ITEM_0078	空调蒸发器温度	X
+ID_STR_DS_ITEM_0079	空调蒸发器压力	X
+ID_STR_DS_ITEM_0080	空调压力	X
+ID_STR_DS_ITEM_0081	空调高低压开关状态	X
+ID_STR_DS_ITEM_0082	空调请求开关状态	X
+ID_STR_DS_ITEM_0083	空调压缩离合继电器状态	X
+ID_STR_DS_ITEM_0084	后氧传感器电压	X
+ID_STR_DS_ITEM_0085	上游氧传感器电压	X
+ID_STR_DS_ITEM_0086	下游氧传感器电压	X
+ID_STR_DS_ITEM_0087	λ控制输出	X
+ID_STR_DS_ITEM_0088	下游催化剂废气温度(基于模型)	X
+ID_STR_DS_ITEM_0089	混合气自适应值乘法修正	X
+ID_STR_DS_ITEM_0090	混合气自适应值加法修正	X
+ID_STR_DS_ITEM_0091	最大指示扭矩	X
+ID_STR_DS_ITEM_0092	期望指示扭矩	X
+ID_STR_DS_ITEM_0093	实际指示扭矩	X
+ID_STR_DS_ITEM_0094	怠速控制引起的期望扭矩变化值	X
+ID_STR_DS_ITEM_0095	发动机负荷	X
+ID_STR_DS_ITEM_0096	发动机转速	X
+ID_STR_DS_ITEM_0097	期望怠速	X
+ID_STR_DS_ITEM_0098	环境大气压力	X
+ID_STR_DS_ITEM_0099	环境大气温度	X
+ID_STR_DS_ITEM_0100	实际进气歧管压力	X
+ID_STR_DS_ITEM_0101	进气歧管压力(绝对)	X
+ID_STR_DS_ITEM_0102	节气门上游气压	X
+ID_STR_DS_ITEM_0103	进气温度	X
+ID_STR_DS_ITEM_0104	空气流量	X
+ID_STR_DS_ITEM_0105	节气门开度(根据传感器1)	X
+ID_STR_DS_ITEM_0106	节气门开度(根据传感器2)	X
+ID_STR_DS_ITEM_0107	低位机械停止位的节气门角度	X
+ID_STR_DS_ITEM_0108	节气门位置传感器1电压	X
+ID_STR_DS_ITEM_0109	节气门位置传感器2电压	X
+ID_STR_DS_ITEM_0110	节气门控制占空比	X
+ID_STR_DS_ITEM_0111	加速踏板1电压	X
+ID_STR_DS_ITEM_0112	加速踏板2电压	X
+ID_STR_DS_ITEM_0113	标准化的加速踏板角度	X
+ID_STR_DS_ITEM_0114	碳罐吹洗的空气流量	X
+ID_STR_DS_ITEM_0115	碳罐截止阀状态	X
+ID_STR_DS_ITEM_0116	冷却风扇1开关状态	X
+ID_STR_DS_ITEM_0117	冷却风扇2开关状态	X
+ID_STR_DS_ITEM_0118	最大指示扭矩	X
+ID_STR_DS_ITEM_0119	期望指示扭矩	X
+ID_STR_DS_ITEM_0120	实际指示扭矩	X
+ID_STR_DS_ITEM_0121	怠速控制引起的期望扭矩变化值	X
+ID_STR_DS_ITEM_0122	发动机负荷	X
+ID_STR_DS_ITEM_0123	发动机转速	X
+ID_STR_DS_ITEM_0124	期望怠速	X
+ID_STR_DS_ITEM_0125	实际进气歧管压力	X
+ID_STR_DS_ITEM_0126	进气歧管压力(绝对)	X
+ID_STR_DS_ITEM_0127	节气门上游气压	X
+ID_STR_DS_ITEM_0128	进气温度	X
+ID_STR_DS_ITEM_0129	空气流量	X
+ID_STR_DS_ITEM_0130	节气门开度(根据传感器1)	X
+ID_STR_DS_ITEM_0131	节气门开度(根据传感器2)	X
+ID_STR_DS_ITEM_0132	低位机械停止位的节气门角度	X
+ID_STR_DS_ITEM_0133	节气门位置传感器1电压	X
+ID_STR_DS_ITEM_0134	节气门位置传感器2电压	X
+ID_STR_DS_ITEM_0135	节气门控制占空比	X
+ID_STR_DS_ITEM_0136	加速踏板1电压	X
+ID_STR_DS_ITEM_0137	加速踏板2电压	X
+ID_STR_DS_ITEM_0138	标准化的加速踏板角度	X
+ID_STR_DS_ITEM_0139	1缸喷射时间	X
+ID_STR_DS_ITEM_0140	2缸喷射时间	X
+ID_STR_DS_ITEM_0141	3缸喷射时间	X
+ID_STR_DS_ITEM_0142	4缸喷射时间	X
+ID_STR_DS_ITEM_0143	油箱燃油压力	X
+ID_STR_DS_ITEM_0144	油泵继电器状态	X
+ID_STR_DS_ITEM_0145	最大指示扭矩	X
+ID_STR_DS_ITEM_0146	期望指示扭矩	X
+ID_STR_DS_ITEM_0147	实际指示扭矩	X
+ID_STR_DS_ITEM_0148	怠速控制引起的期望扭矩变化值	X
+ID_STR_DS_ITEM_0149	发动机负荷	X
+ID_STR_DS_ITEM_0150	发动机转速	X
+ID_STR_DS_ITEM_0151	期望怠速	X
+ID_STR_DS_ITEM_0152	环境大气压力	X
+ID_STR_DS_ITEM_0153	环境大气温度	X
+ID_STR_DS_ITEM_0154	实际进气歧管压力	X
+ID_STR_DS_ITEM_0155	进气歧管压力(绝对)	X
+ID_STR_DS_ITEM_0156	节气门上游气压	X
+ID_STR_DS_ITEM_0157	进气温度	X
+ID_STR_DS_ITEM_0158	空气流量	X
+ID_STR_DS_ITEM_0159	加速踏板1电压	X
+ID_STR_DS_ITEM_0160	加速踏板2电压	X
+ID_STR_DS_ITEM_0161	标准化的加速踏板角度	X
+ID_STR_DS_ITEM_0162	实际点火角	X
+ID_STR_DS_ITEM_0163	基准点火角度	X
+ID_STR_DS_ITEM_0164	1缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0165	2缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0166	3缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0167	4缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0168	1缸爆震控制参考电平	X
+ID_STR_DS_ITEM_0169	2缸爆震控制参考电平	X
+ID_STR_DS_ITEM_0170	3缸爆震控制参考电平	X
+ID_STR_DS_ITEM_0171	4缸爆震控制参考电平	X
+ID_STR_DS_ITEM_0172	后氧传感器电压	X
+ID_STR_DS_ITEM_0173	上游氧传感器电压	X
+ID_STR_DS_ITEM_0174	下游氧传感器电压	X
+ID_STR_DS_ITEM_0175	λ控制输出	X
+ID_STR_DS_ITEM_0176	下游催化剂废气温度(基于模型)	X
+ID_STR_DS_ITEM_0177	混合气自适应值乘法修正	X
+ID_STR_DS_ITEM_0178	混合气自适应值加法修正	X
+ID_STR_DS_ITEM_0179	喷油时间	X
+ID_STR_DS_ITEM_0180	碳罐吹洗的空气流量	X
+ID_STR_DS_ITEM_0181	碳罐截止阀状态	X
+ID_STR_DS_ITEM_0182	油泵继电器状态	X
+ID_STR_DS_ITEM_0183	期望指示扭矩	X
+ID_STR_DS_ITEM_0184	实际指示扭矩	X
+ID_STR_DS_ITEM_0185	怠速控制引起的期望扭矩变化值	X
+ID_STR_DS_ITEM_0186	发动机负荷	X
+ID_STR_DS_ITEM_0187	发动机转速	X
+ID_STR_DS_ITEM_0188	期望怠速	X
+ID_STR_DS_ITEM_0189	实际进气歧管压力	X
+ID_STR_DS_ITEM_0190	进气歧管压力(绝对)	X
+ID_STR_DS_ITEM_0191	节气门上游气压	X
+ID_STR_DS_ITEM_0192	进气温度	X
+ID_STR_DS_ITEM_0193	空气流量	X
+ID_STR_DS_ITEM_0194	节气门开度(根据传感器1)	X
+ID_STR_DS_ITEM_0195	节气门开度(根据传感器2)	X
+ID_STR_DS_ITEM_0196	低位机械停止位的节气门角度	X
+ID_STR_DS_ITEM_0197	节气门位置传感器1电压	X
+ID_STR_DS_ITEM_0198	节气门位置传感器2电压	X
+ID_STR_DS_ITEM_0199	节气门控制占空比	X
+ID_STR_DS_ITEM_0200	加速踏板1电压	X
+ID_STR_DS_ITEM_0201	加速踏板2电压	X
+ID_STR_DS_ITEM_0202	标准化的加速踏板角度	X
+ID_STR_DS_ITEM_0203	实际点火角	X
+ID_STR_DS_ITEM_0204	基准点火角度	X
+ID_STR_DS_ITEM_0205	1缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0206	2缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0207	3缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0208	4缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0209	所有气缸失火故障计数器	X
+ID_STR_DS_ITEM_0210	1缸失火次数	X
+ID_STR_DS_ITEM_0211	2缸失火次数	X
+ID_STR_DS_ITEM_0212	3缸失火次数	X
+ID_STR_DS_ITEM_0213	4缸失火次数	X
+ID_STR_DS_ITEM_0214	失火最小负荷	X
+ID_STR_DS_ITEM_0215	失火最大负荷	X
+ID_STR_DS_ITEM_0216	后氧传感器电压	X
+ID_STR_DS_ITEM_0217	上游氧传感器电压	X
+ID_STR_DS_ITEM_0218	下游氧传感器电压	X
+ID_STR_DS_ITEM_0219	λ控制输出	X
+ID_STR_DS_ITEM_0220	下游催化剂废气温度(基于模型)	X
+ID_STR_DS_ITEM_0221	混合气自适应值乘法修正	X
+ID_STR_DS_ITEM_0222	混合气自适应值加法修正	X
+ID_STR_DS_ITEM_0223	喷油时间	X
+ID_STR_DS_ITEM_0224	碳罐吹洗的空气流量	X
+ID_STR_DS_ITEM_0225	碳罐截止阀状态	X
+ID_STR_DS_ITEM_0226	前氧传感器泵电流	X
+ID_STR_DS_ITEM_0227	下游氧加热传感器状态	X
+ID_STR_DS_ITEM_0228	上游氧加热传感器状态	X
+ID_STR_DS_ITEM_0229	最大指示扭矩	X
+ID_STR_DS_ITEM_0230	期望指示扭矩	X
+ID_STR_DS_ITEM_0231	实际指示扭矩	X
+ID_STR_DS_ITEM_0232	怠速控制引起的期望扭矩变化值	X
+ID_STR_DS_ITEM_0233	发动机负荷	X
+ID_STR_DS_ITEM_0234	发动机转速	X
+ID_STR_DS_ITEM_0235	期望怠速	X
+ID_STR_DS_ITEM_0236	节气门开度(根据传感器1)	X
+ID_STR_DS_ITEM_0237	节气门开度(根据传感器2)	X
+ID_STR_DS_ITEM_0238	低位机械停止位的节气门角度	X
+ID_STR_DS_ITEM_0239	节气门位置传感器1电压	X
+ID_STR_DS_ITEM_0240	节气门位置传感器2电压	X
+ID_STR_DS_ITEM_0241	节气门控制占空比	X
+ID_STR_DS_ITEM_0242	加速踏板1电压	X
+ID_STR_DS_ITEM_0243	加速踏板2电压	X
+ID_STR_DS_ITEM_0244	标准化的加速踏板角度	X
+ID_STR_DS_ITEM_0245	实际点火角	X
+ID_STR_DS_ITEM_0246	基准点火角度	X
+ID_STR_DS_ITEM_0247	1缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0248	2缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0249	3缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0250	4缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0251	1缸爆震控制参考电平	X
+ID_STR_DS_ITEM_0252	2缸爆震控制参考电平	X
+ID_STR_DS_ITEM_0253	3缸爆震控制参考电平	X
+ID_STR_DS_ITEM_0254	4缸爆震控制参考电平	X
+ID_STR_DS_ITEM_0255	所有气缸失火故障计数器	X
+ID_STR_DS_ITEM_0256	1缸失火次数	X
+ID_STR_DS_ITEM_0257	2缸失火次数	X
+ID_STR_DS_ITEM_0258	3缸失火次数	X
+ID_STR_DS_ITEM_0259	4缸失火次数	X
+ID_STR_DS_ITEM_0260	失火最小负荷	X
+ID_STR_DS_ITEM_0261	失火最大负荷	X
+ID_STR_DS_ITEM_0262	喷油时间	X
+ID_STR_DS_ITEM_0263	碳罐截止阀状态	X
+ID_STR_DS_ITEM_0264	最大指示扭矩	X
+ID_STR_DS_ITEM_0265	期望指示扭矩	X
+ID_STR_DS_ITEM_0266	实际指示扭矩	X
+ID_STR_DS_ITEM_0267	怠速控制引起的期望扭矩变化值	X
+ID_STR_DS_ITEM_0268	发动机负荷	X
+ID_STR_DS_ITEM_0269	发动机转速	X
+ID_STR_DS_ITEM_0270	期望怠速	X
+ID_STR_DS_ITEM_0271	环境大气压力	X
+ID_STR_DS_ITEM_0272	环境大气温度	X
+ID_STR_DS_ITEM_0273	实际进气歧管压力	X
+ID_STR_DS_ITEM_0274	进气歧管压力(绝对)	X
+ID_STR_DS_ITEM_0275	节气门上游气压	X
+ID_STR_DS_ITEM_0276	进气温度	X
+ID_STR_DS_ITEM_0277	空气流量	X
+ID_STR_DS_ITEM_0278	节气门开度(根据传感器1)	X
+ID_STR_DS_ITEM_0279	节气门开度(根据传感器2)	X
+ID_STR_DS_ITEM_0280	低位机械停止位的节气门角度	X
+ID_STR_DS_ITEM_0281	节气门位置传感器1电压	X
+ID_STR_DS_ITEM_0282	节气门位置传感器2电压	X
+ID_STR_DS_ITEM_0283	节气门控制占空比	X
+ID_STR_DS_ITEM_0284	加速踏板1电压	X
+ID_STR_DS_ITEM_0285	加速踏板2电压	X
+ID_STR_DS_ITEM_0286	标准化的加速踏板角度	X
+ID_STR_DS_ITEM_0287	后氧传感器电压	X
+ID_STR_DS_ITEM_0288	上游氧传感器电压	X
+ID_STR_DS_ITEM_0289	下游氧传感器电压	X
+ID_STR_DS_ITEM_0290	λ控制输出	X
+ID_STR_DS_ITEM_0291	下游催化剂废气温度(基于模型)	X
+ID_STR_DS_ITEM_0292	混合气自适应值乘法修正	X
+ID_STR_DS_ITEM_0293	混合气自适应值加法修正	X
+ID_STR_DS_ITEM_0294	碳罐吹洗的空气流量	X
+ID_STR_DS_ITEM_0295	碳罐截止阀状态	X
+ID_STR_DS_ITEM_0296	发动机负荷	X
+ID_STR_DS_ITEM_0297	发动机冷却液温度	X
+ID_STR_DS_ITEM_0298	发动机冷却液温度(线性化)	X
+ID_STR_DS_ITEM_0299	启动时刻发动机冷却液温度	X
+ID_STR_DS_ITEM_0300	发动机转速	X
+ID_STR_DS_ITEM_0301	期望怠速	X
+ID_STR_DS_ITEM_0302	启动后行驶里程	X
+ID_STR_DS_ITEM_0303	MIL灯激活后行驶里程	X
+ID_STR_DS_ITEM_0304	电池电压	X
+ID_STR_DS_ITEM_0305	启动时间	X
+ID_STR_DS_ITEM_0306	油位	X
+ID_STR_DS_ITEM_0307	碳罐截止阀状态	X
+ID_STR_DS_ITEM_0308	GPF故障指示灯状态	X
+ID_STR_DS_ITEM_0309	第二路水温	X
+ID_STR_DS_ITEM_0310	巡航控制按键状态	X
+ID_STR_DS_ITEM_0311	巡航控制按键状态	X
+ID_STR_DS_ITEM_0312	巡航控制按键状态	X
+ID_STR_DS_ITEM_0313	巡航控制按键状态	X
+ID_STR_DS_ITEM_0314	巡航控制按键状态	X
+ID_STR_DS_ITEM_0315	最大指示扭矩	X
+ID_STR_DS_ITEM_0316	期望指示扭矩	X
+ID_STR_DS_ITEM_0317	实际指示扭矩	X
+ID_STR_DS_ITEM_0318	怠速控制引起的期望扭矩变化值	X
+ID_STR_DS_ITEM_0319	发动机负荷	X
+ID_STR_DS_ITEM_0320	发动机转速	X
+ID_STR_DS_ITEM_0321	期望怠速	X
+ID_STR_DS_ITEM_0322	节气门开度(根据传感器1)	X
+ID_STR_DS_ITEM_0323	节气门开度(根据传感器2)	X
+ID_STR_DS_ITEM_0324	低位机械停止位的节气门角度	X
+ID_STR_DS_ITEM_0325	节气门位置传感器1电压	X
+ID_STR_DS_ITEM_0326	节气门位置传感器2电压	X
+ID_STR_DS_ITEM_0327	节气门控制占空比	X
+ID_STR_DS_ITEM_0328	加速踏板1电压	X
+ID_STR_DS_ITEM_0329	加速踏板2电压	X
+ID_STR_DS_ITEM_0330	标准化的加速踏板角度	X
+ID_STR_DS_ITEM_0331	实际点火角	X
+ID_STR_DS_ITEM_0332	基准点火角度	X
+ID_STR_DS_ITEM_0333	1缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0334	2缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0335	3缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0336	4缸点火正火延迟角度	X
+ID_STR_DS_ITEM_0337	所有气缸失火故障计数器	X
+ID_STR_DS_ITEM_0338	1缸失火次数	X
+ID_STR_DS_ITEM_0339	2缸失火次数	X
+ID_STR_DS_ITEM_0340	3缸失火次数	X
+ID_STR_DS_ITEM_0341	4缸失火次数	X
+ID_STR_DS_ITEM_0342	失火最小负荷	X
+ID_STR_DS_ITEM_0343	失火最大负荷	X
+ID_STR_DS_ITEM_0344	喷油时间	X
+ID_STR_DS_ITEM_0345	碳罐吹洗的空气流量	X
+ID_STR_DS_ITEM_0346	碳罐截止阀状态	X
+ID_STR_DS_ITEM_0347	1缸爆震参考电压	X
+ID_STR_DS_ITEM_0348	2缸爆震参考电压	X
+ID_STR_DS_ITEM_0349	3缸爆震参考电压	X
+ID_STR_DS_ITEM_0350	4缸爆震参考电压	X
+ID_STR_DS_ITEM_0351	最大指示扭矩	X
+ID_STR_DS_ITEM_0352	期望指示扭矩	X
+ID_STR_DS_ITEM_0353	实际指示扭矩	X
+ID_STR_DS_ITEM_0354	怠速控制引起的期望扭矩变化值	X
+ID_STR_DS_ITEM_0355	发动机负荷	X
+ID_STR_DS_ITEM_0356	发动机转速	X
+ID_STR_DS_ITEM_0357	期望怠速	X
+ID_STR_DS_ITEM_0358	环境大气压力	X
+ID_STR_DS_ITEM_0359	环境大气温度	X
+ID_STR_DS_ITEM_0360	实际进气歧管压力	X
+ID_STR_DS_ITEM_0361	进气歧管压力(绝对)	X
+ID_STR_DS_ITEM_0362	节气门上游气压	X
+ID_STR_DS_ITEM_0363	进气温度	X
+ID_STR_DS_ITEM_0364	空气流量	X
+ID_STR_DS_ITEM_0365	节气门开度(根据传感器1)	X
+ID_STR_DS_ITEM_0366	节气门开度(根据传感器2)	X
+ID_STR_DS_ITEM_0367	低位机械停止位的节气门角度	X
+ID_STR_DS_ITEM_0368	节气门位置传感器1电压	X
+ID_STR_DS_ITEM_0369	节气门位置传感器2电压	X
+ID_STR_DS_ITEM_0370	节气门控制占空比	X
+ID_STR_DS_ITEM_0371	加速踏板1电压	X
+ID_STR_DS_ITEM_0372	加速踏板2电压	X
+ID_STR_DS_ITEM_0373	标准化的加速踏板角度	X
+ID_STR_DS_ITEM_0374	碳罐截止阀状态	X
+
+;版本信息
+ID_STR_ECU_GROUP_00	版本信息	X
+
+ID_STR_ECU_ITEM_0000	ECU生产日期	X
+ID_STR_ECU_ITEM_0001	VIN码	X
+ID_STR_ECU_ITEM_0002	供应商ECU硬件号	X
+ID_STR_ECU_ITEM_0003	供应商ECU软件号	X
+ID_STR_ECU_ITEM_0004	零件号	X
+ID_STR_ECU_ITEM_0005	SGMW ECU硬件号	X
+ID_STR_ECU_ITEM_0006	供应商标识信息	X
+ID_STR_ECU_ITEM_0007	SGMW ECU软件号	X
+
+;数据流或者版本信息switch使用的字符串
+ID_DS_STRING_000	关	X
+ID_DS_STRING_001	开	X
+ID_DS_STRING_002	-	X
+
+;数据流或者版本信息用到的其他字符串
+IMS_DSSTRING_0008	OFF	X
+IMS_DSSTRING_0009	ON	X
+IMS_DSSTRING_0040	关闭	X
+IMS_DSSTRING_0041	打开	X
+IMS_DSSTRING_0135	DECE	X
+IMS_DSSTRING_0136	SET	X
+IMS_DSSTRING_0137	ACCEL	X
+IMS_DSSTRING_0138	RESUME	X
+IMS_DSSTRING_0139	CANCEL	X
+IMS_DSSTRING_0140	-	X
+IMS_DSSTRING_0141	Neutral	X

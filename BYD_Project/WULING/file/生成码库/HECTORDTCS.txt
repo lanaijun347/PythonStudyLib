@@ -1,0 +1,1772 @@
+168300          $*          P168300	安全气囊信号不合理
+209112          $*          P209112	排气VVT电路对电源短路
+209011          $*          P209011	排气VVT电路对地短路
+001313          $*          P001313	排气VVT电路断路
+000B71          $*          P000B71	排气VVT运行故障（迟缓）
+000B77          $*          P000B77	排气VVT运行故障（卡死）
+057129          $*          P057129	刹车信号不同步
+05711C          $*          P05711C	刹车灯信号电路故障
+213800          $*          P213800	油门位置传感器1/2电压相关性不合理
+D40400          $*          U140400	ECU与ABS通讯不正常
+D40000          $*          U140000	ECU与ABS通讯不正常
+C41500          $*          U041500	ECU与ABS通讯不正常
+C14000          $*          U014000	与BCM通讯丢失或信号异常
+D60000          $*          U160000	来自EPS的故障指示及工作状态信息丢失
+C00100          $*          U000100	CAN总线BUS OFF故障
+C15100          $*          U015100	与ACU通讯中断
+C12900          $*          U012900	ECU与ABS控制模块通讯丢失
+012317          $*          P012317	电子节气门位置传感器1信号电路电压过高
+012216          $*          P012216	电子节气门位置传感器1信号电路电压过低
+012129          $*          P012129	电子节气门位置传感器1信号不合理
+022317          $*          P022317	电子节气门位置传感器2信号电路电压过高
+022216          $*          P022216	电子节气门位置传感器2信号电路电压过低
+022129          $*          P022129	电子节气门位置传感器2信号不合理
+042000          $*          P042000	催化剂转化效率过低
+138600          $*          P138600	爆震传感器信号评估诊断
+055817          $*          P055817	制动真空度传感器电路电压过高
+055716          $*          P055716	制动真空度传感器电路电压过低
+023815          $*          P023815	Turbocharger pressure sensor signal (circuit shortto battery or open circuit)
+023711          $*          P023711	Turbocharger pressure sensor signal (circuit shortto ground)
+010812          $*          P010812	进气压力传感器电路电压过高
+010711          $*          P010711	进气压力传感器电路电压过低
+010600          $*          P010600	进气岐管压力传感器信号不合理
+010528          $*          P010528	进气压力传感器信号不合理
+006D17          $*          P006D17	环境压力传感器电路电压过高
+006D16          $*          P006D16	环境压力传感器电路电压过低
+210612          $*          P210612	电子节气门驱动级故障 (短路）
+210619          $*          P210619	电子节气门驱动级故障（过热或过流）
+210692          $*          P210692	电子节气门驱动级故障（不合理）
+210613          $*          P210613	电子节气门驱动级故障（开路)
+156800          $*          P156800	回位弹簧检查最大故障
+154500          $*          P154500	DVE位置偏差故障
+155900          $*          P155900	节气门跛行位置自学习故障
+154522          $*          P154522	节气门体PID调节最大故障
+154521          $*          P154521	节气门体PID调节最小故障
+157900          $*          P157900	电子节气门自学习条件不满足
+156400          $*          P156400	系统电压不满足电子节气门自学习条件
+155929          $*          P155929	节气门机械下止点再次自习故障
+156500          $*          P156500	电子节气门下限位置初始化自学习故障
+151300          $*          P151300	电池种类变换故障
+151200          $*          P151200	EBS或电池故障
+151100          $*          P151100	起动机反馈信号对电源短路
+062915          $*          P062915	油泵继电器控制电路电压过高
+062811          $*          P062811	Fuel pump relay command (circuit short to ground)
+062700          $*          P062700	油泵继电器线路开路
+208912          $*          P208912	进气VVT控制电路电压过高
+208811          $*          P208811	进气VVT控制电路电压过低
+001013          $*          P001013	进气VVT控制电路开路
+000A71          $*          P000A71	进气VVT运行故障（迟缓）
+000A77          $*          P000A77	进气VVT运行故障（卡死）
+026212          $*          P026212	一缸喷油器控制电路电压过高
+026111          $*          P026111	Short circuit of the power stage low side (cylinder1 error)
+020113          $*          P020113	Injector 1 command open
+026812          $*          P026812	三缸喷油器控制电路电压过高
+026711          $*          P026711	Short circuit of the power stage low side (cylinder3 error)
+020313          $*          P020313	Injector 3 command open
+027112          $*          P027112	四缸喷油器控制电路电压过高
+027011          $*          P027011	Short circuit of the power stage low side (cylinder4 error)
+020413          $*          P020413	Injector 4 command open
+026512          $*          P026512	二缸喷油器控制电路电压过高
+026411          $*          P026411	Short circuit of the power stage low side (cylinder2 error)
+020213          $*          P020213	Injector 2 command open
+034100          $*          P034100	进气凸轮轴位置传感器信号不合理
+001676          $*          P001676	进气凸轮轴安装故障
+034300          $*          P034300	进气凸轮轴相位信号电路电压常为高
+034200          $*          P034200	进气凸轮轴相位信号电路电压常为低
+001600          $*          P001600	曲轴位置和进气凸轮轴位置相关性不合理
+036600          $*          P036600	排气凸轮轴位置传感器信号不合理
+001700          $*          P001700	曲轴位置和排气凸轮轴位置相关性不合理
+036800          $*          P036800	排气凸轮轴相位信号电路电压常为高
+036700          $*          P036700	排气凸轮轴相位信号电路电压常为低
+032100          $*          P032100	曲轴转速传感器信号波动
+032200          $*          P032200	曲轴转速传感器无信号
+056800          $*          P056800	巡航A/D两路采样电压相差过大
+212317          $*          P212317	电子油门踏板位置传感器1信号电压过高
+212216          $*          P212216	电子油门踏板位置传感器1信号电压过低
+213829          $*          P213829	电子油门踏板位置传感器信号不合理
+212817          $*          P212817	电子油门踏板位置传感器2信号电压过高
+212716          $*          P212716	电子油门踏板位置传感器2信号电压过低
+217700          $*          P217700	空燃比闭环控制乘法自学习值超上限（中负荷区）
+217800          $*          P217800	空燃比闭环控制乘法自学习值超下限（中负荷区）
+04831A          $*          P04831A	冷却风扇控制器过温故障
+04831B          $*          P04831B	冷却风扇电机堵转故障
+04831C          $*          P04831C	冷却风扇电机开路/短路故障
+069111          $*          P069111	Cooling Fan 1 (circuit short to ground)
+003812          $*          P003812	下游氧传感器加热控制电路电压过高
+003711          $*          P003711	下游氧传感器加热控制电路电压过低
+003613          $*          P003613	下游氧传感器加热控制电路开路
+00541E          $*          P00541E	下游氧传感器加热内阻不合理
+003212          $*          P003212	Lambda probe upstream heater command signal high
+003111          $*          P003111	Lambda probe upstream heater command signal low
+003013          $*          P003013	Lambda probe upstream heater command signal open
+00531E          $*          P00531E	Lambda sensor upstream heater diagnosis (circuitresistance out of range)
+1A0100          $*          P1A0100	BMS故障：等级1
+D82A00          $*          U182A00	Lost Communication With BMS
+1A8000          $*          P1A8000	BMS:fault_Level= 1: no response
+1A8100          $*          P1A8100	BMS:fault_Level= 2: power limited and SVS
+1A8200          $*          P1A8200	BMS:fault_Level= 3: main relay open and SVS
+1A8300          $*          P1A8300	BMS:fault_Level= 4: only SVS for part of fault level 1
+C41200          $*          U041200	ESP checksum  fault or rolling counter fault
+1A0500          $*          P1A0500	BSG故障：等级2
+1A0600          $*          P1A0600	BSG故障：等级3
+1A0700          $*          P1A0700	BSG:fault_Level= 3:  ibsg report protection, ibsg can recover. HCU send reset command (such as neutral)
+1A0800          $*          P1A0800	BSG:fault_Level= 4: ibsg report fault, HCU will not use ibsg again
+1A0200          $*          P1A0200	BMS故障：等级2
+1A0300          $*          P1A0300	BMS故障：等级3
+080500          $*          P080500	AC checksum  fault or rolling counter fault
+DA8000          $*          U1A8000	Lost Communication with DCDC
+1B0000          $*          P1B0000	Boost模式故障
+1B0100          $*          P1B0100	Buck模式故障
+1B0200          $*          P1B0200	非能量转换状态故障
+1B0300          $*          P1B0300	一次清除操作无法清除硬件故障
+C59900          $*          U059900	DCDC message error (check sum or rolling counter)
+1B0500          $*          P1B0500	低压侧电流零漂过大，导致信号失效
+C42000          $*          U042000	EPS checksum  fault or  rolling counter fault
+091400          $*          P091400	Gear neutral position circuit fault
+1A8500          $*          P1A8500	HVBattRelayClose 1. HCU command is open，reply is close 2. reply is ok, but there is unexpected high voltage
+1A8600          $*          P1A8600	HVBattRelayOpen 1. 非期望的断开（BMS继电器闭合的前提下，非期望断开） 2.  不按照期望闭合（发闭合命令BMS不执行）
+1B8400          $*          P1B8400	HV Network Inconsistency Fault(include BSG2DCDC and BSG2BMS)
+254F00          $*          P254F00	Engine Hood Switch circuit fault
+C07400          $*          U007400	48V CAN bus off
+1B8500          $*          P1B8500	Hyb Controller internal Fault
+1B8600          $*          P1B8600	LV Network Inconsistency Fault
+DA8100          $*          U1A8100	Lost Communication with MCU
+C46900          $*          U046900	MCU message error (check sum or rolling counter)
+1B8800          $*          P1B8800	Precharge too slow
+1B8900          $*          P1B8900	Auto start-stop enable stuck fault
+1B8A00          $*          P1B8A00	TorqueMonitorActive
+1A0000          $*          P1A0000	自动起停按键卡死
+1A0400          $*          P1A0400	BSG故障：等级1
+1A0900          $*          P1A0900	DCDC故障：等级3
+1A8400          $*          P1A8400	Reserved
+1B0400          $*          P1B0400	低压侧电流高于上限
+1B8000          $*          P1B8000	EMS:fault_Level= 1: start problem
+1B8100          $*          P1B8100	EMS:fault_Level= 2: toruqe limited or not precise
+1B8200          $*          P1B8200	EMS:fault_Level= 3: limp home
+1B8300          $*          P1B8300	EMS:fault_Level= 4: shut down
+1B8700          $*          P1B8700	PreCharge too quickly
+C12A00          $*          U012A00	ESP checksum  fault or rolling counter fault
+C16400          $*          U016400	Lost Communication with AC in PT CAN
+C42400          $*          U042400	AC checksum  fault or rolling counter fault
+035113          $*          P035113	一缸点火线圈控制电路故障
+035313          $*          P035313	三缸点火线圈控制电路故障
+035413          $*          P035413	四缸点火线圈控制电路故障
+035213          $*          P035213	二缸点火线圈控制电路故障
+230112          $*          P230112	一缸点火线圈控制电路电压过高
+230712          $*          P230712	三缸点火线圈控制电路电压过高
+231012          $*          P231012	四缸点火线圈控制电路电压过高
+230412          $*          P230412	二缸点火线圈控制电路电压过高
+230011          $*          P230011	一缸点火线圈控制电路电压过低
+230611          $*          P230611	三缸点火线圈控制电路电压过低
+230911          $*          P230911	四缸点火线圈控制电路电压过低
+230311          $*          P230311	二缸点火线圈控制电路电压过低
+064712          $*          P064712	AC compressor (Short circuit to battery)
+064611          $*          P064611	AC compressor (Short circuit to ground)
+064513          $*          P064513	AC compressor (open load)
+032516          $*          P032516	爆震传感器信号电路电压过低
+070400          $*          P070400	离合器踏板开关信号不正确
+032800          $*          P032800	爆震传感器A端对电源短路诊断
+032700          $*          P032700	爆震传感器A端对地短路诊断
+032815          $*          P032815	爆震传感器B端对电源短路诊断
+032714          $*          P032714	爆震传感器B端对地短路诊断
+227000          $*          P227000	下游氧传感器老化-信号持续偏稀
+227100          $*          P227100	下游氧传感器老化-信号持续偏浓
+013300          $*          P013300	上游氧传感器转换时间响应慢
+219500          $*          P219500	上游氧传感器信号不合理故障-信号持续偏稀
+219600          $*          P219600	上游氧传感器信号不合理故障-信号持续偏浓
+024600          $*          P024600	增压器对电源短路
+024500          $*          P024500	增压器对地短路
+024300          $*          P024300	增压器开路
+023400          $*          P023400	增压压力过高
+029900          $*          P029900	增压压力过低
+226100          $*          P226100	泄流阀机械故障
+069212          $*          P069212	Cooling Fan 1 (circuit short to battery)
+048013          $*          P048013	Cooling Fan 1 (open circuit)
+150300          $*          P150300	LIN总线回读错误
+150200          $*          P150200	LIN总线响应超时
+150000          $*          P150000	LIN总线校验错误
+150100          $*          P150100	LIN总线帧错误
+050700          $*          P050700	怠速控制速度过高
+050600          $*          P050600	怠速控制速度过低
+013817          $*          P013817	下游氧传感器信号电路电压过高
+013716          $*          P013716	下游氧传感器信号电路电压过低
+013600          $*          P013600	下游氧传感器电路开路
+014000          $*          P014000	下游氧传感器电路信号故障
+013217          $*          P013217	上游氧传感器信号电路电压过高
+013116          $*          P013116	上游氧传感器信号电路电压过低
+013000          $*          P013000	上游氧传感器电路开路
+013400          $*          P013400	上游氧传感器未能准备完成
+030000          $*          P030000	多次失火
+133600          $*          P133600	电子节气门安全监控扭矩限制作用
+030100          $*          P030100	1 缸失火
+030300          $*          P030300	3 缸失火
+030400          $*          P030400	4 缸失火
+030200          $*          P030200	2 缸失火
+130A00          $*          P130A00	失火引起断缸
+060696          $*          P060696	AD转换器零测试监控故障
+060697          $*          P060697	AD转换器给定电压测试监控故障
+060647          $*          P060647	监控模块反馈故障
+060617          $*          P060617	ECU控制器故障（5V过压监控故障）
+060616          $*          P060616	ECU控制器故障（5V欠压监控故障）
+083F00          $*          P083F00	离合器底部开关无法脱开
+081D00          $*          P081D00	空档开关失效，空档信号持续为高电平或低电平
+001500          $*          P001500	排气凸轮轴锁死位置运行不合理故障
+001200          $*          P001200	进气凸轮轴锁死位置运行不合理故障
+021900          $*          P021900	发动机转速过高
+060649          $*          P060649	监控模块询问故障
+060648          $*          P060648	监控错误响应故障
+060691          $*          P060691	过压导致DVE驱动关断故障
+053317          $*          P053317	空调制冷剂压力过高
+053216          $*          P053216	空调制冷剂压力过低
+218700          $*          P218700	空燃比闭环控制加法自学习值超上限（怠速）
+218800          $*          P218800	空燃比闭环控制加法自学习值超下限（怠速）
+152300          $*          P152300	安全气囊发送给ECU的CAN信号不正确
+308800          $*          P308800	起动机损坏或者起动机供电电路中断故障
+305400          $*          P305400	发动机堵转或者起动机与飞轮不啮合故障
+305600          $*          P305600	起动机反馈电压信号线(KL50r)与电源短路故障
+305500          $*          P305500	起动机反馈电压信号线(KL50r)与地短路故障
+060644          $*          P060644	软件复位（类型1）
+060645          $*          P060645	软件复位（类型2）
+26E400          $*          P26E400	起动机继电器控制电路故障（低边）
+26E600          $*          P26E600	起动机继电器控制电路电压过高（低边）
+26E500          $*          P26E500	起动机继电器控制电路电压过低（低边）
+06150          $*          P06150	起动机继电器控制电路故障（低边）
+061712          $*          P061712	Short circuit to battery Error at Starter High sidepowerstage
+061600          $*          P061600	启动机继电器驱动器1对地短路
+064100          $*          P064100	T5V输出1电压过高
+065100          $*          P065100	T5V输出2电压过高
+063400          $*          P063400	控制模块内部温度太高
+011317          $*          P011317	进气温度传感器电路电压过高
+011216          $*          P011216	进气温度传感器电路电压过低
+011129          $*          P011129	进气温度传感器信号不合理
+009817          $*          P009817	气体温度传感器2电路电压过高
+009716          $*          P009716	气体温度传感器2电路电压过低
+009629          $*          P009629	进气温度传感器2电路信号跳变
+045917          $*          P045917	炭罐控制阀控制电路电压过高
+045816          $*          P045816	炭罐控制阀控制电路电压过低
+044413          $*          P044413	炭罐控制阀控制电路开路
+011817          $*          P011817	发动机冷却液温度传感器电路电压过高
+011716          $*          P011716	发动机冷却液温度传感器电路电压过低
+011629          $*          P011629	发动机冷却液温度传感器信号不合理
+053716          $*          P053716	空调温度传感器电压过高
+053817          $*          P053817	空调温度传感器电压过低
+060000          $*          P060000	TLE8888芯片通讯故障
+056317          $*          P056317	Upstream main relay battery voltage above threshold
+056216          $*          P056216	Upstream main relay battery voltage below threshold
+056000          $*          P056000	系统蓄电池电压信号不合理
+068891          $*          P068891	主继电器输出电压不合理
+068892          $*          P068892	主继电器输出电压信号故障
+060694          $*          P060694	电子节气门安全监控功能故障（第二层扭矩监控故障）
+060692          $*          P060692	电子节气门安全监控功能故障（第二层发动机转速监控故障）
+210629          $*          P210629	负荷监控故障
+060664          $*          P060664	电子节气门安全监控功能故障（负荷信号，线束或ECU故障）
+060661          $*          P060661	电子节气门安全监控功能故障（点火角信号，线束或ECU故障）
+060667          $*          P060667	电子节气门安全监控功能故障（ECU错误响应监控故障）
+06061C          $*          P06061C	电子节气门安全监控功能故障（节气门体信号，线束或ECU故障）
+060600          $*          P060600	ATIC 211芯片通讯故障
+060662          $*          P060662	电子节气门安全监控功能故障（第二层油门踏板信号合理性故障）
+060663          $*          P060663	电子节气门安全监控功能故障（起停监控故障）
+003500          $*          P003500	增压泄流阀控制电路电压过高
+003400          $*          P003400	增压泄流阀控制电路电压过低
+003300          $*          P003300	增压泄流阀控制电路开路
+065900          $*          P065900	执行器提供的电压过高
+050100          $*          P050100	车速传感器信号故障
+063000          $*          P063000	VIN码未写入或写入的VIN不合法
+161400          $*          P161400	PEPS(或IMMO)的认证回复不正确，防盗认证失败
+161300          $*          P161300	最后一次PEPS(或IMMO)认证回复Busy
+161500          $*          P161500	ECM eeprom状态出错
+161600          $*          P161600	收到错误的的防盗器认证回复
+161000          $*          P161000	ECM未学习SecretKey
+161200          $*          P161200	ECM未收到PEPS（或IMMO）认证回复
+161900          $*          P161900	ECM未进行防盗匹配
+161700          $*          P161700	未收到防盗器的认证回复
+161800          $*          P161800	防盗匹配时写入密钥码失败
+163000          $*          P163000	MEC大于0，或CustomerMode处于未激活状态
+900017          $*          B100017	电源电压高
+900116          $*          B100116	左前轮发射器电池电压低故障
+900171          $*          B100171	模式电机锁死故障
+900177          $*          B100177	模式电机电位器故障
+900211          $*          B100211	阳光传感器短路
+900271          $*          B100271	温度电机锁死故障
+900277          $*          B100277	温度电机电位器故障
+900311          $*          B100311	车外温度传感器短路
+900315          $*          B100315	车外温度传感器开路
+900400          $*          B100400	鼓风机工作电压异常
+900411          $*          B100411	车内温度传感器短路
+900415          $*          B100415	车内温度传感器开路
+900511          $*          B100511	蒸发器温度传感器短路
+900515          $*          B100515	蒸发器温度传感器开路
+C07300          $*          U007300	CAN 总线关闭
+D40287          $*          U140287	来自ESP的车速信息报文#17D丢失
+E00087          $*          U200087	来自BCM的点火钥匙位置信息报文#1F1丢失
+E10187          $*          U210187	来自网关转发的水温、前蒸发器温度、空调压缩机状态信号报文#0DC丢失
+E60087          $*          U260087	来自IC的车辆行驶里程信息报文#120丢失
+856F00          $*          B056F00	C101未配置
+866F00          $*          B066F00	ESK未配置
+900016          $*          B100016	 电源电压低
+910112          $*          B110112	位置灯继电器短路到电源
+910113          $*          B110113	位置灯继电器开路
+910212          $*          B110212	折叠后视镜关使能短路到电源
+910213          $*          B110213	折叠后视镜关使能开路
+910312          $*          B110312	近光灯继电器短路到电源
+910313          $*          B110313	近光灯继电器开路
+910412          $*          B110412	远光灯继电器短路到电源
+910413          $*          B110413	远光灯继电器开路
+910611          $*          B110611	右前转向灯过载或短路到地
+910613          $*          B110613	右前转向灯开路
+910712          $*          B110712	前雾灯继电器短路到电源
+910713          $*          B110713	前雾灯继电器开路
+910912          $*          B110912	前雨刮低速继电器短路到电源
+910913          $*          B110913	前雨刮低速继电器开路
+910A12          $*          B110A12	内灯过载或短路到电源
+910B11          $*          B110B11	节电过载或短路到地
+910C12          $*          B110C12	前雨刮高速继电器短路到电源
+910C13          $*          B110C13	前雨刮高速继电器开路
+910D12          $*          B110D12	电动车窗电源继电器短路到电源
+910D13          $*          B110D13	电动车窗电源继电器开路
+910E12          $*          B110E12	电动车窗升窗使能短路到电源
+910F11          $*          B110F11	后雾灯短路到地或过载
+911011          $*          B111011	日间行车灯短路到地或过载
+911111          $*          B111111	尾门左转向灯过载或短路到地
+911113          $*          B111113	尾门左转向灯开路
+911311          $*          B111311	左前转向灯过载或短路到地
+911313          $*          B111313	左前转向灯开路
+911412          $*          B111412	后雨刮继电器短路到电源
+911413          $*          B111413	后雨刮继电器开路
+911512          $*          B111512	位置灯切换控制短路到电源
+911513          $*          B111513	位置灯切换控制开路
+911611          $*          B111611	D柱左转向灯过载或短路到地
+911613          $*          B111613	D柱左转向灯开路
+911711          $*          B111711	D柱右转向灯过载或短路到地
+911713          $*          B111713	D柱右转向灯开路
+911F12          $*          B111F12	电动车窗降窗使能短路到电源
+912512          $*          B112512	折叠后视镜开使能短路到电源
+912513          $*          B112513	折叠后视镜开使能开路
+913112          $*          B113112	喇叭继电器短路到电源
+913211          $*          B113211	尾门右转向灯过载或短路到地
+913213          $*          B113213	尾门右转向灯开路
+926011          $*          B126011	刹车灯高驱输出短路到地或者过载
+926013          $*          B126013	刹车高驱输出开路（开路或短路到电源B126013）
+932001          $*          B132001	收到来自SDM的安全气囊碰撞硬线信息
+950013          $*          B150013	IMMO天线开路或短路
+950129          $*          B150129	钥匙认证失败
+950251          $*          B150251	IMMO未存储任何钥匙信息
+950351          $*          B150351	未写入PIN
+950451          $*          B150451	未生成SK
+950555          $*          B150555	IMMO 未锁定
+950662          $*          B150662	ECM 认证失败
+950708          $*          B150708	基站通信错误
+C09200          $*          U009200	卷帘节点超时
+C09300          $*          U009300	天窗节点超时
+C09600          $*          U009600	雨量光传感器LIN报文超时
+C09700          $*          U009700	雨量传感器功能错误
+C09800          $*          U009800	光线传感器功能错误
+C09900          $*          U009900	雨量光传感器欠压或过压
+D00287          $*          U100287	发动机模块失去通讯-报文#0C9丢失
+D40687          $*          U140687	来自ESP的EPB（电子手刹）指示灯报文#230丢失
+D60087          $*          U160087	来自EPS的故障码指示及工作状态信息、工作电流、方向盘角度报文#1E5丢失
+D80187          $*          U180187	来自SDM的安全带信息 报文#0E1丢失
+E20187          $*          U220187	来自PEPS的尾门开启提示等信息报文#359丢失
+E20287          $*          U220287	来自PEPS的一键按钮状态信息报文#565丢失
+E80187          $*          U280187	来自AC的自动空调控制状态 、空调控制温度 、空气循环模式等信息报文#43B丢失
+900001          $*          B100001	SOC过高
+900002          $*          B100002	SOC过低
+900003          $*          B100003	电压传感器信号值过高
+900004          $*          B100004	电压传感器信号值过低
+900005          $*          B100005	电池CAN模块硬件故障
+900006          $*          B100006	正常继电器打开过程中,继电器带载打开
+900007          $*          B100007	初始化诊断未通过
+900008          $*          B100008	EEP数据读取故障
+900009          $*          B100009	EEP数据写入故障
+90000A          $*          B10000A	Group1监测到故障
+90000B          $*          B10000B	Group2监测到故障
+90000C          $*          B10000C	Group3监测到故障
+90000D          $*          B10000D	充电过流报错
+90000E          $*          B10000E	充电过流警告
+90000F          $*          B10000F	放电过流报错
+900010          $*          B100010	放电过流警告
+900011          $*          B100011	分流电阻状态异常
+900012          $*          B100012	电流合理性检测
+900013          $*          B100013	温度过高警告
+900014          $*          B100014	温度过低故障
+900015          $*          B100015	温度过低警告
+900018          $*          B100018	最高最低电芯电压差值过大
+900019          $*          B100019	ECU监控模块故障，例WD error
+90001A          $*          B10001A	温度合理性检测
+90001B          $*          B10001B	电芯电压合理性检测
+90001C          $*          B10001C	不同内存存储数据不一致
+90001D          $*          B10001D	继电器应该闭合时没有闭合
+90001E          $*          B10001E	监测到软件重置
+90001F          $*          B10001F	当继电器闭合指令时，端电压和pack电压差异过大
+900020          $*          B100020	link电压限值检测
+900021          $*          B100021	从系统发送给电池的含有继电器指令的信号发生timeout
+900022          $*          B100022	整车发送crash发生信号给电池
+906040          $*          B106040	EEP read and write error
+906060          $*          B106060	SW reset
+906B80          $*          B106B80	Data inconsistence is diagnosed between memory blocksof EEP init, EEP shutdown
+90A1F0          $*          B10A1F0	Function monitoring：fault of ECU monitoring moduleerror
+90A7D0          $*          B10A7D0	SOC under lower SOC error limit
+90A7E0          $*          B10A7E0	Temperature too high
+90A7F0          $*          B10A7F0	End of life SOH error
+90AA10          $*          B10AA10	Contactor Weld, link voltage does not drop aftercontactor open request
+90AA20          $*          B10AA20	Contactor stuck open
+90ABA0          $*          B10ABA0	Limits monitoring of the link voltage modules
+90ADA0          $*          B10ADA0	Contactor stuck diagnosis failed too often or contactoropen with load
+90AF80          $*          B10AF80	Link voltage different from pack voltage while contactorcommanded on
+90AFD0          $*          B10AFD0	Temperature too low
+90C300          $*          B10C300	SOC exceed upper SOC error limit
+90C6E0          $*          B10C6E0	Module temperature plausibilisation check
+90CA60          $*          B10CA60	charge current higher than threshold
+90CA70          $*          B10CA70	Discharge current higher than threshold
+90ECB0          $*          B10ECB0	Cell voltage plausibilization
+90FF00          $*          B10FF00	永久故障
+90FF01          $*          B10FF01	达到End of life的SOH值
+90FF02          $*          B10FF02	黏连检测失败次数太多
+90FF03          $*          B10FF03	继电器打开诊断失败
+90FF04          $*          B10FF04	电流超过继电器允许范围
+90FF05          $*          B10FF05	继电器过载打开次数打到限值
+90FF06          $*          B10FF06	温度过高故障
+90FF07          $*          B10FF07	继电器黏连
+90FF08          $*          B10FF08	电芯电压检测
+90FF09          $*          B10FF09	电芯开路故障
+9C0010          $*          B1C0010	CAN hardware error
+9C0100          $*          B1C0100	crash signal CAN error
+9C0200          $*          B1C0200	After crash was reported to the BCU crash-emergency-offis triggered
+9C0400          $*          B1C0400	Debounced error of signal qality of the batterycurrent
+9C0500          $*          B1C0500	Cell voltage check
+9C0FF0          $*          B1C0FF0	Permanent error
+9C1000          $*          B1C1000	CAN Operation-Mode-Desired signal monitoring
+D00D83          $*          U100D83	CAN帧0x151失效故障
+D00D87          $*          U100D87	CAN帧0x151超时故障
+D01881          $*          U101881	0x0E9安全气囊状态失效故障
+D01883          $*          U101883	CAN帧0x0E9失效故障
+D01887          $*          U101887	来自ECM（VCU）的车速、转速、气囊点爆信息报文#0E9丢失
+D02787          $*          U102787	Message 0x1CA time-out
+DC8087          $*          U1C8087	Message 0x1D7 time-out
+1B0600          $*          P1B0600	低压侧电流低于下限
+1B0700          $*          P1B0700	低压侧电流过流
+1B0800          $*          P1B0800	硬件电路检测低压侧过流
+1B0900          $*          P1B0900	需求设定的DCDC低压端电流限定值超出范围
+1B0A00          $*          P1B0A00	高压侧电流高于上限
+1B0B00          $*          P1B0B00	诊断高压电流偏移量
+1B0C00          $*          P1B0C00	高压侧电流低于下限
+1B0D00          $*          P1B0D00	高压侧电流过流
+1B0E00          $*          P1B0E00	硬件电路检测高压侧过流
+1B0F00          $*          P1B0F00	高压端电流限定值超出范围
+1B1000          $*          P1B1000	三次清除操作无法清除硬件故障
+1B1100          $*          P1B1100	预充电超时故障
+1B1200          $*          P1B1200	设定PWM与实际PWM偏差值过大
+1B1300          $*          P1B1300	输入与输出功率差值不在合理范围内
+1B1400          $*          P1B1400	S9无法断开
+1B1500          $*          P1B1500	关断路径检测
+1B1600          $*          P1B1600	高边Mos管温度高于上限
+1B1700          $*          P1B1700	高边Mos温度低于下限
+1B1800          $*          P1B1800	低边安全MOS管温度高于上限
+1B1900          $*          P1B1900	低边安全MOS管温度低于下限
+1B1A00          $*          P1B1A00	第1相高边MOS管温度高于上限
+1B1B00          $*          P1B1B00	第1相高边MOS管温度低于下限
+1B1C00          $*          P1B1C00	第2相高边MOS管温度高于上限
+1B1D00          $*          P1B1D00	第2相高边MOS管温度低于下限
+1B1E00          $*          P1B1E00	第3相高边MOS管温度高于上限
+1B1F00          $*          P1B1F00	第3相高边MOS管温度低于下限
+1B2000          $*          P1B2000	第4相高边MOS管温度高于上限
+1B2100          $*          P1B2100	第4相高边MOS管温度低于下限
+1B2200          $*          P1B2200	第4相低边MOS管温度高于上限
+1B2300          $*          P1B2300	第4相低边MOS管温度低于下限
+1B2400          $*          P1B2400	PCB板温度过高
+1B2500          $*          P1B2500	低压端实际电压值与目标值偏差过大
+1B2600          $*          P1B2600	低压侧电压值高于上限
+1B2700          $*          P1B2700	高压侧电压值高于上限
+1B2800          $*          P1B2800	低压侧电压值高于上限
+1B2900          $*          P1B2900	低压侧电压值低于下限
+1B2B00          $*          P1B2B00	低边电压硬件过压
+1B2C00          $*          P1B2C00	低压端电压设定值超出范围
+1B2E00          $*          P1B2E00	MOS管驱动电压高于上限
+1B2F00          $*          P1B2F00	MOS管驱动电压低于下限
+1B3000          $*          P1B3000	MOS管驱动电压过压
+1B3100          $*          P1B3100	MOS管驱动电压欠压
+1B3200          $*          P1B3200	高压端实际电压值与目标值偏差过大
+1B3300          $*          P1B3300	高压侧电压值高于上限
+1B3400          $*          P1B3400	高压侧电压值高于上限
+1B3500          $*          P1B3500	高压侧电压值低于下限
+1B3600          $*          P1B3600	高压侧电压值低于下限
+1B3700          $*          P1B3700	高压侧电压过压
+1B3800          $*          P1B3800	高压侧电压硬件过压
+1B3900          $*          P1B3900	低压端电压设定值超出范围
+1B3A00          $*          P1B3A00	正向（Buck）模式下高边电压欠压
+1B3B00          $*          P1B3B00	反向（Boost）模式下低边电压欠压
+1B3C00          $*          P1B3C00	5V 过压诊断
+1B3D00          $*          P1B3D00	CAN节点丢失
+1B3F00          $*          P1B3F00	DLC长度过小
+1B4100          $*          P1B4100	DLC长度过小
+1B4300          $*          P1B4300	If level2 failed to shut off the energy flow, triggerthis module's DFC
+1B4400          $*          P1B4400	Diagnosis of low side current signal acquired byFuSa SW
+1B4500          $*          P1B4500	Diagnosis of the auxiliry voltage
+1B4600          $*          P1B4600	Diagnosis of low side over-voltage via Level 2 SW
+1B4700          $*          P1B4700	Diagnosis of low side voltage signal acquired byFuSa SW
+1B4800          $*          P1B4800	Diagnosis of high side voltage signal acquired byFuSa SW
+1B4900          $*          P1B4900	Diagnosis of high side voltage signal acquired byFuSa SW
+1B5000          $*          P1B5000	NVM Read Error
+1B5100          $*          P1B5100	NVM Write Error
+1B5300          $*          P1B5300	CAN2 Bus off
+D00A87          $*          U100A87	来自ECM（VCU）的DCDC休眠唤醒、控制模式信息报文#1D9丢失
+001662          $*          P001662	Offset between camshaft and crankshaft (signal comparefailure)
+004513          $*          P004513	Diagnostic fault check for power stage open load (Electric VGT, present on E6 applications)
+00464B          $*          P00464B	Diagnostic fault check for power stage over temperature
+004711          $*          P004711	Variable Geometry Turbocharger output 1 signal low
+004812          $*          P004812	Variable Geometry Turbocharger output 1 signal high
+006921          $*          P006921	Turbocharger pressure and atmospheric pressure plausibility
+006922          $*          P006922	Turbocharger pressure and atmospheric pressure plausibility
+006E16          $*          P006E16	Variable Geometry Turbocharger actuator commandunder voltage
+008792          $*          P008792	Positive fuel pressure governor deviation (step1) low pressure (signal above upper limit)(signal above upper limit)
+008822          $*          P008822	Rail pressure too high (signal amplitude > maximum)
+008884          $*          P008884	Fuel pressure negative governor deviation, highpressure (signal below lower limit)
+009711          $*          P009711	Air intake manifold temperature (circuit short toground)
+009815          $*          P009815	Air intake manifold temperature (circuit short tobattery or open)
+00BC21          $*          P00BC21	Air mass meter sensitivity drift (signal below lowerlimit)
+00BD22          $*          P00BD22	Air mass meter sensitivity drift (signal above upperlimit)
+00C692          $*          P00C692	Minimum rail pressure (signal below lower limit)
+010011          $*          P010011	SCG of hardware signal of HFM sensor
+010101          $*          P010101	Air mass meter (general electrical failure)
+010232          $*          P010232	Air mass meter (signal high time below threshold)
+010335          $*          P010335	Air mass meter (signal high time above threshold)
+011164          $*          P011164	Air temperature sensor plausibility check
+011211          $*          P011211	Air temperature sensor electrical failure (circuitshort to ground)
+011315          $*          P011315	Air temperature sensor electrical failure (circuitshort to battery or open)
+011664          $*          P011664	Engine coolant temperature sensor plausibility
+011711          $*          P011711	Engine coolant temperature sensor signal (circuitshort to ground)
+011815          $*          P011815	Engine coolant temperature sensor signal (circuitshort to battery or open)
+012013          $*          P012013	Diagnostic fault check to detect unplugged errorfor accelerator pedal sensors
+012211          $*          P012211	internal fault path number: short circuit to GNDof accelerator pedal signal 1
+012312          $*          P012312	Accelerator pedal potentiometer 1 (circuit shortto battery)
+01274B          $*          P01274B	EGR high pressure intake air manifold overheating
+013111          $*          P013111	Lambda sensor upstream wire diagnosis (circuit shortto ground)
+013212          $*          P013212	Lambda sensor upstream wire diagnosis (circuit shortto battery)
+013401          $*          P013401	Lambda probe upstream Serial Peripheral Interfaceerror detection (generical electrical failure)
+018211          $*          P018211	Fuel temperature sensor (circuit short to ground)
+018315          $*          P018315	Fuel temperature sensor (circuit short to batteryor open)
+019211          $*          P019211	Rail pressure sensor (circuit short to ground)
+019315          $*          P019315	Rail pressure sensor (circuit short to battery oropen)
+019484          $*          P019484	Negative offset of the rail pressure sensor exceeded
+019485          $*          P019485	Positive offset of the rail pressure sensor exceeded
+02193A          $*          P02193A	Engine overspeed recognition
+022211          $*          P022211	Diagnostic fault check of short circuit to ground(signal range check low) of acceleration pedal signal 2
+022312          $*          P022312	Fuel Filter Heating Short to Battery
+02252F          $*          P02252F	Signal range check Max error on throttle valve positionsensor
+02262F          $*          P02262F	Signal range check Min error on throttle valve positionsensor
+023561          $*          P023561	Positive boost pressure governor deviation (lowpressure, signal calculation failure)
+023661          $*          P023661	Negative boost pressure governor deviation (highpressure, signal calculation failure)
+025113          $*          P025113	Metering Unit electrical failure (open circuit)
+02524B          $*          P02524B	Metering Unit electrical failure (over temperature)
+025311          $*          P025311	Metering Unit electrical failure (circuit shortto ground)
+025412          $*          P025412	Metering Unit electrical failure (circuit shortto battery)
+02622B          $*          P02622B	Short circuit between high side and low side ofthe power stage cylinder 1
+02662B          $*          P02662B	Short circuit between high side and low side ofthe power stage cylinder 2
+02682B          $*          P02682B	Short circuit between high side and low side ofthe power stage cylinder 3
+02712B          $*          P02712B	Short circuit between high side and low side ofthe power stage cylinder 4
+033531          $*          P033531	Engine speed sensor general electrical failure
+03362F          $*          P03362F	crankshaft signal disturbance
+034064          $*          P034064	Camshaft sensor signal invalid
+034164          $*          P034164	Camshaft sensor general electrical failure
+038311          $*          P038311	Glow plug relay command (circuit short to ground)
+038412          $*          P038412	Glow plug relay command (circuit short to battery)
+040121          $*          P040121	The minimum control deviation falls below the lowerlimit
+040222          $*          P040222	The maximum control deviation exceeds the upperlimit
+040313          $*          P040313	EGR high pressure valve control open
+040419          $*          P040419	EGR high pressure valve control (circuit currentabove threshold)
+040514          $*          P040514	EGR high pressure valve position sensor electricaltest (circuit short to ground or open)
+040612          $*          P040612	EGR high pressure valve position sensor electricaltest (circuit short to battery)
+040978          $*          P040978	EGR high pressure valve position sensor (functionaltest, alignment or adjustment incorrect)
+042E72          $*          P042E72	EGR high pressure valve actuator stuck open
+048113          $*          P048113	Cooling Fan 2 (open circuit)
+04844B          $*          P04844B	Cooling Fan 1 (over temperature)
+048597          $*          P048597	Blocked Fan Motor detected by PWM module
+048598          $*          P048598	Fan1 Over temperature errors reported by FAN1 smartactuator through DGK
+048911          $*          P048911	EGR high pressure valve control out 1 (circuit shortto ground)
+049012          $*          P049012	EGR high pressure valve control out 1 (circuit shortto battery)
+049D22          $*          P049D22	EGR high pressure valve positive position deviation(signal above upper limit)
+050185          $*          P050185	Vehicle speed signal above allowabled range
+050186          $*          P050186	Vehicle speed received from CAN wrong
+052067          $*          P052067	Oil pressure switch signal incorrect after event
+053021          $*          P053021	Diagnostic Fault Check for Signal Range Min Checkof A/C Coolant Pressure Analog Signal
+053022          $*          P053022	Diagnostic Fault Check for Signal Range Max Checkof A/C Coolant Pressure Analog Signal
+053111          $*          P053111	Indicates an error when the compressor pressureis not sufficient
+053212          $*          P053212	Indicates an error when the compressor pressureis above a certain upper limit
+054584          $*          P054584	SRC low for Turbine Upstream temperature devicedriver
+054685          $*          P054685	SRC high for Turbine Upstream temperature devicedriver
+056524          $*          P056524	Cruise ON/Off button stuck key error
+056624          $*          P056624	Cruise Cncl button stuck key error
+056724          $*          P056724	Cruise plus button stuck key error
+056824          $*          P056824	Cruise Minus button stuck key error
+057194          $*          P057194	Brake pedal switch signal incorrect after event(0/1 error)
+057611          $*          P057611	Diagnostic fault check for SRC MIN error when analogkey detection is enabled
+057715          $*          P057715	Diagnostic fault check for SRC MAX error when analogkey detection is enabled
+057929          $*          P057929	NPL error
+060144          $*          P060144	Error state of EEPROM (data memory failure)
+060245          $*          P060245	Error state of EEPROM (program memory failure)
+061513          $*          P061513	Open Load Error at Starter High side powerstage
+061611          $*          P061611	Short circuit to ground Error at Starter High Sidepowerstage
+061D16          $*          P061D16	Control Unit (EGR high pressure driver) internalelectronic failure (undervoltage)
+062713          $*          P062713	Fuel pump relay command (open circuit)
+062912          $*          P062912	Fuel pump relay command (circuit short to battery)
+062A4B          $*          P062A4B	Fuel pump relay command (over temperature)
+063822          $*          P063822	Throttle valve actuator permanent control deviation(signal amplitude > maximum)
+06411C          $*          P06411C	Sensor supply 1 (voltage out of range)
+06511C          $*          P06511C	Sensor supply 2 (voltage out of range)
+066A11          $*          P066A11	Glow plug 1 (circuit short to ground)
+066C11          $*          P066C11	Glow plug 2 (circuit short to ground)
+066E11          $*          P066E11	Glow plug 3 (circuit short to ground)
+067113          $*          P067113	Glow plug 1 (open circuit)
+067213          $*          P067213	Glow plug 2 (open circuit)
+067313          $*          P067313	Glow plug 3 (open circuit)
+067413          $*          P067413	Glow plug 4 (open circuit)
+067A11          $*          P067A11	Glow plug 4 (circuit short to ground)
+068574          $*          P068574	Main relay command (actuator slipping)
+068694          $*          P068694	Main relay command (unexpected operation)
+068A94          $*          P068A94	Battery disconnection
+069311          $*          P069311	Cooling Fan 2 (circuit short to ground)
+069412          $*          P069412	Cooling Fan 2 (circuit short to battery)
+06971C          $*          P06971C	Sensor supply 3 (voltage out of range)
+06E971          $*          P06E971	Starter stalled fault
+070394          $*          P070394	Brake pedal switch signal sequence incorrect (1/0error)
+083062          $*          P083062	Plausibility check for Clutch
+083F62          $*          P083F62	Two digital clutch switches not plausible
+100016          $*          P100016	电源电压过低
+100017          $*          P100017	电源电压过高
+100092          $*          P100092	Performance limitation for high fuel temperature
+104711          $*          P104711	Variable Geometry Turbocharger output 2 signal low
+104812          $*          P104812	Variable Geometry Turbocharger output 2 signal high
+108792          $*          P108792	Positive fuel pressure governor deviation (step2) low pressure (signal above upper limit)
+110211          $*          P110211	Throttle valve actuator output 2 circuit low
+110312          $*          P110312	Throttle valve actuator output 2 circuit high
+111816          $*          P111816	Throttle valve actuator command undervoltage
+112A21          $*          P112A21	Lambda sensor upstream signal plausibility check(signal amplitude   minimum)
+112B22          $*          P112B22	Lambda sensor upstream signal plausibility check(signal amplitude > maximum)/Diagnostics status of the oxygen sensorplausibility maximum deviation check in part load mode
+121892          $*          P121892	Recovery hardware of Control Unit (Control Unitreset)
+12754B          $*          P12754B	Over Temperature of the power stage for AC compressor
+127612          $*          P127612	SCB of VSense line
+127714          $*          P127714	Plausibility check Vsensing short to gound or opencircuit during crank
+127864          $*          P127864	Plausibility check R1 and R2 stuck closed or shortcircuit to battery Vsensing at Ignition ON
+127972          $*          P127972	Relay Stuck Open Plausibility error
+148911          $*          P148911	EGR high pressure valve control out 2 (circuit shortto ground)
+149011          $*          P149011	EGR high pressure valve control out 2 (circuit shortto battery)
+149A1C          $*          P149A1C	Under/Over Voltage errors detected by PWM module
+156321          $*          P156321	Variable Geometry Turbocharger position sensor deviation(signal amplitude   minimum)
+156724          $*          P156724	When Cruise Active, Cruise + Switch / button ispressed for pro-longed acceleration (Greater than Calibrate-able threshold(Def. 10 Sec)
+157953          $*          P157953	Cruise control reversible disabling (event information)
+160C92          $*          P160C92	ECM micro reset for second safety level
+161D4B          $*          P161D4B	Control Unit (EGR high pressure driver) over temperature
+163821          $*          P163821	Throttle valve actuator permanent control deviation(Signal amplitude   minimum)
+164801          $*          P164801	DFC glow module error of GCU-T
+164964          $*          P164964	Glow Plug Unit supply (signal plausibility failure)
+165601          $*          P165601	ECM in plant mode or customer mode (unlocked state)
+168B4B          $*          P168B4B	Fuel Filter Heating Over temperature
+16AA27          $*          P16AA27	Cruise control / speed limiter by driver reversibledisabling for high acceleration
+16AB26          $*          P16AB26	Cruise control disabled for high deceleration
+1B1146          $*          P1B1146	Torque to quantity conversion not strictly monotonous(calibration / parameter memory failure)
+1C5F7B          $*          P1C5F7B	Too low viscosity (level 1)
+1D307B          $*          P1D307B	Too low viscosity (level 2)
+1E144B          $*          P1E144B	Cooling Fan 2 (over temperature)
+200297          $*          P200297	Diesel Particulate Filter flow resistance monitoringtoo high (level 2, component or system operation obstructed or blocked)
+200472          $*          P200472	Variable swirl actuator open blocked
+200673          $*          P200673	Variable swirl actuator closed blocked
+200813          $*          P200813	Variable swirl actuator command
+200911          $*          P200911	Variable swirl actuator command SCG
+200A1C          $*          P200A1C	Variable swirl actuator supply voltage
+201012          $*          P201012	Variable swirl actuator command SCB
+201429          $*          P201429	Variable swirl actuator command pwm
+201507          $*          P201507	Variable swirl actuator HW damage
+201611          $*          P201611	Variable swirl actuator feedback line
+201715          $*          P201715	Variable swirl actuator feedback line
+201871          $*          P201871	Variable swirl actuator intermediate position blocked
+201B4B          $*          P201B4B	Variable swirl actuator excess temperature
+201D38          $*          P201D38	Variable swirl actuator
+203164          $*          P203164	Oxidation catalyst upstream temperature signal plausibility
+203211          $*          P203211	Oxidation catalyst upstream temperature signal low(circuit short to ground)
+203315          $*          P203315	Oxidation catalyst upstream temperature signal high(circuit short to battery or open)
+208062          $*          P208062	Outlet Turbine exhaust gas temperature plausibility   T3
+20F84B          $*          P20F84B	Variable swirl actuator electrical failure (overtemperature)
+210013          $*          P210013	Throttle valve actuator pwm command open
+21014B          $*          P21014B	Throttle valve actuator excess temperature
+210211          $*          P210211	Throttle valve actuator output 1 circuit low
+210312          $*          P210312	Throttle valve actuator output 1 circuit high
+211892          $*          P211892	Throttle valve actuator command overload
+213562          $*          P213562	Accelerator pedal potentiometer congruence (signalcompare failure)
+214819          $*          P214819	Power stage high side (bank 0 error, circuit currentabove threshold)
+215119          $*          P215119	Power stage high side (bank 1 error, circuit currentabove threshold)
+222816          $*          P222816	Atmospheric air pressure sensor (circuit voltagebelow threshold)
+222917          $*          P222917	Atmospheric air pressure sensor (circuit voltageabove threshold)
+224313          $*          P224313	Lambda sensor wire diagnosis open load at pin IPE,sensor 1 bank 1
+225113          $*          P225113	Lambda sensor wire diagnosis open load at pin MES,sensor 1 bank 1
+226967          $*          P226967	Water in fuel filter (signal incorrect after event)
+226D00          $*          P226D00	DFC to indicate hoseline error
+226D29          $*          P226D29	Diesel Particulate Filter hose line monitoring 1(signal invalid)
+228892          $*          P228892	Injector control pressure too high
+228992          $*          P228992	Injector control pressure too high (engine off)
+22992A          $*          P22992A	Brake and accelerator pedal coherence
+241321          $*          P241321	EGR high pressure valve negative position deviation(signal below lower limit)
+242B64          $*          P242B64	Inlet Diesel Particulate Filter exhaust gas temperaturesensor plausibility
+242C11          $*          P242C11	Inlet Diesel Particulate Filter exhaust gas temperaturesensor (circuit short to ground)
+242D15          $*          P242D15	Inlet Diesel Particulate Filter exhaust gas temperaturesensor (circuit short to battery or open)
+242F97          $*          P242F97	Diesel Particulate Filter flow resistance monitoringhigh (level 1, component or system operation obstructed or blocked)
+244A11          $*          P244A11	Diesel Particulate Filter delta pressure sensor(circuit short to ground)
+244B15          $*          P244B15	Diesel Particulate Filter delta pressure sensor(circuit short to battery or open)
+245300          $*          P245300	Fault check for the pressure sensor plausibility
+245364          $*          P245364	Diesel Particulate Filter differential pressuresensor plausibility
+245892          $*          P245892	Diesel Particulate Filter regeneration not ended
+245A13          $*          P245A13	EGR high pressure cooler bypass command (circuitopen)
+245B4B          $*          P245B4B	EGR high pressure cooler bypass command (over temperature)
+245C11          $*          P245C11	EGR high pressure cooler bypass command (circuitshort to ground)
+245D12          $*          P245D12	EGR high pressure cooler bypass command (circuitshort to battery)
+246F64          $*          P246F64	Outlet Diesel Particulate Filter exhaust gas temperaturesensor plausibility
+247011          $*          P247011	Outlet Diesel Particulate Filter exhaust gas temperaturesensor (circuit short to ground)
+247115          $*          P247115	Outlet Diesel Particulate Filter exhaust gas temperaturesensor (circuit short to battery or open)
+24A492          $*          P24A492	Soot load and mileage with Diesel Particulate Filterlamp ON
+24C262          $*          P24C262	Exhaust gas temperature for cold start condition2 (signal compare failure) (compare failure)
+256322          $*          P256322	Variable Geometry Turbocharger position sensor deviation(signal amplitude > maximum)
+256414          $*          P256414	Variable Geometry Turbocharger position sensor electricalfailure (circuit short to ground or open circuit)
+256512          $*          P256512	Variable Geometry Turbocharger position sensor electricalfailure (circuit short to battery)
+262613          $*          P262613	Lambda sensor wire diagnosis open load at pin APE,sensor 1 bank 1
+263E4B          $*          P263E4B	Glow plug relay command (over temperature)
+268713          $*          P268713	Fuel Filter Heating overload
+268811          $*          P268811	Fuel Filter Heating Short to Ground
+268912          $*          P268912	Fuel Filter Heating Short to Battery
+268C55          $*          P268C55	IMA classification injector 1 missed personalization
+268C56          $*          P268C56	check of IMA quantisation type mismatch injector1
+268D55          $*          P268D55	IMA classification injector 2 missed personalization
+268D56          $*          P268D56	check of IMA quantisation type mismatch injector1
+268E55          $*          P268E55	IMA classification injector 3 missed personalization
+268E56          $*          P268E56	check of IMA quantisation type mismatch injector3
+268F55          $*          P268F55	IMA classification injector 4 missed personalization
+268F56          $*          P268F56	check of IMA quantisation type mismatch injector4
+26E413          $*          P26E413	Open Load Error at Starter Low side powerstage
+26E511          $*          P26E511	Short circuit to ground at Starter Low side powerstage
+26E612          $*          P26E612	Short circuit to battery at Starter Low side powerstage
+26F173          $*          P26F173	Starter Relay 1 stuck closed
+26F373          $*          P26F373	Start Relay 2 stuck closed
+2A0613          $*          P2A0613	Lambda sensor wire diagnosis open load at pin RE,sensor 1 bank 1
+301154          $*          P301154	Variant coding not performed
+302107          $*          P302107	Fire Prevention System: crash event detected
+D00913          $*          U100913	CAN Passive Failure
+D40587          $*          U140587	来自ESP的底盘请求电动机扭矩值快、慢速增加/降低、底盘系统扭矩干预类型的信息报文#1C6丢失
+D40E87          $*          U140E87	来自ESP的HBB系统工作状态信息报文#1E9丢失
+080600          $*          P080600	离合器传感器底位开关:信号范围/性能故障
+085000          $*          P085000	空挡位置电路故障
+0A1200          $*          P0A1200	自动起停失败
+0A1300          $*          P0A1300	高压电路连续性故障
+0A1400          $*          P0A1400	低压电路连续性故障
+0A1500          $*          P0A1500	高压电池继电器非期望的断开
+0A1600          $*          P0A1600	高压电池继电器非期望的闭合
+1A0E00          $*          P1A0E00	BSG皮带打滑
+1A0F00          $*          P1A0F00	BSG皮带断开
+1A1000          $*          P1A1000	预充时间太长
+1A1100          $*          P1A1100	预充时间太短
+C11187          $*          U011187	与BMS通信中断
+C12087          $*          U012087	与MCU通信中断
+C29887          $*          U029887	与DCDC通信中断
+C41283          $*          U041283	BMS传送的CAN信息检验错误
+C46983          $*          U046983	MCU传送的CAN信息校验错误
+C59983          $*          U059983	DCDC传送的CAN信息检验错误
+001100          $*          P001100	进气凸轮轴位置与VVT设定值偏移
+001400          $*          P001400	排气凸轮轴位置与VVT设定值偏移
+003000          $*          P003000	上游氧传感器加热器控制电路开路
+003100          $*          P003100	上游氧传感器加热器控制电路对地短路
+003200          $*          P003200	上游氧传感器加热器控制电路对电源短路
+003600          $*          P003600	O2 Sensor Heater (Down) Control Circuit Open (Bank1Sensor2)
+003700          $*          P003700	下游氧传感器加热器控制电路开路
+003800          $*          P003800	下游氧传感器加热器控制电路对电源短路
+003A00          $*          P003A00	增压器控制学习值过高
+003B00          $*          P003B00	增压器控制学习值过低
+004900          $*          P004900	增压器涡轮机超速
+007000          $*          P007000	环境温度传感器开路
+007200          $*          P007200	环境温度传感器对地短路
+007500          $*          P007500	进气VVT阀螺线管开路
+007600          $*          P007600	进气VVT阀螺线管对地短路
+007700          $*          P007700	进气VVT阀螺线管对电源短路
+007800          $*          P007800	排气VVT阀螺线管开路
+007900          $*          P007900	排气VVT阀螺线管对地短路
+008000          $*          P008000	排气VVT阀螺线管对电源短路
+010700          $*          P010700	进气岐管压力传感器电路对地短路
+010800          $*          P010800	进气岐管压力传感器电路对电源短路
+011200          $*          P011200	进气温度传感器电路对地短路
+011300          $*          P011300	进气温度传感器电路对电源短路
+011700          $*          P011700	发动机冷却液温度传感器对地短路
+011800          $*          P011800	发动机冷却液温度传感器对电源短路或线路开路
+011900          $*          P011900	发动机冷却液温度传感器信号梯度故障
+012100          $*          P012100	节气门位置传感器1信号不合理
+012200          $*          P012200	节气门位置传感器1电压过低
+012300          $*          P012300	节气门位置传感器1电压过高
+013100          $*          P013100	上游氧传感器线对地短路
+013200          $*          P013200	上游氧传感器线对电源短路
+013500          $*          P013500	上游氧传感器加热电路不合理
+013700          $*          P013700	下游氧传感器线路对地短路
+013800          $*          P013800	下游氧传感器线路对电源短路
+013A00          $*          P013A00	下游氧传感器响应不合理
+014100          $*          P014100	下游氧传感器加热电路不合理
+014C00          $*          P014C00	上游氧传感器响应不合理
+017100          $*          P017100	燃油系统诊断过稀
+017200          $*          P017200	燃油系统诊断过浓
+020100          $*          P020100	一缸喷油器电路开路
+020200          $*          P020200	二缸喷油器电路开路
+020300          $*          P020300	三缸喷油器电路开路
+020400          $*          P020400	四缸喷油器电路开路
+022100          $*          P022100	节气门位置传感器2信号不合理
+022200          $*          P022200	节气门位置传感器2电压过低
+022300          $*          P022300	节气门位置传感器2电压过高
+023600          $*          P023600	增压压力不合理
+023700          $*          P023700	增压压力传感器对地短路
+023800          $*          P023800	增压压力传感器对电源短路
+026100          $*          P026100	一缸喷油器电路对地短路
+026200          $*          P026200	一缸喷油器电路对电源短路
+026400          $*          P026400	二缸喷油器电路对地短路
+026500          $*          P026500	二缸喷油器电路对电源短路
+026700          $*          P026700	三缸喷油器电路对地短路
+026800          $*          P026800	三缸喷油器电路对电源短路
+027000          $*          P027000	四缸喷油器电路对地短路
+027100          $*          P027100	四缸喷油器电路对电源短路
+031500          $*          P031500	飞轮自适应周期时间处于极限
+032400          $*          P032400	爆震传感器故障-信号拾取故障
+032500          $*          P032500	爆震传感器故障-信号绝对值错误
+032600          $*          P032600	爆震传感器故障-信号相对值错误
+033500          $*          P033500	曲轴传感器无信号
+033600          $*          P033600	曲轴传感器信号不合理
+033900          $*          P033900	曲轴传感器信号失去同步
+034000          $*          P034000	进气凸轮轴位置同步信号不合理
+034400          $*          P034400	进气凸轮轴位置传感器信号周期超限
+035100          $*          P035100	1缸点火线圈开路
+035200          $*          P035200	2缸点火线圈开路
+035300          $*          P035300	3缸点火线圈开路
+035400          $*          P035400	4缸点火线圈开路
+036500          $*          P036500	排气凸轮轴位置同步信号不合理
+036900          $*          P036900	排气凸轮轴位置传感器信号周期超限
+037300          $*          P037300	曲轴齿不合理信号
+044400          $*          P044400	碳罐控制阀电路开路
+045800          $*          P045800	碳罐控制阀电路对地短路
+045900          $*          P045900	碳罐控制阀电路对电源短路
+046200          $*          P046200	油位传感器对开路或对地短路
+046300          $*          P046300	油位传感器对电源短路
+048000          $*          P048000	冷却风扇继电器1线路开路
+050400          $*          P050400	刹车灯和刹车信号相关性不合理
+053200          $*          P053200	空调压力过低
+053300          $*          P053300	空调压力过高
+053700          $*          P053700	空调蒸发器温度传感器对地短路
+053800          $*          P053800	空调蒸发器温度传感器对电源短路或线路开路
+056400          $*          P056400	巡航开关“设置键”卡死
+060A00          $*          P060A00	监控故障
+060C00          $*          P060C00	对主控制器的监控故障
+061500          $*          P061500	启动机继电器驱动器1开路
+061700          $*          P061700	启动机继电器驱动器1对电压短路
+061A00          $*          P061A00	实际扭矩与计算扭矩偏差监控
+061C00          $*          P061C00	对发动机转速限制的监控故障
+062800          $*          P062800	油泵继电器线路对地短路
+062900          $*          P062900	油泵继电器线路对电源短路
+063300          $*          P063300	ECU未写入防盗信息
+063800          $*          P063800	ETC_1位置控制器输出信号不合理
+063900          $*          P063900	ETC_2位置控制器输出信号不合理
+064200          $*          P064200	传感器电源电压1电路电压低
+064300          $*          P064300	传感器电源电压1电路电压高
+064500          $*          P064500	空调压缩机继电器线路开路
+064600          $*          P064600	空调压缩机继电器线路对地短路
+064700          $*          P064700	空调压缩机继电器线路对电源短路
+065200          $*          P065200	传感器电源电压2电路电压低
+065300          $*          P065300	传感器电源电压2电路电压高
+068500          $*          P068500	主继电器电路对地断路
+068600          $*          P068600	主继电器电路对地短路
+068700          $*          P068700	主继电器电路对电源短路
+069100          $*          P069100	冷却风扇继电器1线路对地短路
+069200          $*          P069200	冷却风扇继电器1线路对电源短路
+101300          $*          P101300	启动机继电器1卡滞
+101400          $*          P101400	启动机继电器2卡滞
+101500          $*          P101500	启动机继电器驱动器2开路
+101600          $*          P101600	启动机继电器驱动器2对地短路
+101700          $*          P101700	启动机继电器驱动器2对电压短路
+101800          $*          P101800	基本增压压力学习值过低
+151000          $*          P151000	起动机反馈信号开路或对地短路
+160900          $*          P160900	发生碰撞事故
+210000          $*          P210000	ETC电气故障开路
+210100          $*          P210100	ETC过热保护
+210200          $*          P210200	ETC电气故障短路
+211800          $*          P211800	节气门位置信号偏差过大
+212000          $*          P212000	油门踏板未联接诊断
+212200          $*          P212200	油门位置传感器1电压过低
+212300          $*          P212300	油门位置传感器1电压过高
+212700          $*          P212700	油门位置传感器2电压过低
+212800          $*          P212800	油门位置传感器2电压过高
+213500          $*          P213500	节气门位置传感器1/2电压相关性不合理
+217600          $*          P217600	TPS无法到达下截止位
+222700          $*          P222700	大气压力传感器信号不合理
+226200          $*          P226200	增压器工作的临界压力过低
+226B00          $*          P226B00	基本增压压力学习值过高
+229900          $*          P229900	刹车位置和油门踏板位置矛盾
+230000          $*          P230000	1缸点火线圈对地短路
+230100          $*          P230100	1缸点火线圈对电源短路
+230300          $*          P230300	2缸点火线圈对地短路
+230400          $*          P230400	2缸点火线圈对电源短路
+230600          $*          P230600	3缸点火线圈对地短路
+230700          $*          P230700	3缸点火线圈对电源短路
+230900          $*          P230900	4缸点火线圈对地短路
+231000          $*          P231000	4缸点火线圈对电源短路
+2AF200          $*          P2AF200	起动机继电器高边保护的诊断
+C16700          $*          U016700	防盗器未发送计算结果或认证结果
+C32600          $*          U032600	防盗器发送的算法的结果跟ECU计算的结果不一样
+D02100          $*          U102100	ESP扭矩增加请求干预不合理
+D02200          $*          U102200	当车速过低时ESP扭矩增加请求干预
+D02300          $*          U102300	ESP扭矩降低请求干预不合理
+D20087          $*          U120087	来自TCM的档位显示信息报文#4C9丢失
+D20187          $*          U120187	来自TCM的换挡信号报文#1F5丢失
+D20287          $*          U120287	来自TCM的车速信息报文#3E5丢失
+D20882          $*          U120882	TCU ETTR2 #19B的CAN通讯计数错误
+D20883          $*          U120883	TCU ETTR2 #19B 的CAN通讯校验错误
+D20887          $*          U120887	来自TCM的扭矩请求信号报文#19B丢失
+D20982          $*          U120982	TCU ETGS1 #19E 的CAN通讯计数错误
+D20983          $*          U120983	TCU ETGS1 #19E 的CAN通讯校验错误
+D20987          $*          U120987	来自TCM的变速箱转速需求、离合器状态号报文#19E丢失
+D40087          $*          U140087	来自ABS的工作状态、车身稳定系统变速箱挡位请求、牵引力控制系统、车身稳定系统、坡道保持系统工作状态报文#1E9丢失
+D40282          $*          U140282	ESP ABTCS #17D 的CAN通讯计数错误
+D40283          $*          U140283	来自ESC的报文#17D的checksum或rolling counter错误
+D40382          $*          U140382	ABS驱动车轮#348 CAN通讯计数错误
+D40383          $*          U140383	ABS驱动车轮#348 CAN通讯校验错误
+D40387          $*          U140387	来自ABS的左、右驱动轮对地速度信息报文丢失#348
+D40482          $*          U140482	ABS非驱动车轮#34A CAN通讯计数错误
+D40483          $*          U140483	ABS非驱动车轮#34A CAN通讯校验错误
+D40487          $*          U140487	来自ABS的左、右从动轮对地速度信息报文丢失#34A
+D40582          $*          U140582	ESP PCETR1 #1C6 的CAN通讯计数错误
+D40583          $*          U140583	ESP PCETR1 #1C6 的CAN通讯校验错误
+D40682          $*          U140682	ESP EPBS #230 的CAN通讯计数错误
+D40683          $*          U140683	ESP EPBS #230 的CAN通讯校验错误
+D40782          $*          U140782	ESP VSI #128 的CAN通讯计数错误
+D40783          $*          U140783	ESP VSI #128 的CAN通讯校验错误
+D40787          $*          U140787	来自车身稳定系统纵向加速度、主缸制动压力报文#128丢失
+D40E82          $*          U140E82	ESP PCGS1 #1E9 的CAN通讯计数错误
+D40E83          $*          U140E83	ESP PCGS1 #1E9 的CAN通讯校验错误
+D60037          $*          U160037	EPS #1E5 CAN通讯校验错误
+D80182          $*          U180182	SDM #0E1 的CAN通讯计数错误
+D80183          $*          U180183	SDM #0E1 CAN通讯校验错误
+E00387          $*          U200387	来自BCM的照明灯、指示灯状态信息报文#140丢失
+E80087          $*          U280087	来自AC的环境温度信息报文#57E丢失
+417654          $*          C017654	控制模块温度传感器超过工作周期（性能下降）或超过绝对温度限值
+447500          $*          C047500	马达回路电流测量检查错误或单个FET 开模式错误
+447564          $*          C047564	电流不合理
+454500          $*          C054500	扭矩传感器存储错误
+45454B          $*          C05454B	扭矩传感器偏置没有标定（主传感器）
+455043          $*          C055043	控制器内部诊断错误
+456D39          $*          C056D39	控制器内部诊断错误
+466045          $*          C066045	角度信号错误
+466048          $*          C066048	角度信号未标定
+500016          $*          C100016	CAN bus欠压
+500017          $*          C100017	CAN bus过压
+D00281          $*          U100281	发动机信号报文#0C9无效
+D00283          $*          U100283	来自ECM的报文#0C9的checksum或rolling counter错误
+D40281          $*          U140281	来自ABS的车速信息报文#17D无效
+400104          $*          C000104	USV1阀故障
+400204          $*          C000204	USV2阀故障
+400304          $*          C000304	HSV1阀故障
+400404          $*          C000404	HSV2阀故障
+401004          $*          C001004	前左轮进液阀故障
+401104          $*          C001104	前左轮出液阀故障
+401404          $*          C001404	前右轮进液阀故障
+401504          $*          C001504	前右轮出液阀故障
+401804          $*          C001804	后左轮进液阀故障
+401904          $*          C001904	后左轮出液阀故障
+401C04          $*          C001C04	后右轮进液阀故障
+401D04          $*          C001D04	后右轮出液阀故障
+402004          $*          C002004	回流泵故障
+403108          $*          C003108	前左轮速传感器故障（超范围，噪声，间歇）
+403200          $*          C003200	前左轮速传感器对地、对供电开路
+403408          $*          C003408	前右轮速传感器故障（超范围，噪声，间歇）
+403500          $*          C003500	前右轮速传感器对地、对供电开路
+403708          $*          C003708	后左轮速传感器故障（超范围，噪声，间歇）
+403800          $*          C003800	后左轮速传感器对地、对供电开路
+403A08          $*          C003A08	后右轮速传感器故障（超范围，噪声，间歇）
+403B00          $*          C003B00	后右轮速传感器对地、对供电开路
+404008          $*          C004008	BLS信号不可信
+404460          $*          C004460	压力传感器信号故障
+404510          $*          C004510	压力传感器线路故障
+406108          $*          C006108	横向加速度传感器信号故障
+406208          $*          C006208	纵向加速度信号传感器信号故障
+406308          $*          C006308	横摆角速度传感器信号故障
+406B06          $*          C006B06	ABS/ESP不可信控制（控制时间过长等）
+407204          $*          C007204	制动盘信号过热
+407208          $*          C007208	阀一般故障（过热保护，信号无效，硬件故障）
+40A000          $*          C00A000	前左轮速传感器供电线对地短接
+40A100          $*          C00A100	前左轮速传感器信号线对供电短接
+40A200          $*          C00A200	前右轮速传感器供电线对地短接
+40A300          $*          C00A300	前右轮速传感器信号线对供电短接
+40A400          $*          C00A400	后左轮速传感器供电线对地短接
+40A500          $*          C00A500	后左轮速传感器信号线对供电短接
+40A600          $*          C00A600	后右轮速传感器供电线对地短接
+40A700          $*          C00A700	后右轮速传感器信号线对供电短接
+40A800          $*          C00A800	集成惯性传感器没有标定或者标定失败
+40A900          $*          C00A900	前左轮速传感器一般故障
+40AA00          $*          C00AA00	前右轮速传感器一般故障
+40AB00          $*          C00AB00	后左轮速传感器一般故障
+40AC00          $*          C00AC00	后右轮速传感器一般故障
+410016          $*          C010016	PBC Fault 0
+410116          $*          C010116	PBC Fault 1
+410216          $*          C010216	PBC Fault 2
+410316          $*          C010316	PBC Fault 3
+410416          $*          C010416	PBC Fault 4
+410516          $*          C010516	PBC Fault 5
+410616          $*          C010616	PBC Fault 6
+410716          $*          C010716	PBC Fault 7
+410816          $*          C010816	PBC Fault 8
+410916          $*          C010916	PBC Fault 9
+411016          $*          C011016	PBC Fault 10
+411116          $*          C011116	PBC Fault 11
+411216          $*          C011216	PBC Fault 12
+411316          $*          C011316	PBC Fault 13
+411416          $*          C011416	PBC Fault 14
+411516          $*          C011516	PBC Fault 15
+411616          $*          C011616	PBC Fault 16
+411716          $*          C011716	PBC Fault 17
+411816          $*          C011816	PBC Fault 18
+411916          $*          C011916	PBC Fault 19
+419604          $*          C019604	惯性传感器未标定或故障（硬件/温度/范围/欠压/过压/内部故障）
+446008          $*          C046008	SAS信号故障
+500004          $*          C100004	ECU故障（硬件，MCU故障）
+500104          $*          C100104	CAN硬件故障
+501008          $*          C101008	ECU故障（一般软件问题）
+502100          $*          C102100	左APB执行器故障
+502200          $*          C102200	右APB执行器故障
+502312          $*          C102312	APB按键电路故障
+502401          $*          C102401	左APB执行器电气故障
+50241E          $*          C10241E	APB供电电压过低
+502501          $*          C102501	右APB执行器电气故障
+50251E          $*          C10251E	右APB执行器对地短路
+502A01          $*          C102A01	APB马达供电电压异常
+502B62          $*          C102B62	APB卡钳位置不精确或者不连续
+502C71          $*          C102C71	APB键长时间处于夹紧或释放位置
+503000          $*          C103000	APB Motor Left CAT
+503100          $*          C103100	APB Motor Right CAT
+503200          $*          C103200	APB Motor Left Unintended Run
+503300          $*          C103300	APB Motor Right Unintended Run
+504000          $*          C104000	PBC软件MPU(Memory Protection Unit)错误，PBC软件非法操作内存
+504C04          $*          C104C04	PATA,AVH按键被长时间按下
+504D00          $*          C104D00	AVH Button Handbag Failure
+506600          $*          C106600	SAS标定错误
+508200          $*          C108200	一般寿命故障
+508C08          $*          C108C08	倒挡开关信号长时间高/低
+509504          $*          C109504	阀继电器故障
+509904          $*          C109904	轮速传感器一般故障（信号交叉，多个传感器故障等）
+50A204          $*          C10A204	电子真空助力器真空度过低
+50AD08          $*          C10AD08	真空度传感器信号无效
+521208          $*          C121208	变量码错误
+521308          $*          C121308	HW Code Block Error
+521343          $*          C121343	硬件码不匹配
+521408          $*          C121408	Vehicle Type Block Error
+521443          $*          C121443	车辆类型不匹配
+590004          $*          C190004	ECU供电电压过高
+590104          $*          C190104	ECU供电电压过低
+D00187          $*          U100187	来自ECM的冷却液温度信息报文#4C1丢失
+D00881          $*          U100881	来自ECM的报文#0C9的油门踏板真实位置有效性信号无效
+D00987          $*          U100987	来自ECM的真实扭矩、离合开关、离合踏板位置信息报文#1C3丢失
+D01181          $*          U101181	来自ECM的报文#1C3的离合踏板实际位置有效性信号无效
+D01A81          $*          U101A81	来自ECM的报文#1C3的发动机真实扭矩有效性信号无效
+D01B81          $*          U101B81	#1C3的驾驶员需求扭矩有效性信号无效
+D01E81          $*          U101E81	来自ECM的报文#589发动机最大扭矩有效性信号无效
+D01E87          $*          U101E87	来自ECM的发动机最大扭矩、最小扭矩信息报文#589丢失
+D01F81          $*          U101F81	来自ECM的报文#589发动机最小扭矩有效性信号无效
+D20181          $*          U120181	来自TCM的报文#1F5变速箱正在换挡有效性信号无效
+D21281          $*          U121281	来自TCM的报文#1F5自动变速箱控制档位有效性无效
+D60081          $*          U160081	来自EPS的报文#1E5方向盘角度有效性信号无效
+E00487          $*          U200487	来自BCM的门锁、门碰状态信息报文#12A丢失
+E00B83          $*          U200B83	来自BCM的远程模式信息报文#102数据损坏
+960442          $*          B160442	 电子控制单元RAM错误
+962F41          $*          B162F41	 电子控制单元EEPROM检验和错误
+962F42          $*          B162F42	 电子控制单元EEPROM错误
+C07301          $*          U007301	CAN通讯网络B-CAN BUS OFF错误
+C07302          $*          U007302	CAN通讯网络E-CAN BUS OFF错误
+C07303          $*          U007303	CAN communication network C-CAN BUS OFF error
+C07304          $*          U007304	CAN通讯网络I-CAN BUS OFF错误
+C07305          $*          U007305	CAN通讯网络T-CAN BUS OFF错误
+D00087          $*          U100087	来自ECM的瞬时燃油消耗率信息报文#3D1丢失
+D00487          $*          U100487	来自ECM的燃油量百分比信息报文#4D1丢失
+D00587          $*          U100587	The vehicle speed information message #3E9 fromECM is lost
+D00687          $*          U100687	来自ECM的换挡提醒报文#1F6丢失
+D00E87          $*          U100E87	来自ECM（VCU）的电池电量状态、48V系统故障指示灯、启停系统指示灯信息报文#441丢失
+D01587          $*          U101587	发动机实际扭矩信息报文#191丢失
+D08087          $*          U108087	来自SCU的控制杆位置信息报文#1F2丢失
+D40987          $*          U140987	来自ESP的左右驱动轮对地速度报文#34C丢失
+D40C87          $*          U140C87	来自ESP的报文#269丢失
+D41187          $*          U141187	来自ESP的左右从动轮对地速度报文#34E丢失
+D60387          $*          U160387	Indication and Steering boost mode setting statusState message #429 from the EPS is lost
+D80087          $*          U180087	来自SDM的安全气囊指示灯信息报文#141丢失
+DC0287          $*          U1C0287	The date message #53D from ICE is lost
+E00787          $*          U200787	来自BCM的报文#1E1丢失
+E00887          $*          U200887	来自BCM的电动窗控制状态、变道闪光设置状态、熄火自动解锁方式设置状态等信息报文#43D丢失
+E00987          $*          U200987	来自BCM的雨刮模式控制状态、雨刮间歇时间等级控制状态等信息报文#439丢失
+E00C87          $*          U200C87	来自BCM的氛围灯模式及颜色设置等信息#448报文丢失
+E08087          $*          U208087	来自PLG的电动尾门当前开度、锁开关状态等信息报文#43F丢失
+E40087          $*          U240087	来自TPMS的胎压信息报文#52A丢失
+E50387          $*          U250387	The message from multimedia display state, multimediacontrol state, multimedia interconnection synchronization mode statenavigation control state message #53F from ICE is lost
+E50487          $*          U250487	The road type and Navigation Speed Limit message#41D from ICE is lost
+E60187          $*          U260187	来自IC的报文#3E4丢失
+E60287          $*          U260287	来自IC的轮压力状态、发动机故障灯状态、发动机机油压力低显示等信息报文#471丢失
+E60387          $*          U260387	The settings switch status, instrument interconnectionsynchronization mode status and information #537 from IC is lost
+E60587          $*          U260587	来自IC的轮压力状态、轮温度数据信息报文#473丢失
+E60687          $*          U260687	来自IC的燃油量百分比、续航里程和平均油耗信息报文#475丢失
+E60787          $*          U260787	来自IC的巡航控制模式、AEB错误指示、ACC模式等信息报文#477丢失
+E10087          $*          U210087	来自网关转发的车速、转速报文#0DB丢失
+E10287          $*          U210287	来自网关转发的巡航控制报文#3F5报文丢失
+E10387          $*          U210387	来自网关转发的瞬时油耗报/燃油量报文#3FA丢失
+E50287          $*          U250287	来自ICE的互联信息报文#532丢失
+900360          $*          B100360	摄像头未标定
+900361          $*          B100361	前摄像头信号异常
+900362          $*          B100362	后摄像头异常
+900363          $*          B100363	左摄像头异常
+900364          $*          B100364	右摄像头异常
+E70087          $*          U270087	来自RRS的障碍物信息报文#53B丢失
+AD0000          $*          B2D0000	过压或抛负载
+AD0200          $*          B2D0200	IBSG故障
+AD0300          $*          B2D0300	逆变器故障
+AD0400          $*          B2D0400	电机机身故障
+AD0500          $*          B2D0500	碳刷磨损故障
+AD0600          $*          B2D0600	48V低压故障
+ADFC00          $*          B2DFC00	报文校验和故障
+ADFD00          $*          B2DFD00	AliveCounter信号计数器错误
+D01387          $*          U101387	来自ECM（VCU）的机械扭矩、电机模式、休眠唤醒信息报文#198丢失
+D01487          $*          U101487	来自ECM（VCU）的ESA模式下输出扭矩限制、目标转速、减速梯度信息报文#1B8丢失
+928000          $*          B128000	基站通信失败（PEPS与SSB通信失败）
+928100          $*          B128100	一键启动开关IMMO线圈故障
+928200          $*          B128200	ACC输出故障
+928300          $*          B128300	IGN1输出故障
+928400          $*          B128400	IGN2输出故障
+928500          $*          B128500	START输出故障
+928600          $*          B128600	左前天线故障
+928700          $*          B128700	右前天线故障
+928800          $*          B128800	车内前部天线故障
+928900          $*          B128900	车内中部天线故障
+928A00          $*          B128A00	车内后部天线故障
+928B00          $*          B128B00	后保天线故障
+928C00          $*          B128C00	一键启动开关故障
+928C11          $*          B128C11	一键启动开关背光灯短地
+928C12          $*          B128C12	一键启动开关绿灯短电
+928D45          $*          B128D45	一键启动控制器存储故障
+928E31          $*          B128E31	硬线轮速信号故障
+928E62          $*          B128E62	PEPS控制器检测硬线车速信号不连续
+928E81          $*          B128E81	车速信号无效 （ABS/ESC）
+928F00          $*          B128F00	P档错误
+928F01          $*          B128F01	ESCL 地输出故障
+929002          $*          B129002	ESCL内部故障
+929016          $*          B129016	ESCL电压低
+929053          $*          B129053	ESCL加密认证失败
+929062          $*          B129062	ESCL状态不匹配
+929103          $*          B129103	ESCL进入防入侵模式
+929251          $*          B129251	与ESCL通信失败
+929308          $*          B129308	与副MCU通信失败
+929342          $*          B129342	副MCU存储故障
+929416          $*          B129416	Vbat_Load 保险丝断开
+929500          $*          B129500	ESCL解锁重试
+929597          $*          B129597	ESCL锁舌卡死
+929611          $*          B129611	ESCL使能输出短地
+929612          $*          B129612	ESCL使能输出短电
+929745          $*          B129745	ESCL数据存储失败
+929912          $*          B129912	SSB橙灯短电
+929A11          $*          B129A11	ESCL 电源输出短到地
+929A12          $*          B129A12	ESCL 电源输出短到电
+D40981          $*          U140981	来自ESP的左或右驱动轮对地速度信息报文#34C失效
+D41181          $*          U141181	来自ESP的左或右从动轮对地速度信息报文#34E失效
+857F00          $*          B057F00	系统未退出调试模式
+94A011          $*          B14A011	Left Spindle Motor Shorted to ground
+94A012          $*          B14A012	Left Spindle Motor shorted to battery
+94A013          $*          B14A013	Left Spindle Motor open circuit
+94A111          $*          B14A111	Right Spindle Motor Shorted to ground
+94A112          $*          B14A112	Right Spindle motor shorted to battery
+94A113          $*          B14A113	Right Spindle Motor open circuit
+94A239          $*          B14A239	Left Hall sensor A1 failed
+94A339          $*          B14A339	Left Hall sensor A2 failed
+94A439          $*          B14A439	Ritht Hall sensor B1 failed
+94A539          $*          B14A539	Right Hall sensor B2 failed
+94A611          $*          B14A611	Hall sensor power shorted to ground
+94A613          $*          B14A613	ECU not learned
+94A713          $*          B14A713	EEPROM failed
+94A811          $*          B14A811	Latch Cinch motor shorted to ground
+94A812          $*          B14A812	Latch Cinch motor shorted to battery
+94A813          $*          B14A813	Latch Cinch motor open circuit
+94AA11          $*          B14AA11	Speaker shorted to ground
+94AA13          $*          B14AA13	Speaker malfunction - shorted to battery or opencircuit
+94AB11          $*          B14AB11	Latch Release motor shorted to ground
+94AB13          $*          B14AB13	Latch Release motor open circuit or shorted to battery
+94AC11          $*          B14AC11	Aps shorted to ground
+94AC13          $*          B14AC13	Aps open circuit or shorted to battery
+94AD11          $*          B14AD11	Latch Switch Mismatch
+94AE11          $*          B14AE11	Shutface Switch short to ground
+901000          $*          B101000	警告灯
+901300          $*          B101300	驾驶员前气囊点爆控制 电路对地短路
+901500          $*          B101500	副驾驶员前气囊点爆控制 电路对地短路
+901700          $*          B101700	驾驶员安全带预张紧电路对地短路
+901800          $*          B101800	副驾驶安全带预张紧电路对地短路
+901900          $*          B101900	Right Side Airbag Deployment Control Circuit Leakageto Ground
+901E00          $*          B101E00	左边侧气囊配置错误
+901F00          $*          B101F00	右边侧气囊配置错误
+902100          $*          B102100	Left Side Airbag Deployment Control Circuit Leakageto Ground
+902200          $*          B102200	Left Curtain Deployment Control Circuit Leakageto Ground
+902300          $*          B102300	Right Curtain Deployment Control Circuit Leakageto Ground
+902400          $*          B102400	驾驶员前气囊点爆控制 电路对电源短路
+902600          $*          B102600	副驾驶员前气囊点爆控制 电路对电源短路
+902800          $*          B102800	驾驶员安全带预张紧电路对电源短路
+902900          $*          B102900	副驾驶安全带预张紧电路对电源短路
+902A00          $*          B102A00	左边侧气帘配置错误
+902B00          $*          B102B00	右边侧气帘配置错误
+903100          $*          B103100	Right Side Airbag Deployment Control Circuit Leakageto Battery
+903200          $*          B103200	Left Side Airbag Deployment Control Circuit Leakageto Battery
+903300          $*          B103300	Left Curtain Deployment Control Circuit Leakageto Battery
+903400          $*          B103400	Right Curtain Deployment Control Circuit Leakageto Battery
+903500          $*          B103500	驾驶员前气囊点爆控制 电路电阻低于下限
+903700          $*          B103700	副驾驶员前气囊点爆控制 电路电阻低于下限
+903900          $*          B103900	驾驶员安全带预张紧电路电阻低于下限
+904100          $*          B104100	副驾驶安全带预张紧电路电阻低于下限
+904200          $*          B104200	Right Side Airbag Deployment Control Circuit LowResistance
+904300          $*          B104300	Left Side Airbag Deployment Control Circuit LowResistance
+904400          $*          B104400	Left Curtain Deployment Control Circuit Low Resistance
+904500          $*          B104500	Right Curtain Deployment Control Circuit Low Resistance
+904600          $*          B104600	驾驶员前气囊点爆控制 电路电阻高于上限
+904800          $*          B104800	副驾驶员前气囊点爆控制 电路电阻高于上限
+905100          $*          B105100	驾驶员安全带预张紧电路电阻高于上限
+905200          $*          B105200	副驾驶安全带预张紧电路电阻高于上限
+905300          $*          B105300	Right Side Airbag Deployment Control Circuit HighResistance
+905400          $*          B105400	Left Side Airbag Deployment Control Circuit HighResistance
+905500          $*          B105500	Left Curtain Deployment Control Circuit High Resistance
+905600          $*          B105600	Right Curtain Deployment Control Circuit High Resistance
+905A00          $*          B105A00	乘员负载检测开关 电路对电源短路或开路
+906400          $*          B106400	乘员负载检测开关 电路对地短路或短路或电阻范围错误
+907300          $*          B107300	Left Side Restraints Sensor Defect
+907400          $*          B107400	Right Side Restraints Sensor Defect
+907700          $*          B107700	Left Side Restraints Sensor Parameter
+907800          $*          B107800	Right Side Restraints Sensor Parameter
+907900          $*          B107900	Left Side Restraints Sensor HW Line Leakage to Ground
+907A00          $*          B107A00	Right Side Restraints Sensor HW Line Leakage toGround
+907D00          $*          B107D00	Left Side Restraints Sensor HW Line Leakage to Battery
+907E00          $*          B107E00	Right Side Restraints Sensor HW Line Leakage toBattery
+908400          $*          B108400	Left Side Restraints Sensor Communication Error
+908500          $*          B108500	Right Side Restraints Sensor Communication Error
+908800          $*          B108800	ECU内部错误
+908900          $*          B108900	气囊与其它回路串联故障
+908F00          $*          B108F00	Satellite Cross link
+909500          $*          B109500	安全带预紧碰撞
+909600          $*          B109600	副驾驶侧面碰撞
+909700          $*          B109700	驾驶员侧面碰撞
+909800          $*          B109800	前碰撞
+90C600          $*          B10C600	Left Side Restraints Sensor Openline
+90C700          $*          B10C700	Right Side Restraints Sensor Openline
+90CA00          $*          B10CA00	Left Side Restraints Sensor HW Line Configurationerror
+90CB00          $*          B10CB00	Right Side Restraints Sensor HW Line Configurationerror
+90D000          $*          B10D000	碰撞记录锁定
+90E400          $*          B10E400	碰撞输出故障
+952112          $*          B152112	GPS 天线与 BAT+ 短路
+952113          $*          B152113	GPS 天线开路
+952231          $*          B152231	GPS 模块运行失败
+952631          $*          B152631	GSM 模块运行失败
+952931          $*          B152931	TBOX 与车机通讯故障（线束）
+954100          $*          B154100	无 SIM 卡
+954200          $*          B154200	无效的 SIM 卡
+E11187          $*          U211187	来自网关转发的发动机运转状态、油门踏板位置等信息报文#111丢失
+E11287          $*          U211287	来自网关转发的自动变速箱控制档位、SDM报文接收状态等信息报文#113丢失
+E11387          $*          U211387	来自网关转发的EPS报文接收状态、方向盘角度等信息报文#115丢失
+E11487          $*          U211487	来自网关转发的点火钥匙位置、门碰开关状态等信息报文#119丢失
+E11587          $*          U211587	来自网关转发的环境温度、空调远程控制状态等信息报文#11D丢失
+061348          $*          P061348	TCU监控软件错误
+061349          $*          P061349	TCU内部电气故障
+065713          $*          P065713	电磁阀供电端1开路故障
+065811          $*          P065811	电磁阀供电端1对地短路故障
+065912          $*          P065912	电磁阀供电端1对电源短路故障
+07021C          $*          P07021C	TCU内部供电系统故障
+071162          $*          P071162	阀体温度传感器温度信号比较故障
+071211          $*          P071211	阀体温度传感器对地短路故障
+071315          $*          P071315	阀体温度传感器对电源短路故障
+071501          $*          P071501	奇数输入轴转速传感器电路故障
+071662          $*          P071662	奇数输入轴转速传感器转速信号比较故障
+071664          $*          P071664	奇数输入轴转速传感器信号超量程
+071714          $*          P071714	奇数输入轴转速传感器对地短路/开路
+072001          $*          P072001	输出轴转速传感器电路故障
+072162          $*          P072162	输出轴转速传感器转速信号比较故障
+072164          $*          P072164	输出轴转速传感器转速信号超量程
+072214          $*          P072214	输出轴转速传感器对地短路/开路
+072501          $*          P072501	离合器转速传感器电路故障
+072662          $*          P072662	离合器转速传感器转速信号比较故障
+072714          $*          P072714	离合器转速传感器对地短路/开路
+074519          $*          P074519	主油路电磁阀反馈电流过高故障
+074818          $*          P074818	主油路电磁阀反馈电流过低故障
+075019          $*          P075019	奇数离合器电磁阀反馈电流过高故障
+075318          $*          P075318	奇数离合器电磁阀反馈电流过低故障
+075519          $*          P075519	偶数离合器电磁阀反馈电流过高故障
+075818          $*          P075818	偶数离合器电磁阀反馈电流过低故障
+076019          $*          P076019	换挡电磁阀1反馈电流过高故障
+076318          $*          P076318	换挡电磁阀1反馈电流过低故障
+076519          $*          P076519	换挡电磁阀2反馈电流过高故障
+076818          $*          P076818	换挡电磁阀2反馈电流过低故障
+077519          $*          P077519	润滑油路电磁阀反馈电流过高故障
+077818          $*          P077818	润滑油路电磁阀反馈电流过低故障
+081107          $*          P081107	离合器过度滑摩故障
+084001          $*          P084001	奇数压力传感器电路故障
+084124          $*          P084124	奇数离合器压力传感器零票故障
+084136          $*          P084136	奇数离合器压力传感器实际压力过低故障
+084137          $*          P084137	奇数离合器压力传感器实际压力过高故障
+084214          $*          P084214	奇数离合器压力传感器对地短路/开路故障
+084312          $*          P084312	奇数离合器压力传感器对电源短路故障
+084501          $*          P084501	偶数压力传感器电路故障
+084624          $*          P084624	偶数离合器压力传感器零票故障
+084636          $*          P084636	偶数离合器压力传感器实际压力过低故障
+084637          $*          P084637	偶数离合器压力传感器实际压力过高故障
+084714          $*          P084714	偶数离合器压力传感器对地短路/开路故障
+084812          $*          P084812	偶数离合器压力传感器对电源短路故障
+089392          $*          P089392	奇数轴系多档啮合故障
+093862          $*          P093862	离合器温度传感器温度信号比较故障
+093911          $*          P093911	离合器温度传感器对地短路故障
+094015          $*          P094015	离合器温度传感器对电源短路故障
+096013          $*          P096013	主油路电磁阀开路故障
+096101          $*          P096101	主油路电磁阀SPI通信故障
+096211          $*          P096211	主油路电磁阀对地短路故障
+096312          $*          P096312	主油路电磁阀对电源短路故障
+096413          $*          P096413	润滑油路电磁阀开路故障
+096501          $*          P096501	润滑油路电磁阀SPI通信故障
+096611          $*          P096611	润滑油路电磁阀对地短路故障
+096712          $*          P096712	润滑油路电磁阀对电源短路故障
+097201          $*          P097201	奇数离合器电磁阀SPI通信故障
+097311          $*          P097311	奇数离合器电磁阀对地短路故障
+097412          $*          P097412	奇数离合器电磁阀对电源短路故障
+097501          $*          P097501	偶数离合器电磁阀SPI通信故障
+097611          $*          P097611	偶数离合器电磁阀对地短路故障
+097712          $*          P097712	偶数离合器电磁阀对电源短路故障
+097801          $*          P097801	换挡电磁阀1SPI通信故障
+097911          $*          P097911	换挡电磁阀1对地短路故障
+098012          $*          P098012	换挡电磁阀1对电源短路故障
+098101          $*          P098101	换挡电磁阀2SPI通信故障
+098211          $*          P098211	换挡电磁阀2对地短路故障
+098312          $*          P098312	换挡电磁阀2对电源短路故障
+098401          $*          P098401	多路电磁阀1SPI通信故障
+098511          $*          P098511	多路电磁阀1对地短路故障
+098612          $*          P098612	多路电磁阀1对电源短路故障
+099301          $*          P099301	多路电磁阀2SPI通信故障
+099411          $*          P099411	多路电磁阀2对地短路故障
+099512          $*          P099512	多路电磁阀2对电源短路故障
+180112          $*          P180112	奇数输入轴转速传感器对电源短路
+180212          $*          P180212	偶数输入轴转速传感器对电源短路
+180312          $*          P180312	输出轴转速传感器对电源短路
+180412          $*          P180412	离合器转速传感器对电源短路
+180564          $*          P180564	奇数轴速比不匹配故障
+180664          $*          P180664	偶数轴速比不匹配故障
+180701          $*          P180701	电磁阀供电1电路硬件故障
+180801          $*          P180801	电磁阀供电2电路硬件故障
+180901          $*          P180901	电磁阀供电3电路硬件故障
+181077          $*          P181077	动态上1档失败故障
+181092          $*          P181092	静态上1档失败故障
+181177          $*          P181177	动态退1档失败故障
+181277          $*          P181277	动态上2档失败故障
+181377          $*          P181377	动态退2档失败故障
+181477          $*          P181477	动态上3档失败故障
+181577          $*          P181577	动态退3档失败故障
+181677          $*          P181677	动态上4档失败故障
+181777          $*          P181777	动态退4档失败故障
+181877          $*          P181877	动态上5档失败故障
+181977          $*          P181977	动态退5档失败故障
+182077          $*          P182077	动态上6档失败故障
+182177          $*          P182177	动态退6档失败故障
+182277          $*          P182277	动态上R档失败故障
+182292          $*          P182292	静态上R档失败故障
+182377          $*          P182377	动态退R档失败故障
+182492          $*          P182492	偶数轴系多档啮合故障
+182513          $*          P182513	奇数离合器电磁阀开路故障
+182613          $*          P182613	偶数离合器电磁阀开路故障
+182713          $*          P182713	换挡电磁阀1开路故障
+182813          $*          P182813	换挡电磁阀2开路故障
+182913          $*          P182913	多路电磁阀1开路故障
+183013          $*          P183013	多路电磁阀2开路故障
+183111          $*          P183111	5v1供电端对地短路故障
+183212          $*          P183212	5v1供电端对电源短路故障
+183311          $*          P183311	5v2供电端对地短路故障
+183412          $*          P183412	5v2供电端对电源短路故障
+183511          $*          P183511	9v1供电端对地短路故障
+183612          $*          P183612	9v1供电端对电源短路故障
+183711          $*          P183711	9v2供电端对地短路故障
+183812          $*          P183812	9v2供电端对电源短路故障
+183929          $*          P183929	拨叉1/3位置传感器电气故障
+184029          $*          P184029	拨叉2/4位置传感器电气故障
+184129          $*          P184129	拨叉5/N位置传感器电气故障
+184229          $*          P184229	拨叉6/R位置传感器电气故障
+184592          $*          P184592	两个离合器同时啮合故障
+184692          $*          P184692	多路电磁阀1卡滞故障
+184792          $*          P184792	多路电磁阀2卡滞故障
+184809          $*          P184809	读subrom失败
+184998          $*          P184998	变速箱系统油温过高故障
+185077          $*          P185077	奇数档位自动脱档
+185177          $*          P185177	偶数档位自动脱档
+185207          $*          P185207	曲轴及其联接器故障
+185307          $*          P185307	半轴及差速器故障
+185409          $*          P185409	传感器类型不匹配
+185644          $*          P185644	Subrom 物流信息不匹配
+185764          $*          P185764	拨叉位置信号跳变
+266913          $*          P266913	电磁阀供电端2开路故障
+267011          $*          P267011	电磁阀供电端2对地短路故障
+267112          $*          P267112	电磁阀供电端2对电源短路故障
+268413          $*          P268413	电磁阀供电端3开路故障
+268511          $*          P268511	电磁阀供电端3对地短路故障
+268612          $*          P268612	电磁阀供电端3对电源短路故障
+276501          $*          P276501	偶数输入轴转速传感器电路故障
+276662          $*          P276662	偶数输入轴转速传感器转速信号比较故障
+276664          $*          P276664	偶数输入轴转速传感器信号超量程
+276714          $*          P276714	偶数输入轴转速传感器对地短路/开路
+278798          $*          P278798	离合器表面计算温度过高故障
+D01583          $*          U101583	发动机实际扭矩信息报文#191 rolling counter or checksum check失效故障
+D01687          $*          U101687	发动机空转转速目标值报文#1A1丢失
+D01787          $*          U101787	发动机及空气量负荷率、点火延迟角信息报文#194丢失
+D01C83          $*          U101C83	来自ECM的发动机机械损失扭矩信息报文#196 rolling counter or checksum check失效故障
+D01C87          $*          U101C87	来自ECM的发动机机械损失扭矩信息报文#196丢失
+D02181          $*          U102181	来自ECM的驾驶员要求扭矩有效性信息报文#191无效
+D08081          $*          U108081	换挡杆位置信号失效故障
+D08083          $*          U108083	来自SCU的控制杆位置信息报文#1F2 rolling counter or checksum check失效故障
+900055          $*          B100055	射频模块故障（内部故障）
+900118          $*          B100118	左前轮传感器错误
+900131          $*          B100131	左前轮发射器信号丢失故障
+900216          $*          B100216	右前轮发射器电池电压低故障
+900218          $*          B100218	右前轮传感器错误
+900231          $*          B100231	右前轮发射器信号丢失故障
+900316          $*          B100316	左后轮发射器电池电压低故障
+900318          $*          B100318	右后轮传感器错误
+900331          $*          B100331	左后轮发射器信号丢失故障
+900416          $*          B100416	右后轮发射器电池电压低故障
+900418          $*          B100418	左后轮传感器错误
+900431          $*          B100431	右后轮发射器信号丢失故障
+900555          $*          B100555	标准压力值未配置
+900655          $*          B100655	高压报警补偿值未配置
+900754          $*          B100754	发射器ID未学习
+D50587          $*          U150587	来自RSM的目标加速度梯度的最大及最小允许值、自适应巡航加速度控制上限及下限等信息报文#260丢失
+D50487          $*          U150487	来自RSM的ACC平缓刹车请求、刹车辅助请求、巡航控制模式等信息报文#263丢失
+966F00          $*          B166F00	未写入ESK码
+900000          $*          B100000	空壳故障码
+100001          $*          P100001	SOC过高
+100002          $*          P100002	SOC过低
+100003          $*          P100003	电压传感器信号值过高
+100004          $*          P100004	电压传感器信号值过低
+10FF01          $*          P10FF01	达到End of life的SOH值
+100005          $*          P100005	电池CAN模块硬件故障
+10FF02          $*          P10FF02	黏连检测失败次数太多
+10FF03          $*          P10FF03	继电器打开诊断失败
+10FF04          $*          P10FF04	电流超过继电器允许范围
+10FF05          $*          P10FF05	继电器过载打开次数打到限值
+100006          $*          P100006	正常继电器打开过程中,继电器带载打开
+100007          $*          P100007	初始化诊断未通过
+100008          $*          P100008	EEP数据读取故障
+100009          $*          P100009	EEP数据写入故障
+10000A          $*          P10000A	Group1监测到故障
+10000B          $*          P10000B	Group2监测到故障
+10000C          $*          P10000C	Group3监测到故障
+10000D          $*          P10000D	充电过流报错
+10000E          $*          P10000E	充电过流警告
+10000F          $*          P10000F	放电过流报错
+100010          $*          P100010	放电过流警告
+100011          $*          P100011	分流电阻状态异常
+100012          $*          P100012	电流合理性检测
+10FF06          $*          P10FF06	温度过高故障
+100013          $*          P100013	温度过高警告
+100014          $*          P100014	温度过低故障
+100015          $*          P100015	温度过低警告
+100018          $*          P100018	电芯电压超范围
+100019          $*          P100019	ECU监控模块故障，例WD error
+10001A          $*          P10001A	温度合理性检测
+10001B          $*          P10001B	电芯电压合理性检测
+10001C          $*          P10001C	不同内存存储数据不一致
+10001D          $*          P10001D	继电器应该闭合时没有闭合
+10FF07          $*          P10FF07	继电器黏连
+10001E          $*          P10001E	监测到软件重置
+10001F          $*          P10001F	当继电器闭合指令时，端电压和pack电压差异过大
+100020          $*          P100020	link电压限值检测
+100021          $*          P100021	从系统发送给电池的含有继电器指令的信号发生timeout
+100022          $*          P100022	整车发送crash发生信号给电池
+10FF08          $*          P10FF08	电芯电压检测
+10FF00          $*          P10FF00	永久故障
+10FF09          $*          P10FF09	电芯开路故障
+000100          $*          P000100	BMS未收到任何报文
+100100          $*          P100100	GBA 传感器供电电压故障
+100200          $*          P100200	GBA 1#号电机位置传感器故障
+100300          $*          P100300	GBA 2#号电机位置传感器故障
+100471          $*          P100471	GBA 电机堵转或过流
+10041D          $*          P10041D	GBA H桥故障
+100417          $*          P100417	GBA 电机开路
+100500          $*          P100500	SCU 一个档位位置传感器故障
+100600          $*          P100600	SCU 多于一个档位位置传感器故障
+100700          $*          P100700	UNLOCK按键故障
+100800          $*          P100800	拨片 按键故障
+100454          $*          P100454	GBA未标定故障
+100A00          $*          P100A00	SPORT按键故障
+064C13          $*          P064C13	Glow control unit feedback protocol error or open circuit of the command
+929800          $*          B129800	IGN3 输出故障
+274001          $*          P274001	电磁阀温度传感器电压信号超量程
+274162          $*          P274162	电磁阀温度传感器温度信号比较故障
+274211          $*          P274211	电磁阀温度传感器对地短路
+274315          $*          P274315	电磁阀温度传感器对电源短路
+112B29          $*          P112B29	Diagnostics status of the oxygen sensor plausibility maximum deviation check in part load mode
+D40083          $*          U140083	PPEI_Chassis_General_Status_1 CRC check
+D40082          $*          U140082	PPEI_Chassis_General_Status_1 message counter check
+013367          $*          P013367	Fault indicating insufficient lambda sensor dynamics (lean to air) for sensor 1, bank 1
+021601          $*          P021601	Error in the permissibility of PLI
+052596          $*          P052596	Shut off due to (level 2) monitoring of Driver assistance systems
+060004          $*          P060004	ECU internal monitoring 2
+060A96          $*          P060A96	ECU internal monitoring 2
+060B01          $*          P060B01	fault in ADC  lowidle test pulse test
+060C53          $*          P060C53	ECU internal monitoring 5
+060D96          $*          P060D96	ECU internal monitoring 4
+061192          $*          P061192	Faults recognized by the monitoring functions lead to limp home modes such as injection cutoff or mode homogeneous
+061A49          $*          P061A49	Torque monitoring
+061B62          $*          P061B62	Torque monitoring
+061C04          $*          P061C04	ECU internal monitoring 5
+062B04          $*          P062B04	Energizing time monitoring
+121649          $*          P121649	Energizing time monitoring
+121764          $*          P121764	Energizing time monitoring
+121996          $*          P121996	Energizing time monitoring
+1D3904          $*          P1D3904	ADC monitoring
+1D3B96          $*          P1D3B96	ECU internal monitoring 1
+1D3C49          $*          P1D3C49	ECU internal monitoring 1
+1D3D96          $*          P1D3D96	ECU internal monitoring 3
+1D3E04          $*          P1D3E04	ECU internal monitoring 1
+1D3F04          $*          P1D3F04	ECU internal monitoring 3
+1D4049          $*          P1D4049	ECU internal monitoring 3
+1D4149          $*          P1D4149	ECU internal monitoring 2
+1D4264          $*          P1D4264	ECU internal monitoring 1
+1D4364          $*          P1D4364	ECU internal monitoring 2
+1D4464          $*          P1D4464	ECU internal monitoring 3
+1D4549          $*          P1D4549	Injection system monitoring
+1D4949          $*          P1D4949	ECU internal monitoring 5
+1D4A64          $*          P1D4A64	ECU internal monitoring 5
+1D4C04          $*          P1D4C04	Injection system monitoring
+1D5596          $*          P1D5596	SPI communication
+1D5604          $*          P1D5604	SPI communication
+1D5764          $*          P1D5764	SPI communication
+1D5849          $*          P1D5849	SPI communication
+302229          $*          P302229	Airbag invalid time period for crash signal
+D95986          $*          U195986	Reduce Engine Torque Request Signal Invalid
+051367          $*          P051367	ECM is Locked (CONTI(PEPS) Immo only)
+051344          $*          P051344	EEP read/write problem (UAES Immo only)
+051351          $*          P051351	EEP Nonplausibility error (UAES Immo only)
+051356          $*          P051356	Error: Freestart active (CONTI(PEPS) Immo only)
+051364          $*          P051364	Immobilizer Authentication failed  No valid Key (CONTI(PEPS) Immo only)
+051362          $*          P051362	Invalid teach SK/PIN request from SIM (UAES Immo only)
+063356          $*          P063356	ECM status (UAES Immo only)
+C16787          $*          U016787	Authentication time out (UAES Immo only)
+C40A86          $*          U040A86	Clima Raw Invalid Signal
+C42686          $*          U042686	Communication Error Wrong Checksum (CONTI(PEPS) Immo only)
+C42662          $*          U042662	Immobilizer Authentication Wrong Response (CONTI(PEPS) Immo only)
+406102          $*          C006102	外置惯性传感器横向加速度信号故障
+406202          $*          C006202	外置惯性传感器纵向加速度信号故障
+406302          $*          C006302	外置惯性传感器横摆角速度传感器信号故障
+C00104          $*          U000104	CAN总线Bus Off
+C00500          $*          U000500	CAN总线过电压
+C00700          $*          U000700	CAN总线欠电压
+C10008          $*          U010008	从EMS接收到的报文损坏
+C10104          $*          U010104	从TCU接受到的报文超时
+C10108          $*          U010108	目标挡位信号无效
+C12308          $*          U012308	与外置惯性传感器通讯丢失
+C12608          $*          U012608	从SAS接收到的报文损坏（DLC,CRC,aliver counter错误等）
+C14004          $*          U014004	从BCM接收到的报文超时
+C14008          $*          U014008	从BCM接收到的报文损坏（DLC,CRC,aliver counter错误等）
+C51308          $*          U051308	从外置惯性传感器接收到的数据无效
+C10004          $*          U010004	从EMS接收到的报文超时
+C12604          $*          U012604	从SAS接收到的报文超时
+D60308          $*          U160308	CAN上离合信号无效
+C14104          $*          U014104	从SRS接收的报文超时
+C14108          $*          U014108	从SRS接收到的报文损坏
+414016          $*          C014016	PBC Fault2
+414116          $*          C014116	PBC Fault3
+414216          $*          C014216	PBC Fault12
+414316          $*          C014316	PBC Fault14
+412016          $*          C012016	PBC Fault18
+415016          $*          C015016	PBC Fault20
+412116          $*          C012116	PBC Fault21
+412216          $*          C012216	PBC Fault22
+412316          $*          C012316	PBC Fault23
+412416          $*          C012416	PBC Fault24
+412516          $*          C012516	PBC Fault25
+412616          $*          C012616	PBC Fault26
+412716          $*          C012716	PBC Fault27
+412816          $*          C012816	PBC Fault28
+412916          $*          C012916	PBC Fault29
+413016          $*          C013016	PBC Fault30
+413116          $*          C013116	PBC Fault31
+413216          $*          C013216	PBC Fault32
+413316          $*          C013316	PBC Fault33
+413416          $*          C013416	PBC Fault34
+413516          $*          C013516	PBC Fault35
+413616          $*          C013616	PBC Fault36
+413716          $*          C013716	PBC Fault37
+413816          $*          C013816	PBC Fault38
+413916          $*          C013916	PBC Fault39
+C14604          $*          U014604	从Gateway接收到的报文超时
+C14608          $*          U014608	从Gateway接收到的报文损坏
+D01081          $*          U101081	来自ECM报文#1C3的空挡开关状态信号无效
+D20183          $*          U120183	来自TCM报文#1F5的数据损坏
+D60083          $*          U160083	来自EPS的方向盘角度信息报文#1E5或#14A的数据损坏
+D80181          $*          U180181	来自SDM报文#0E1的驾驶员安全带状态信号无效
+C50483          $*          U050483	来自RSM的ACC平缓刹车请求、刹车辅助请求、巡航控制模式等信息报文#263数据损坏
+C50583          $*          U050583	来自RSM的目标加速度梯度的最大及最小允许值、自适应巡航加速度控制上限及下限等信息报文#260数据损坏
+C00083          $*          U000083	来自BCM的手刹开关、变速箱倒挡开关状态信息报文#1F1数据损坏
+C00483          $*          U000483	来自BCM的门锁、门碰状态信息报文#12A数据损坏
+C60083          $*          U060083	来自IC的车辆行驶里程信息报文#120数据损坏（DTCSnapshotRecord only）
+50A104          $*          C10A104	电子真空助力器电压过高
+50A004          $*          C10A004	电子真空助力器电压过低
+C60208          $*          U060208	手刹信号错误
+C60508          $*          U060508	自适应制动辅助相关车身网络信号错误(ABASensitivityLevel或者ABARequest信号无效
+C60608          $*          U060608	制动器自动预充压 相关车身网络信号错误 (PrefillRequest信号无效）
+C60708          $*          U060708	自动紧急制动 相关车身网络信号错误（AEBRequest或者TarDecelerationValueforAEBorEBA无效）
+C60808          $*          U060808	驾驶员预警系 相关车身网络信号错误（AWBJerkSensitivityLevel或者AWBJerkRequest无效）
+C60908          $*          U060908	车辆纵向控制 相关车身网络信号错误（ACCAcceleration, LowBoundofACCAcceleration, UpperBoundofACCAcceleration, ACCBrakePreferredRequest, ACCSmoothBrakeRequest, MinAlwGradofTarAcceleration, DriverThrottleOverrideDetected或者MaxAlwGradofTarAcceleration信号无效）
+C61008          $*          U061008	驾驶员辅助减速控制系统 相关车身网络信号错误（ACCSystemMode无效）
+C61208          $*          U061208	自适应巡航 相关车身网络信号错误（DriveOffRequest或者DetectionTargetToStop无效）
+C61408          $*          U061408	制动盘温度管理系统 相关车身网络信号错误
+C00381          $*          U000381	电动车 电机 相关车身网络信号错误
+C62008          $*          U062008	发动机自动启停信号 相关CAN信号错误
+DB8087          $*          U1B8087	来自EPS的方向盘角度信息报文#14A 丢失
+D90287          $*          U190287	来自VCU电池高压电上下电指令、整车运行模式、制动踏板、加速踏板位置、驾驶员需求扭矩、整车当前档位状态报文#155丢失
+C90283          $*          U090283	来自VCU电池高压电上下电指令、整车运行模式、制动踏板、加速踏板位置、驾驶员需求扭矩、整车当前档位状态报文#155损坏
+D90281          $*          U190281	来自VCU整车当前档位状态报文#155无效
+D90781          $*          U190781	来自VCU加速踏板位置报文#155无效
+D90881          $*          U190881	来自VCU驾驶员扭矩需求报文#155无效
+D98087          $*          U198087	来自MCU电机工作状态、旋变标定、降额工作状态当前控制模式、当前扭矩/转速、输出功率报文#16C丢失
+C98083          $*          U098083	来自MCU电机工作状态、旋变标定、降额工作状态当前控制模式、当前扭矩/转速、输出功率报文#16C损坏
+D98081          $*          U198081	来自MCU的电机当前扭矩信号报文#16C无效
+D98381          $*          U198381	来自MCU的电机当前转速信号报文#16C无效
+E60487          $*          U260487	来自IC的ESC开关状态信息报文#122丢失
+DA8487          $*          U1A8487	来自OBC的输入电流,连接状态报文#486丢失
+CA8483          $*          U0A8483	来自OBC的输入电流,连接状态报文#486损坏
+EA8487          $*          U2A8487	来自EHB的制动踏板、主缸推杆行程信息报文#156丢失
+CA8583          $*          U0A8583	来自EHB的制动踏板、主缸推杆行程信息报文#156损坏
+C60108          $*          U060108	 来自EHB的制动踏板信号无效
+420016          $*          C020016	WXSH PBCFault0
+420116          $*          C020116	WXSH PBCFault1
+420216          $*          C020216	WXSH PBCFault2
+420316          $*          C020316	WXSH PBC Fault3
+420416          $*          C020416	WXSH PBC Fault4
+420516          $*          C020516	WXSH PBC Fault5
+420616          $*          C020616	WXSH PBC Fault6
+420716          $*          C020716	WXSH PBC Fault7
+420816          $*          C020816	WXSH PBC Fault8
+420916          $*          C020916	WXSH PBC Fault9
+421016          $*          C021016	WXSH PBC Fault10
+421116          $*          C021116	WXSH PBC Fault11
+421216          $*          C021216	WXSH PBC Fault12
+421316          $*          C021316	WXSH PBC Fault13
+421416          $*          C021416	WXSH PBC Fault14
+421516          $*          C021516	WXSH PBC Fault15
+421616          $*          C021616	WXSH PBC Fault16
+421716          $*          C021716	WXSH PBC Fault17
+421816          $*          C021816	WXSH PBC Fault18
+421916          $*          C021916	WXSH PBC Fault19
+422016          $*          C022016	WXSH PBC Fault20
+422116          $*          C022116	WXSH PBC Fault21
+422216          $*          C022216	WXSH PBC Fault22
+422316          $*          C022316	WXSH PBC Fault23
+422416          $*          C022416	WXSH PBC Fault24
+422516          $*          C022516	WXSH PBC Fault25
+422616          $*          C022616	WXSH PBC Fault26
+422716          $*          C022716	WXSH PBC Fault27
+422816          $*          C022816	WXSH PBC Fault28
+422916          $*          C022916	WXSH PBC Fault29
+423016          $*          C023016	WXSH PBC Fault30
+423116          $*          C023116	WXSH PBC Fault31
+423216          $*          C023216	WXSH PBC Fault32
+423316          $*          C023316	WXSH PBC Fault33
+423416          $*          C023416	WXSH PBC Fault34
+423516          $*          C023516	WXSH PBC Fault35
+423616          $*          C023616	WXSH PBC Fault36
+423716          $*          C023716	WXSH PBC Fault37
+423816          $*          C023816	WXSH PBC Fault38
+423916          $*          C023916	WXSH PBC Fault39
+500018          $*          C100018	非启动阶段电源电压低Battery voltage is too low after starting
+500019          $*          C100019	非启动阶段电源电压高Battery voltage is too high after starting
+613378          $*          C213378	关键性功能故障CRITICAL_FUNCTIONALITY_NOT_AVAILABLE
+613478          $*          C213478	雷达不可用RADAR is not Available
+613578          $*          C213578	雷达主动校准SDA is on
+613678          $*          C213678	操作系统任务故障OS task T_10ms is not executed as required
+613178          $*          C213178	下线标定从未做
+613278          $*          C213278	下线标定没有完成
+612578          $*          C212578	MRR未校准或者校准偏差过大
+612678          $*          C212678	MRR未校准或者校准偏差过大-水平方向
+612778          $*          C212778	MRR未校准或者校准偏差过大-垂直方向
+612F06          $*          C212F06	Production mode 生产模式没有关闭
+612604          $*          C212604	MRR失明，不能探测目标
+613D74          $*          C213D74	ACC雷达视野过窄
+613C77          $*          C213C77	ACC雷达受到干扰
+612704          $*          C212704	MRR硬件错误
+614404          $*          C214404	ACC硬件错误Group1
+614504          $*          C214504	ACC硬件错误Group2
+614604          $*          C214604	ACC硬件错误Group3
+614A4B          $*          C214A4B	ACC硬件过热
+614704          $*          C214704	ACC软件错误Group1
+614804          $*          C214804	ACC软件错误Group2
+614904          $*          C214904	ACC软件错误Group3
+614206          $*          C214206	数字信号处理模块算法错误
+614306          $*          C214306	数字信号处理模块算法错误
+614B61          $*          C214B61	车辆自身数据计算有误
+614C68          $*          C214C68	中速全力制动功能在同一个点火循环中被激活十次
+614049          $*          C214049	CAN控制器缓冲寄存器不能按照预期方式工作
+614149          $*          C214149	CAN控制器不能在限定的时间内作出状态响应。
+614F71          $*          C214F71	摄像头系统初始化
+614D73          $*          C214D73	摄像头系统关闭
+615378          $*          C215378	摄像头安装位置X轴超出范围
+615478          $*          C215478	摄像头安装位置Y轴超出范围
+615578          $*          C215578	摄像头安装位置Z轴超出范围
+615278          $*          C215278	摄像头安装位置错误
+615176          $*          C215176	摄像头错误
+C07388          $*          U007388	CAN BUSOFF
+C01187          $*          U001187	CAN 摄像头信号列表报文丢失
+C01287          $*          U001287	CAN 摄像头状态报文丢失
+C01387          $*          U001387	CAN 摄像头安装位置报文丢失
+C01587          $*          U001587	CAN 摄像头报文时间戳信号丢失
+C01383          $*          U001383	CAN 摄像头安装位置报文Checksum错误
+C01483          $*          U001483	CAN 摄像头安装位置报文Rollingcounter错误
+456F00          $*          C056F00	RSM在线未配置
+C01683          $*          U001683	ACC报告发送报文时出现超时
+D40A87          $*          U140A87	来自ESP的报文#0C1丢失
+D40B87          $*          U140B87	来自ESP的报文#0C5丢失
+E50087          $*          U250087	来自ICE的报文#53D丢失
+D58087          $*          U158087	来自CSM的报文#373丢失
+D58083          $*          U158083	MRR接受的CSM报文#373出现RollingCounter错误或Checksum错误
+D40A83          $*          U140A83	MRR接受的ESP报文#0C1出现RollingCounter错误或Checksum错误
+D40B83          $*          U140B83	MRR接受的ESP报文#0C5出现RollingCounter错误或Checksum错误
+D40C83          $*          U140C83	MRR接受的ESP报文#269出现RollingCounter错误或Checksum错误
+E00783          $*          U200783	MRR接受的BCM报文#1E1出现RollingCounter错误或Checksum错误
+E60183          $*          U260183	MRR接受的IC报文#3E4出现RollingCounter错误或Checksum错误
+C50183          $*          U050183	MRR接受的ICE报文#3F7出现Checksum错误
+D00F81          $*          U100F81	ECM制动踏板输入状态无效#0C9
+610381          $*          C210381	ECM发动机扭矩控制无效#1C3
+D02681          $*          U102681	ECM油门踏板实际位置信号无效#191
+612181          $*          C212181	TCM变速箱故障#4C9
+D20B81          $*          U120B81	TCM变速箱控制模式无效#4C9
+616481          $*          C216481	ESP车身稳定系统故障#1E9
+D40F81          $*          U140F81	ESP车辆横摆角速度无效#1E9
+D40381          $*          U140381	ESP左驱动轮轮速信号无效#348
+D40781          $*          U140781	ESP右驱动轮轮速信号无效#348
+D40481          $*          U140481	ESP左从动轮轮速信号无效#34A
+D40881          $*          U140881	ESP右从动轮轮速信号无效#34A
+610681          $*          C210681	EPB系统报警提示故障#230
+D40681          $*          U140681	EPB系统报警显示要求信号无效#230
+D41F81          $*          U141F81	ESP纵向加速度信号无效#128
+D41381          $*          U141381	ESP主缸压力信号无效#128
+D42081          $*          U142081	ESP左驱动轮方向信号无效#0C1
+D42181          $*          U142181	ESP右驱动轮方向信号无效#0C1
+D40A81          $*          U140A81	ESP左驱动轮脉冲信号无效#0C1
+D41A81          $*          U141A81	ESP右驱动轮方向信号无效#0C1
+D42281          $*          U142281	ESP左非驱动轮方向信号无效#0C5
+D42381          $*          U142381	ESP右非驱动轮方向信号无效#0C5
+D40B81          $*          U140B81	ESP左非驱动轮脉冲信号无效#0C5
+D41B81          $*          U141B81	ESP右非驱动轮方向信号无效#0C5
+611708          $*          C211708	ESP发现ACC故障#269
+615881          $*          C215881	ESP车辆纵向控制不可用(ACC控制不可用)#269
+616581          $*          C216581	ESP的ABA功能不可用#269
+616681          $*          C216681	ESP的ABP预填充功能不可用#269
+616781          $*          C216781	ESP的点刹功能不可用#269
+616881          $*          C216881	ESP的AEB功能不可用#269
+616281          $*          C216281	ESP车辆静止状态无效#269
+D41D81          $*          U141D81	ESP制动压力状态无效#269
+615981          $*          C215981	ESP的车辆减速控制不可用#269
+D41E81          $*          U141E81	ESP扭矩拖拽状态无效#269
+611198          $*          C211198	ESP指示制动温度过高#269
+610754          $*          C210754	EPS的方向盘转角传感器未校准#1E5
+610881          $*          C210881	EPS故障#1E5
+E60081          $*          U260081	IC的车辆行驶里程无效#120
+612908          $*          C212908	IC检测ACC故障#3E4
+612B81          $*          C212B81	IP仪表显示故障#3E4
+615781          $*          C215781	BCM的开关数据完整性为无效或两个Resume开关信号没有同时置一#1E1
+E80081          $*          U280081	AC指示车外温度信号无效#57E
+680281          $*          C280281	VIDEO交通标志识别错误#373
+615A81          $*          C215A81	TCM档位信号不合理#1F5
+641F81          $*          C241F81	TCM目标档位不合理#1F5

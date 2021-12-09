@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VehicleFunctionConfig>
+	<Domain Name="Advance" Type="0">
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			
+			<ProcessUnit Name="Refresh_DCT_UAES_DCT_PIN" />
+			<ProcessUnit Name="Refresh_ECM_UAES_G6" />
+			<!--2019/01/17	xudongli	add	start-->
+			<ProcessUnit Name="Refresh_EPS_TKP_PIN" />
+			<!--2019/01/17	xudongli	add	end-->
+			<!--2018/10/30	xudongli	add	start-->
+			<ProcessUnit Name="Refresh_PEPS" />
+			<ProcessUnit Name="Refresh_SMM" />
+			<!--2018/10/30	xudongli	add	end-->
+		</ProcessGroup>
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="ABSOLConfiguration" />
+			<ProcessUnit Name="EPSOLConfiguration" />
+			<ProcessUnit Name="BCMOLConfiguration" />
+			<ProcessUnit Name="TPMSConfiguration" />
+			<ProcessUnit Name="T-ICEOnlineConfiguration" />
+			<ProcessUnit Name="GWOnlineConfigurationF1B9" />
+		</ProcessGroup>
+		<ProcessGroup Name="Calibration" LD="Proc_Calibration" Type="Calibration" Lv="1">
+			<ProcessUnit Name="ESPYawRateSensorCalibration" />			
+		</ProcessGroup>
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN" />
+		</ProcessGroup>
+		<ProcessGroup Name="IMMO" LD="Proc_IMMO" Type="IMMO" Lv="1">
+			<ProcessUnit Name="IMMO" />
+		</ProcessGroup>
+		<ProcessGroup Name="PEPSConfiguration" LD="Proc_PEPSConfiguration" Type="PEPSConfiguration" Lv="1">
+			<ProcessUnit Name="PEPSConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="ZeroPositionLearning" LD="Proc_ZeroPositionLearning" Type="ZeroPositionLearning" Lv="1">
+			<ProcessUnit Name="ZeroPositionLearning_NAI" />
+		</ProcessGroup>
+		<ProcessGroup Name="EPBRepair" LD="Proc_EPBRepair" Type="Repair" Lv="1">
+			<ProcessUnit Name="EPBRepair_ABS" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="B15T" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_UAES_NP18_PIN" />
+		</ProcessGroup>
+		<ProcessGroup Name="DCTRoutineControl" LD="Proc_DCTRoutineControl" Type="DCTRoutineControl" Lv="1">
+			<ProcessUnit Name="DCTRoutineControl" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="N15T" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<!--<ProcessUnit Name = "Refresh_ECM_UAES_B15D"/>-->
+			<ProcessUnit Name="Refresh_ECM_UAES_N12A" />
+			<ProcessUnit Name="Refresh_CVT_PIN" />
+			<ProcessUnit Name="Refresh_ECM_UAES_N15T_PIN" />
+		</ProcessGroup>
+		<ProcessGroup Name="Replace" LD="Proc_Replace" Type="Replace" Lv="1">
+			<ProcessUnit Name="ReplaceTCM" />
+			<ProcessUnit Name="ReplaceTICE_202S" />
+		</ProcessGroup>		
+		<ProcessGroup Name="VTWrite" LD="Proc_VTWrite" Type="VTWrite" Lv="1">
+			<ProcessUnit Name="BCMWrite" />
+		</ProcessGroup>
+		
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Displacement" Value="1.8-AMT" />
+		</Conditions>
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="DCUOLConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="Calibration" LD="Proc_Calibration" Type="Calibration" Lv="1">
+			<ProcessUnit Name="DCUYawRateSensorCalibration" />
+		</ProcessGroup>
+		<ProcessGroup Name="Exhaust" LD="Proc_Exhaust" Type="Exhaust" Lv="1">
+			<ProcessUnit Name="Exhaust" LD="Proc_Exhaust" />
+		</ProcessGroup>
+	</Domain>
+	<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Code" Value="CN202S_2019_IPC_G6_Bosch_CAN" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_IC_BOSCH" />
+		</ProcessGroup>
+	</Domain>
+		<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Year" Value="2018" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_BCM_UAES_FT1" />
+		</ProcessGroup>
+	</Domain>
+		<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Year" Value="2019" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_BCM_UAES_210" />
+		</ProcessGroup>
+	</Domain>
+		<Domain Name="Advance" Type="1">
+		<Conditions>
+			<Condition Name="Year" Value="2020" />
+		</Conditions>
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_BCM_UAES_210" />
+		</ProcessGroup>
+	</Domain>
+	<Data Name="TPMSCFGDATA">
+		<TyreSize Name="215/60R17" Value="A7A74646" />
+	</Data>
+</VehicleFunctionConfig>

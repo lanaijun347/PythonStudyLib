@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0"> 
+	<include file="Command.xml"/>  
+	<include file="../../210M48V_BMS_2017_CAN/CANActiveType/SelfDiagnosis.xml"/>  
+	<include file="DataStream.xml"/>  
+	<include file="../../CN050V_N12_2016_ECM_CAN/CANActiveType/ECUInformation.xml"/>  
+	<!--功能的级别。0级别最低，用户级别大于等于permission时才有权执行该功能。例如用户等级为3，可以执行等级为0、1、2、3的功能-->  
+	<main_menu> 
+		<menu ID="ID_MENU_READ_ECU_INFOR" caption="ID_STR_ECU_INFORMATION" function="ID_FUNCTION_ECU_INFORMATION" permission="0" function_number="0001"/>  
+		<menu ID="ID_MENU_SELF_DIAGNOSIS" caption="ID_STR_READ_DTC" function="ID_FUNCTION_READ_DTC" permission="0" function_number="0002"/>  
+		<menu ID="ID_MENU_CLEAR_DTC" caption="ID_STR_CLEAR_DTC" function="ID_FUNCTION_CLEAR_DTC" permission="0" function_number="0004"/>  
+		<menu ID="ID_MENU_DATA_STREAM" caption="ID_STR_DATA_STREAM" function="ID_FUNCTION_DATASTREAM" permission="0" function_number="0008"/> 
+	</main_menu>  
+	<function ID="quit_function"> 
+		<call_protocol label="" function="quit_system"> 
+			<param type="command" value=""/> 
+		</call_protocol> 
+	</function> 
+</root>

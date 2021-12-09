@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VehicleFunctionConfig>
+	<Domain Name="Advance">
+		<ProcessGroup Name="Refresh" LD="Proc_Refresh" Type="Refresh" Lv="1">
+			<ProcessUnit Name="Refresh_ECM_CON_Single" />
+			<ProcessUnit Name="Refresh_ECM_UAES_NP18" />
+			<ProcessUnit Name="Refresh_AC" />
+			<ProcessUnit Name="Refresh_ECM_Con" />
+			<ProcessUnit Name="Refresh_CVT" />
+		</ProcessGroup>
+		<ProcessGroup Name="ZeroPositionLearning" LD="Proc_ZeroPositionLearning" Type="ZeroPositionLearning" Lv="1">
+			<ProcessUnit Name="ZeroPositionLearning_NAI" />
+		</ProcessGroup>
+		<ProcessGroup Name="WriteVIN" LD="Proc_WriteVIN" Type="WriteVIN" Lv="1">
+			<ProcessUnit Name="ECMWriteVIN" />
+		</ProcessGroup>
+		<ProcessGroup Name="IMMO" LD="Proc_IMMO" Type="IMMO" Lv="1">
+			<ProcessUnit Name="IMMO" />
+		</ProcessGroup>
+		<ProcessGroup Name="RKE" LD="Proc_RKE" Type="RKE" Lv="1">
+			<ProcessUnit Name="RKE" />
+		</ProcessGroup>
+		<ProcessGroup Name="PEPSConfiguration" LD="Proc_PEPSConfiguration" Type="PEPSConfiguration" Lv="1">
+			<ProcessUnit Name="PEPSConfiguration" />
+		</ProcessGroup>		
+		<ProcessGroup Name="EPBRepair" LD="Proc_EPBRepair" Type="Repair" Lv="1">
+			<ProcessUnit Name="EPBRepair_ABS" />
+		</ProcessGroup>
+		<ProcessGroup Name="Configuration" LD="Proc_Configuration" Type="Configuration" Lv="1">
+			<ProcessUnit Name="TPMSConfiguration" />
+			<ProcessUnit Name="ABSOLConfiguration" />
+			<ProcessUnit Name="PEPSOnlineConfiguration" />
+			<ProcessUnit Name="BCMOLConfiguration" />
+		</ProcessGroup>
+		<ProcessGroup Name="Calibration" LD="Proc_Calibration" Type="Calibration" Lv="1">
+			<ProcessUnit Name="ESPYawRateSensorCalibration" />
+		</ProcessGroup>
+		<ProcessGroup Name="Exhaust" LD="Proc_Exhaust" Type="Exhaust" Lv="1">
+			<ProcessUnit Name="Exhaust" LD="Proc_Exhaust" />
+		</ProcessGroup>
+		<ProcessGroup Name="ECMReset" LD="Proc_ECMSelfLearningValueClear" Type="Reset" Lv="1">
+			<ProcessUnit Name="ECMReset" />
+		</ProcessGroup>
+	</Domain>	
+	<Data Name="TPMSCFGDATA">
+		<TyreSize Name="215/60R17" Value="A7A74646" />
+	</Data>
+</VehicleFunctionConfig>

@@ -1,0 +1,270 @@
+ID_STR_READ_DTC	读取故障码	Read DTC
+ID_STR_CLEAR_DTC	清除故障码	Clear DTC
+ID_STR_READ_CURRENT_DTC	当前故障码	Current DTC
+ID_STR_READ_HISTORY_DTC	历史故障码	History DTC
+ID_STR_DATA_STREAM	读数据流	Data Stream
+ID_STR_DS_FREEZE	冻结帧数据	Freeze Data Stream
+ID_STR_ACTUATOR_TEST	元件测试	Actuator Test
+ID_STR_ECU_INFORMATION	版本信息	Version Information
+ID_STR_SPECIAL_TEST	特殊功能	Special Function
+
+ID_STR_TIME_OUT	系统通讯已超时中断，建议退出系统重新激活！是否退出系统？	system communication time out and interrupted,please exit to re-activate.whether to exit?
+ID_STR_SUCCESS	执行成功！	Success!
+ID_STR_FRAME_TIME_OUT	帧超时！	Fram time out!
+ID_STR_PROTOCOL_ERROR	程序错误！	Procotol error!
+ID_STR_FAILE	失败！	Faile!
+ID_STR_FORMAT_ERORR	格式错误！	Format erorr!
+ID_STR_NULL_POINT	空指针！	Null point!
+ID_STR_NEGATIVE	消极响应！	Negative!
+ID_STR_MATCH_ERROE	匹配错误！	Match error!
+ID_STR_SYSTEM_NOT_REPLY	系统无响应！	System not replay!
+ID_STR_NO_FREEZE_DS	无冻结帧数据流！	No freeze data stream!
+ID_STR_NO_FREEZE_DTC	无冻结帧故障码！	No freeze DTC!
+ID_STR_NO_CURRENT_DTC	无故障码！	No current DTC!
+ID_STR_NO_HISTORY_DTC	无故障码！	No history DTC!
+ID_STR_RECEIVE_FRAME_TYPE_ERROR	回收帧类型错误！	Receive frame type error!
+ID_STR_MESSAGE_TYPE_ERROR	消息类型错误！	Message type error!
+ID_STR_INVALID_INPUT	输入错误！	Input error!
+ID_STR_ECU_RECV_FAIL	数据单元格式错误！	data unit format error!
+ID_STR_ACTIVE	正在执行，请稍候...	operating,please wait...
+Input_data	提示: 没有输入数据或者数据长度不对,请再次输入数据,谢谢!	Tip:no data input or data length incorrect,Input data again!
+ID_STR_SECURITY_THROUGH	正在进行安全验证...	Safety verification in progress...
+
+ID_STR_NEGATIVE_7F	汽车回复数据无效，ECU负反应！	Data invalid,ECU negative response!
+ID_STR_NEGATIVE_7F11	服务不支持！	Service not supported!
+ID_STR_NEGATIVE_7F12	子功能不支持！	Subfunction not supported!
+ID_STR_NEGATIVE_7F13	不正确的信息格式或无效帧！	Incorrect info or inavlid frame!
+ID_STR_NEGATIVE_7F14	应答过长！	Response too long!
+ID_STR_NEGATIVE_7F21	ECU忙，请重复请求！	ECU busy, please repeat the request!
+ID_STR_NEGATIVE_7F22	条件不正确	Condition incorrect
+ID_STR_NEGATIVE_7F24	请求序列错误	Requested sequence wrong
+ID_STR_NEGATIVE_7F25	子网络组件无响应	Subnetwork component no response
+ID_STR_NEGATIVE_7F26	阻止执行功能请求失败	Request to stop operation failed
+ID_STR_NEGATIVE_7F31	请求超出范围	Request out of range
+ID_STR_NEGATIVE_7F33	拒绝安全访问	Security access rejected
+ID_STR_NEGATIVE_7F35	无效的秘钥	Invalid key
+ID_STR_NEGATIVE_7F36	尝试超出次数	Attempts exceeded
+ID_STR_NEGATIVE_7F37	所需延时时间未到	Delay time not available
+ID_STR_NEGATIVE_7F70	上传/下载不许可	Upload/download not allowed
+ID_STR_NEGATIVE_7F71	数据转换中断	Data conversion interrupted
+ID_STR_NEGATIVE_7F72	常规编程失败	Regular programming failed
+ID_STR_NEGATIVE_7F73	块序列计算器错误	Block sequence calculator error
+ID_STR_NEGATIVE_7F78	请求收到-应答挂起	Request received,response hang
+ID_STR_NEGATIVE_7F7E	活动对象子功能不支持	Subfunction of active object not supported
+ID_STR_NEGATIVE_7F7F	活动对象服务不支持	Service of active object not supported
+ID_STR_NEGATIVE_7F81	rpm过高	RPM too high
+ID_STR_NEGATIVE_7F82	rpm过低	RPM too low
+ID_STR_NEGATIVE_7F83	发动机运行中	Engine running
+ID_STR_NEGATIVE_7F84	发动机未运行	Engine not running
+ID_STR_NEGATIVE_7F85	电动机运行时间过低	Motor running time too short
+ID_STR_NEGATIVE_7F86	温度过高	Temp too high
+ID_STR_NEGATIVE_7F87	温度过低	Temp too low
+ID_STR_NEGATIVE_7F88	车速过高	Vehicle speed too high
+ID_STR_NEGATIVE_7F89	车速过低	Vehicle speed too low
+ID_STR_NEGATIVE_7F8A	油门踏板过高	Accel pedal too high
+ID_STR_NEGATIVE_7F8B	油门踏板过低	Accel pedal too low
+ID_STR_NEGATIVE_7F8C	变速器未在空挡上	Transmission not in neutral
+ID_STR_NEGATIVE_7F8D	变速器未在齿轮上	Transmission not in gear
+ID_STR_NEGATIVE_7F8F	制动开关未关闭	Brake switch open
+ID_STR_NEGATIVE_7F90	变速杆未停好	Shift lever not parked
+ID_STR_NEGATIVE_7F91	扭转离合器已锁定	Torque clutch locked
+ID_STR_NEGATIVE_7F92	电压过高	The voltage is too high
+ID_STR_NEGATIVE_7F93	电压过低	The voltage is too low
+
+;读码清码
+ID_STR_CLEARDTC_NOTE0	请关闭点火开关！	Please turn off the ignition switch!
+ID_STR_CLEARDTC_NOTE1	请打开点火开关！	Please turn on the ignition switch!
+ID_STR_TIP_READ_DTC	正在读取故障码，请稍候...	Reading DTC,please wait...
+ID_STR_TIP_IF_CLEAR_DTC	是否清除故障码？	Whether to clear DTC?
+ID_STR_TIP_CLEAR_DTC	正在清除故障码，请稍候...	Clearing DTC,please wait...
+ID_STR_CLEAR_DTC_SUCCESS	清除故障码完成，\n是否读取故障码？	Clearing DTC completed,whether to read DTC?
+ID_STR_CURRENT_DTC	读取故障码	Read DTC
+
+ID_STR_GROUP_CAPTION	普通数据流	Common data stream
+ID_STR_CAPTION	提示	Tip
+ID_STR_READ_ECUINFOR	正在读取，请稍候...	Reading,please wait...
+ID_STR_SET_IDLE_LINK_FAIL	空闲链接设置失败	Set idle link fail!
+ID_STR_READ_DATASTREAM	正在扫描数据流，请稍候...	The data flow is being scanned. Please wait a moment...
+
+;主动测试
+ID_STR_EXCUTING	正在执行，请稍候...	Operating,please wait...
+ID_STR_STOP	正在取消，请稍候...	Cancelling,please wait...
+ID_STR_TEST_RETURN	正在退出，请稍候...	Exitting,please wait...
+ID_STR_SGD_OPERATION_COMPLETE	执行完成！	Operation completed!
+ID_STR_SGD_STOP_COMPLETE	取消完成！	Cancellation completed!
+ID_STR_DIFF_RETURE	请输入范围内的数值	Please input value within the range
+INVALID_INPUT	请输入范围内的数值	Please input value within the range
+
+;读码
+
+;清码
+
+;数据流
+ID_STR_DS_GROUP_00	数据流	X
+
+ID_STR_DS_ITEM_0000	座椅前部电机位置计数	X
+ID_STR_DS_ITEM_0001	座椅后部电机位置计数	X
+ID_STR_DS_ITEM_0002	滑道电机位置计数	X
+ID_STR_DS_ITEM_0003	靠背电机位置计数	X
+ID_STR_DS_ITEM_0004	左后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0005	右后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0006	左后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0007	右后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0008	主驾座椅加热状态	X
+ID_STR_DS_ITEM_0009	舒适上下车设置状态	X
+ID_STR_DS_ITEM_0010	倒挡外后视镜倾斜设置状态	X
+ID_STR_DS_ITEM_0011	记忆用户状态设置状态	X
+ID_STR_DS_ITEM_0012	记忆功能操作设置状态	X
+ID_STR_DS_ITEM_0013	有后视镜或座椅调节操作	X
+ID_STR_DS_ITEM_0014	驾驶员座椅加热控制状态	X
+ID_STR_DS_ITEM_0015	用户1的座椅前部电机位置计数	X
+ID_STR_DS_ITEM_0016	用户1的座椅后部电机位置计数	X
+ID_STR_DS_ITEM_0017	用户1的滑道电机位置计数	X
+ID_STR_DS_ITEM_0018	用户1的靠背电机位置计数	X
+ID_STR_DS_ITEM_0019	用户1的左后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0020	用户1的右后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0021	用户1的左后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0022	用户1的右后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0023	用户2的座椅前部电机位置计数	X
+ID_STR_DS_ITEM_0024	用户2的座椅后部电机位置计数	X
+ID_STR_DS_ITEM_0025	用户2的滑道电机位置计数	X
+ID_STR_DS_ITEM_0026	用户2的靠背电机位置计数	X
+ID_STR_DS_ITEM_0027	用户2的左后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0028	用户2的右后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0029	用户2的左后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0030	用户2的右后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0031	用户3的座椅前部电机位置计数	X
+ID_STR_DS_ITEM_0032	用户3的座椅后部电机位置计数	X
+ID_STR_DS_ITEM_0033	用户3的滑道电机位置计数	X
+ID_STR_DS_ITEM_0034	用户3的靠背电机位置计数	X
+ID_STR_DS_ITEM_0035	用户3的左后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0036	用户3的右后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0037	用户3的左后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0038	用户3的右后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0039	用户4的座椅前部电机位置计数	X
+ID_STR_DS_ITEM_0040	用户4的座椅后部电机位置计数	X
+ID_STR_DS_ITEM_0041	用户4的滑道电机位置计数	X
+ID_STR_DS_ITEM_0042	用户4的靠背电机位置计数	X
+ID_STR_DS_ITEM_0043	用户4的左后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0044	用户4的右后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0045	用户4的左后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0046	用户4的右后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0047	用户5的座椅前部电机位置计数	X
+ID_STR_DS_ITEM_0048	用户5的座椅后部电机位置计数	X
+ID_STR_DS_ITEM_0049	用户5的滑道电机位置计数	X
+ID_STR_DS_ITEM_0050	用户5的靠背电机位置计数	X
+ID_STR_DS_ITEM_0051	用户5的左后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0052	用户5的右后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0053	用户5的左后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0054	用户5的右后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0055	用户6的座椅前部电机位置计数	X
+ID_STR_DS_ITEM_0056	用户6的座椅后部电机位置计数	X
+ID_STR_DS_ITEM_0057	用户6的滑道电机位置计数	X
+ID_STR_DS_ITEM_0058	用户6的靠背电机位置计数	X
+ID_STR_DS_ITEM_0059	用户6的左后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0060	用户6的右后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0061	用户6的左后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0062	用户6的右后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0063	用户7的座椅前部电机位置计数	X
+ID_STR_DS_ITEM_0064	用户7的座椅后部电机位置计数	X
+ID_STR_DS_ITEM_0065	用户7的滑道电机位置计数	X
+ID_STR_DS_ITEM_0066	用户7的靠背电机位置计数	X
+ID_STR_DS_ITEM_0067	用户7的左后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0068	用户7的右后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0069	用户7的左后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0070	用户7的右后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0071	用户8的座椅前部电机位置计数	X
+ID_STR_DS_ITEM_0072	用户8的座椅后部电机位置计数	X
+ID_STR_DS_ITEM_0073	用户8的滑道电机位置计数	X
+ID_STR_DS_ITEM_0074	用户8的靠背电机位置计数	X
+ID_STR_DS_ITEM_0075	用户8的左后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0076	用户8的右后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0077	用户8的左后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0078	用户8的右后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0079	用户9的座椅前部电机位置计数	X
+ID_STR_DS_ITEM_0080	用户9的座椅后部电机位置计数	X
+ID_STR_DS_ITEM_0081	用户9的滑道电机位置计数	X
+ID_STR_DS_ITEM_0082	用户9的靠背电机位置计数	X
+ID_STR_DS_ITEM_0083	用户9的左后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0084	用户9的右后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0085	用户9的左后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0086	用户9的右后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0087	用户10的座椅前部电机位置计数	X
+ID_STR_DS_ITEM_0088	用户10的座椅后部电机位置计数	X
+ID_STR_DS_ITEM_0089	用户10的滑道电机位置计数	X
+ID_STR_DS_ITEM_0090	用户10的靠背电机位置计数	X
+ID_STR_DS_ITEM_0091	用户10的左后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0092	用户10的右后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0093	用户10的左后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0094	用户10的右后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0095	用户11的座椅前部电机位置计数	X
+ID_STR_DS_ITEM_0096	用户11的座椅后部电机位置计数	X
+ID_STR_DS_ITEM_0097	用户11的滑道电机位置计数	X
+ID_STR_DS_ITEM_0098	用户11的靠背电机位置计数	X
+ID_STR_DS_ITEM_0099	用户11的左后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0100	用户11的右后视镜上下电机位置计数	X
+ID_STR_DS_ITEM_0101	用户11的左后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0102	用户11的右后视镜左右电机位置计数	X
+ID_STR_DS_ITEM_0103	座椅滑道电机软止点学习状态	X
+ID_STR_DS_ITEM_0104	座椅靠背电机软止点学习状态	X
+ID_STR_DS_ITEM_0105	座椅前部电机软止点学习状态	X
+ID_STR_DS_ITEM_0106	座椅后部电机软止点学习状态	X
+ID_STR_DS_ITEM_0107	滑道向前开关状态	X
+ID_STR_DS_ITEM_0108	滑道向后开关状态	X
+ID_STR_DS_ITEM_0109	座椅前部向上开关状态	X
+ID_STR_DS_ITEM_0110	座椅前部向下开关状态	X
+ID_STR_DS_ITEM_0111	座椅后部向上开关状态	X
+ID_STR_DS_ITEM_0112	座椅后部向下开关状态	X
+ID_STR_DS_ITEM_0113	靠背向前开关状态	X
+ID_STR_DS_ITEM_0114	靠背向后开关状态	X
+
+;版本信息
+ID_STR_ECU_GROUP_00	版本信息	X
+
+ID_STR_ECU_ITEM_0000	供应商信息	X
+ID_STR_ECU_ITEM_0001	VIN	X
+ID_STR_ECU_ITEM_0002	供应商ECU硬件版本号	X
+ID_STR_ECU_ITEM_0003	供应商ECU软件版本号	X
+ID_STR_ECU_ITEM_0004	零件号	X
+ID_STR_ECU_ITEM_0005	SGMW软件号	X
+ID_STR_ECU_ITEM_0006	SGMW硬件号	X
+
+;数据流或者版本信息switch使用的字符串
+ID_DS_STRING_000	加热关闭	X
+ID_DS_STRING_001	加热1	X
+ID_DS_STRING_002	加热2	X
+ID_DS_STRING_003	加热3	X
+ID_DS_STRING_004	-	X
+ID_DS_STRING_005	不可用	X
+ID_DS_STRING_006	关闭	X
+ID_DS_STRING_007	打开	X
+ID_DS_STRING_008	无请求	X
+ID_DS_STRING_009	两边倾斜	X
+ID_DS_STRING_010	左边倾斜	X
+ID_DS_STRING_011	右边倾斜	X
+ID_DS_STRING_012	用户1	X
+ID_DS_STRING_013	用户2	X
+ID_DS_STRING_014	用户3	X
+ID_DS_STRING_015	用户4	X
+ID_DS_STRING_016	用户5	X
+ID_DS_STRING_017	用户6	X
+ID_DS_STRING_018	用户7	X
+ID_DS_STRING_019	用户8	X
+ID_DS_STRING_020	用户9	X
+ID_DS_STRING_021	用户10	X
+ID_DS_STRING_022	恢复	X
+ID_DS_STRING_023	保存	X
+ID_DS_STRING_024	新建用户	X
+ID_DS_STRING_025	调用	X
+ID_DS_STRING_026	删除	X
+ID_DS_STRING_027	运动中	X
+ID_DS_STRING_028	无操作	X
+ID_DS_STRING_029	有操作	X
+ID_DS_STRING_030	正常	X
+ID_DS_STRING_031	故障	X
+
+;数据流或者版本信息用到的其他字符串
+IMS_DSSTRING_0085	无效	X
+IMS_DSSTRING_0086	有效	X
+IMS_DSSTRING_0133	未学习	X
+IMS_DSSTRING_0134	已学习	X

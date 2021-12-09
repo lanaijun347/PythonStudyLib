@@ -1,0 +1,309 @@
+ID_STR_READ_DTC	读取故障码	Read DTC
+ID_STR_CLEAR_DTC	清除故障码	Clear DTC
+ID_STR_READ_CURRENT_DTC	当前故障码	Current DTC
+ID_STR_READ_HISTORY_DTC	历史故障码	History DTC
+ID_STR_DATA_STREAM	读数据流	Data Stream
+ID_STR_DS_FREEZE	冻结帧数据	Freeze Data Stream
+ID_STR_ACTUATOR_TEST	元件测试	Actuator Test
+ID_STR_ECU_INFORMATION	版本信息	Version Information
+ID_STR_SPECIAL_TEST	特殊功能	Special Function
+
+ID_STR_TIME_OUT	系统通讯已超时中断，建议退出系统重新激活！是否退出系统？	system communication time out and interrupted,please exit to re-activate.whether to exit?
+ID_STR_SUCCESS	执行成功！	Success!
+ID_STR_FRAME_TIME_OUT	帧超时！	Fram time out!
+ID_STR_PROTOCOL_ERROR	程序错误！	Procotol error!
+ID_STR_FAILE	失败！	Faile!
+ID_STR_FORMAT_ERORR	格式错误！	Format erorr!
+ID_STR_NULL_POINT	空指针！	Null point!
+ID_STR_NEGATIVE	消极响应！	Negative!
+ID_STR_MATCH_ERROE	匹配错误！	Match error!
+ID_STR_SYSTEM_NOT_REPLY	系统无响应！	System not replay!
+ID_STR_NO_FREEZE_DS	无冻结帧数据流！	No freeze data stream!
+ID_STR_NO_FREEZE_DTC	无冻结帧故障码！	No freeze DTC!
+ID_STR_NO_CURRENT_DTC	无故障码！	No current DTC!
+ID_STR_NO_HISTORY_DTC	无故障码！	No history DTC!
+ID_STR_RECEIVE_FRAME_TYPE_ERROR	回收帧类型错误！	Receive frame type error!
+ID_STR_MESSAGE_TYPE_ERROR	消息类型错误！	Message type error!
+ID_STR_INVALID_INPUT	输入错误！	Input error!
+ID_STR_ECU_RECV_FAIL	数据单元格式错误！	data unit format error!
+ID_STR_ACTIVE	正在执行，请稍候...	operating,please wait...
+Input_data	提示: 没有输入数据或者数据长度不对,请再次输入数据,谢谢!	Tip:no data input or data length incorrect,Input data again!
+ID_STR_SECURITY_THROUGH	正在进行安全验证...	Safety verification in progress...
+
+ID_STR_NEGATIVE_7F	汽车回复数据无效，ECU负反应！	Data invalid,ECU negative response!
+ID_STR_NEGATIVE_7F11	服务不支持！	Service not supported!
+ID_STR_NEGATIVE_7F12	子功能不支持！	Subfunction not supported!
+ID_STR_NEGATIVE_7F13	不正确的信息格式或无效帧！	Incorrect info or inavlid frame!
+ID_STR_NEGATIVE_7F14	应答过长！	Response too long!
+ID_STR_NEGATIVE_7F21	ECU忙，请重复请求！	ECU busy, please repeat the request!
+ID_STR_NEGATIVE_7F22	条件不正确	Condition incorrect
+ID_STR_NEGATIVE_7F24	请求序列错误	Requested sequence wrong
+ID_STR_NEGATIVE_7F25	子网络组件无响应	Subnetwork component no response
+ID_STR_NEGATIVE_7F26	阻止执行功能请求失败	Request to stop operation failed
+ID_STR_NEGATIVE_7F31	请求超出范围	Request out of range
+ID_STR_NEGATIVE_7F33	拒绝安全访问	Security access rejected
+ID_STR_NEGATIVE_7F35	无效的秘钥	Invalid key
+ID_STR_NEGATIVE_7F36	尝试超出次数	Attempts exceeded
+ID_STR_NEGATIVE_7F37	所需延时时间未到	Delay time not available
+ID_STR_NEGATIVE_7F70	上传/下载不许可	Upload/download not allowed
+ID_STR_NEGATIVE_7F71	数据转换中断	Data conversion interrupted
+ID_STR_NEGATIVE_7F72	常规编程失败	Regular programming failed
+ID_STR_NEGATIVE_7F73	块序列计算器错误	Block sequence calculator error
+ID_STR_NEGATIVE_7F78	请求收到-应答挂起	Request received,response hang
+ID_STR_NEGATIVE_7F7E	活动对象子功能不支持	Subfunction of active object not supported
+ID_STR_NEGATIVE_7F7F	活动对象服务不支持	Service of active object not supported
+ID_STR_NEGATIVE_7F81	rpm过高	RPM too high
+ID_STR_NEGATIVE_7F82	rpm过低	RPM too low
+ID_STR_NEGATIVE_7F83	发动机运行中	Engine running
+ID_STR_NEGATIVE_7F84	发动机未运行	Engine not running
+ID_STR_NEGATIVE_7F85	电动机运行时间过低	Motor running time too short
+ID_STR_NEGATIVE_7F86	温度过高	Temp too high
+ID_STR_NEGATIVE_7F87	温度过低	Temp too low
+ID_STR_NEGATIVE_7F88	车速过高	Vehicle speed too high
+ID_STR_NEGATIVE_7F89	车速过低	Vehicle speed too low
+ID_STR_NEGATIVE_7F8A	油门踏板过高	Accel pedal too high
+ID_STR_NEGATIVE_7F8B	油门踏板过低	Accel pedal too low
+ID_STR_NEGATIVE_7F8C	变速器未在空挡上	Transmission not in neutral
+ID_STR_NEGATIVE_7F8D	变速器未在齿轮上	Transmission not in gear
+ID_STR_NEGATIVE_7F8F	制动开关未关闭	Brake switch open
+ID_STR_NEGATIVE_7F90	变速杆未停好	Shift lever not parked
+ID_STR_NEGATIVE_7F91	扭转离合器已锁定	Torque clutch locked
+ID_STR_NEGATIVE_7F92	电压过高	The voltage is too high
+ID_STR_NEGATIVE_7F93	电压过低	The voltage is too low
+
+;读码清码
+ID_STR_CLEARDTC_NOTE0	请关闭点火开关！	Please turn off the ignition switch!
+ID_STR_CLEARDTC_NOTE1	请打开点火开关！	Please turn on the ignition switch!
+ID_STR_TIP_READ_DTC	正在读取故障码，请稍候...	Reading DTC,please wait...
+ID_STR_TIP_IF_CLEAR_DTC	是否清除故障码？	Whether to clear DTC?
+ID_STR_TIP_CLEAR_DTC	正在清除故障码，请稍候...	Clearing DTC,please wait...
+ID_STR_CLEAR_DTC_SUCCESS	清除故障码完成，\n是否读取故障码？	Clearing DTC completed,whether to read DTC?
+ID_STR_CURRENT_DTC	读取故障码	Read DTC
+
+ID_STR_GROUP_CAPTION	普通数据流	Common data stream
+ID_STR_CAPTION	提示	Tip
+ID_STR_READ_ECUINFOR	正在读取，请稍候...	Reading,please wait...
+ID_STR_SET_IDLE_LINK_FAIL	空闲链接设置失败	Set idle link fail!
+ID_STR_READ_DATASTREAM	正在扫描数据流，请稍候...	The data flow is being scanned. Please wait a moment...
+
+;主动测试
+ID_STR_EXCUTING	正在执行，请稍候...	Operating,please wait...
+ID_STR_STOP	正在取消，请稍候...	Cancelling,please wait...
+ID_STR_TEST_RETURN	正在退出，请稍候...	Exitting,please wait...
+ID_STR_SGD_OPERATION_COMPLETE	执行完成！	Operation completed!
+ID_STR_SGD_STOP_COMPLETE	取消完成！	Cancellation completed!
+ID_STR_DIFF_RETURE	请输入范围内的数值	Please input value within the range
+INVALID_INPUT	请输入范围内的数值	Please input value within the range
+
+;读码
+
+;清码
+
+;数据流
+ID_STR_DS_GROUP_00	数据流	X
+
+ID_STR_DS_ITEM_0000	Vehicle Battery Voltage	X
+ID_STR_DS_ITEM_0001	Engine Speed	X
+ID_STR_DS_ITEM_0002	Vehicle Speed	X
+ID_STR_DS_ITEM_0003	Odometer	X
+ID_STR_DS_ITEM_0004	System coolant temperature with 1℃resolution	X
+ID_STR_DS_ITEM_0005	Outiside ambient air temperature filtered	X
+ID_STR_DS_ITEM_0006	ECU time stamps (RAM)	X
+ID_STR_DS_ITEM_0007	ECU time stamps from KeyOn (RAM)	X
+ID_STR_DS_ITEM_0008	Inlet Diesel Particulate Filter Exhaust gas temperature	X
+ID_STR_DS_ITEM_0009	Power latch time	X
+ID_STR_DS_ITEM_0010	Intake air temperature	X
+ID_STR_DS_ITEM_0011	Ambient pressure	X
+ID_STR_DS_ITEM_0012	Odometer content to the last F-ROM updating	X
+ID_STR_DS_ITEM_0013	Number of FlashRom re-writings (F-ROM)	X
+ID_STR_DS_ITEM_0014	ECU time stamps (EEPROM)	X
+ID_STR_DS_ITEM_0015	ECU time stamps from KeyOn (EEPROM)	X
+ID_STR_DS_ITEM_0016	KeyOn counter (EEPROM)	X
+ID_STR_DS_ITEM_0017	ECU Time first DTC detection (EEPROM)	X
+ID_STR_DS_ITEM_0018	ECU Time Stamps from KeyOn first DTC detection (EEPROM)	X
+ID_STR_DS_ITEM_0019	Event Counter	X
+ID_STR_DS_ITEM_0020	Failure Type	X
+ID_STR_DS_ITEM_0021	Switch state	X
+ID_STR_DS_ITEM_0022	Engine operation status	X
+ID_STR_DS_ITEM_0023	Urea mass flow quantity request	X
+ID_STR_DS_ITEM_0024	Exhaust back pressure	X
+ID_STR_DS_ITEM_0025	Cooling fan average speed	X
+ID_STR_DS_ITEM_0026	Actuator test injector	X
+ID_STR_DS_ITEM_0027	Actuator Test Pump	X
+ID_STR_DS_ITEM_0028	Actuator Test Inverse Pump	X
+ID_STR_DS_ITEM_0029	Reducing agent volume in tank	X
+ID_STR_DS_ITEM_0030	Overall consumed reducing agent quantity with Low Resolution	X
+ID_STR_DS_ITEM_0031	Reducing agent temperatures at tank	X
+ID_STR_DS_ITEM_0032	 Reducing agent Tank system heating is active	X
+ID_STR_DS_ITEM_0033	Reducing agent Tube system heating is active	X
+ID_STR_DS_ITEM_0034	engine running time (since engine start) in [s]	X
+ID_STR_DS_ITEM_0035	Engine shut-off time	X
+ID_STR_DS_ITEM_0036	Fuel temperature	X
+ID_STR_DS_ITEM_0037	Raw vehicle acceleration received from communication network	X
+ID_STR_DS_ITEM_0038	Raw traversal vehicle acceleration received from communication network	X
+ID_STR_DS_ITEM_0039	Measured current feedback of reducing agent injector	X
+ID_STR_DS_ITEM_0040	Reducing agent tank urea concentration	X
+ID_STR_DS_ITEM_0041	Remaining distance calculated from reducing agent tank volume	X
+ID_STR_DS_ITEM_0042	Frequency of the PWM signal to control the reducing agent injector	X
+ID_STR_DS_ITEM_0043	Exhaust gas temperature ahead of oxidation catalyst	X
+ID_STR_DS_ITEM_0044	Enabling of reducing agent supply system	X
+ID_STR_DS_ITEM_0045	General MIL on request	X
+ID_STR_DS_ITEM_0046	Power latch phase active	X
+ID_STR_DS_ITEM_0047	Cavity flag validity status	X
+ID_STR_DS_ITEM_0048	Flag to indicate the tank is frozen or not	X
+ID_STR_DS_ITEM_0049	Refilling detected for the reducing agent at the tank	X
+ID_STR_DS_ITEM_0050	Reducing agent realized injected mass	X
+ID_STR_DS_ITEM_0051	Exhaust mass flow after EGR	X
+ID_STR_DS_ITEM_0052	Feedback of injected adblue mass flow	X
+ID_STR_DS_ITEM_0053	Maximum allowed reducing agent mass flow for dosing	X
+ID_STR_DS_ITEM_0054	Measured reducing agent pump speed	X
+ID_STR_DS_ITEM_0055	Setpoint for spped controller in [rpm]	X
+ID_STR_DS_ITEM_0056	Filtered reducing agent pressure sensor signal	X
+ID_STR_DS_ITEM_0057	Reducing agent pressure setpoint	X
+ID_STR_DS_ITEM_0058	Reducing agent temperature value coming from the tank sensor	X
+ID_STR_DS_ITEM_0059	Reducing agent volume downstream to pump	X
+ID_STR_DS_ITEM_0060	Maximum fillable reducing agent tank volume	X
+ID_STR_DS_ITEM_0061	Reducing agent nominal fill capacity as a percent of maximum	X
+ID_STR_DS_ITEM_0062	Vector for direct Reducing agent tank levels measured by a continuous level sensor	X
+ID_STR_DS_ITEM_0063	Vector for combi Reducing agent tank levels measured by a continuous level sensor	X
+ID_STR_DS_ITEM_0064	Fast Filtered reducing agent tank level measurement	X
+ID_STR_DS_ITEM_0065	Slow Filtered reducing agent tank level measurement	X
+ID_STR_DS_ITEM_0066	Fast filtered reducing agent tank volume in high resolution	X
+ID_STR_DS_ITEM_0067	Slow filtered reducing agent tank volume in high resolution	X
+ID_STR_DS_ITEM_0068	SCRM state machine activated	X
+ID_STR_DS_ITEM_0069	Reducing agent temperature measured by pressure sensor	X
+ID_STR_DS_ITEM_0070	Reducing agent injector coil temperature	X
+ID_STR_DS_ITEM_0071	Indicated torque for combustion setpoint	X
+ID_STR_DS_ITEM_0072	Adaption factor for reducing agent pump	X
+ID_STR_DS_ITEM_0073	Volume of the reducing agent pump per stroke filtered	X
+ID_STR_DS_ITEM_0074	Reducing agent purging during power latch is successful	X
+ID_STR_DS_ITEM_0075	Intervention for the injector protection in case of high exhaust gas temperature for SCR interface	X
+ID_STR_DS_ITEM_0076	Exhaust gas temperature at the reducing agent injector for cylinder bank 1	X
+ID_STR_DS_ITEM_0077	Driver warning and inducement active	X
+ID_STR_DS_ITEM_0078	Power-latch phase is ended : begining of system shutdown mechanism	X
+ID_STR_DS_ITEM_0079	First reducing agent refilling of the system completed	X
+ID_STR_DS_ITEM_0080	Injector heating is active	X
+ID_STR_DS_ITEM_0081	Realized air mass correction	X
+ID_STR_DS_ITEM_0082	Reducing agent mass for air injection correction total	X
+ID_STR_DS_ITEM_0083	Reducing agent tank volume without the dead volume	X
+ID_STR_DS_ITEM_0084	Level Direct Piezo in Liter	X
+ID_STR_DS_ITEM_0085	Level Combi Piezo in Liter	X
+ID_STR_DS_ITEM_0086	Lifetime counter for measured reducing agent injector coil temperature (based on current feedback) over maximum limit	X
+ID_STR_DS_ITEM_0087	Rate based monitor general denominator	X
+ID_STR_DS_ITEM_0088	Rate based monitor ignition cycle counter	X
+ID_STR_DS_ITEM_0089	Numerator - reducing agent concentration plausibility diagnosis	X
+ID_STR_DS_ITEM_0090	Denominator - reducing agent concentration plausibility diagnosis	X
+ID_STR_DS_ITEM_0091	Numerator - reducing agent concentration stuck diagnosis	X
+ID_STR_DS_ITEM_0092	Denominator - reducing agent concentration stuck diagnosis	X
+ID_STR_DS_ITEM_0093	Numerator - Temperature offset between reducing agent pressure sensor temperature and the reference temperatures is too high at cold start	X
+ID_STR_DS_ITEM_0094	Denominator - Temperature offset between reducing agent pressure sensor temperature and the reference temperatures is too high at cold start	X
+ID_STR_DS_ITEM_0095	Numerator - Temperature offset between reducing agent pressure sensor temperature and the reference temperatures is too low at cold start	X
+ID_STR_DS_ITEM_0096	Denominator - Temperature offset between reducing agent pressure sensor temperature and the reference temperatures is too low at cold start	X
+ID_STR_DS_ITEM_0097	Numerator - Temperature offset between reducing agent tank temperature sensor and the reference temperatures is too high at cold start	X
+ID_STR_DS_ITEM_0098	Denominator - Temperature offset between reducing agent tank temperature sensor and the reference temperatures is too high at cold start	X
+ID_STR_DS_ITEM_0099	Numerator - Temperature offset between reducing agent tank temperature sensor and the reference temperatures is too low at cold start	X
+ID_STR_DS_ITEM_0100	Denominator - Temperature offset between reducing agent tank temperature sensor and the reference temperatures is too low at cold start	X
+ID_STR_DS_ITEM_0101	Numerator - Temperature offset between reducing agent injector coil temperature and the reference temperatures is too high at cold start	X
+ID_STR_DS_ITEM_0102	Denominator - Temperature offset between reducing agent injector coil temperature and the reference temperatures is too high at cold start	X
+ID_STR_DS_ITEM_0103	Numerator - Temperature offset between reducing agent injector coil temperature and the reference temperatures is too low at cold start	X
+ID_STR_DS_ITEM_0104	Denominator - Temperature offset between reducing agent injector coil temperature and the reference temperatures is too low at cold start	X
+ID_STR_DS_ITEM_0105	Numerator - Reducing agent system pressure crossing bottom 1 threshold of plausible range	X
+ID_STR_DS_ITEM_0106	Denominator - Reducing agent system pressure crossing bottom 1 threshold of plausible range	X
+ID_STR_DS_ITEM_0107	Numerator - Reducing agent low system pressure decrease with disabled pump	X
+ID_STR_DS_ITEM_0108	Denominator - Reducing agent low system pressure decrease with disabled pump	X
+ID_STR_DS_ITEM_0109	Numerator - Reducing agent low system pressure increase with an enabled pump	X
+ID_STR_DS_ITEM_0110	Denominator - Reducing agent low system pressure increase with an enabled pump	X
+ID_STR_DS_ITEM_0111	Numerator - High negative deviation between ambient and system pressure before engine start	X
+ID_STR_DS_ITEM_0112	Denominator - High negative deviation between ambient and system pressure before engine start	X
+ID_STR_DS_ITEM_0113	Numerator - High positive deviation between ambient and system pressure before engine start	X
+ID_STR_DS_ITEM_0114	Denominator - High positive deviation between ambient and system pressure before engine start	X
+ID_STR_DS_ITEM_0115	Numerator - Reducing agent system pressure crossing top 1 threshold plausible range	X
+ID_STR_DS_ITEM_0116	Denominator - Reducing agent system pressure crossing top 1 threshold plausible range	X
+ID_STR_DS_ITEM_0117	Numerator - Reducing agent pump pumping air fault	X
+ID_STR_DS_ITEM_0118	Numerator - Reducing agent consumption is implausible high (determined by tank level information)	X
+ID_STR_DS_ITEM_0119	Denominator - Reducing agent consumption is implausible high (determined by tank level information)	X
+ID_STR_DS_ITEM_0120	Numerator - Reducing agent consumption is implausible low(determined by tank level information)	X
+ID_STR_DS_ITEM_0121	Denominator - Reducing agent consumption is implausible low (determined by tank level information)	X
+ID_STR_DS_ITEM_0122	Numerator - Reducing agent consumption is implausible high	X
+ID_STR_DS_ITEM_0123	Denominator - Reducing agent consumption is implausible high	X
+ID_STR_DS_ITEM_0124	Numerator - Reducing agent consumption is implausible low	X
+ID_STR_DS_ITEM_0125	Denominator - Reducing agent consumption is implausible low	X
+ID_STR_DS_ITEM_0126	Numerator - Reducing agent system leakage too high	X
+ID_STR_DS_ITEM_0127	Denominator - Reducing agent system leakage too high	X
+ID_STR_DS_ITEM_0128	Numerator - Jammed reducing agent injector detected	X
+ID_STR_DS_ITEM_0129	Denominator - Jammed reducing agent injector detected	X
+ID_STR_DS_ITEM_0130	Numerator - reducing agent level empty diagnosis	X
+ID_STR_DS_ITEM_0131	Denominator - reducing agent level empty diagnosis	X
+ID_STR_DS_ITEM_0132	Numerator - reducing agent level out of range diagnosis	X
+ID_STR_DS_ITEM_0133	Denominator - reducing agent level out of range diagnosis	X
+ID_STR_DS_ITEM_0134	Numerator - reducing agent tank sensor signals comparison diagnosis	X
+ID_STR_DS_ITEM_0135	Denominator - reducing agent tank sensor signals comparison diagnosis	X
+ID_STR_DS_ITEM_0136	Numerator - reducing agent tank sensor not availability diagnosis	X
+ID_STR_DS_ITEM_0137	Denominator - reducing agent tank sensor not availability diagnosis	X
+ID_STR_DS_ITEM_0138	Numerator - reducing agent tank sensor not availability diagnosis 1	X
+ID_STR_DS_ITEM_0139	Denominator - reducing agent tank sensor not availability diagnosis 1	X
+ID_STR_DS_ITEM_0140	Numerator - reducing agent level stuck diagnosis	X
+ID_STR_DS_ITEM_0141	Denominator - reducing agent level stuck diagnosis	X
+ID_STR_DS_ITEM_0142	Numerator - reducing agent level stuck diagnosis 1	X
+ID_STR_DS_ITEM_0143	Denominator - reducing agent level stuck diagnosis 1	X
+ID_STR_DS_ITEM_0144	Within one driving cycle consumed reducing agent quantity for enviromental data	X
+ID_STR_DS_ITEM_0145	Overall consumed reducing agent quantity with High Resolution	X
+ID_STR_DS_ITEM_0146	Volume of the reducing agent pump per stroke filtered and normalized	X
+
+;版本信息
+ID_STR_ECU_GROUP_00	版本信息	X
+
+ID_STR_ECU_ITEM_0000	Supplier Identifier Information	X
+ID_STR_ECU_ITEM_0001	ECUManufacturingDate	X
+ID_STR_ECU_ITEM_0002	VIN	X
+ID_STR_ECU_ITEM_0003	ECU Hardware Version Number	X
+ID_STR_ECU_ITEM_0004	ECU Software Version Number	X
+ID_STR_ECU_ITEM_0005	SGMW P/N	X
+ID_STR_ECU_ITEM_0006	Supplier ECU Hardware Number	X
+ID_STR_ECU_ITEM_0007	Supplier ECU Software Number	X
+ID_STR_ECU_ITEM_0008	SGMW ECUSoftwareNumber	X
+
+;数据流或者版本信息switch使用的字符串
+ID_DS_STRING_000	Stop position (not used)	X
+ID_DS_STRING_001	Inizialization (Key-Off)	X
+ID_DS_STRING_002	Accessory position	X
+ID_DS_STRING_003	Run position (Key-On)	X
+ID_DS_STRING_004	Cranking position	X
+ID_DS_STRING_005	Signal not Available	X
+ID_DS_STRING_006	-	X
+ID_DS_STRING_007	Engine off	X
+ID_DS_STRING_008	Cranking	X
+ID_DS_STRING_009	Unused	X
+ID_DS_STRING_010	Engine in Idle	X
+ID_DS_STRING_011	Engine Running(no overspeed limitation activated)	X
+ID_DS_STRING_012	Engine overspeed conditions reached	X
+ID_DS_STRING_013	Urea Tank Heater Not Active	X
+ID_DS_STRING_014	Urea Tank Heater Active	X
+ID_DS_STRING_015	Urea Tube Heater Not Active	X
+ID_DS_STRING_016	Urea Tube Heater Active	X
+ID_DS_STRING_017	Supply System not Enabled	X
+ID_DS_STRING_018	Supply System Enabled	X
+ID_DS_STRING_019	MIL on not request	X
+ID_DS_STRING_020	MIL on request	X
+ID_DS_STRING_021	Pawer latch phase not active	X
+ID_DS_STRING_022	Pawer latch phase active	X
+ID_DS_STRING_023	Not Valid	X
+ID_DS_STRING_024	Valid	X
+ID_DS_STRING_025	Not Frozen	X
+ID_DS_STRING_026	Frozen	X
+ID_DS_STRING_027	Refill not detected	X
+ID_DS_STRING_028	Refill detected	X
+ID_DS_STRING_029	ES_ON	X
+ID_DS_STRING_030	ASYN_ON	X
+ID_DS_STRING_031	SYN_ON	X
+ID_DS_STRING_032	SYN_OFF	X
+ID_DS_STRING_033	PWL	X
+ID_DS_STRING_034	WAIT	X
+ID_DS_STRING_035	DEAC	X
+ID_DS_STRING_036	power latch is not successful	X
+ID_DS_STRING_037	injector protection not active	X
+ID_DS_STRING_038	injector protection active	X
+ID_DS_STRING_039	Driver warning and inducement not active	X
+ID_DS_STRING_040	First reducing agent refilling of the system not completed	X
+ID_DS_STRING_041	Injector heating is not active	X
+ID_DS_STRING_042	Injector heating is active	X

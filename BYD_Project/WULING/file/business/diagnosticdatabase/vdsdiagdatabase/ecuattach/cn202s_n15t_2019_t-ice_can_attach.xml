@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ECUConfig>
+  <SAConfig Platform="Default">
+    <SALevels>
+      <SALevel SubFunc="01" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="d13ac32d" />
+      <SALevel SubFunc="03" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="a32dc79a" />
+      <SALevel SubFunc="05" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="ac4a3291" />
+    </SALevels>
+  </SAConfig>
+  <SAConfig Platform="CN220C" ModuleType="N15T">
+    <SALevels>
+      <SALevel SubFunc="01" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="d13ac32d" />
+      <SALevel SubFunc="03" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="a32dc79a" />
+    </SALevels>
+  </SAConfig>
+</ECUConfig>

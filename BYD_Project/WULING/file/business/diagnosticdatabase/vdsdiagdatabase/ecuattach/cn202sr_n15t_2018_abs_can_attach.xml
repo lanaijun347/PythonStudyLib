@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ECUConfig>
+  <SAConfig Platform="Default">
+    <SALevels>
+      <SALevel SubFunc="01" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="37da1b4c" />
+    </SALevels>
+  </SAConfig>
+  <SAConfig Platform="CN200SAMT">
+    <SALevels>
+      <SALevel SubFunc="01" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="973adf77" />
+    </SALevels>
+  </SAConfig>
+   <SAConfig Platform="CN202SR">
+    <SALevels>
+      <SALevel SubFunc="01" DllName="DSM_Code_SDM.dll" Type="SA_TYPE_ETS" Mask="973adf77" />
+    </SALevels>
+  </SAConfig>
+</ECUConfig>

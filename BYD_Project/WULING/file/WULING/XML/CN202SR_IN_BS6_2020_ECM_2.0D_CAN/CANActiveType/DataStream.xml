@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0">
+	<function ID="ID_FUNCTION_DATASTREAM">
+		<!--选择数据流，并把选择的数据流ID保存到ui_data_buffer中-->
+		<show label="" type="data_stream_select">
+			<param type="function" value="ID_FUNCTION_READ_DATASTREAM"/>
+			<param label="data_stream_id" type="ui_data_buffer" value=""/>
+			<param label="GROUP" type="string" value="0,1,2,3,4,5,6,7,8,9"/>
+			<param label="GROUP" type="string" value="10"/>
+		</show>
+	</function>
+	<function ID="ID_FUNCTION_READ_DATASTREAM">
+		<call_protocol label="data_stream" function="read_data_stream">
+			<param type="ui_data_buffer" value="data_stream_id"/>
+		</call_protocol>
+		<judge_tip_jump use_label="data_stream"/>
+		<show label="" type="read_data_stream">
+			<param type="protocol_data" value="data_stream"/>
+		</show>
+	</function>
+	<data_stream_lib>
+		<!-- Engine data -->
+		<group ID="0" caption="ID_STR_DS_GROUP_00">
+			<!-- Desired indicated engine torque -->
+			<data_stream ID="0" caption="ID_STR_DS_ITEM_0000" unit="NM" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Engine coolant temperature -->
+			<data_stream ID="1" caption="ID_STR_DS_ITEM_0001" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Engine speed -->
+			<data_stream ID="2" caption="ID_STR_DS_ITEM_0002" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Current gear -->
+			<data_stream ID="3" caption="ID_STR_DS_ITEM_0003" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(0,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Engine temperature at start -->
+			<data_stream ID="4" caption="ID_STR_DS_ITEM_0004" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.75</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Inlet Oxycat exhaust gas temperature sensor (T4) -->
+			<data_stream ID="5" caption="ID_STR_DS_ITEM_0005" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_005</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.02-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Inlet turbine temperature sensor (T3) -->
+			<data_stream ID="6" caption="ID_STR_DS_ITEM_0006" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_006</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01960784-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- Temperature downstream high pressure EGR cooler Temperature -->
+			<data_stream ID="7" caption="ID_STR_DS_ITEM_0007" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_007</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.02001221-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- VGT actuator position -->
+			<data_stream ID="8" caption="ID_STR_DS_ITEM_0008" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_008</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.00305185-100</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- Voltage from VGT position sensor -->
+			<data_stream ID="9" caption="ID_STR_DS_ITEM_0009" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_009</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.001220703</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.9f</format>
+			</data_stream>
+			<!-- Swirl position sensor -->
+			<data_stream ID="10" caption="ID_STR_DS_ITEM_0010" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0015259</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- Engine Status -->
+			<data_stream ID="11" caption="ID_STR_DS_ITEM_0011" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_011</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(1,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Engine overspeed counter -->
+			<data_stream ID="12" caption="ID_STR_DS_ITEM_0012" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_012</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Total engine overspeed duration -->
+			<data_stream ID="13" caption="ID_STR_DS_ITEM_0013" unit="ms" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_013</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*10</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Maximum engine overspeed -->
+			<data_stream ID="14" caption="ID_STR_DS_ITEM_0014" unit="rpm" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_014</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- ADC Engine coolant temperature -->
+			<data_stream ID="15" caption="ID_STR_DS_ITEM_0015" unit="mV" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_015</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- Covered distance since last regeneration -->
+			<data_stream ID="16" caption="ID_STR_DS_ITEM_0016" unit="Km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_016</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>3</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*65536+B*256+C)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- Counter of DPF regeneration due to flow resistance -->
+			<data_stream ID="17" caption="ID_STR_DS_ITEM_0017" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_017</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Mean temperature value of the last regenerations (forced + automatic) -->
+			<data_stream ID="18" caption="ID_STR_DS_ITEM_0018" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_018</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.02-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Mean driven distance of the last regenerations (forced + automatic) -->
+			<data_stream ID="19" caption="ID_STR_DS_ITEM_0019" unit="Km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_019</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Mean duration of the last regenerations -->
+			<data_stream ID="20" caption="ID_STR_DS_ITEM_0020" unit="s" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_020</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Percentage time of regeneration -->
+			<data_stream ID="21" caption="ID_STR_DS_ITEM_0021" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_021</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0015259</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- RGN interrupted counter OR Number of consecutive interrupted regenerations by key off -->
+			<data_stream ID="22" caption="ID_STR_DS_ITEM_0022" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_022</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Driven distance since DPF lamp ON -->
+			<data_stream ID="23" caption="ID_STR_DS_ITEM_0023" unit="Km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_023</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- TVA DC motor required position -->
+			<data_stream ID="24" caption="ID_STR_DS_ITEM_0024" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_024</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0015259</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- Starter engagement release result-Powerstage high side -->
+			<data_stream ID="25" caption="ID_STR_DS_ITEM_0025" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_025</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0015;ELSE Y=@0318;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Starter engagement release result-Powerstage low side -->
+			<data_stream ID="26" caption="ID_STR_DS_ITEM_0026" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_025</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X2)Y=@0015;ELSE Y=@0318;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Voltage feedback signal status from starte-Starter motor signal feedback -->
+			<data_stream ID="27" caption="ID_STR_DS_ITEM_0027" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_026</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0346;ELSE Y=@0345;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Status message for oil pressure sensing-Oil pressure switch -->
+			<data_stream ID="28" caption="ID_STR_DS_ITEM_0028" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_027</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0348;ELSE Y=@0347;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+		</group>
+		<!-- Air conditioning system data -->
+		<group ID="1" caption="ID_STR_DS_GROUP_01">
+			<!-- A/C pressure sensor -->
+			<data_stream ID="29" caption="ID_STR_DS_ITEM_0029" unit="hPa" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*10</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- A/C compressor clutch relay status -->
+			<data_stream ID="30" caption="ID_STR_DS_ITEM_0030" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(2,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+		</group>
+		<!-- Exhaust gas recirculation data -->
+		<group ID="2" caption="ID_STR_DS_GROUP_02">
+			<!-- Air flow rate from mass air flow sensor measured -->
+			<data_stream ID="31" caption="ID_STR_DS_ITEM_0031" unit="mg/str" min="" max="" self_learn="0">
+				<command_id>DS_CMD_02_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.5-200</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- ADC Intake manifold air temperature  (Boost pressure sensor) -->
+			<data_stream ID="32" caption="ID_STR_DS_ITEM_0032" unit="mV" min="" max="" self_learn="0">
+				<command_id>DS_CMD_02_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+		</group>
+		<!-- Evaporative emission data -->
+		<group ID="3" caption="ID_STR_DS_GROUP_03">
+			<!-- Turbocharger Pressure Actuator Command -->
+			<data_stream ID="33" caption="ID_STR_DS_ITEM_0033" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.00305185+0,0x8000,0xFFFF,((A*256+B)-65535)*0.00305185+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+		</group>
+		<!-- The fuel system data -->
+		<group ID="4" caption="ID_STR_DS_GROUP_04">
+			<!-- Accelerator pedal position -->
+			<data_stream ID="34" caption="ID_STR_DS_ITEM_0034" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0015259</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- Accelerator pedal potentiometer 1 -->
+			<data_stream ID="35" caption="ID_STR_DS_ITEM_0035" unit="mV" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- Accelerator pedal potentiometer 2 -->
+			<data_stream ID="36" caption="ID_STR_DS_ITEM_0036" unit="mV" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- Total fuel correction in cylinder 1 -->
+			<data_stream ID="37" caption="ID_STR_DS_ITEM_0037" unit="mm³/str" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.01+0,0x8000,0xFFFF,((A*256+B)-65535)*0.01+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Total fuel correction in cylinder 2 -->
+			<data_stream ID="38" caption="ID_STR_DS_ITEM_0038" unit="mm³/str" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.01+0,0x8000,0xFFFF,((A*256+B)-65535)*0.01+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Total fuel correction in cylinder 3 -->
+			<data_stream ID="39" caption="ID_STR_DS_ITEM_0039" unit="mm³/str" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_005</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.01+0,0x8000,0xFFFF,((A*256+B)-65535)*0.01+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Total fuel correction in cylinder 4 -->
+			<data_stream ID="40" caption="ID_STR_DS_ITEM_0040" unit="mm³/str" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_006</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="LJ">
+					<!--公式-->
+					<formula>2,1,0x0000,0x7FFF,(A*256+B)*0.01+0,0x8000,0xFFFF,((A*256+B)-65535)*0.01+0</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Fuel metering unit current -->
+			<data_stream ID="41" caption="ID_STR_DS_ITEM_0041" unit="mA" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_007</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Elapsed time in engine running with low oil pressure condition -->
+			<data_stream ID="42" caption="ID_STR_DS_ITEM_0042" unit="min" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_008</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*10</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- HP-EGR Cooler Bypass status-EGR cooler closed -->
+			<data_stream ID="43" caption="ID_STR_DS_ITEM_0043" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_009</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0319;ELSE Y=@0076;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- HP-EGR Cooler Bypass status-EGR cooler bypass in fault -->
+			<data_stream ID="44" caption="ID_STR_DS_ITEM_0044" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_009</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X2)Y=@0319;ELSE Y=@0076;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+		</group>
+		<!-- Fuel adjustment data -->
+		<group ID="5" caption="ID_STR_DS_GROUP_05">
+			<!-- Fuel consumption -->
+			<data_stream ID="45" caption="ID_STR_DS_ITEM_0045" unit="L/h" min="" max="" self_learn="0">
+				<command_id>DS_CMD_05_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.0004</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- ADC fuel temperature sensor -->
+			<data_stream ID="46" caption="ID_STR_DS_ITEM_0046" unit="mV" min="" max="" self_learn="0">
+				<command_id>DS_CMD_05_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- Total fuel consumption -->
+			<data_stream ID="47" caption="ID_STR_DS_ITEM_0047" unit="L" min="" max="" self_learn="0">
+				<command_id>DS_CMD_05_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>3</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*65536+B*256+C)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Water present in fuel filter -->
+			<data_stream ID="48" caption="ID_STR_DS_ITEM_0048" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_05_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0321;ELSE Y=@0320;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+		</group>
+		<!-- Oxygen sensor data -->
+		<group ID="6" caption="ID_STR_DS_GROUP_06">
+			<!-- Sensor voltage from TVA -->
+			<data_stream ID="49" caption="ID_STR_DS_ITEM_0049" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_06_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.001220704</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.9f</format>
+			</data_stream>
+			<!-- Differential pressure sensor -->
+			<data_stream ID="50" caption="ID_STR_DS_ITEM_0050" unit="mBar" min="" max="" self_learn="0">
+				<command_id>DS_CMD_06_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*1-32767</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Fuel temperature sensor -->
+			<data_stream ID="51" caption="ID_STR_DS_ITEM_0051" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_06_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.02-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Outlet DPF temperature sensor (T6) -->
+			<data_stream ID="52" caption="ID_STR_DS_ITEM_0052" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_06_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.02-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Inlet PreCAT exhaust gas temperature sensor (T5) -->
+			<data_stream ID="53" caption="ID_STR_DS_ITEM_0053" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_06_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.02-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Fuel rail pressure measured (sensor) -->
+			<data_stream ID="54" caption="ID_STR_DS_ITEM_0054" unit="bar" min="" max="" self_learn="0">
+				<command_id>DS_CMD_06_005</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.05</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Upstream O2 heater status -->
+			<data_stream ID="55" caption="ID_STR_DS_ITEM_0055" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_06_006</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.0015259</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.7f</format>
+			</data_stream>
+			<!-- Boost pressure from sensor -->
+			<data_stream ID="56" caption="ID_STR_DS_ITEM_0056" unit="hPa" min="" max="" self_learn="0">
+				<command_id>DS_CMD_06_007</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*1-32767</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Boost temperature from sensor -->
+			<data_stream ID="57" caption="ID_STR_DS_ITEM_0057" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_06_008</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.02-40</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- Lambda sensor O2 concentration -->
+			<data_stream ID="58" caption="ID_STR_DS_ITEM_0058" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_06_009</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.00152588</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+		</group>
+		<!-- Light data -->
+		<group ID="7" caption="ID_STR_DS_GROUP_07">
+			<!-- The glow control Lamp activation in OFF mode -->
+			<data_stream ID="59" caption="ID_STR_DS_ITEM_0059" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- The glow control Lamp activation in ON mode -->
+			<data_stream ID="60" caption="ID_STR_DS_ITEM_0060" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X2)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Lamp activation in BLINKING mode -->
+			<data_stream ID="61" caption="ID_STR_DS_ITEM_0061" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X4)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Lamp activation in ON mode during lamp test -->
+			<data_stream ID="62" caption="ID_STR_DS_ITEM_0062" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X10)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Priority command for lamp activation in blinking mode received -->
+			<data_stream ID="63" caption="ID_STR_DS_ITEM_0063" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X40)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- IOLI command for lamp activation in OFF mode received -->
+			<data_stream ID="64" caption="ID_STR_DS_ITEM_0064" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- IOLI command for lamp activation in ON mode received -->
+			<data_stream ID="65" caption="ID_STR_DS_ITEM_0065" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_000</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- IOLI command for lamp activation in automatic cycle mode received -->
+			<data_stream ID="66" caption="ID_STR_DS_ITEM_0066" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_000</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X2)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Lamp activation in OFF mode -->
+			<data_stream ID="67" caption="ID_STR_DS_ITEM_0067" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Lamp activation in ON mode -->
+			<data_stream ID="68" caption="ID_STR_DS_ITEM_0068" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X2)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Lamp activation in BLINKING mode -->
+			<data_stream ID="69" caption="ID_STR_DS_ITEM_0069" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X4)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Lamp activation in ON mode during lamp test -->
+			<data_stream ID="70" caption="ID_STR_DS_ITEM_0070" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X10)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Priority command for lamp activation in blinking mode received -->
+			<data_stream ID="71" caption="ID_STR_DS_ITEM_0071" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X40)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- IOLI command for lamp activation in OFF mode received -->
+			<data_stream ID="72" caption="ID_STR_DS_ITEM_0072" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X80)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- IOLI command for lamp activation in ON mode received -->
+			<data_stream ID="73" caption="ID_STR_DS_ITEM_0073" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_001</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- IOLI command for lamp activation in automatic cycle mode received -->
+			<data_stream ID="74" caption="ID_STR_DS_ITEM_0074" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_001</command_id>
+				<valid_byte_offset>4</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X2)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Clutch switch status (Normally open) -->
+			<data_stream ID="75" caption="ID_STR_DS_ITEM_0075" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="X117">
+					<!--公式-->
+					<formula>IF(X1&amp;0X1)Y=@0009;ELSE Y=@0008;</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+		</group>
+		<!-- Air intake data -->
+		<group ID="8" caption="ID_STR_DS_GROUP_08">
+			<!-- EGR hp DC Motor required position -->
+			<data_stream ID="76" caption="ID_STR_DS_ITEM_0076" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_08_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.00305185-100</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.8f</format>
+			</data_stream>
+			<!-- Air flow rate mass target -->
+			<data_stream ID="77" caption="ID_STR_DS_ITEM_0077" unit="mg/str" min="" max="" self_learn="0">
+				<command_id>DS_CMD_08_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.5-200</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+		</group>
+		<!-- The instrument shows data -->
+		<group ID="9" caption="ID_STR_DS_GROUP_09">
+			<!-- Counter for distance travelled while MIL is activated MIL -->
+			<data_stream ID="78" caption="ID_STR_DS_ITEM_0078" unit="Km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_09_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Battery voltage -->
+			<data_stream ID="79" caption="ID_STR_DS_ITEM_0079" unit="mV" min="" max="" self_learn="0">
+				<command_id>DS_CMD_09_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.5</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- Vehicle speed -->
+			<data_stream ID="80" caption="ID_STR_DS_ITEM_0080" unit="Km/h" min="" max="" self_learn="0">
+				<command_id>DS_CMD_09_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- Vehicle Odometer -->
+			<data_stream ID="81" caption="ID_STR_DS_ITEM_0081" unit="Km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_09_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)*0.001</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.3f</format>
+			</data_stream>
+			<!-- Brake lamp switch (main) -->
+			<data_stream ID="82" caption="ID_STR_DS_ITEM_0082" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_09_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Clutch switch status (Normally Closed) -->
+			<data_stream ID="83" caption="ID_STR_DS_ITEM_0083" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_09_005</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(3,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- Cruise speed -->
+			<data_stream ID="84" caption="ID_STR_DS_ITEM_0084" unit="Km/h" min="" max="" self_learn="0">
+				<command_id>DS_CMD_09_006</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- Odometer value at last overspeed detection -->
+			<data_stream ID="85" caption="ID_STR_DS_ITEM_0085" unit="km" min="" max="" self_learn="0">
+				<command_id>DS_CMD_09_007</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>3</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*65536+B*256+C)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+		</group>
+		<!-- Injector Data -->
+		<group ID="10" caption="ID_STR_DS_GROUP_10">
+			<!-- IMA code of injector cylinder 1 -->
+			<data_stream ID="86" caption="ID_STR_DS_ITEM_0086" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_10_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(4,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- IMA code of injector cylinder 2 -->
+			<data_stream ID="87" caption="ID_STR_DS_ITEM_0087" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_10_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(4,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- IMA code of injector cylinder 3 -->
+			<data_stream ID="88" caption="ID_STR_DS_ITEM_0088" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_10_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(4,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- IMA code of injector cylinder 4 -->
+			<data_stream ID="89" caption="ID_STR_DS_ITEM_0089" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_10_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(4,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+		</group>
+	</data_stream_lib>
+	<switchs>
+		<!-- 00:Gear 0 (Neutral) 01:Gear 1 02:Gear 2 03:Gear 3 04:Gear 4 05:Gear 5 06:Gear 6 07:Gear 7 08:Gear 8 09:Gear 9 0A:Reverse gear 1 0B:Reverse gear 2 其他:-  -->
+		<switch ID="0">
+			<case value="0x00">ID_DS_STRING_000</case>
+			<case value="0x01">ID_DS_STRING_001</case>
+			<case value="0x02">ID_DS_STRING_002</case>
+			<case value="0x03">ID_DS_STRING_003</case>
+			<case value="0x04">ID_DS_STRING_004</case>
+			<case value="0x05">ID_DS_STRING_005</case>
+			<case value="0x06">ID_DS_STRING_006</case>
+			<case value="0x07">ID_DS_STRING_007</case>
+			<case value="0x08">ID_DS_STRING_008</case>
+			<case value="0x09">ID_DS_STRING_009</case>
+			<case value="0x0A">ID_DS_STRING_010</case>
+			<case value="0x0B">ID_DS_STRING_011</case>
+			<default>ID_DS_STRING_012</default>
+		</switch>
+		<!-- 00:Engine not running & Ignition ON 01:Engine cranking  in progress 02:Engine Idling 03:Engine running 04:Engine ready to crank 05:Engine stalled 其他:-  -->
+		<switch ID="1">
+			<case value="0x00">ID_DS_STRING_013</case>
+			<case value="0x01">ID_DS_STRING_014</case>
+			<case value="0x02">ID_DS_STRING_015</case>
+			<case value="0x03">ID_DS_STRING_016</case>
+			<case value="0x04">ID_DS_STRING_017</case>
+			<case value="0x05">ID_DS_STRING_018</case>
+			<default>ID_DS_STRING_012</default>
+		</switch>
+		<!-- 注释太长，不显示 -->
+		<switch ID="2">
+			<case value="0x00">ID_DS_STRING_019</case>
+			<case value="0x01">ID_DS_STRING_020</case>
+			<case value="0x02">ID_DS_STRING_021</case>
+			<case value="0x03">ID_DS_STRING_022</case>
+			<default>ID_DS_STRING_012</default>
+		</switch>
+		<!-- 00:OFF 01:ON 其他:-  -->
+		<switch ID="3">
+			<case value="0x00">ID_DS_STRING_023</case>
+			<case value="0x01">ID_DS_STRING_024</case>
+			<default>ID_DS_STRING_012</default>
+		</switch>
+		<!-- 00:A 01:B 02:C 03:D 04:E 05:F 06:G 07:H 08:I 09:K 0A:L 0B:M 0C:N 0D:O 0E:P 0F:R 10:S 11:T 12:U 13:V 14:W 15:21 16:Y 17:Z 18:1 19:2 1A:3 1B:4 1C:5 1D:6 1E:7 1F:8 其他:-  -->
+		<switch ID="4">
+			<case value="0x00">ID_DS_STRING_025</case>
+			<case value="0x01">ID_DS_STRING_026</case>
+			<case value="0x02">ID_DS_STRING_027</case>
+			<case value="0x03">ID_DS_STRING_028</case>
+			<case value="0x04">ID_DS_STRING_029</case>
+			<case value="0x05">ID_DS_STRING_030</case>
+			<case value="0x06">ID_DS_STRING_031</case>
+			<case value="0x07">ID_DS_STRING_032</case>
+			<case value="0x08">ID_DS_STRING_033</case>
+			<case value="0x09">ID_DS_STRING_034</case>
+			<case value="0x0A">ID_DS_STRING_035</case>
+			<case value="0x0B">ID_DS_STRING_036</case>
+			<case value="0x0C">ID_DS_STRING_037</case>
+			<case value="0x0D">ID_DS_STRING_038</case>
+			<case value="0x0E">ID_DS_STRING_039</case>
+			<case value="0x0F">ID_DS_STRING_040</case>
+			<case value="0x10">ID_DS_STRING_041</case>
+			<case value="0x11">ID_DS_STRING_042</case>
+			<case value="0x12">ID_DS_STRING_043</case>
+			<case value="0x13">ID_DS_STRING_044</case>
+			<case value="0x14">ID_DS_STRING_045</case>
+			<case value="0x15">ID_DS_STRING_046</case>
+			<case value="0x16">ID_DS_STRING_047</case>
+			<case value="0x17">ID_DS_STRING_048</case>
+			<case value="0x18">ID_DS_STRING_049</case>
+			<case value="0x19">ID_DS_STRING_050</case>
+			<case value="0x1A">ID_DS_STRING_051</case>
+			<case value="0x1B">ID_DS_STRING_052</case>
+			<case value="0x1C">ID_DS_STRING_053</case>
+			<case value="0x1D">ID_DS_STRING_054</case>
+			<case value="0x1E">ID_DS_STRING_055</case>
+			<case value="0x1F">ID_DS_STRING_056</case>
+			<default>ID_DS_STRING_012</default>
+		</switch>
+	</switchs>
+</root>

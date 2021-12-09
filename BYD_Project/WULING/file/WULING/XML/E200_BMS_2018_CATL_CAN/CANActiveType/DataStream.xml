@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0">
+	<function ID="ID_FUNCTION_DATASTREAM">
+		<!--选择数据流，并把选择的数据流ID保存到ui_data_buffer中-->
+		<show label="" type="data_stream_select">
+			<param type="function" value="ID_FUNCTION_READ_DATASTREAM"/>
+			<param label="data_stream_id" type="ui_data_buffer" value=""/>
+			<param label="GROUP" type="string" value="0,1,2,3,4,5,6,7,8,9"/>
+			<param label="GROUP" type="string" value="10"/>
+		</show>
+	</function>
+	<function ID="ID_FUNCTION_READ_DATASTREAM">
+		<call_protocol label="data_stream" function="read_data_stream">
+			<param type="ui_data_buffer" value="data_stream_id"/>
+		</call_protocol>
+		<judge_tip_jump use_label="data_stream"/>
+		<show label="" type="read_data_stream">
+			<param type="protocol_data" value="data_stream"/>
+		</show>
+	</function>
+	<data_stream_lib>
+		<!-- 电池包继电器数据 -->
+		<group ID="0" caption="ID_STR_DS_GROUP_00">
+			<!-- 主负继电器计数 -->
+			<data_stream ID="0" caption="ID_STR_DS_ITEM_0000" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>3</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*65536+B*256+C)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 预充继电器计数 -->
+			<data_stream ID="1" caption="ID_STR_DS_ITEM_0001" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>3</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*65536+B*256+C)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 慢充继电器计数 -->
+			<data_stream ID="2" caption="ID_STR_DS_ITEM_0002" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>3</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*65536+B*256+C)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 加热继电器计数 -->
+			<data_stream ID="3" caption="ID_STR_DS_ITEM_0003" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>3</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*65536+B*256+C)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 主正继电器状态 -->
+			<data_stream ID="4" caption="ID_STR_DS_ITEM_0004" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(0,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 主负继电器状态 -->
+			<data_stream ID="5" caption="ID_STR_DS_ITEM_0005" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_005</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(0,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 预充继电器状态 -->
+			<data_stream ID="6" caption="ID_STR_DS_ITEM_0006" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_006</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(0,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 慢充继电器状态 -->
+			<data_stream ID="7" caption="ID_STR_DS_ITEM_0007" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_007</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(0,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 加热继电器状态 -->
+			<data_stream ID="8" caption="ID_STR_DS_ITEM_0008" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_008</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(0,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 电池包加热检验 -->
+			<data_stream ID="9" caption="ID_STR_DS_ITEM_0009" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_009</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(1,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 电芯数量 -->
+			<data_stream ID="10" caption="ID_STR_DS_ITEM_0010" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_010</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电芯温度传感器个数 -->
+			<data_stream ID="11" caption="ID_STR_DS_ITEM_0011" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_00_011</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+		</group>
+		<!-- OBC数据 -->
+		<group ID="1" caption="ID_STR_DS_GROUP_01">
+			<!-- 充电机输入最大电流 -->
+			<data_stream ID="12" caption="ID_STR_DS_ITEM_0012" unit="A" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- OBC状态 -->
+			<data_stream ID="13" caption="ID_STR_DS_ITEM_0013" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(2,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- OBC输入电压 -->
+			<data_stream ID="14" caption="ID_STR_DS_ITEM_0014" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- OBC输出电压 -->
+			<data_stream ID="15" caption="ID_STR_DS_ITEM_0015" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- OBC输出电流 -->
+			<data_stream ID="16" caption="ID_STR_DS_ITEM_0016" unit="A" min="" max="" self_learn="0">
+				<command_id>DS_CMD_01_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+		</group>
+		<!-- 电池包电压数据 -->
+		<group ID="2" caption="ID_STR_DS_GROUP_02">
+			<!-- 电池包外部电压 -->
+			<data_stream ID="17" caption="ID_STR_DS_ITEM_0017" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_02_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 电池包单体电压最高位置 -->
+			<data_stream ID="18" caption="ID_STR_DS_ITEM_0018" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_02_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电池包单体电压最低位置 -->
+			<data_stream ID="19" caption="ID_STR_DS_ITEM_0019" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_02_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电池包单体最高电压 -->
+			<data_stream ID="20" caption="ID_STR_DS_ITEM_0020" unit="mV" min="" max="" self_learn="0">
+				<command_id>DS_CMD_02_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电池包单体最低电压 -->
+			<data_stream ID="21" caption="ID_STR_DS_ITEM_0021" unit="mV" min="" max="" self_learn="0">
+				<command_id>DS_CMD_02_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电池包内部电压 -->
+			<data_stream ID="22" caption="ID_STR_DS_ITEM_0022" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_02_005</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 电池包总电压状态 -->
+			<data_stream ID="23" caption="ID_STR_DS_ITEM_0023" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_02_006</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(3,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 电池电压传感器状态 -->
+			<data_stream ID="24" caption="ID_STR_DS_ITEM_0024" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_02_007</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(4,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+		</group>
+		<!-- 电池包电流数据 -->
+		<group ID="3" caption="ID_STR_DS_GROUP_03">
+			<!-- 电池包总电流 -->
+			<data_stream ID="25" caption="ID_STR_DS_ITEM_0025" unit="A" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1-1000</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 电池电流传感器状态 -->
+			<data_stream ID="26" caption="ID_STR_DS_ITEM_0026" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_03_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(4,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+		</group>
+		<!-- 电池包温度数据 -->
+		<group ID="4" caption="ID_STR_DS_GROUP_04">
+			<!-- 电池包模块平均温度 -->
+			<data_stream ID="27" caption="ID_STR_DS_ITEM_0027" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1-50</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电池包模块最高温度 -->
+			<data_stream ID="28" caption="ID_STR_DS_ITEM_0028" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1-50</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电池包模块最低温度 -->
+			<data_stream ID="29" caption="ID_STR_DS_ITEM_0029" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1-50</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电池包模块温度最高位置 -->
+			<data_stream ID="30" caption="ID_STR_DS_ITEM_0030" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电池包模块温度最低位置 -->
+			<data_stream ID="31" caption="ID_STR_DS_ITEM_0031" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电池包最高温度 -->
+			<data_stream ID="32" caption="ID_STR_DS_ITEM_0032" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_005</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1-50</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电池包最低温度 -->
+			<data_stream ID="33" caption="ID_STR_DS_ITEM_0033" unit="℃" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_006</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*1-50</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电池包温度状态 -->
+			<data_stream ID="34" caption="ID_STR_DS_ITEM_0034" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_007</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(5,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 电池绝缘状态 -->
+			<data_stream ID="35" caption="ID_STR_DS_ITEM_0035" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_008</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(6,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 电池CAN通讯状态 -->
+			<data_stream ID="36" caption="ID_STR_DS_ITEM_0036" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_009</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(4,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 电池温度传感器状态 -->
+			<data_stream ID="37" caption="ID_STR_DS_ITEM_0037" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_04_010</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(4,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+		</group>
+		<!-- 电机数据 -->
+		<group ID="5" caption="ID_STR_DS_GROUP_05">
+			<!-- 电机当前工作状态 -->
+			<data_stream ID="38" caption="ID_STR_DS_ITEM_0038" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_05_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(7,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 电机变频器电压 -->
+			<data_stream ID="39" caption="ID_STR_DS_ITEM_0039" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_05_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+		</group>
+		<!-- 车辆数据 -->
+		<group ID="6" caption="ID_STR_DS_GROUP_06">
+			<!-- 车辆操作模式 -->
+			<data_stream ID="40" caption="ID_STR_DS_ITEM_0040" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_06_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(8,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 车辆充电请求 -->
+			<data_stream ID="41" caption="ID_STR_DS_ITEM_0041" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_06_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(9,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+		</group>
+		<!-- 电池包充放电数据 -->
+		<group ID="7" caption="ID_STR_DS_GROUP_07">
+			<!-- 电池包充放电次数 -->
+			<data_stream ID="42" caption="ID_STR_DS_ITEM_0042" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电池包剩余充电时间 -->
+			<data_stream ID="43" caption="ID_STR_DS_ITEM_0043" unit="min" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电池包继续充电可用功率 -->
+			<data_stream ID="44" caption="ID_STR_DS_ITEM_0044" unit="kw" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 电池包继续放电可用功率 -->
+			<data_stream ID="45" caption="ID_STR_DS_ITEM_0045" unit="kw" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 电池包2S脉冲充电可用功率 -->
+			<data_stream ID="46" caption="ID_STR_DS_ITEM_0046" unit="kw" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 电池包2S脉冲放电可用功率 -->
+			<data_stream ID="47" caption="ID_STR_DS_ITEM_0047" unit="kw" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_005</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 电池包10S脉冲充电可用功率 -->
+			<data_stream ID="48" caption="ID_STR_DS_ITEM_0048" unit="kw" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_006</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 电池包10S脉冲放电可用功率 -->
+			<data_stream ID="49" caption="ID_STR_DS_ITEM_0049" unit="kw" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_007</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.01</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.2f</format>
+			</data_stream>
+			<!-- 电池包完成充电电压 -->
+			<data_stream ID="50" caption="ID_STR_DS_ITEM_0050" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_008</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 电池包累计充电电量 -->
+			<data_stream ID="51" caption="ID_STR_DS_ITEM_0051" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_009</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电池包累计放电电量 -->
+			<data_stream ID="52" caption="ID_STR_DS_ITEM_0052" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_07_010</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+		</group>
+		<!-- 电池包状态数据 -->
+		<group ID="8" caption="ID_STR_DS_GROUP_08">
+			<!-- 电池包SOH -->
+			<data_stream ID="53" caption="ID_STR_DS_ITEM_0053" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_08_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.3921</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- 电池包SOC -->
+			<data_stream ID="54" caption="ID_STR_DS_ITEM_0054" unit="%" min="" max="" self_learn="0">
+				<command_id>DS_CMD_08_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>A*0.3921</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.4f</format>
+			</data_stream>
+			<!-- 电池包绝缘值 -->
+			<data_stream ID="55" caption="ID_STR_DS_ITEM_0055" unit="kΩ" min="" max="" self_learn="0">
+				<command_id>DS_CMD_08_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</data_stream>
+			<!-- 电池电源状态 -->
+			<data_stream ID="56" caption="ID_STR_DS_ITEM_0056" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_08_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(10,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 电池包慢充状态 -->
+			<data_stream ID="57" caption="ID_STR_DS_ITEM_0057" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_08_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(11,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 电池保险丝状态 -->
+			<data_stream ID="58" caption="ID_STR_DS_ITEM_0058" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_08_005</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(12,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 电池包高压互锁状态 -->
+			<data_stream ID="59" caption="ID_STR_DS_ITEM_0059" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_08_006</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(13,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 电池包故障等级 -->
+			<data_stream ID="60" caption="ID_STR_DS_ITEM_0060" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_08_007</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(14,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 电池包单体平均电源状态 -->
+			<data_stream ID="61" caption="ID_STR_DS_ITEM_0061" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_08_008</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(5,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+		</group>
+		<!-- BMS数据 -->
+		<group ID="9" caption="ID_STR_DS_GROUP_09">
+			<!-- BMS高压功率请求 -->
+			<data_stream ID="62" caption="ID_STR_DS_ITEM_0062" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_09_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(15,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 电池管理系统充电电流请求 -->
+			<data_stream ID="63" caption="ID_STR_DS_ITEM_0063" unit="A" min="" max="" self_learn="0">
+				<command_id>DS_CMD_09_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+			<!-- 电池管理系统充电电压请求 -->
+			<data_stream ID="64" caption="ID_STR_DS_ITEM_0064" unit="V" min="" max="" self_learn="0">
+				<command_id>DS_CMD_09_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*256+B)*0.1</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.1f</format>
+			</data_stream>
+		</group>
+		<!-- 其他数据 -->
+		<group ID="10" caption="ID_STR_DS_GROUP_10">
+			<!-- 气囊状态 -->
+			<data_stream ID="65" caption="ID_STR_DS_ITEM_0065" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_10_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(16,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 碰撞状态 -->
+			<data_stream ID="66" caption="ID_STR_DS_ITEM_0066" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_10_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(17,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 禁止绝缘 -->
+			<data_stream ID="67" caption="ID_STR_DS_ITEM_0067" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_10_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(18,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 均衡标识 -->
+			<data_stream ID="68" caption="ID_STR_DS_ITEM_0068" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_10_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(19,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+			<!-- 钥匙位置 -->
+			<data_stream ID="69" caption="ID_STR_DS_ITEM_0069" unit="-" min="" max="" self_learn="0">
+				<command_id>DS_CMD_10_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>switch(20,A)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>STRING</format>
+			</data_stream>
+		</group>
+	</data_stream_lib>
+	<switchs>
+		<!-- 00:断开 01:连接 02:粘连 03:开路 其他:-  -->
+		<switch ID="0">
+			<case value="0x00">ID_DS_STRING_000</case>
+			<case value="0x01">ID_DS_STRING_001</case>
+			<case value="0x02">ID_DS_STRING_002</case>
+			<case value="0x03">ID_DS_STRING_003</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:正常加热阈值 01:测试加热阈值 其他:-  -->
+		<switch ID="1">
+			<case value="0x00">ID_DS_STRING_005</case>
+			<case value="0x01">ID_DS_STRING_006</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:充电准备完成 01:正常工作 02:降功率工作 03:故障 04:待机 其他:-  -->
+		<switch ID="2">
+			<case value="0x00">ID_DS_STRING_007</case>
+			<case value="0x01">ID_DS_STRING_008</case>
+			<case value="0x02">ID_DS_STRING_009</case>
+			<case value="0x03">ID_DS_STRING_010</case>
+			<case value="0x04">ID_DS_STRING_011</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:正常 01:电压过高 02:电压过低 其他:-  -->
+		<switch ID="3">
+			<case value="0x00">ID_DS_STRING_012</case>
+			<case value="0x01">ID_DS_STRING_013</case>
+			<case value="0x02">ID_DS_STRING_014</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:正常 01:异常 其他:-  -->
+		<switch ID="4">
+			<case value="0x00">ID_DS_STRING_012</case>
+			<case value="0x01">ID_DS_STRING_015</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:正常 01:电压过高 02:电压过低 03:电压不均衡 其他:-  -->
+		<switch ID="5">
+			<case value="0x00">ID_DS_STRING_012</case>
+			<case value="0x01">ID_DS_STRING_013</case>
+			<case value="0x02">ID_DS_STRING_014</case>
+			<case value="0x03">ID_DS_STRING_016</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:正常 01:绝缘值低 其他:-  -->
+		<switch ID="6">
+			<case value="0x00">ID_DS_STRING_012</case>
+			<case value="0x01">ID_DS_STRING_017</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:未准备完成 01:低压自检通过 02:MOS管自检通过 03:准备完毕 其他:-  -->
+		<switch ID="7">
+			<case value="0x00">ID_DS_STRING_018</case>
+			<case value="0x01">ID_DS_STRING_019</case>
+			<case value="0x02">ID_DS_STRING_020</case>
+			<case value="0x03">ID_DS_STRING_021</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:休眠 01:初始化 02:上电 03:行驶 04:充电 05:下电 06:故障 07:跛行 其他:-  -->
+		<switch ID="8">
+			<case value="0x00">ID_DS_STRING_022</case>
+			<case value="0x01">ID_DS_STRING_023</case>
+			<case value="0x02">ID_DS_STRING_024</case>
+			<case value="0x03">ID_DS_STRING_025</case>
+			<case value="0x04">ID_DS_STRING_026</case>
+			<case value="0x05">ID_DS_STRING_027</case>
+			<case value="0x06">ID_DS_STRING_010</case>
+			<case value="0x07">ID_DS_STRING_028</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:禁止充电 01:允许充电 02:充电完成 其他:-  -->
+		<switch ID="9">
+			<case value="0x00">ID_DS_STRING_029</case>
+			<case value="0x01">ID_DS_STRING_030</case>
+			<case value="0x02">ID_DS_STRING_031</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:电源断开 01:电源连接 其他:-  -->
+		<switch ID="10">
+			<case value="0x00">ID_DS_STRING_032</case>
+			<case value="0x01">ID_DS_STRING_033</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:不可充电 01:可充电 02:充电完成 其他:-  -->
+		<switch ID="11">
+			<case value="0x00">ID_DS_STRING_034</case>
+			<case value="0x01">ID_DS_STRING_035</case>
+			<case value="0x02">ID_DS_STRING_031</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:正常 01:熔断 其他:-  -->
+		<switch ID="12">
+			<case value="0x00">ID_DS_STRING_012</case>
+			<case value="0x01">ID_DS_STRING_036</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:断开 01:连接 02:粘连 其他:-  -->
+		<switch ID="13">
+			<case value="0x00">ID_DS_STRING_000</case>
+			<case value="0x01">ID_DS_STRING_001</case>
+			<case value="0x02">ID_DS_STRING_002</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:正常 01:放电轻微故障 02:放电功率限制 03:放电跛行行车 04:停车 05:紧急停车 06:充电功率限制 07:充电紧急停止 08:充电紧急停止 09:放电紧急停止 0A:充电紧急停止 其他:-  -->
+		<switch ID="14">
+			<case value="0x00">ID_DS_STRING_012</case>
+			<case value="0x01">ID_DS_STRING_037</case>
+			<case value="0x02">ID_DS_STRING_038</case>
+			<case value="0x03">ID_DS_STRING_039</case>
+			<case value="0x04">ID_DS_STRING_040</case>
+			<case value="0x05">ID_DS_STRING_041</case>
+			<case value="0x06">ID_DS_STRING_042</case>
+			<case value="0x07">ID_DS_STRING_043</case>
+			<case value="0x08">ID_DS_STRING_043</case>
+			<case value="0x09">ID_DS_STRING_044</case>
+			<case value="0x0A">ID_DS_STRING_043</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:断开高压开关 01:紧急断开高压开关 02:闭合高压开关 其他:-  -->
+		<switch ID="15">
+			<case value="0x00">ID_DS_STRING_045</case>
+			<case value="0x01">ID_DS_STRING_046</case>
+			<case value="0x02">ID_DS_STRING_047</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:未点爆 01:点爆 其他:-  -->
+		<switch ID="16">
+			<case value="0x00">ID_DS_STRING_048</case>
+			<case value="0x01">ID_DS_STRING_049</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:未发生后撞 01:发生后撞 其他:-  -->
+		<switch ID="17">
+			<case value="0x00">ID_DS_STRING_050</case>
+			<case value="0x01">ID_DS_STRING_051</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:绝缘正常 01:绝缘异常 其他:-  -->
+		<switch ID="18">
+			<case value="0x00">ID_DS_STRING_052</case>
+			<case value="0x01">ID_DS_STRING_053</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:无均衡 01:开启均衡 02:均衡错误 其他:-  -->
+		<switch ID="19">
+			<case value="0x00">ID_DS_STRING_054</case>
+			<case value="0x01">ID_DS_STRING_055</case>
+			<case value="0x02">ID_DS_STRING_056</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+		<!-- 00:OFF 01:ACC 02:ON 其他:-  -->
+		<switch ID="20">
+			<case value="0x00">ID_DS_STRING_057</case>
+			<case value="0x01">ID_DS_STRING_058</case>
+			<case value="0x02">ID_DS_STRING_059</case>
+			<default>ID_DS_STRING_004</default>
+		</switch>
+	</switchs>
+</root>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0">
+	<DTC_lib>
+		<link_file>Default.html</link_file>
+		<DTC ID="0117"       caption="P0117"      zh_CN="冷却液温度传感器电路对地短路" en_US="wait translete"/>
+		<DTC ID="0118"       caption="P0118"      zh_CN="冷却液温度传感器电路对电源短路/开路" en_US="wait translete"/>
+		<DTC ID="0650"       caption="P0650"      zh_CN="CNG MIL 线路故障电路对地短路或对电源短路或开路" en_US="wait translete"/>
+		<DTC ID="3001"       caption="P3001"      zh_CN="高压燃气压力传感器电路对电源短路/开路" en_US="wait translete"/>
+		<DTC ID="3003"       caption="P3003"      zh_CN="高压燃气压力传感器电路对地短路" en_US="wait translete"/>
+		<DTC ID="3089"       caption="P3089"      zh_CN="燃气电磁阀电路对电源短路" en_US="wait translete"/>
+		<DTC ID="3176"       caption="P3176"      zh_CN="燃料切换开关电路对地短路" en_US="wait translete"/>
+		<DTC ID="3180"       caption="P3180"      zh_CN="燃气温度传感器电路对地短路" en_US="wait translete"/>
+		<DTC ID="3181"       caption="P3181"      zh_CN="燃气温度传感器电路对电源短路/开路" en_US="wait translete"/>
+		<DTC ID="3190"       caption="P3190"      zh_CN="燃气压力传感器电路对电源短路/开路" en_US="wait translete"/>
+		<DTC ID="3192"       caption="P3192"      zh_CN="燃气压力传感器电路对地短路" en_US="wait translete"/>
+		<DTC ID="3201"       caption="P3201"      zh_CN="喷气嘴(1缸)电路对地短路或对电源短路或开路" en_US="wait translete"/>
+		<DTC ID="3202"       caption="P3202"      zh_CN="喷气嘴(2缸)电路对地短路或对电源短路或开路" en_US="wait translete"/>
+		<DTC ID="3203"       caption="P3203"      zh_CN="喷气嘴(3缸)电路对地短路或对电源短路或开路" en_US="wait translete"/>
+		<DTC ID="3204"       caption="P3204"      zh_CN="喷气嘴(4缸)电路对地短路或对电源短路或开路" en_US="wait translete"/>
+		<DTC ID="3222"       caption="P3222"      zh_CN="燃料切换继电器电路(一缸)对电源短路" en_US="wait translete"/>
+		<DTC ID="3223"       caption="P3223"      zh_CN="燃料切换继电器电路(一缸)对电路对地短路或开路" en_US="wait translete"/>
+		<DTC ID="3224"       caption="P3224"      zh_CN="燃料切换继电器电路(二缸)对电源短路" en_US="wait translete"/>
+		<DTC ID="3225"       caption="P3225"      zh_CN="燃料切换继电器电路(二缸)对电路对地短路或开路" en_US="wait translete"/>
+		<DTC ID="3226"       caption="P3226"      zh_CN="燃料切换继电器电路(三缸)对电源短路" en_US="wait translete"/>
+		<DTC ID="3227"       caption="P3227"      zh_CN="燃料切换继电器电路(三缸)对电路对地短路或开路" en_US="wait translete"/>
+		<DTC ID="3228"       caption="P3228"      zh_CN="燃料切换继电器电路(四缸)对电源短路" en_US="wait translete"/>
+		<DTC ID="3229"       caption="P3229"      zh_CN="燃料切换继电器电路(四缸)对电路对地短路或开路" en_US="wait translete"/>
+		<DTC ID="3322"       caption="P3322"      zh_CN="点火切换继电器电路(一缸)对电源短路" en_US="wait translete"/>
+		<DTC ID="3323"       caption="P3323"      zh_CN="点火切换继电器电路(一缸)对地短路或开路" en_US="wait translete"/>
+		<DTC ID="3324"       caption="P3324"      zh_CN="点火切换继电器电路(二缸)对电源短路" en_US="wait translete"/>
+		<DTC ID="3325"       caption="P3325"      zh_CN="点火切换继电器电路(二缸)对地短路或开路" en_US="wait translete"/>
+		<DTC ID="3326"       caption="P3326"      zh_CN="点火切换继电器电路(三缸)对电源短路" en_US="wait translete"/>
+		<DTC ID="3327"       caption="P3327"      zh_CN="点火切换继电器电路(三缸)对地短路或开路" en_US="wait translete"/>
+		<DTC ID="3328"       caption="P3328"      zh_CN="点火切换继电器电路(四缸)对电源短路" en_US="wait translete"/>
+		<DTC ID="3329"       caption="P3329"      zh_CN="点火切换继电器电路(四缸)对地短路或开路" en_US="wait translete"/>
+		<DTC ID="3331"       caption="P3331"      zh_CN="燃气气量指示灯电路对地短路或对电源短路或开路" en_US="wait translete"/>
+		<DTC ID="3332"       caption="P3332"      zh_CN="燃气泄漏指示灯电路对地短路或对电源短路或开路" en_US="wait translete"/>
+		<DTC ID="3333"       caption="P3333"      zh_CN="前燃气泄露检测传感器电路故障(燃气管道泄露)" en_US="wait translete"/>
+		<DTC ID="3334"       caption="P3334"      zh_CN="后燃气泄露检测传感器电路故障(燃气管道泄露)" en_US="wait translete"/>
+		<DTC ID="3381"       caption="P3381"      zh_CN="燃料指示灯故障诊断电路对地短路或对电源短路或开路" en_US="wait translete"/>
+	</DTC_lib>
+</root>

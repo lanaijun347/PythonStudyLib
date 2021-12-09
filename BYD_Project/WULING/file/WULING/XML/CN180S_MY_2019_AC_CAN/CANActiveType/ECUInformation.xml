@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root version="1.0">
+	<function ID="ID_FUNCTION_ECU_INFORMATION">
+		<dlg label="wait_dlg" type="wait_dlg" caption="ID_STR_CAPTION" note="ID_STR_READ_ECUINFOR"/>
+		<call_protocol label="read_Ecu_information" function="read_Ecu_information">
+			<!--组号-->
+			<param type="string" value="0"/>
+		</call_protocol>
+		<close use_label="wait_dlg"/>
+		<judge_tip_jump use_label="read_Ecu_information"/>
+		<show type="show_Ecu_information">
+			<param type="protocol_data" value="read_Ecu_information"/>
+		</show>
+	</function>
+	<ECU_informations>
+		<!-- 版本信息 -->
+		<group ID="0" caption="ID_STR_ECU_GROUP_00">
+			<!-- 引导软件标识符 -->
+			<ECU_information ID="0" caption="ID_STR_ECU_ITEM_0000">
+				<command_id>ECU_CMD_00_000</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>3</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula></formula>
+				</caculate>
+				<!--显示控制-->
+				<format>HEX</format>
+			</ECU_information>
+			<!-- SGMW ECU软件号 -->
+			<ECU_information ID="1" caption="ID_STR_ECU_ITEM_0001">
+				<command_id>ECU_CMD_00_001</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</ECU_information>
+			<!-- ECU生产日期 -->
+			<ECU_information ID="2" caption="ID_STR_ECU_ITEM_0002">
+				<command_id>ECU_CMD_00_002</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula></formula>
+				</caculate>
+				<!--显示控制-->
+				<format>HEX</format>
+			</ECU_information>
+			<!-- VIN -->
+			<ECU_information ID="3" caption="ID_STR_ECU_ITEM_0003">
+				<command_id>ECU_CMD_00_003</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>17</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula></formula>
+				</caculate>
+				<!--显示控制-->
+				<format>ASCII</format>
+			</ECU_information>
+			<!-- SGMW ECU硬件号 -->
+			<ECU_information ID="4" caption="ID_STR_ECU_ITEM_0004">
+				<command_id>ECU_CMD_00_004</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</ECU_information>
+			<!-- 零件号 -->
+			<ECU_information ID="5" caption="ID_STR_ECU_ITEM_0005">
+				<command_id>ECU_CMD_00_005</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>4</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula>(A*16777216+B*65536+C*256+D)</formula>
+				</caculate>
+				<!--显示控制-->
+				<format>%.0f</format>
+			</ECU_information>
+			<!-- 硬件号 -->
+			<ECU_information ID="6" caption="ID_STR_ECU_ITEM_0006">
+				<command_id>ECU_CMD_00_006</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>1</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula></formula>
+				</caculate>
+				<!--显示控制-->
+				<format>HEX</format>
+			</ECU_information>
+			<!-- 软件号 -->
+			<ECU_information ID="7" caption="ID_STR_ECU_ITEM_0007">
+				<command_id>ECU_CMD_00_007</command_id>
+				<valid_byte_offset>3</valid_byte_offset>
+				<valid_byte_number>2</valid_byte_number>
+				<caculate type="FORMULA_PARSER">
+					<!--公式-->
+					<formula></formula>
+				</caculate>
+				<!--显示控制-->
+				<format>HEX</format>
+			</ECU_information>
+		</group>
+	</ECU_informations>
+</root>

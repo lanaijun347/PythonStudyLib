@@ -1,0 +1,1232 @@
+轿车\GA3(GA3S视界)\ECM(发动机控制模块)\9BD1\
+轿车\GA3(GA3S视界)\BCM(车身控制模块)\9BD2\
+轿车\GA3(GA3S视界)\TCU(双离合变速箱)\AT(自动变速器)\9BD3\
+轿车\GA3(GA3S视界)\TCU(双离合变速箱)\TCM(变速箱控制模块)\9BD4\
+轿车\GA3(GA3S视界)\ABS(防抱死刹车系统)\9BD5\
+轿车\GA3(GA3S视界)\EPS(电动助力转向系统)\9BD6\
+轿车\GA3(GA3S视界)\TPMS(胎压监测系统)\9BD7\
+轿车\GA3(GA3S视界)\SRS(安全气囊)\9BD8\
+轿车\GA3(GA3S视界)\ICM(组合仪表)\9BD9\
+轿车\GA3(GA3S视界)\DVD(娱乐系统)\CD(娱乐系统)\9BDA\
+轿车\GA3(GA3S视界)\DVD(娱乐系统)\NAVI(娱乐系统)\9BDB\
+轿车\GA3(GA3S视界)\DVD(娱乐系统)\AUDIO(娱乐系统)\9BDC\
+轿车\GA3(GA3S视界)\HVAC(空调系统)\9BDD\
+轿车\GA3(GA3S视界)\PEPS(智能无钥匙启动)\9BDE\
+轿车\GA3(GA3S视界)\RPA(倒车辅助系统)\9BDF\
+轿车\GA3(GA3S视界)\SSU(智能启停系统)\9BE0\
+轿车\GA3(GA3S视界)\TBOX(车网互联模块)\9BE1\
+轿车\GA3(GA3S视界)\GSM(换档杆模块)\9BE2\
+轿车\GA4\EMS(发动机控制模块)\发动机控制模块(1)\9CAE\
+轿车\GA4\EMS(发动机控制模块)\发动机控制模块(2)\9CB6\
+轿车\GA4\AT(自动变速器)\自动变速器(1)\9CB1\
+轿车\GA4\AT(自动变速器)\自动变速器(2)\9CB5\
+轿车\GA4\BCS(制动控制模块)\9CAD\
+轿车\GA4\ICM(组合仪表)\9CA2\
+轿车\GA4\EPB(电子驻车)\9CA9\
+轿车\GA4\SRS(安全气囊)\9CAA\
+轿车\GA4\BCM(车身控制模块)\9CA7\
+轿车\GA4\EPS(电动助力转向系统)\9CAB\
+轿车\GA4\PEPS(智能无钥匙启动)\9CA1\
+轿车\GA4\ESCL(电子转向驻锁)\9CAC\
+轿车\GA4\HVSM(座椅加热模块)\9CA0\
+轿车\GA4\TBOX(车网互联模块)\9CA3\
+轿车\GA4\CD(娱乐系统)\9CA4\
+轿车\GA4\HCP(空调控制面板)\9CA5\
+轿车\GA4\FCP(前排控制面板)\9CA6\
+轿车\GA4\HVAC(空调系统)\9CA8\
+轿车\GA4\TPMS(胎压监测系统)\9CAF\
+轿车\GA4\GWM(独立网关)\9CB0\
+轿车\GA4\RPA(倒车辅助系统)\9CB2\
+轿车\GA4\SVM(全景泊车系统)\9CB3\
+轿车\GA4\WCM(无线充电模块)\9CB4\
+轿车\GA5(1.8T_2.0T VTML)\ECM(发动机控制模块)\9B91\
+轿车\GA5(1.8T_2.0T VTML)\BCM(车身控制模块)\9B92\
+轿车\GA5(1.8T_2.0T VTML)\TCM(变速箱控制模块)\AT(自动变速器)\9B93\
+轿车\GA5(1.8T_2.0T VTML)\TCM(变速箱控制模块)\RMT(手自一体变速箱)\9B94\
+轿车\GA5(1.8T_2.0T VTML)\ABS(防抱死刹车系统)\9B95\
+轿车\GA5(1.8T_2.0T VTML)\SRS(安全气囊)\9B96\
+轿车\GA5(1.8T_2.0T VTML)\ICM(组合仪表)\9B97\
+轿车\GA5(1.8T_2.0T VTML)\DVD(娱乐系统)\CD(娱乐系统)\9B98\
+轿车\GA5(1.8T_2.0T VTML)\DVD(娱乐系统)\6CD(娱乐系统)\9B99\
+轿车\GA5(1.8T_2.0T VTML)\DVD(娱乐系统)\NAVI(娱乐系统)\9B9A\
+轿车\GA5(1.8T_2.0T VTML)\HVAC(空调系统)\9B9B\
+轿车\GA5(1.8T_2.0T VTML)\AFS(大灯调节模块)\9B9C\
+轿车\GA5(1.8T_2.0T VTML)\RPA(倒车辅助系统)\9B9D\
+轿车\GA5(1.6T_1.8T_2.0T DCVVT)\ECM(发动机控制模块)\9BA1\
+轿车\GA5(1.6T_1.8T_2.0T DCVVT)\BCM(车身控制模块)\9BA2\
+轿车\GA5(1.6T_1.8T_2.0T DCVVT)\AT(自动变速器)\9BA3\
+轿车\GA5(1.6T_1.8T_2.0T DCVVT)\ABS(防抱死刹车系统)\9BA4\
+轿车\GA5(1.6T_1.8T_2.0T DCVVT)\TPMS(胎压监测系统)\9BA5\
+轿车\GA5(1.6T_1.8T_2.0T DCVVT)\SRS(安全气囊)\9BA6\
+轿车\GA5(1.6T_1.8T_2.0T DCVVT)\ICM(组合仪表)\9BA7\
+轿车\GA5(1.6T_1.8T_2.0T DCVVT)\DVD(娱乐系统)\CD(娱乐系统)\9BA8\
+轿车\GA5(1.6T_1.8T_2.0T DCVVT)\DVD(娱乐系统)\NAVI(娱乐系统)\9BA9\
+轿车\GA5(1.6T_1.8T_2.0T DCVVT)\HVAC(空调系统)\9BAA\
+轿车\GA5(1.6T_1.8T_2.0T DCVVT)\PEPS(智能无钥匙启动)\9BAB\
+轿车\GA5(1.6T_1.8T_2.0T DCVVT)\AFS(大灯调节模块)\9BAC\
+轿车\GA5(1.6T_1.8T_2.0T DCVVT)\RPA(倒车辅助系统)\9BAD\
+轿车\GA6\ECM(发动机控制模块)\9B71\
+轿车\GA6\BCM(车身控制模块)\9B72\
+轿车\GA6\TCU(双离合变速箱)\9B73\
+轿车\GA6\GSM(换档杆模块)\9B74\
+轿车\GA6\ABS(防抱死刹车系统)\9B75\
+轿车\GA6\TPMS(胎压监测系统)\9B76\
+轿车\GA6\SRS(安全气囊)\9B77\
+轿车\GA6\ICM(组合仪表)\9B78\
+轿车\GA6\DVD(娱乐系统)\CD(娱乐系统)\9B79\
+轿车\GA6\DVD(娱乐系统)\AV(娱乐系统)\9B7A\
+轿车\GA6\DVD(娱乐系统)\NAVI(娱乐系统)\9B7B\
+轿车\GA6\HVAC(空调系统)\9B7C\
+轿车\GA6\PEPS(智能无钥匙启动)\9B7D\
+轿车\GA6\RPA(倒车辅助系统)\9B7E\
+轿车\GA6\EPB(电子驻车)\9B7F\
+轿车\GA6\FCP(前排控制面板)\9B80\
+轿车\GA6\HVSM(座椅加热模块)\9B81\
+轿车\GA6\SSU(智能启停系统)\9B82\
+轿车\GA6\TBOX(车网互联模块)\9B83\
+轿车\GA6\BSD(盲区监测系统)\9B84\
+轿车\GA6\FCW(前碰撞预警系统)\9B85\
+轿车\GA6\LDW(车道偏移系统)\9B86\
+轿车\GA6\MSM(座椅记忆模块)\9B87\
+轿车\GA6\SVM(全景泊车系统)\9B88\
+轿车\GA6 2019款\EMS(发动机管理系统)\A050\
+轿车\GA6 2019款\AT(自动变速箱)\A051\
+轿车\GA6 2019款\BCS(制动控制系统)\A052\
+轿车\GA6 2019款\SRS(辅助安全系统)\A053\
+轿车\GA6 2019款\GWM(独立网关)\A054\
+轿车\GA6 2019款\MRR(中距离雷达模块)\A055\
+轿车\GA6 2019款\GSM(换挡杆模块)\A056\
+轿车\GA6 2019款\PEPS(智能无钥匙启动)\A057\
+轿车\GA6 2019款\ICM(组合仪表)\A058\
+轿车\GA6 2019款\BCM(车身控制模块)\A059\
+轿车\GA6 2019款\CD(娱乐系统1)\A05A\
+轿车\GA6 2019款\CD(娱乐系统2)\A05B\
+轿车\GA6 2019款\CD(娱乐系统3)\A05C\
+轿车\GA6 2019款\TBOX(车网互联模块)\A05D\
+轿车\GA6 2019款\HVAC(前排空调系统)\A05E\
+轿车\GA6 2019款\HCP(空调控制面板)\A05F\
+轿车\GA6 2019款\RCP(后排控制面板)\A060\
+轿车\GA6 2019款\FCP(前排控制面板)\A061\
+轿车\GA6 2019款\MSM(座椅记忆模块)\A062\
+轿车\GA6 2019款\IAL(氛围灯)\A063\
+轿车\GA6 2019款\HVSM(座椅加热模块)\A064\
+轿车\GA6 2019款\AMP(外置功放)\A065\
+轿车\GA6 2019款\SVM(全景环视系统)\A066\
+轿车\GA6 2019款\RPA(驻车辅助系统1)\A067\
+轿车\GA6 2019款\RPA(驻车辅助系统2)\A068\
+轿车\GA6 2019款\WCM(无线充电模块)\A069\
+轿车\GA6 2019款\EPS(电子助力转向系统)\A06A\
+轿车\GA6 2019款\IFC(智能前向摄像头)\A06B\
+轿车\GA6 2019款\MBSD(主盲区监测系统)\A06C\
+轿车\GA6 2019款\SBSD(从盲区监测系统)\A06D\
+轿车\GA8\ECM(发动机控制系统)\9C01\
+轿车\GA8\BCS(制动控制模块)\9C02\
+轿车\GA8\SRS(安全气囊)\9C03\
+轿车\GA8\AT(自动变速器)\9C04\
+轿车\GA8\BCM(车身控制模块)\9C05\
+轿车\GA8\ICM(组合仪表)\9C06\
+轿车\GA8\TPMS(胎压监测系统)\9C07\
+轿车\GA8\PEPS(智能无钥匙启动)\9C08\
+轿车\GA8\CD(娱乐系统)\9C09\
+轿车\GA8\MSM(座椅记忆模块)\9C0A\
+轿车\GA8\AFS(大灯调节模块)\9C0B\
+轿车\GA8\FCP(前排控制面板)\9C0C\
+轿车\GA8\EPS(电动助力转向系统)\9C0D\
+轿车\GA8\MRR(微波雷达模块)\9C0E\
+轿车\GA8\LDW(车道偏移系统)\9C0F\
+轿车\GA8\RCP(后排控制面板)\9C10\
+轿车\GA8\GWM(独立网关)\9C11\
+轿车\GA8\TBOX(车网互联模块)\9C12\
+轿车\GA8\HVAC(空调系统)\9C13\
+轿车\GA8\SVM(全景泊车系统)\9C14\
+轿车\GA8\RPA(倒车辅助系统)\9C15\
+轿车\GA8\BSD(盲区监测系统)\9C16\
+轿车\GA8\GSM(换档杆模块)\9C17\
+轿车\GA8\EPB(电子驻车)\9C18\
+轿车\GA8\HVSM(座椅加热模块)\9C19\
+轿车\全新传祺GA8\EMS(发动机管理系统)\A0C0\
+轿车\全新传祺GA8\AT(自动变速箱)\A0C1\
+轿车\全新传祺GA8\SRS(辅助安全系统)\A0C2\
+轿车\全新传祺GA8\BCS(制动控制系统)\A0C3\
+轿车\全新传祺GA8\GSM(换挡杆模块)\A0C4\
+轿车\全新传祺GA8\GWM(独立网关)\A0C5\
+轿车\全新传祺GA8\MRR(中距离雷达模块)\A0C6\
+轿车\全新传祺GA8\AFS(大灯调节系统)\A0C7\
+轿车\全新传祺GA8\CD(娱乐系统1)\A0C8\
+轿车\全新传祺GA8\CD(娱乐系统2)\A0C9\
+轿车\全新传祺GA8\CD(娱乐系统3)\A0CA\
+轿车\全新传祺GA8\HVAC(前排空调系统)\A0CB\
+轿车\全新传祺GA8\ICM(组合仪表)\A0CC\
+轿车\全新传祺GA8\TBOX(车网互联模块)\A0CD\
+轿车\全新传祺GA8\BCM(车身控制模块)\A0CE\
+轿车\全新传祺GA8\PEPS(智能无钥匙启动)\A0CF\
+轿车\全新传祺GA8\HCP(空调控制面板)\A0D0\
+轿车\全新传祺GA8\MSM(座椅记忆模块1)\A0D1\
+轿车\全新传祺GA8\MSM(座椅记忆模块2)\A0D2\
+轿车\全新传祺GA8\HVSM(座椅加热模块)\A0D3\
+轿车\全新传祺GA8\FCP(前排控制面板)\A0D4\
+轿车\全新传祺GA8\RCP(后排控制面板)\A0D5\
+轿车\全新传祺GA8\AMP(外置功放)\A0D6\
+轿车\全新传祺GA8\MBSD(主盲区监测系统)\A0D7\
+轿车\全新传祺GA8\SBSD(从盲区监测系统)\A0D8\
+轿车\全新传祺GA8\EPS(电动助力转向系统)\A0D9\
+轿车\全新传祺GA8\SVM(全景环视系统)\A0DA\
+轿车\全新传祺GA8\RPA(倒车辅助系统1)\A0DB\
+轿车\全新传祺GA8\RPA(倒车辅助系统2)\A0DC\
+轿车\全新传祺GA8\WCM(无线充电模块)\A0DD\
+轿车\全新传祺GA8\IFC(智能前向摄像头)\A0DE\
+SUV\GS3\EMS(发动机控制模块)\发动机控制模块(1)\9C75\
+SUV\GS3\EMS(发动机控制模块)\发动机控制模块(2)\9C7E\
+SUV\GS3\TCU(双离合变速箱)\9C74\
+SUV\GS3\BCM(车身控制模块)\9C61\
+SUV\GS3\BCS(制动控制模块)\9C70\
+SUV\GS3\SRS(安全气囊)\9C6F\
+SUV\GS3\ICM(组合仪表)\9C64\
+SUV\GS3\CD(娱乐系统)\9C62\
+SUV\GS3\EPS(电动助力转向系统)\9C6B\
+SUV\GS3\PEPS(智能无钥匙启动)\9C65\
+SUV\GS3\EPB(电子驻车)\9C71\
+SUV\GS3\HVAC(空调系统)\9C68\
+SUV\GS3\FCP(前排控制面板)\9C63\
+SUV\GS3\HCP(空调控制面板)\9C67\
+SUV\GS3\ESCL(电子转向驻锁)\9C6D\
+SUV\GS3\HVSM(座椅加热模块)\9C60\
+SUV\GS3\WCM(无线充电模块)\9C66\
+SUV\GS3\MFS(多功能显示屏)\9C69\
+SUV\GS3\TBOX(车网互联模块)\9C6A\
+SUV\GS3\RPA(倒车辅助系统)\9C6C\
+SUV\GS3\SVM(全景泊车系统)\9C6E\
+SUV\GS3\GWM(独立网关)\9C72\
+SUV\GS3\GSM(换档杆模块)\9C73\
+SUV\GS4\ECM(发动机控制模块)\9B50\
+SUV\GS4\BCM(车身控制模块)\9B51\
+SUV\GS4\TCM(变速箱控制模块)\TCU(双离合变速箱)\9B52\
+SUV\GS4\TCM(变速箱控制模块)\AT(自动变速器)\9B65\
+SUV\GS4\GSM(换档杆模块)\9B53\
+SUV\GS4\BCS(制动控制模块)\ABS(防抱死刹车系统)\9B54\
+SUV\GS4\BCS(制动控制模块)\ESP(电子稳定系统)\9B66\
+SUV\GS4\AFS(大灯调节模块)\9B55\
+SUV\GS4\TPMS(胎压监测系统)\9B56\
+SUV\GS4\EPS(电动助力转向系统)\9B57\
+SUV\GS4\SRS(安全气囊)\9B58\
+SUV\GS4\ICM(组合仪表)\9B59\
+SUV\GS4\DVD(娱乐系统)\CD(娱乐系统)\9B5A\
+SUV\GS4\DVD(娱乐系统)\AV(娱乐系统)\9B5B\
+SUV\GS4\DVD(娱乐系统)\NAVI(娱乐系统)\9B5C\
+SUV\GS4\HVAC(空调系统)\9B5D\
+SUV\GS4\PEPS(智能无钥匙启动)\9B5E\
+SUV\GS4\RPA(倒车辅助系统)\9B5F\
+SUV\GS4\HCP(空调控制面板)\9B60\
+SUV\GS4\FCP(前排控制面板)\9B61\
+SUV\GS4\HVSM(座椅加热模块)\9B62\
+SUV\GS4\SSU(智能启停系统)\9B63\
+SUV\GS4\TBOX(车网互联模块)\9B64\
+SUV\GS4\TMM(智能扭矩系统)\9B67\
+SUV\GS4\SVM(全景泊车系统)\9B68\
+SUV\GS4 2018款\EMS(发动机控制模块)\9CCF\
+SUV\GS4 2018款\TCM(变速箱控制模块)\AT(自动变速器)\9CCD\
+SUV\GS4 2018款\TCM(变速箱控制模块)\TCU(双离合变速箱)\9CD5\
+SUV\GS4 2018款\EPS(电动助力转向系统)\9CD1\
+SUV\GS4 2018款\PEPS(智能无钥匙启动)\9CC6\
+SUV\GS4 2018款\BCM(车身控制模块)\9CC7\
+SUV\GS4 2018款\SRS(安全气囊)\9CC8\
+SUV\GS4 2018款\BCS(制动控制模块)\9CC9\
+SUV\GS4 2018款\HVSM(座椅加热模块)\9CC0\
+SUV\GS4 2018款\TBOX(车网互联模块)\9CC1\
+SUV\GS4 2018款\ICM(组合仪表)\9CC2\
+SUV\GS4 2018款\DVD(娱乐系统)\CD(娱乐系统)\9CC3\
+SUV\GS4 2018款\DVD(娱乐系统)\AV(娱乐系统)\9CD6\
+SUV\GS4 2018款\DVD(娱乐系统)\NAVI(娱乐系统)\9CD7\
+SUV\GS4 2018款\HCP(空调控制面板)\9CC4\
+SUV\GS4 2018款\HVAC(空调系统)\9CC5\
+SUV\GS4 2018款\TPMS(胎压监测系统)\9CCA\
+SUV\GS4 2018款\TMM(智能扭矩系统)\9CCB\
+SUV\GS4 2018款\AFS(大灯调节模块)\9CCC\
+SUV\GS4 2018款\GSM(换档杆模块)\9CCE\
+SUV\GS4 2018款\GWM(独立网关)\9CD0\
+SUV\GS4 2018款\SVM(全景泊车系统)\9CD2\
+SUV\GS4 2018款\RPA(倒车辅助系统)\9CD3\
+SUV\GS4 2018款\WCM(无线充电模块)\9CD4\
+SUV\第二代传祺GS4\EMS(发动机管理系统1)\A0E0\
+SUV\第二代传祺GS4\EMS(发动机管理系统2)\A0E1\
+SUV\第二代传祺GS4\EMS(发动机管理系统3)\A0E2\
+SUV\第二代传祺GS4\AT(自动变速箱1)\A0E3\
+SUV\第二代传祺GS4\AT(自动变速箱2)\A0E4\
+SUV\第二代传祺GS4\AT(自动变速箱3)\A0E5\
+SUV\第二代传祺GS4\SRS(辅助安全系统)\A0E6\
+SUV\第二代传祺GS4\BCS(制动控制系统1)\A0E7\
+SUV\第二代传祺GS4\BCS(制动控制系统2)\A0E8\
+SUV\第二代传祺GS4\GSM(换挡杆模块1)\A0E9\
+SUV\第二代传祺GS4\GSM(换挡杆模块2)\A0EA\
+SUV\第二代传祺GS4\PCU(P档控制器)\A0EB\
+SUV\第二代传祺GS4\AFS(大灯调节系统)\A0EC\
+SUV\第二代传祺GS4\GWM(独立网关1)\A0ED\
+SUV\第二代传祺GS4\GWM(独立网关2)\A0EE\
+SUV\第二代传祺GS4\MRR(中距离雷达模块)\A0EF\
+SUV\第二代传祺GS4\TMM(四驱系统)\A0F0\
+SUV\第二代传祺GS4\HCP(空调控制面板)\A0F1\
+SUV\第二代传祺GS4\PEPS(智能无钥匙启动)\A0F2\
+SUV\第二代传祺GS4\CD(娱乐系统1)\A0F3\
+SUV\第二代传祺GS4\CD(娱乐系统2)\A0F4\
+SUV\第二代传祺GS4\CD(娱乐系统3)\A0F5\
+SUV\第二代传祺GS4\ICM(组合仪表)\A0F6\
+SUV\第二代传祺GS4\TBOX(车网互联模块)\A0F7\
+SUV\第二代传祺GS4\BCM(车身控制模块)\A0F8\
+SUV\第二代传祺GS4\HVAC(前排空调系统)\A0F9\
+SUV\第二代传祺GS4\HVAC(前排空调系统2)\A0FA\
+SUV\第二代传祺GS4\PLGM(电动背门)\A0FB\
+SUV\第二代传祺GS4\FCP(前排控制面板)\A0FC\
+SUV\第二代传祺GS4\HVSM(座椅加热模块)\A0FD\
+SUV\第二代传祺GS4\MSM(座椅记忆模块)\A0FE\
+SUV\第二代传祺GS4\ATSS(全地形开关)\A0FF\
+SUV\第二代传祺GS4\AVAS(低速提示音系统)\A100\
+SUV\第二代传祺GS4\SBM(智能蓝牙模块)\A101\
+SUV\第二代传祺GS4\SCM(座椅控制模块)\A102\
+SUV\第二代传祺GS4\SVM(全景环视系统)\A103\
+SUV\第二代传祺GS4\RPA(倒车辅助系统)\A104\
+SUV\第二代传祺GS4\EPS(电动助力转向系统)\A105\
+SUV\第二代传祺GS4\IFC(智能前向摄像头)\A106\
+SUV\第二代传祺GS4\WCM(无线充电模块)\A107\
+SUV\第二代传祺GS4\VCU(车辆控制系统)\A108\
+SUV\第二代传祺GS4\BMS(电池管理模块)\A109\
+SUV\第二代传祺GS4\DCU(驱动电机控制器)\A10A\
+SUV\第二代传祺GS4\GCU(发电机控制器)\A10B\
+SUV\第二代传祺GS4\IPS(集成电源系统)\A10C\
+SUV\第二代传祺GS4\OPC(低压油泵电机)\A10D\
+SUV\第二代传祺GS4\CMC1(电芯监控控制器1)\A10E\
+SUV\第二代传祺GS4\CMC2(电芯监控控制器2)\A10F\
+SUV\GS4 COUPE\EMS(发动机管理系统1)\A0E0\
+SUV\GS4 COUPE\EMS(发动机管理系统2)\A0E1\
+SUV\GS4 COUPE\EMS(发动机管理系统3)\A0E2\
+SUV\GS4 COUPE\AT(自动变速箱1)\A0E3\
+SUV\GS4 COUPE\AT(自动变速箱2)\A0E4\
+SUV\GS4 COUPE\AT(自动变速箱3)\A0E5\
+SUV\GS4 COUPE\SRS(辅助安全系统)\A0E6\
+SUV\GS4 COUPE\BCS(制动控制系统1)\A0E7\
+SUV\GS4 COUPE\BCS(制动控制系统2)\A0E8\
+SUV\GS4 COUPE\GSM(换挡杆模块1)\A0E9\
+SUV\GS4 COUPE\GSM(换挡杆模块2)\A0EA\
+SUV\GS4 COUPE\PCU(P档控制器)\A0EB\
+SUV\GS4 COUPE\AFS(大灯调节系统)\A0EC\
+SUV\GS4 COUPE\GWM(独立网关1)\A0ED\
+SUV\GS4 COUPE\GWM(独立网关2)\A0EE\
+SUV\GS4 COUPE\MRR(中距离雷达模块)\A0EF\
+SUV\GS4 COUPE\TMM(四驱系统)\A0F0\
+SUV\GS4 COUPE\HCP(空调控制面板)\A0F1\
+SUV\GS4 COUPE\PEPS(智能无钥匙启动)\A0F2\
+SUV\GS4 COUPE\CD(娱乐系统1)\A0F3\
+SUV\GS4 COUPE\CD(娱乐系统2)\A0F4\
+SUV\GS4 COUPE\CD(娱乐系统3)\A0F5\
+SUV\GS4 COUPE\ICM(组合仪表)\A0F6\
+SUV\GS4 COUPE\TBOX(车网互联模块)\A0F7\
+SUV\GS4 COUPE\BCM(车身控制模块)\A0F8\
+SUV\GS4 COUPE\HVAC(前排空调系统)\A0F9\
+SUV\GS4 COUPE\HVAC(前排空调系统2)\A0FA\
+SUV\GS4 COUPE\PLGM(电动背门)\A0FB\
+SUV\GS4 COUPE\FCP(前排控制面板)\A0FC\
+SUV\GS4 COUPE\HVSM(座椅加热模块)\A0FD\
+SUV\GS4 COUPE\MSM(座椅记忆模块)\A0FE\
+SUV\GS4 COUPE\ATSS(全地形开关)\A0FF\
+SUV\GS4 COUPE\AVAS(低速提示音系统)\A100\
+SUV\GS4 COUPE\SBM(智能蓝牙模块)\A101\
+SUV\GS4 COUPE\SCM(座椅控制模块)\A102\
+SUV\GS4 COUPE\SVM(全景环视系统)\A103\
+SUV\GS4 COUPE\RPA(倒车辅助系统)\A104\
+SUV\GS4 COUPE\EPS(电动助力转向系统)\A105\
+SUV\GS4 COUPE\IFC(智能前向摄像头)\A106\
+SUV\GS4 COUPE\WCM(无线充电模块)\A107\
+SUV\GS4 COUPE\VCU(车辆控制系统)\A108\
+SUV\GS4 COUPE\BMS(电池管理模块)\A109\
+SUV\GS4 COUPE\DCU(驱动电机控制器)\A10A\
+SUV\GS4 COUPE\GCU(发电机控制器)\A10B\
+SUV\GS4 COUPE\IPS(集成电源系统)\A10C\
+SUV\GS4 COUPE\OPC(低压油泵电机)\A10D\
+SUV\GS4 COUPE\CMC1(电芯监控控制器1)\A10E\
+SUV\GS4 COUPE\CMC2(电芯监控控制器2)\A10F\
+SUV\GS5(GS5速博)\ECM(发动机控制模块)\发动机控制模块(1)\9BB1\
+SUV\GS5(GS5速博)\ECM(发动机控制模块)\发动机控制模块(2)\9BCB\
+SUV\GS5(GS5速博)\BCM(车身控制模块)\9BB2\
+SUV\GS5(GS5速博)\TCM(变速箱控制模块)\AT(自动变速器)\9BB3\
+SUV\GS5(GS5速博)\TCM(变速箱控制模块)\TCU(双离合变速箱)\9BB4\
+SUV\GS5(GS5速博)\ABS(防抱死刹车系统)\9BB5\
+SUV\GS5(GS5速博)\AFS(大灯调节模块)\9BB6\
+SUV\GS5(GS5速博)\TPMS(胎压监测系统)\9BB7\
+SUV\GS5(GS5速博)\EPB(电子驻车)\EPB(电子驻车 GS5)\9BB8\
+SUV\GS5(GS5速博)\EPB(电子驻车)\EPB(电子驻车 GS5速博)\9BB9\
+SUV\GS5(GS5速博)\SRS(安全气囊)\9BBA\
+SUV\GS5(GS5速博)\ICM(组合仪表)\9BBB\
+SUV\GS5(GS5速博)\DVD(娱乐系统)\6CD(娱乐系统)\9BBC\
+SUV\GS5(GS5速博)\DVD(娱乐系统)\AV(娱乐系统)\9BBD\
+SUV\GS5(GS5速博)\DVD(娱乐系统)\CD(娱乐系统)\9BBE\
+SUV\GS5(GS5速博)\DVD(娱乐系统)\NAVI(娱乐系统)\9BBF\
+SUV\GS5(GS5速博)\DVD(娱乐系统)\DVD(车载多媒体系统)\9BC0\
+SUV\GS5(GS5速博)\HVAC(空调系统)\9BC1\
+SUV\GS5(GS5速博)\PEPS(智能无钥匙启动)\9BC2\
+SUV\GS5(GS5速博)\RPA(倒车辅助系统)\9BC3\
+SUV\GS5(GS5速博)\TBOX(车网互联模块)\9BC4\
+SUV\GS5(GS5速博)\BSD(盲区监测系统)\9BC5\
+SUV\GS5(GS5速博)\FCW(前碰撞预警系统)\9BC6\
+SUV\GS5(GS5速博)\LDW(车道偏移系统)\9BC7\
+SUV\GS5(GS5速博)\SVM(全景泊车系统)\9BC8\
+SUV\GS5(GS5速博)\GSM(换档杆模块)\9BC9\
+SUV\GS5(GS5速博)\TMM(智能扭矩系统)\9BCA\
+SUV\GS5 2019款\ECM(发动机控制模块)\发动机管理系统(1)\9D40\
+SUV\GS5 2019款\ECM(发动机控制模块)\发动机管理系统(2)\9D41\
+SUV\GS5 2019款\AT(自动变速箱)\9D42\
+SUV\GS5 2019款\BCS(制动控制系统)\9D43\
+SUV\GS5 2019款\SRS(辅助安全系统)\9D44\
+SUV\GS5 2019款\ICM(组合仪表)\9D45\
+SUV\GS5 2019款\AFS(大灯调节系统)\9D46\
+SUV\GS5 2019款\BCM(车身控制模块)\9D47\
+SUV\GS5 2019款\CD(娱乐系统)\娱乐系统(1)\9D48\
+SUV\GS5 2019款\CD(娱乐系统)\娱乐系统(2)\9D49\
+SUV\GS5 2019款\CD(娱乐系统)\娱乐系统(3)\9D4A\
+SUV\GS5 2019款\EPS(电动助力转向系统)\9D4B\
+SUV\GS5 2019款\FCP(前排控制面板)\9D4C\
+SUV\GS5 2019款\GWM(独立网关)\9D4D\
+SUV\GS5 2019款\HCP(空调控制面板)\9D4E\
+SUV\GS5 2019款\HVAC(空调管理系统)\9D4F\
+SUV\GS5 2019款\HVSM(座椅加热模块)\9D50\
+SUV\GS5 2019款\IAL(氛围灯)\9D51\
+SUV\GS5 2019款\IFC(智能前向摄像头)\9D52\
+SUV\GS5 2019款\MBSD(主盲区监测系统)\9D53\
+SUV\GS5 2019款\SBSD(从盲区监测系统)\9D54\
+SUV\GS5 2019款\MRR(中距离雷达模块)\9D55\
+SUV\GS5 2019款\MSM(座椅记忆模块)\9D56\
+SUV\GS5 2019款\PEPS(智能无钥匙启动)\9D57\
+SUV\GS5 2019款\PLGM(电动背门)\9D58\
+SUV\GS5 2019款\RPA(倒车辅助系统)\9D59\
+SUV\GS5 2019款\SVM(全景环视系统)\9D5A\
+SUV\GS5 2019款\TBOX(车网互联模块)\9D5B\
+SUV\GS5 2019款\TMM(四驱系统)\9D5C\
+SUV\GS5 2019款\WCM(无线充电模块)\9D5D\
+SUV\GS7\ECM(发动机控制系统)\9D21\
+SUV\GS7\BCS(制动控制模块)\9D22\
+SUV\GS7\SRS(安全气囊)\9D23\
+SUV\GS7\AT(自动变速器)\9D24\
+SUV\GS7\BCM(车身控制模块)\9D25\
+SUV\GS7\ICM(组合仪表)\9D26\
+SUV\GS7\TPMS(胎压监测系统)\9D27\
+SUV\GS7\PEPS(智能无钥匙启动)\9D28\
+SUV\GS7\PLGM(电动背门模块)\9D29\
+SUV\GS7\IAL(氛围灯)\9D2A\
+SUV\GS7\CD(娱乐系统)\9D2B\
+SUV\GS7\MSM(座椅记忆模块)\9D2C\
+SUV\GS7\AFS(大灯调节模块)\9D2D\
+SUV\GS7\FCP(前排控制面板)\9D2E\
+SUV\GS7\EPS(电动助力转向系统)\9D2F\
+SUV\GS7\WCM(无线充电模块)\9D30\
+SUV\GS7\MRR(微波雷达模块)\9D31\
+SUV\GS7\RCP(后排控制面板)\9D33\
+SUV\GS7\GWM(独立网关)\9D34\
+SUV\GS7\ATSS(全地形开关)\9D35\
+SUV\GS7\TBOX(车网互联模块)\9D36\
+SUV\GS7\HVAC(空调系统)\9D37\
+SUV\GS7\TMM(智能扭矩系统)\9D39\
+SUV\GS7\RPA(倒车辅助系统)\9D3A\
+SUV\GS7\GSM(换档杆模块)\9D3B\
+SUV\GS7\RHVAC(后排空调控制系统)\9D3C\
+SUV\GS7\HVSM(座椅加热模块)\9D3D\
+SUV\GS7\IFC(智能前向摄像头)\9D3E\
+SUV\GS7\APA(驻车辅助系统)\9D3F\
+SUV\GS7\SVM(全景泊车系统)\9D38\
+SUV\GS7\RVM(倒车影像模块)\9D32\
+SUV\GS7 2019款\EMS(发动机管理系统1)\A020\
+SUV\GS7 2019款\EMS(发动机管理系统2)\A021\
+SUV\GS7 2019款\EMS(发动机管理系统3)\A022\
+SUV\GS7 2019款\WDCT(自动变速箱)\A023\
+SUV\GS7 2019款\AT(自动变速箱)\A024\
+SUV\GS7 2019款\BCS(制动控制系统)\A025\
+SUV\GS7 2019款\SRS(辅助安全系统)\A026\
+SUV\GS7 2019款\GWM(独立网关)\A027\
+SUV\GS7 2019款\AFS(大灯调节系统)\A028\
+SUV\GS7 2019款\GSM(换挡杆模块)\A029\
+SUV\GS7 2019款\MRR(中距离雷达模块)\A02A\
+SUV\GS7 2019款\PLGM(电动背门)\A02B\
+SUV\GS7 2019款\TMM(四驱系统)\A02C\
+SUV\GS7 2019款\TPMS(胎压监测系统)\A02D\
+SUV\GS7 2019款\ATSS(全地形开关)\A02E\
+SUV\GS7 2019款\BCM(车身控制模块1)\A02F\
+SUV\GS7 2019款\BCM(车身控制模块2)\A030\
+SUV\GS7 2019款\CD(娱乐系统)\A031\
+SUV\GS7 2019款\FCP(前排控制面板)\A032\
+SUV\GS7 2019款\RCP(后排控制面板)\A033\
+SUV\GS7 2019款\HVSM(座椅加热模块)\A034\
+SUV\GS7 2019款\IAL(氛围灯)\A035\
+SUV\GS7 2019款\ICM(组合仪表)\A036\
+SUV\GS7 2019款\MSM(座椅记忆模块)\A037\
+SUV\GS7 2019款\PEPS(智能无钥匙)\A038\
+SUV\GS7 2019款\HVAC(前排空调系统)\A039\
+SUV\GS7 2019款\RHVAC(后排空调系统)\A03A\
+SUV\GS7 2019款\TBOX(车网互联模块)\A03B\
+SUV\GS7 2019款\IFC(智能前向摄像头)\A03C\
+SUV\GS7 2019款\EPS(电子助力转向系统)\A03D\
+SUV\GS7 2019款\APA(驻车辅助系统)\A03E\
+SUV\GS7 2019款\RPA(倒车辅助系统)\A03F\
+SUV\GS7 2019款\RVM(全景环视系统)\A040\
+SUV\GS7 2019款\SVM(全景环视系统)\A041\
+SUV\GS7 2019款\WCM(无线充电模块)\A042\
+SUV\GS8\ECM(发动机控制系统)\9C21\
+SUV\GS8\BCS(制动控制模块)\9C22\
+SUV\GS8\SRS(安全气囊)\9C23\
+SUV\GS8\AT(自动变速器)\9C24\
+SUV\GS8\BCM(车身控制模块)\9C25\
+SUV\GS8\ICM(组合仪表)\9C26\
+SUV\GS8\TPMS(胎压监测系统)\9C27\
+SUV\GS8\PEPS(智能无钥匙启动)\9C28\
+SUV\GS8\PLGM(电动背门模块)\9C29\
+SUV\GS8\IAL(氛围灯)\9C2A\
+SUV\GS8\CD(娱乐系统)\9C2B\
+SUV\GS8\MSM(座椅记忆模块)\9C2C\
+SUV\GS8\AFS(大灯调节模块)\9C2D\
+SUV\GS8\FCP(前排控制面板)\9C2E\
+SUV\GS8\EPS(电动助力转向系统)\9C2F\
+SUV\GS8\WCM(无线充电模块)\9C30\
+SUV\GS8\MRR(微波雷达模块)\9C31\
+SUV\GS8\PS(泊车系统)\SVM(全景泊车系统)\9C38\
+SUV\GS8\PS(泊车系统)\RVM(倒车影像模块)\9C32\
+SUV\GS8\RCP(后排控制面板)\9C33\
+SUV\GS8\GWM(独立网关)\9C34\
+SUV\GS8\ATSS(全地形开关)\9C35\
+SUV\GS8\TBOX(车网互联模块)\9C36\
+SUV\GS8\HVAC(空调系统)\9C37\
+SUV\GS8\TMM(智能扭矩系统)\9C39\
+SUV\GS8\RPA(倒车辅助系统)\9C3A\
+SUV\GS8\GSM(换档杆模块)\9C3B\
+SUV\GS8\RHVAC(后排空调控制系统)\9C3C\
+SUV\GS8\HVSM(座椅加热模块)\9C3D\
+SUV\GS8\IFC(智能前向摄像头)\9C3E\
+SUV\GS8 2020款\EMS(发动机管理系统)\9DC0\
+SUV\GS8 2020款\AT(自动变速箱)\9DC1\
+SUV\GS8 2020款\BCS(制动控制系统)\9DC2\
+SUV\GS8 2020款\SRS(辅助安全系统)\9DC3\
+SUV\GS8 2020款\AFS(大灯调节系统)\9DC4\
+SUV\GS8 2020款\GSM(换挡杆模块)\9DC5\
+SUV\GS8 2020款\GWM(独立网关)\9DC6\
+SUV\GS8 2020款\MRR(中距离雷达模块)\9DC7\
+SUV\GS8 2020款\TMM(四驱系统)\9DC8\
+SUV\GS8 2020款\ICM(组合仪表)\9DC9\
+SUV\GS8 2020款\BCM(车身控制模块)\9DCA\
+SUV\GS8 2020款\PEPS(智能无钥匙启动)\9DCB\
+SUV\GS8 2020款\AMP(外置功放)\9DCC\
+SUV\GS8 2020款\ATSS(全地形开关)\9DCD\
+SUV\GS8 2020款\CD(娱乐系统1)\9DCE\
+SUV\GS8 2020款\CD(娱乐系统2)\9DCF\
+SUV\GS8 2020款\CD(娱乐系统3)\9DD0\
+SUV\GS8 2020款\FCP(前排控制面板)\9DD1\
+SUV\GS8 2020款\HVAC(前排空调系统)\9DD2\
+SUV\GS8 2020款\HVSM(座椅加热模块)\9DD3\
+SUV\GS8 2020款\IAL(氛围灯)\9DD4\
+SUV\GS8 2020款\MSM(座椅记忆模块)\9DD5\
+SUV\GS8 2020款\PLGM(电动背门)\9DD6\
+SUV\GS8 2020款\RCP(后排控制面板)\9DD7\
+SUV\GS8 2020款\TBOX(车网互联模块)\9DD8\
+SUV\GS8 2020款\EPS(电动助力转向系统)\9DD9\
+SUV\GS8 2020款\IFC(智能前向摄像头)\9DDA\
+SUV\GS8 2020款\MBSD(主盲区监测系统)\9DDB\
+SUV\GS8 2020款\SBSD(从盲区监测系统)\9DDC\
+SUV\GS8 2020款\RPA(驻车辅助系统1)\9DDD\
+SUV\GS8 2020款\RPA(驻车辅助系统2)\9DDE\
+SUV\GS8 2020款\SVM(驻车摄像系统)\9DDF\
+SUV\GS8 2020款\WCM(无线充电模块)\9DE0\
+SUV\GS8S\EMS(发动机管理系统)\A000\
+SUV\GS8S\SRS(辅助安全系统)\A001\
+SUV\GS8S\BCS(制动控制系统)\A002\
+SUV\GS8S\GSM(换挡杆模块)\A003\
+SUV\GS8S\GWM(独立网关)\A004\
+SUV\GS8S\AT(自动变速箱)\A005\
+SUV\GS8S\AFS(大灯调节系统)\A006\
+SUV\GS8S\EPS(电子助力转向系统)\A007\
+SUV\GS8S\SVM(驻车摄像系统)\A008\
+SUV\GS8S\WCM(无线充电模块)\A009\
+SUV\GS8S\RPA(驻车辅助系统)\A00A\
+SUV\GS8S\CD(娱乐系统1)\A00B\
+SUV\GS8S\CD(娱乐系统2)\A00C\
+SUV\GS8S\CD(娱乐系统3)\A00D\
+SUV\GS8S\HVAC(前排空调系统)\A00E\
+SUV\GS8S\ICM(组合仪表)\A00F\
+SUV\GS8S\TBOX(车网互联模块)\A010\
+SUV\GS8S\BCM(车身控制模块)\A011\
+SUV\GS8S\PEPS(智能无钥匙启动)\A012\
+SUV\GS8S\FCP(前排控制面板)\A013\
+SUV\GS8S\MSM(座椅记忆模块)\A014\
+SUV\GS8S\HVSM(座椅加热模块)\A015\
+SUV\GS8S\IAL(氛围灯)\A016\
+SUV\GS8S\PLGM(电动背门)\A017\
+SUV\GS3 POWER\EMS(发动机管理系统1)\A120\
+SUV\GS3 POWER\EMS(发动机管理系统2)\A121\
+SUV\GS3 POWER\AT(自动变速箱1)\A122\
+SUV\GS3 POWER\AT(自动变速箱2)\A123\
+SUV\GS3 POWER\AT(自动变速箱3)\A124\
+SUV\GS3 POWER\BCS(制动控制系统1)\A125\
+SUV\GS3 POWER\BCS(制动控制系统2)\A126\
+SUV\GS3 POWER\SRS(辅助安全系统)\A127\
+SUV\GS3 POWER\EPS(电子助力转向系统)\A128\
+SUV\GS3 POWER\GSM(换挡杆模块)\A129\
+SUV\GS3 POWER\GWM(独立网关)\A12A\
+SUV\GS3 POWER\ESCL(电子转向柱锁)\A12B\
+SUV\GS3 POWER\ICM(组合仪表)\A12C\
+SUV\GS3 POWER\BCM(车身控制模块)\A12D\
+SUV\GS3 POWER\PEPS(智能无钥匙)\A12E\
+SUV\GS3 POWER\HVAC(空调管理系统1)\A12F\
+SUV\GS3 POWER\HVAC(空调管理系统2)\A130\
+SUV\GS3 POWER\HCP(空调控制面板)\A131\
+SUV\GS3 POWER\HVSM(座椅加热模块)\A132\
+SUV\GS3 POWER\DVD(娱乐系统1)\A133\
+SUV\GS3 POWER\DVD(娱乐系统2)\A134\
+SUV\GS3 POWER\CD(娱乐系统)\A135\
+SUV\GS3 POWER\TBOX(车网互联模块)\A136\
+SUV\GS3 POWER\ETC(电子不停车收费系统)\A137\
+SUV\GS3 POWER\IFC(智能前向摄像头)\A138\
+SUV\GS3 POWER\RPA(倒车辅助系统)\A139\
+MPV\GM6(M6)\EMS(发动机管理系统)\9DA0\
+MPV\GM6(M6)\AT(自动变速箱)\9DA1\
+MPV\GM6(M6)\BCS(制动控制系统)\9DA2\
+MPV\GM6(M6)\SRS(辅助安全系统)\9DA3\
+MPV\GM6(M6)\ICM(组合仪表)\9DA4\
+MPV\GM6(M6)\AFS(大灯调节系统)\9DA5\
+MPV\GM6(M6)\BCM(车身控制模块)\9DA6\
+MPV\GM6(M6)\CD(娱乐系统)\娱乐系统(DVD)\9DA7\
+MPV\GM6(M6)\CD(娱乐系统)\娱乐系统(CD)\9DA8\
+MPV\GM6(M6)\EPS(电子助力转向系统)\9DA9\
+MPV\GM6(M6)\ESCL(电子转向柱锁)\9DAA\
+MPV\GM6(M6)\GSM(换挡杆模块)\9DAB\
+MPV\GM6(M6)\GWM(独立网关)\9DAC\
+MPV\GM6(M6)\HCP(空调控制面板)\9DAD\
+MPV\GM6(M6)\HVAC(空调管理系统)\9DAE\
+MPV\GM6(M6)\HVSM(座椅加热模块)\9DAF\
+MPV\GM6(M6)\IAL(氛围灯)\9DB0\
+MPV\GM6(M6)\PEPS(智能无钥匙启动)\9DB1\
+MPV\GM6(M6)\RCP(后排控制面板)\9DB2\
+MPV\GM6(M6)\RPA(驻车辅助系统)\9DB3\
+MPV\GM6(M6)\SVM(全景环视系统)\9DB4\
+MPV\GM6(M6)\TBOX(车网互联模块)\9DB5\
+MPV\GM6(M6)\WCM(无线充电模块)\9DB6\
+MPV\GM8\EMS(发动机控制模块)\9CF8\
+MPV\GM8\AT(自动变速器)\9CF2\
+MPV\GM8\ICM(组合仪表)\9CE3\
+MPV\GM8\SRS(安全气囊)\9CF4\
+MPV\GM8\EPS(电动助力转向系统)\9D01\
+MPV\GM8\BCM(车身控制模块)\9CE9\
+MPV\GM8\BCS(制动控制模块)\9CF5\
+MPV\GM8\PEPS(智能无钥匙启动)\9CEB\
+MPV\GM8\HVSM(座椅加热模块)\9CE0\
+MPV\GM8\MSM(座椅记忆模块)\9CE1\
+MPV\GM8\WCM(无线充电模块)\9CE2\
+MPV\GM8\TBOX(车网互联模块)\9CE4\
+MPV\GM8\IAL(氛围灯)\9CE5\
+MPV\GM8\HCP(空调控制面板)\9CE6\
+MPV\GM8\RCP(后排控制面板)\9CE7\
+MPV\GM8\FCP(前排控制面板)\9CE8\
+MPV\GM8\RHVAC(后排空调控制系统)\9CEA\
+MPV\GM8\CD(娱乐系统)\9CEC\
+MPV\GM8\ACUR(后音响控制系统)\9CED\
+MPV\GM8\HVSMR(后座椅加热模块)\9CEE\
+MPV\GM8\HVAC(空调系统)\9CEF\
+MPV\GM8\TPMS(胎压监测系统)\9CF0\
+MPV\GM8\AFS(大灯调节模块)\9CF1\
+MPV\GM8\PLGM(电动背门模块)\9CF3\
+MPV\GM8\GSM(换档杆模块)\9CF6\
+MPV\GM8\MRR(微波雷达模块)\9CF7\
+MPV\GM8\GWM(独立网关)\9CF9\
+MPV\GM8\PSDL(左电动滑移门)\9CFA\
+MPV\GM8\PSDR(右电动滑移门)\9CFB\
+MPV\GM8\ESCL(电子转向驻锁)\9CFC\
+MPV\GM8\RPA(倒车辅助系统)\9CFD\
+MPV\GM8\APA(驻车辅助系统)\9CFE\
+MPV\GM8\SVM(全景泊车系统)\9CFF\
+MPV\GM8\RVM(倒车影像模块)\9D00\
+MPV\GM8\IFC(智能前向摄像头)\9D02\
+MPV\GM8\BSD(盲区监测系统)\9D03\
+MPV\GM8 2020款\EMS(发动机管理系统1)\A070\
+MPV\GM8 2020款\EMS(发动机管理系统2)\A071\
+MPV\GM8 2020款\AT(自动变速箱1)\A072\
+MPV\GM8 2020款\AT(自动变速箱2)\A073\
+MPV\GM8 2020款\BCS(制动控制系统)\A074\
+MPV\GM8 2020款\SRS(辅助安全系统)\A075\
+MPV\GM8 2020款\AFS(大灯调节系统)\A076\
+MPV\GM8 2020款\ESCL(驻车摄像系统)\A077\
+MPV\GM8 2020款\GSM(换挡杆模块)\A078\
+MPV\GM8 2020款\GWM(独立网关)\A079\
+MPV\GM8 2020款\MRR(中距离雷达模块1)\A07A\
+MPV\GM8 2020款\MRR(中距离雷达模块2)\A07B\
+MPV\GM8 2020款\PLGM(电动背门)\A07C\
+MPV\GM8 2020款\PSDL(左电动滑移门)\A07D\
+MPV\GM8 2020款\PSDR(右电动滑移门)\A07E\
+MPV\GM8 2020款\TPMS(胎压监测系统)\A07F\
+MPV\GM8 2020款\HVSM(座椅加热模块)\A080\
+MPV\GM8 2020款\MSM(座椅记忆模块)\A081\
+MPV\GM8 2020款\HVSMR(后座椅加热模块)\A082\
+MPV\GM8 2020款\ACUR(后音响控制系统)\A083\
+MPV\GM8 2020款\ICM(组合仪表)\A084\
+MPV\GM8 2020款\TBOX(车网互联模块)\A085\
+MPV\GM8 2020款\IAL(氛围灯)\A086\
+MPV\GM8 2020款\HCP(空调控制面板)\A087\
+MPV\GM8 2020款\RCP(后排控制面板)\A088\
+MPV\GM8 2020款\FCP(前排控制面板)\A089\
+MPV\GM8 2020款\BCM(车身控制模块)\A08A\
+MPV\GM8 2020款\RHVAC(后排空调控制系统)\A08B\
+MPV\GM8 2020款\HVAC(前排空调系统)\A08C\
+MPV\GM8 2020款\PEPS(智能无钥匙启动)\A08D\
+MPV\GM8 2020款\CD(前音响控制系统1)\A08E\
+MPV\GM8 2020款\CD(前音响控制系统2)\A08F\
+MPV\GM8 2020款\AMP(外置功放)\A090\
+MPV\GM8 2020款\RPA(驻车辅助系统)\A091\
+MPV\GM8 2020款\APA(驻车辅助系统)\A092\
+MPV\GM8 2020款\SVM(全景环视系统)\A093\
+MPV\GM8 2020款\RVM(全景环视系统)\A094\
+MPV\GM8 2020款\EPS(电子助力转向系统)\A095\
+MPV\GM8 2020款\IFC(智能前向摄像头1)\A096\
+MPV\GM8 2020款\IFC(智能前向摄像头2)\A097\
+MPV\GM8 2020款\WCM(无线充电模块)\A098\
+MPV\GM8 2020款\BSD(盲区监测系统)\A099\
+MPV\全新传祺M8\EMS(发动机管理系统)\A140\
+MPV\全新传祺M8\AT(自动变速箱)\A141\
+MPV\全新传祺M8\BCS(制动控制系统)\A142\
+MPV\全新传祺M8\SRS(辅助安全系统)\A143\
+MPV\全新传祺M8\AFS(大灯调节系统)\A144\
+MPV\全新传祺M8\MRR(中距离雷达模块)\A145\
+MPV\全新传祺M8\GSM(换挡杆模块)\A146\
+MPV\全新传祺M8\PCU(P档控制器)\A147\
+MPV\全新传祺M8\PSDL(左电动滑移门)\A148\
+MPV\全新传祺M8\PSDR(右电动滑移门)\A149\
+MPV\全新传祺M8\GWM(独立网关)\A14A\
+MPV\全新传祺M8\BCM(车身控制模块)\A14B\
+MPV\全新传祺M8\PEPS(智能无钥匙)\A14C\
+MPV\全新传祺M8\ICM(组合仪表)\A14D\
+MPV\全新传祺M8\HVAC(空调管理系统)\A14E\
+MPV\全新传祺M8\RCP(后排控制面板)\A14F\
+MPV\全新传祺M8\PLGM(电动背门)\A150\
+MPV\全新传祺M8\FCP(前排控制面板)\A151\
+MPV\全新传祺M8\HVSM(前排座椅加热通风)\A152\
+MPV\全新传祺M8\TBOX(车网互联模块)\A153\
+MPV\全新传祺M8\MSM(座椅记忆模块)\A154\
+MPV\全新传祺M8\SBM(智能蓝牙模块)\A155\
+MPV\全新传祺M8\CD(前音响控制系统1)\A156\
+MPV\全新传祺M8\CD(前音响控制系统2)\A157\
+MPV\全新传祺M8\ACUR(后音响控制系统)\A158\
+MPV\全新传祺M8\HVSMR(后排座椅加热通风)\A159\
+MPV\全新传祺M8\IAL(氛围灯模块)\A15A\
+MPV\全新传祺M8\AMP(外置放功)\A15B\
+MPV\全新传祺M8\FAPA(融合自动泊车辅助)\A15C\
+MPV\全新传祺M8\EPS(电动助力转向系统)\A15D\
+MPV\全新传祺M8\IFC(智能前向摄像头)\A15E\
+MPV\全新传祺M8\RPA(驻车辅助系统)\A15F\
+MPV\全新传祺M8\SBSD(左后雷达)\A160\
+MPV\全新传祺M8\MBSD(右后雷达)\A161\
+MPV\全新传祺M8\SVM(全景环视系统)\A162\
+MPV\全新传祺M8\WCM(无线充电)\A163\
+新能源车\GE3\VCU(车辆控制系统)\9C7C\
+新能源车\GE3\BMS(电池管理系统)\9C79\
+新能源车\GE3\SRS(安全气囊)\9C6F\
+新能源车\GE3\BCS(制动控制模块)\9C70\
+新能源车\GE3\EPB(电子驻车)\9C71\
+新能源车\GE3\DCDC(直流变换器)\9C7D\
+新能源车\GE3\BCM(车身控制模块)\9C61\
+新能源车\GE3\ICM(组合仪表)\9C64\
+新能源车\GE3\PEPS(智能无钥匙启动)\9C65\
+新能源车\GE3\ESCL(电子转向驻锁)\9C6D\
+新能源车\GE3\EPS(电动助力转向系统)\9C6B\
+新能源车\GE3\HVSM(座椅加热模块)\9C60\
+新能源车\GE3\CD(娱乐系统)\9C62\
+新能源车\GE3\FCP(前排控制面板)\9C63\
+新能源车\GE3\WCM(无线充电模块)\9C66\
+新能源车\GE3\HCP(空调控制面板)\9C67\
+新能源车\GE3\HVAC(空调系统)\9C68\
+新能源车\GE3\MFS(多功能显示屏)\9C69\
+新能源车\GE3\TBOX(车网互联模块)\9C6A\
+新能源车\GE3\RPA(倒车辅助系统)\9C6C\
+新能源车\GE3\SVM(全景泊车系统)\9C6E\
+新能源车\GE3\GWM(独立网关)\9C72\
+新能源车\GE3\GSM(换档杆模块)\9C73\
+新能源车\GE3\AVAS(低速提示音系统)\9C76\
+新能源车\GE3\PCU(P档控制器)\9C77\
+新能源车\GE3\TGW(温控网关)\9C78\
+新能源车\GE3\OBC(充电控制系统)\9C7A\
+新能源车\GE3\DCU(电机控制器)\9C7B\
+新能源车\GE3 530 2020款\BMS(电池管理系统)\A0A0\
+新能源车\GE3 530 2020款\IPS(充电控制系统)\A0A1\
+新能源车\GE3 530 2020款\VCU(车辆控制系统)\A0A2\
+新能源车\GE3 530 2020款\DCU(电机控制系统)\A0A3\
+新能源车\GE3 530 2020款\GSM(换挡杆模块)\A0A4\
+新能源车\GE3 530 2020款\SRS(辅助安全系统)\A0A5\
+新能源车\GE3 530 2020款\BCS(制动控制系统)\A0A6\
+新能源车\GE3 530 2020款\GWM(独立网关)\A0A7\
+新能源车\GE3 530 2020款\EPS(电子助力转向系统)\A0A8\
+新能源车\GE3 530 2020款\EPB(电子驻车)\A0A9\
+新能源车\GE3 530 2020款\ESCL(电子转向柱锁)\A0AA\
+新能源车\GE3 530 2020款\TBOX(车网互联模块)\A0AB\
+新能源车\GE3 530 2020款\CD(娱乐系统1)\A0AC\
+新能源车\GE3 530 2020款\CD(娱乐系统2)\A0AD\
+新能源车\GE3 530 2020款\CD(娱乐系统3)\A0AE\
+新能源车\GE3 530 2020款\ICM(组合仪表)\A0AF\
+新能源车\GE3 530 2020款\HCP(空调控制面板)\A0B0\
+新能源车\GE3 530 2020款\HVAC(空调管理系统)\A0B1\
+新能源车\GE3 530 2020款\BCM(车身控制模块)\A0B2\
+新能源车\GE3 530 2020款\PEPS(智能无钥匙启动)\A0B3\
+新能源车\GE3 530 2020款\HVSM(座椅加热模块)\A0B4\
+新能源车\GE3 530 2020款\AVAS(低速提示音系统)\A0B5\
+新能源车\GE3 530 2020款\SVM(全景环视系统)\A0B6\
+新能源车\GE3 530 2020款\RPA(倒车辅助系统)\A0B7\
+新能源车\GE3 530 2020款\WCM(无线充电模块)\A0B8\
+新能源车\世锐\VCU(车辆控制系统)\VCU(车辆控制系统)-EV\9D60\
+新能源车\世锐\VCU(车辆控制系统)\VCU(车辆控制系统)-PEV\9D61\
+新能源车\世锐\EMS(发动机管理系统)\9D62\
+新能源车\世锐\PGCU(电子换档控制器)\9D63\
+新能源车\世锐\DCU(电机控制器)\DCU(电机控制系统)\9D64\
+新能源车\世锐\DCU(电机控制器)\DCU(电机控制系统)-EV\9D65\
+新能源车\世锐\CCU(耦合控制系统)\9D66\
+新能源车\世锐\BMS(电池管理系统)\BMS(电池管理模块)\9D67\
+新能源车\世锐\BMS(电池管理系统)\BMS(电池管理模块)-EV\9D68\
+新能源车\世锐\BCS(制动控制系统)\9D69\
+新能源车\世锐\SRS(辅助安全系统)\9D6A\
+新能源车\世锐\ICM(组合仪表)\ICM(组合仪表1)\9D6B\
+新能源车\世锐\ICM(组合仪表)\ICM(组合仪表2)\9D6C\
+新能源车\世锐\EPB(电子驻车)\EPB(电子驻车1)\9D6D\
+新能源车\世锐\EPB(电子驻车)\EPB(电子驻车2)\9D6E\
+新能源车\世锐\TPMS(胎压监测系统)\TPMS(胎压监测系统1)\9D6F\
+新能源车\世锐\TPMS(胎压监测系统)\TPMS(胎压监测系统2)\9D70\
+新能源车\世锐\PEPS(智能无钥匙启动)\PEPS(智能无钥匙启动)\9D71\
+新能源车\世锐\PEPS(智能无钥匙启动)\PEPS(智能无钥匙启动)-EV\9D72\
+新能源车\世锐\BCM(车身控制模块)\BCM(车身控制模块)\9D73\
+新能源车\世锐\BCM(车身控制模块)\BCM(车身控制模块)-EV\9D74\
+新能源车\世锐\EPS(电子助力转向)\9D75\
+新能源车\世锐\SVM(全景泊车系统)\9D76\
+新能源车\世锐\OBC(充电控制系统)\OBC(充电控制系统)\9D77\
+新能源车\世锐\OBC(充电控制系统)\OBC(充电控制系统)-EV\9D78\
+新能源车\世锐\OPC(低压油泵电机)\9D79\
+新能源车\世锐\GCU(发电机控制系统)\9D7A\
+新能源车\世锐\LDW(车道偏离系统)\9D7B\
+新能源车\世锐\BSD(盲区监测系统)\9D7C\
+新能源车\世锐\AFS(大灯调节系统)\9D7D\
+新能源车\世锐\AVAS(低速提示音系统)\9D7E\
+新能源车\世锐\CD(娱乐系统)\娱乐系统\9D7F\
+新能源车\世锐\CD(娱乐系统)\娱乐系统(CD)\9D80\
+新能源车\世锐\CD(娱乐系统)\娱乐系统(AV)\9D81\
+新能源车\世锐\CD(娱乐系统)\娱乐系统(NAVI)\9D82\
+新能源车\世锐\DCDC(直流变换器)\9D83\
+新能源车\世锐\FCP(前排控制面板)\9D84\
+新能源车\世锐\GSM(换挡杆模块)\9D85\
+新能源车\世锐\GWM(独立网关)\GWM(独立网关1)\9D86\
+新能源车\世锐\GWM(独立网关)\GWM(独立网关2)\9D87\
+新能源车\世锐\HCP(空调控制面板)\HCP(空调控制面板1)\9D88\
+新能源车\世锐\HCP(空调控制面板)\HCP(空调控制面板2)\9D89\
+新能源车\世锐\HVAC(空调系统)\HVAC(空调管理系统)\9D8A\
+新能源车\世锐\HVAC(空调系统)\HVAC(空调管理系统)-EV\9D8B\
+新能源车\世锐\HVSM(座椅加热模块)\HVSM(座椅加热系统)\9D8C\
+新能源车\世锐\HVSM(座椅加热模块)\HVSM(座椅加热系统)-EV\9D8D\
+新能源车\世锐\PCU(P档控制器)\9D8E\
+新能源车\世锐\RPA(倒车辅助系统)\RPA(倒车辅助系统1)\9D8F\
+新能源车\世锐\RPA(倒车辅助系统)\RPA(倒车辅助系统2)\9D90\
+新能源车\世锐\TBOX(车网互联模块)\TBOX(车网互联模块1)\9D91\
+新能源车\世锐\TBOX(车网互联模块)\TBOX(车网互联模块2)\9D92\
+新能源车\世锐\TGW(温控网关)\TGW(温控网关1)\9D93\
+新能源车\世锐\TGW(温控网关)\TGW(温控网关2)\9D94\
+新能源车\世锐\WCM(无线充电模块)\9D95\
+新能源车\GS4 EV\VCU(车辆控制系统)\VCU(车辆控制系统)-EV\9D60\
+新能源车\GS4 EV\VCU(车辆控制系统)\VCU(车辆控制系统)-PEV\9D61\
+新能源车\GS4 EV\EMS(发动机管理系统)\9D62\
+新能源车\GS4 EV\PGCU(电子换档控制器)\9D63\
+新能源车\GS4 EV\DCU(电机控制器)\DCU(电机控制系统)\9D64\
+新能源车\GS4 EV\DCU(电机控制器)\DCU(电机控制系统)-EV\9D65\
+新能源车\GS4 EV\CCU(耦合控制系统)\9D66\
+新能源车\GS4 EV\BMS(电池管理系统)\BMS(电池管理模块)\9D67\
+新能源车\GS4 EV\BMS(电池管理系统)\BMS(电池管理模块)-EV\9D68\
+新能源车\GS4 EV\BCS(制动控制系统)\9D69\
+新能源车\GS4 EV\SRS(辅助安全系统)\9D6A\
+新能源车\GS4 EV\ICM(组合仪表)\ICM(组合仪表1)\9D6B\
+新能源车\GS4 EV\ICM(组合仪表)\ICM(组合仪表2)\9D6C\
+新能源车\GS4 EV\EPB(电子驻车)\EPB(电子驻车1)\9D6D\
+新能源车\GS4 EV\EPB(电子驻车)\EPB(电子驻车2)\9D6E\
+新能源车\GS4 EV\TPMS(胎压监测系统)\TPMS(胎压监测系统1)\9D6F\
+新能源车\GS4 EV\TPMS(胎压监测系统)\TPMS(胎压监测系统2)\9D70\
+新能源车\GS4 EV\PEPS(智能无钥匙启动)\PEPS(智能无钥匙启动)\9D71\
+新能源车\GS4 EV\PEPS(智能无钥匙启动)\PEPS(智能无钥匙启动)-EV\9D72\
+新能源车\GS4 EV\BCM(车身控制模块)\BCM(车身控制模块)\9D73\
+新能源车\GS4 EV\BCM(车身控制模块)\BCM(车身控制模块)-EV\9D74\
+新能源车\GS4 EV\EPS(电子助力转向)\9D75\
+新能源车\GS4 EV\SVM(全景泊车系统)\9D76\
+新能源车\GS4 EV\OBC(充电控制系统)\OBC(充电控制系统)\9D77\
+新能源车\GS4 EV\OBC(充电控制系统)\OBC(充电控制系统)-EV\9D78\
+新能源车\GS4 EV\OPC(低压油泵电机)\9D79\
+新能源车\GS4 EV\GCU(发电机控制系统)\9D7A\
+新能源车\GS4 EV\LDW(车道偏离系统)\9D7B\
+新能源车\GS4 EV\BSD(盲区监测系统)\9D7C\
+新能源车\GS4 EV\AFS(大灯调节系统)\9D7D\
+新能源车\GS4 EV\AVAS(低速提示音系统)\9D7E\
+新能源车\GS4 EV\CD(娱乐系统)\娱乐系统\9D7F\
+新能源车\GS4 EV\CD(娱乐系统)\娱乐系统(CD)\9D80\
+新能源车\GS4 EV\CD(娱乐系统)\娱乐系统(AV)\9D81\
+新能源车\GS4 EV\CD(娱乐系统)\娱乐系统(NAVI)\9D82\
+新能源车\GS4 EV\DCDC(直流变换器)\9D83\
+新能源车\GS4 EV\FCP(前排控制面板)\9D84\
+新能源车\GS4 EV\GSM(换挡杆模块)\9D85\
+新能源车\GS4 EV\GWM(独立网关)\GWM(独立网关1)\9D86\
+新能源车\GS4 EV\GWM(独立网关)\GWM(独立网关2)\9D87\
+新能源车\GS4 EV\HCP(空调控制面板)\HCP(空调控制面板1)\9D88\
+新能源车\GS4 EV\HCP(空调控制面板)\HCP(空调控制面板2)\9D89\
+新能源车\GS4 EV\HVAC(空调系统)\HVAC(空调管理系统)\9D8A\
+新能源车\GS4 EV\HVAC(空调系统)\HVAC(空调管理系统)-EV\9D8B\
+新能源车\GS4 EV\HVSM(座椅加热模块)\HVSM(座椅加热系统)\9D8C\
+新能源车\GS4 EV\HVSM(座椅加热模块)\HVSM(座椅加热系统)-EV\9D8D\
+新能源车\GS4 EV\PCU(P档控制器)\9D8E\
+新能源车\GS4 EV\RPA(倒车辅助系统)\RPA(倒车辅助系统1)\9D8F\
+新能源车\GS4 EV\RPA(倒车辅助系统)\RPA(倒车辅助系统2)\9D90\
+新能源车\GS4 EV\TBOX(车网互联模块)\TBOX(车网互联模块1)\9D91\
+新能源车\GS4 EV\TBOX(车网互联模块)\TBOX(车网互联模块2)\9D92\
+新能源车\GS4 EV\TGW(温控网关)\TGW(温控网关1)\9D93\
+新能源车\GS4 EV\TGW(温控网关)\TGW(温控网关2)\9D94\
+新能源车\GS4 EV\WCM(无线充电模块)\9D95\
+新能源车\GS4 PHEV\EMS(发动机控制模块)\9C4D\
+新能源车\GS4 PHEV\BCM(车身控制模块)\9C41\
+新能源车\GS4 PHEV\SRS(安全气囊)\9C51\
+新能源车\GS4 PHEV\BCS(制动控制模块)\9C4C\
+新能源车\GS4 PHEV\EPS(电动助力转向系统)\9C5B\
+新能源车\GS4 PHEV\CD(娱乐系统)\CD(娱乐系统)\9C42\
+新能源车\GS4 PHEV\CD(娱乐系统)\AV(娱乐系统)\9C5E\
+新能源车\GS4 PHEV\CD(娱乐系统)\NAVI(娱乐系统)\9C5F\
+新能源车\GS4 PHEV\TPMS(胎压监测系统)\9C52\
+新能源车\GS4 PHEV\FCP(前排控制面板)\9C43\
+新能源车\GS4 PHEV\HCP(空调控制面板)\9C44\
+新能源车\GS4 PHEV\HVAC(空调系统)\9C45\
+新能源车\GS4 PHEV\ICM(组合仪表)\9C46\
+新能源车\GS4 PHEV\PEPS(智能无钥匙启动)\9C47\
+新能源车\GS4 PHEV\RPA(倒车辅助系统)\9C48\
+新能源车\GS4 PHEV\EPB(电子驻车)\9C4E\
+新能源车\GS4 PHEV\TBOX(车网互联模块)\9C49\
+新能源车\GS4 PHEV\AVAS(低速提示音系统)\9C4A\
+新能源车\GS4 PHEV\AFS(大灯调节模块)\9C4B\
+新能源车\GS4 PHEV\HVSM(座椅加热模块)\9C40\
+新能源车\GS4 PHEV\GWM(独立网关)\9C4F\
+新能源车\GS4 PHEV\PGCU(电子换挡控制器)\9C50\
+新能源车\GS4 PHEV\BMS(电池管理系统)\9C53\
+新能源车\GS4 PHEV\OBC(充电控制系统)\9C54\
+新能源车\GS4 PHEV\CCU(耦合控制器)\9C55\
+新能源车\GS4 PHEV\DCU(电机控制器)\9C56\
+新能源车\GS4 PHEV\GCU(发电机控制系统)\9C57\
+新能源车\GS4 PHEV\VCU(车辆控制系统)\PEVVCU(车辆控制系统)\9C58\
+新能源车\GS4 PHEV\VCU(车辆控制系统)\EVVCU(车辆控制系统)\9C7F\
+新能源车\GS4 PHEV\OPC(低压油泵电机)\9C59\
+新能源车\GS4 PHEV\BSD(盲区监测系统)\9C5A\
+新能源车\GS4 PHEV\LDW(车道偏移系统)\9C5C\
+新能源车\GS4 PHEV\SVM(全景泊车系统)\9C5D\
+新能源车\第二代GS4 PHEV\EMS(发动机管理系统1)\A0E0\
+新能源车\第二代GS4 PHEV\EMS(发动机管理系统2)\A0E1\
+新能源车\第二代GS4 PHEV\EMS(发动机管理系统3)\A0E2\
+新能源车\第二代GS4 PHEV\AT(自动变速箱1)\A0E3\
+新能源车\第二代GS4 PHEV\AT(自动变速箱2)\A0E4\
+新能源车\第二代GS4 PHEV\AT(自动变速箱3)\A0E5\
+新能源车\第二代GS4 PHEV\SRS(辅助安全系统)\A0E6\
+新能源车\第二代GS4 PHEV\BCS(制动控制系统1)\A0E7\
+新能源车\第二代GS4 PHEV\BCS(制动控制系统2)\A0E8\
+新能源车\第二代GS4 PHEV\GSM(换挡杆模块1)\A0E9\
+新能源车\第二代GS4 PHEV\GSM(换挡杆模块2)\A0EA\
+新能源车\第二代GS4 PHEV\PCU(P档控制器)\A0EB\
+新能源车\第二代GS4 PHEV\AFS(大灯调节系统)\A0EC\
+新能源车\第二代GS4 PHEV\GWM(独立网关1)\A0ED\
+新能源车\第二代GS4 PHEV\GWM(独立网关2)\A0EE\
+新能源车\第二代GS4 PHEV\MRR(中距离雷达模块)\A0EF\
+新能源车\第二代GS4 PHEV\TMM(四驱系统)\A0F0\
+新能源车\第二代GS4 PHEV\HCP(空调控制面板)\A0F1\
+新能源车\第二代GS4 PHEV\PEPS(智能无钥匙启动)\A0F2\
+新能源车\第二代GS4 PHEV\CD(娱乐系统1)\A0F3\
+新能源车\第二代GS4 PHEV\CD(娱乐系统2)\A0F4\
+新能源车\第二代GS4 PHEV\CD(娱乐系统3)\A0F5\
+新能源车\第二代GS4 PHEV\ICM(组合仪表)\A0F6\
+新能源车\第二代GS4 PHEV\TBOX(车网互联模块)\A0F7\
+新能源车\第二代GS4 PHEV\BCM(车身控制模块)\A0F8\
+新能源车\第二代GS4 PHEV\HVAC(前排空调系统)\A0F9\
+新能源车\第二代GS4 PHEV\HVAC(前排空调系统2)\A0FA\
+新能源车\第二代GS4 PHEV\PLGM(电动背门)\A0FB\
+新能源车\第二代GS4 PHEV\FCP(前排控制面板)\A0FC\
+新能源车\第二代GS4 PHEV\HVSM(座椅加热模块)\A0FD\
+新能源车\第二代GS4 PHEV\MSM(座椅记忆模块)\A0FE\
+新能源车\第二代GS4 PHEV\ATSS(全地形开关)\A0FF\
+新能源车\第二代GS4 PHEV\AVAS(低速提示音系统)\A100\
+新能源车\第二代GS4 PHEV\SBM(智能蓝牙模块)\A101\
+新能源车\第二代GS4 PHEV\SCM(座椅控制模块)\A102\
+新能源车\第二代GS4 PHEV\SVM(全景环视系统)\A103\
+新能源车\第二代GS4 PHEV\RPA(倒车辅助系统)\A104\
+新能源车\第二代GS4 PHEV\EPS(电动助力转向系统)\A105\
+新能源车\第二代GS4 PHEV\IFC(智能前向摄像头)\A106\
+新能源车\第二代GS4 PHEV\WCM(无线充电模块)\A107\
+新能源车\第二代GS4 PHEV\VCU(车辆控制系统)\A108\
+新能源车\第二代GS4 PHEV\BMS(电池管理模块)\A109\
+新能源车\第二代GS4 PHEV\DCU(驱动电机控制器)\A10A\
+新能源车\第二代GS4 PHEV\GCU(发电机控制器)\A10B\
+新能源车\第二代GS4 PHEV\IPS(集成电源系统)\A10C\
+新能源车\第二代GS4 PHEV\OPC(低压油泵电机)\A10D\
+新能源车\第二代GS4 PHEV\CMC1(电芯监控控制器1)\A10E\
+新能源车\第二代GS4 PHEV\CMC2(电芯监控控制器2)\A10F\
+新能源车\GA3S PHEV\EMS(发动机控制模块)\9C95\
+新能源车\GA3S PHEV\VCU(车辆控制系统)\9C93\
+新能源车\GA3S PHEV\BCS(制动控制模块)\9C94\
+新能源车\GA3S PHEV\DCU(电机控制器)\9C91\
+新能源车\GA3S PHEV\ICM(组合仪表)\9C87\
+新能源车\GA3S PHEV\SRS(安全气囊)\9C99\
+新能源车\GA3S PHEV\EPB(电子驻车)\9C96\
+新能源车\GA3S PHEV\BCM(车身控制模块)\9C83\
+新能源车\GA3S PHEV\CD(娱乐系统)\9C84\
+新能源车\GA3S PHEV\BMS(电池管理系统)\9C8D\
+新能源车\GA3S PHEV\EPS(电动助力转向系统)\9C80\
+新能源车\GA3S PHEV\PEPS(智能无钥匙启动)\9C88\
+新能源车\GA3S PHEV\TPMS(胎压监测系统)\9C9A\
+新能源车\GA3S PHEV\LDW(车道偏移系统)\9C81\
+新能源车\GA3S PHEV\SVM(全景泊车系统)\9C82\
+新能源车\GA3S PHEV\HCP(空调控制面板)\9C85\
+新能源车\GA3S PHEV\HVAC(空调系统)\9C86\
+新能源车\GA3S PHEV\RPA(倒车辅助系统)\9C89\
+新能源车\GA3S PHEV\TBOX(车网互联模块)\9C8A\
+新能源车\GA3S PHEV\AVNT(智能多媒体主机)\9C8B\
+新能源车\GA3S PHEV\AVAS(低速提示音系统)\9C8C\
+新能源车\GA3S PHEV\GCU(发电机控制系统)\9C8E\
+新能源车\GA3S PHEV\OBC(充电控制系统)\9C8F\
+新能源车\GA3S PHEV\CCU(耦合控制器)\9C90\
+新能源车\GA3S PHEV\OPC(低压油泵电机)\9C92\
+新能源车\GA3S PHEV\GWM(独立网关)\9C97\
+新能源车\GA3S PHEV\PGCU(电子换挡控制器)\9C98\
+新能源车\GA5 PHEV\ECM(发动机控制系统)\9BF1\
+新能源车\GA5 PHEV\HCU(混动控制模块)\9BF2\
+新能源车\GA5 PHEV\ISG(集成启动发电机)\9BF3\
+新能源车\GA5 PHEV\FTM(前驱电机)\9BF4\
+新能源车\GA5 PHEV\BMS(电池管理系统)\9BF5\
+新能源车\GA5 PHEV\BCM(车身控制模块)\9BF6\
+新能源车\GA5 PHEV\ABS(防抱死刹车系统)\9BF7\
+新能源车\GA5 PHEV\EPS(电动助力转向系统)\9BF8\
+新能源车\GA5 PHEV\SRS(安全气囊)\9BF9\
+新能源车\GA5 PHEV\ICM(组合仪表)\9BFA\
+新能源车\GA5 PHEV\DVD(娱乐系统)\NAVI(娱乐系统)\9BFB\
+新能源车\GA5 PHEV\DVD(娱乐系统)\CD(娱乐系统)\9BFC\
+新能源车\GA5 PHEV\HVAC(空调系统)\9BFD\
+新能源车\GA5 PHEV\TBOX(车网互联模块)\9BFE\
+新能源车\GA5 PHEV\TGW(温控网关)\9BFF\
+埃安(Aion)\Aion S\ALS(大灯调节模块)\8000\
+埃安(Aion)\Aion S\BCS(刹车控制模块)\8001\
+埃安(Aion)\Aion S\GSM(换挡杆模块)\8002\
+埃安(Aion)\Aion S\GWM(网关模块)\8003\
+埃安(Aion)\Aion S\MRR(中距离雷达)\8004\
+埃安(Aion)\Aion S\SRS(安全气囊模块)\8005\
+埃安(Aion)\Aion S\APA(自动泊车辅助模块)\8006\
+埃安(Aion)\Aion S\RPA(倒车辅助模块)\8007\
+埃安(Aion)\Aion S\BSDL(左盲区监测模块)\8008\
+埃安(Aion)\Aion S\BSDR(右盲区监测模块)\8009\
+埃安(Aion)\Aion S\EPS(电动助力转向模块_天合)\800A\
+埃安(Aion)\Aion S\EPS_NST(电动助力转向模块_耐世特)\800B\
+埃安(Aion)\Aion S\ESCL(电子转向柱锁)\800C\
+埃安(Aion)\Aion S\IFC(智能前向摄像头)\800D\
+埃安(Aion)\Aion S\SVM(全景影像模块)\800E\
+埃安(Aion)\Aion S\WCM(无线充电模块)\800F\
+埃安(Aion)\Aion S\AV(音响主机)\8010\
+埃安(Aion)\Aion S\AVNT(智能多媒体主机)\8011\
+埃安(Aion)\Aion S\AVAS(低速提示音模块)\8012\
+埃安(Aion)\Aion S\BCM(车身控制模块)\8013\
+埃安(Aion)\Aion S\FCP(前排控制面板)\8014\
+埃安(Aion)\Aion S\FLDCM(左前门控模块)\8015\
+埃安(Aion)\Aion S\FRDCM(右前门控模块)\8016\
+埃安(Aion)\Aion S\HCP(空调控制面板)\8017\
+埃安(Aion)\Aion S\HVAC(空调系统模块)\8018\
+埃安(Aion)\Aion S\IAL(氛围灯模块)\8019\
+埃安(Aion)\Aion S\ICM(组合仪表)\801A\
+埃安(Aion)\Aion S\PEPS(智能钥匙模块)\801B\
+埃安(Aion)\Aion S\SBM(智能蓝牙模块)\801C\
+埃安(Aion)\Aion S\SCM(座椅控制模块)\801D\
+埃安(Aion)\Aion S\SMC(快换模块)\801E\
+埃安(Aion)\Aion S\TBOX(车网互联模块)\801F\
+埃安(Aion)\Aion S\BMS(电池管理模块_孚能)\8020\
+埃安(Aion)\Aion S\BMS_ND(电池管理模块_宁德时代)\8021\
+埃安(Aion)\Aion S\BMS_ZH(电池管理模块_中航锂电)\8022\
+埃安(Aion)\Aion S\BMS_ZH3(电池管理模块_中航锂电3)\8023\
+埃安(Aion)\Aion S\CMC1(电芯监控控制器1)\8024\
+埃安(Aion)\Aion S\CMC2(电芯监控控制器2)\8025\
+埃安(Aion)\Aion S\DCDC(直流变换模块)\8026\
+埃安(Aion)\Aion S\DCU(驱动电机控制模块_联电)\8027\
+埃安(Aion)\Aion S\DCU_Nissan(驱动电机控制模块_日电产)\8028\
+埃安(Aion)\Aion S\IPS(集成电源模块)\8029\
+埃安(Aion)\Aion S\VCU(整车控制模块_联电)\802A\
+埃安(Aion)\Aion S\VCU3(整车控制模块_联电3)\802B\
+埃安(Aion)\Aion LX_L\ALS(大灯调节模块)\8100\
+埃安(Aion)\Aion LX_L\CDC(半主动悬架模块)\8101\
+埃安(Aion)\Aion LX_L\GSM(换挡杆模块)\8102\
+埃安(Aion)\Aion LX_L\GWM(网关模块)\8103\
+埃安(Aion)\Aion LX_L\MRR(中距离雷达)\8104\
+埃安(Aion)\Aion LX_L\SRS(安全气囊模块)\8105\
+埃安(Aion)\Aion LX_L\APA(自动泊车辅助模块)\8106\
+埃安(Aion)\Aion LX_L\RPA(倒车辅助模块)\8107\
+埃安(Aion)\Aion LX_L\BCS(刹车控制模块)\8108\
+埃安(Aion)\Aion LX_L\BSDL(左盲区监测模块)\8109\
+埃安(Aion)\Aion LX_L\BSDR(右盲区监测模块)\810A\
+埃安(Aion)\Aion LX_L\DMS(驾驶员状态监测系统)\810B\
+埃安(Aion)\Aion LX_L\EBB(电控制动助力器)\810C\
+埃安(Aion)\Aion LX_L\EPS(电动助力转向模块_天合)\810D\
+埃安(Aion)\Aion LX_L\EPS_NST(电动助力转向模块_耐世特)\810E\
+埃安(Aion)\Aion LX_L\ESCL(电子转向柱锁)\810F\
+埃安(Aion)\Aion LX_L\IFC(智能前向摄像头)\8110\
+埃安(Aion)\Aion LX_L\SVM(全景影像模块)\8111\
+埃安(Aion)\Aion LX_L\WCM(无线充电模块)\8112\
+埃安(Aion)\Aion LX_L\AMP(外置功放)\8113\
+埃安(Aion)\Aion LX_L\AVAS(低速提示音模块)\8114\
+埃安(Aion)\Aion LX_L\AVNT(智能多媒体主机)\8115\
+埃安(Aion)\Aion LX_L\BCM(车身控制模块)\8116\
+埃安(Aion)\Aion LX_L\FCP(前排控制面板)\8117\
+埃安(Aion)\Aion LX_L\FLDCM(左前门控模块)\8118\
+埃安(Aion)\Aion LX_L\FRDCM(右前门控模块)\8119\
+埃安(Aion)\Aion LX_L\FLLCU(左前车灯控制模块)\811A\
+埃安(Aion)\Aion LX_L\FRLCU(右前车灯控制模块)\811B\
+埃安(Aion)\Aion LX_L\HCP(空调控制面板)\811C\
+埃安(Aion)\Aion LX_L\HVAC(空调系统模块)\811D\
+埃安(Aion)\Aion LX_L\IAL(氛围灯模块)\811E\
+埃安(Aion)\Aion LX_L\ICM(组合仪表)\811F\
+埃安(Aion)\Aion LX_L\PEPS(智能钥匙模块)\8120\
+埃安(Aion)\Aion LX_L\PLGM(电动背门模块)\8121\
+埃安(Aion)\Aion LX_L\RLCU(后车灯控制模块)\8122\
+埃安(Aion)\Aion LX_L\SBM(智能蓝牙模块)\8123\
+埃安(Aion)\Aion LX_L\SCM(座椅控制模块)\8124\
+埃安(Aion)\Aion LX_L\TBOX(车网互联模块)\8125\
+埃安(Aion)\Aion LX_L\BMS_JM(电池管理模块_金脉)\8126\
+埃安(Aion)\Aion LX_L\BMS(电池管理模块_联电)\8127\
+埃安(Aion)\Aion LX_L\CMC1(电芯监控控制器1)\8128\
+埃安(Aion)\Aion LX_L\CMC2(电芯监控控制器2)\8129\
+埃安(Aion)\Aion LX_L\DCU(驱动电机控制模块_联电)\812A\
+埃安(Aion)\Aion LX_L\DCU_Nissan(驱动电机控制模块_日电产)\812B\
+埃安(Aion)\Aion LX_L\DCU2(驱动电机控制模块2)\812C\
+埃安(Aion)\Aion LX_L\IPS(集成电源模块_富特)\812D\
+埃安(Aion)\Aion LX_L\IPS_HW(集成电源模块_华为)\812E\
+埃安(Aion)\Aion LX_L\VCU(整车控制模块)\812F\
+埃安(Aion)\Aion LX_H\ALS(大灯调节模块)\8200\
+埃安(Aion)\Aion LX_H\CDC(半主动悬架模块)\8201\
+埃安(Aion)\Aion LX_H\GSM(换挡杆模块)\8202\
+埃安(Aion)\Aion LX_H\GWM(网关模块)\8203\
+埃安(Aion)\Aion LX_H\SRS(安全气囊模块)\8204\
+埃安(Aion)\Aion LX_H\APA(自动泊车辅助模块)\8205\
+埃安(Aion)\Aion LX_H\AVNT(智能多媒体主机)\8206\
+埃安(Aion)\Aion LX_H\BCS(刹车控制模块)\8207\
+埃安(Aion)\Aion LX_H\DMS(驾驶员状态监测系统)\8208\
+埃安(Aion)\Aion LX_H\EBB(电控制动助力器)\8209\
+埃安(Aion)\Aion LX_H\EPS(电动助力转向模块_天合)\820A\
+埃安(Aion)\Aion LX_H\EPS_NST(电动助力转向模块_耐世特)\820B\
+埃安(Aion)\Aion LX_H\ESCL(电子转向柱锁)\820C\
+埃安(Aion)\Aion LX_H\FAPA(融合自动泊车辅助模块)\820D\
+埃安(Aion)\Aion LX_H\SVM(全景影像模块)\820E\
+埃安(Aion)\Aion LX_H\WCM(无线充电模块)\820F\
+埃安(Aion)\Aion LX_H\AMP(外置功放)\8210\
+埃安(Aion)\Aion LX_H\AVAS(低速提示音模块)\8211\
+埃安(Aion)\Aion LX_H\BCM(车身控制模块)\8212\
+埃安(Aion)\Aion LX_H\FCP(前排控制面板)\8213\
+埃安(Aion)\Aion LX_H\FLDCM(左前门控模块)\8214\
+埃安(Aion)\Aion LX_H\FRDCM(右前门控模块)\8215\
+埃安(Aion)\Aion LX_H\FLLCU(左前车灯控制模块)\8216\
+埃安(Aion)\Aion LX_H\FRLCU(右前车灯控制模块)\8217\
+埃安(Aion)\Aion LX_H\HCP(空调控制面板)\8218\
+埃安(Aion)\Aion LX_H\HVAC(空调系统模块)\8219\
+埃安(Aion)\Aion LX_H\IAL(氛围灯模块)\821A\
+埃安(Aion)\Aion LX_H\ICM(组合仪表)\821B\
+埃安(Aion)\Aion LX_H\IHU(智能中控主机)\821C\
+埃安(Aion)\Aion LX_H\PEPS(智能钥匙模块)\821D\
+埃安(Aion)\Aion LX_H\PLGM(电动背门模块)\821E\
+埃安(Aion)\Aion LX_H\RLCU(后车灯控制模块)\821F\
+埃安(Aion)\Aion LX_H\SBM(智能蓝牙模块)\8220\
+埃安(Aion)\Aion LX_H\SCM(座椅控制模块)\8221\
+埃安(Aion)\Aion LX_H\TBOX(车网互联模块)\8222\
+埃安(Aion)\Aion LX_H\BMS_JM(电池管理模块_金脉)\8223\
+埃安(Aion)\Aion LX_H\BMS(电池管理模块_联电)\8224\
+埃安(Aion)\Aion LX_H\CMC1(电芯监控控制器1)\8225\
+埃安(Aion)\Aion LX_H\CMC2(电芯监控控制器2)\8226\
+埃安(Aion)\Aion LX_H\DCU(驱动电机控制模块_联电)\8227\
+埃安(Aion)\Aion LX_H\DCU_Nissan(驱动电机控制模块_日电产)\8228\
+埃安(Aion)\Aion LX_H\DCU2(驱动电机控制模块2)\8229\
+埃安(Aion)\Aion LX_H\IPS(集成电源模块)\822A\
+埃安(Aion)\Aion LX_H\IPS_HW(集成电源模块_华为)\822B\
+埃安(Aion)\Aion LX_H\VCU(整车控制模块)\822C\
+埃安(Aion)\Aion LX_H\ADAS(智能驾驶控制模块)\822D\
+埃安(Aion)\Aion LX_H\FLR(左前雷达)\822E\
+埃安(Aion)\Aion LX_H\FR(前雷达)\822F\
+埃安(Aion)\Aion LX_H\FRR(右前雷达)\8230\
+埃安(Aion)\Aion LX_H\MLM(高精度地图模块)\8231\
+埃安(Aion)\Aion LX_H\RLR(左后雷达)\8232\
+埃安(Aion)\Aion LX_H\RRR(右后雷达)\8233\
+埃安(Aion)\Aion V_L\ALS(大灯调节模块)\8300\
+埃安(Aion)\Aion V_L\DMS(驾驶员状态监测系统)\8301\
+埃安(Aion)\Aion V_L\GSM(换挡杆模块)\8302\
+埃安(Aion)\Aion V_L\GWM(网关模块)\8303\
+埃安(Aion)\Aion V_L\SRS(安全气囊模块)\8304\
+埃安(Aion)\Aion V_L\WCM(无线充电模块)\8305\
+埃安(Aion)\Aion V_L\BCS(刹车控制模块)\8306\
+埃安(Aion)\Aion V_L\EBB(电控制动助力器)\8307\
+埃安(Aion)\Aion V_L\EPS(电动助力转向模块)\8308\
+埃安(Aion)\Aion V_L\EPS_NSTC(电动助力转向模块_耐世特)\8309\
+埃安(Aion)\Aion V_L\EPS_NSTR(电动助力转向模块_耐世特)\830A\
+埃安(Aion)\Aion V_L\ESCL(电子转向柱锁)\830B\
+埃安(Aion)\Aion V_L\FR(前向雷达)\830C\
+埃安(Aion)\Aion V_L\IFC(智能前向摄像头)\830D\
+埃安(Aion)\Aion V_L\RLR(左后雷达)\830E\
+埃安(Aion)\Aion V_L\RPA(倒车辅助模块)\830F\
+埃安(Aion)\Aion V_L\RRR(右后雷达)\8310\
+埃安(Aion)\Aion V_L\SVM(全景影像模块)\8311\
+埃安(Aion)\Aion V_L\AVAS(低速提示音模块)\8312\
+埃安(Aion)\Aion V_L\BCM(车身控制模块)\8313\
+埃安(Aion)\Aion V_L\FLDCM(左前门控模块)\8314\
+埃安(Aion)\Aion V_L\FRDCM(右前门控模块)\8315\
+埃安(Aion)\Aion V_L\HCP(空调控制面板)\8316\
+埃安(Aion)\Aion V_L\HVAC(空调系统模块_华望)\8317\
+埃安(Aion)\Aion V_L\HVAC_DZ(空调系统模块_电装)\8318\
+埃安(Aion)\Aion V_L\IAL(氛围灯模块)\8319\
+埃安(Aion)\Aion V_L\IHU(智能中控主机)\831A\
+埃安(Aion)\Aion V_L\PEPS(智能钥匙模块)\831B\
+埃安(Aion)\Aion V_L\PLGM(电动背门)\831C\
+埃安(Aion)\Aion V_L\SBM(智能蓝牙模块)\831D\
+埃安(Aion)\Aion V_L\SCM(座椅控制模块)\831E\
+埃安(Aion)\Aion V_L\TBOX(车网互联模块)\831F\
+埃安(Aion)\Aion V_L\BMS(电池管理模块_联电)\8320\
+埃安(Aion)\Aion V_L\BMS_JM(电池管理模块_金脉)\8321\
+埃安(Aion)\Aion V_L\CMC1(电芯监控控制器1)\8322\
+埃安(Aion)\Aion V_L\CMC2(电芯监控控制器2)\8323\
+埃安(Aion)\Aion V_L\DCU(驱动电机控制模块)\8324\
+埃安(Aion)\Aion V_L\IPS(集成电源模块_富特)\8325\
+埃安(Aion)\Aion V_L\IPS_HW(集成电源模块_华为)\8326\
+埃安(Aion)\Aion V_L\VCU(整车控制模块)\8327\
+埃安(Aion)\Aion V_H\ALS(大灯调节模块)\8400\
+埃安(Aion)\Aion V_H\DMS(驾驶员状态监测系统)\8401\
+埃安(Aion)\Aion V_H\GSM(换挡杆模块)\8402\
+埃安(Aion)\Aion V_H\GWM(网关模块)\8403\
+埃安(Aion)\Aion V_H\PCU(P档控制器)\8404\
+埃安(Aion)\Aion V_H\SRS(安全气囊模块)\8405\
+埃安(Aion)\Aion V_H\WCM(无线充电模块)\8406\
+埃安(Aion)\Aion V_H\ADAS(智能驾驶控制单元)\8407\
+埃安(Aion)\Aion V_H\BCS(刹车控制模块)\8408\
+埃安(Aion)\Aion V_H\EBB(电控制动助力器)\8409\
+埃安(Aion)\Aion V_H\EPS(电动助力转向模块_天合)\840A\
+埃安(Aion)\Aion V_H\EPS_NSTC(电动助力转向模块_耐世特)\840B\
+埃安(Aion)\Aion V_H\EPS_NSTR(电动助力转向模块_耐世特)\840C\
+埃安(Aion)\Aion V_H\ESCL(电子转向柱锁)\840D\
+埃安(Aion)\Aion V_H\FAPA(融合自动泊车辅助模块)\840E\
+埃安(Aion)\Aion V_H\SVM(全景影像模块)\840F\
+埃安(Aion)\Aion V_H\FLR(左前雷达)\8410\
+埃安(Aion)\Aion V_H\FR(前向雷达)\8411\
+埃安(Aion)\Aion V_H\FRR(右前雷达)\8412\
+埃安(Aion)\Aion V_H\IFC(智能前向摄像头)\8413\
+埃安(Aion)\Aion V_H\MLM(高精度地图)\8414\
+埃安(Aion)\Aion V_H\RLR(左后雷达)\8415\
+埃安(Aion)\Aion V_H\RPA(倒车辅助模块)\8416\
+埃安(Aion)\Aion V_H\RRR(右后雷达)\8417\
+埃安(Aion)\Aion V_H\AVAS(低速提示音模块)\8418\
+埃安(Aion)\Aion V_H\BCM(车身控制模块)\8419\
+埃安(Aion)\Aion V_H\FLDCM(左前门控模块)\841A\
+埃安(Aion)\Aion V_H\FRDCM(右前门控模块)\841B\
+埃安(Aion)\Aion V_H\HCP(空调控制面板)\841C\
+埃安(Aion)\Aion V_H\HVAC(空调系统模块_华望)\841D\
+埃安(Aion)\Aion V_H\HVAC_DZ(空调系统模块_电装)\841E\
+埃安(Aion)\Aion V_H\IAL(氛围灯模块)\841F\
+埃安(Aion)\Aion V_H\IHU(智能中控主机)\8420\
+埃安(Aion)\Aion V_H\PEPS(智能钥匙模块)\8421\
+埃安(Aion)\Aion V_H\PLGM(电动背门)\8422\
+埃安(Aion)\Aion V_H\SBM(智能蓝牙模块)\8423\
+埃安(Aion)\Aion V_H\SCM(座椅控制模块)\8424\
+埃安(Aion)\Aion V_H\TBOX(车网互联模块)\8425\
+埃安(Aion)\Aion V_H\BMS(电池管理模块_联电)\8426\
+埃安(Aion)\Aion V_H\BMS_JM(电池管理模块_金脉)\8427\
+埃安(Aion)\Aion V_H\CMC1(电芯监控控制器1)\8428\
+埃安(Aion)\Aion V_H\CMC2(电芯监控控制器2)\8429\
+埃安(Aion)\Aion V_H\DCU(驱动电机控制模块)\842A\
+埃安(Aion)\Aion V_H\IPS(集成电源模块_富特)\842B\
+埃安(Aion)\Aion V_H\IPS_HW(集成电源模块_华为)\842C\
+埃安(Aion)\Aion V_H\VCU(整车控制模块)\842D\
