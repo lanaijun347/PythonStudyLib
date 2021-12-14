@@ -31,12 +31,19 @@ def Xml_GetInfoFromVerSysInfo(file_list, fp, data):
             cmd_id = tmp[2]
             cmd_str = Bs.get_id_data_from_dict(Pa._cmd_dict, cmd_id)
             cmd = Bs.get_command(cmd_str, gl.InitDataLinkLayer['m0'])
+            if gl.InitDataLinkLayer['m0'] == 3 and gl._global_dict['ZH_ID'] == '0' and  not cmd:
+                cmd = cmd_str[0]
             cmds.append(cmd)
             offset = tmp[3]
             if gl.InitDataLinkLayer['m0'] == 2:
                 offset = offset - 3
             elif gl.InitDataLinkLayer['m0'] == 3:
-                offset = offset - 5
+                if gl._global_dict['ZH_ID'] == '0':
+                    offset = offset
+                    # tip = '警告：请确认是否是侦听协议：' + hex(gl._global_dict['car_id'])
+                    # Bs.debug(Pa.Debug, tip)
+                else:
+                    offset = offset - 5
             else:
                 # X431 回复按80算
                 if (cmds[0][0:2] == '80') | (cmds[0][0:2] == 'C0'):

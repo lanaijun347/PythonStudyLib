@@ -58,7 +58,10 @@ def Xml_GetInfoFromFunCfgReadDtc1(file_list, fp, data):
                 cmds.append(cmd)  # 命令
                 dtc_nums.append(data[4])  # 字节控制故障码数
                 dtc_num_off = data[2]  # 字节控制故障码数的偏移位置
-                formula = Bs.get_id_data_from_dict(Pa._formula_dict, data[3])
+                if data[3] == '00000000':
+                    formula = ''
+                else:
+                    formula = Bs.get_id_data_from_dict(Pa._formula_dict, data[3])
                 if formula:
                     formulas.append(formula)
                 if gl.InitDataLinkLayer['m0'] == 2:
@@ -109,11 +112,14 @@ def Xml_GetInfoFromFunCfgReadDtc1(file_list, fp, data):
                 cmd_str = Bs.get_id_data_from_dict(Pa._cmd_dict, cmd_id)
                 cmd = Bs.get_command(cmd_str, gl.InitDataLinkLayer['m0'])
                 cmds.append(cmd)
-                formula = Bs.get_id_data_from_dict(Pa._formula_dict, data[3])
+                if data[3] == '00000000':
+                    formula = ''
+                else:
+                    formula = Bs.get_id_data_from_dict(Pa._formula_dict, data[3])
                 if formula:
                     formulas.append(formula)
-                else:
-                    print(hex(gl._global_dict['car_id']))
+                # else:
+                #     print(hex(gl._global_dict['car_id']))
                 if gl.InitDataLinkLayer['m0'] == 2:
                     byte_off = byte_off - 3
                     if dtc_num_off != 0:

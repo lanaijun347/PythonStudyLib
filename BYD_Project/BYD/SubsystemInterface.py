@@ -217,6 +217,8 @@ def Com_SetParameter_CAN(InitDataLinkLayer):
         bps = '250K'
         tip = '警告：车型ID ' + hex(gl._global_dict['car_id']) + ' 未找到合适波特率, 默认给了 250K ！'
         Bs.debug(Bs.Debug, tip)
+    if len(lv_id) > 1 and zh_id == lv_id[0]:
+        lv_id = lv_id[1:]
     gl._global_dict['PIN1'] = pin1
     gl._global_dict['PIN2'] = pin2
     gl._global_dict['ZH_ID'] = zh_id
@@ -268,6 +270,9 @@ def Com_SetParameter_LONGCAN(InitDataLinkLayer):
     gl._global_dict['ZH_ID'] = zh_id
     gl._global_dict['LV_ID'] = lv_id
     gl._global_dict['Bps'] = bps
+    if gl.InitDataLinkLayer['m0'] == 3 and gl._global_dict['ZH_ID'] == '0':
+        tip = '警告：请确认是否是侦听协议：' + hex(gl._global_dict['car_id'])
+        Bs.debug(Pa.Debug, tip)
 
 
 # 获取 进入 命令
@@ -319,6 +324,12 @@ def GetSaveCmdConunt(file_list, fp):
         cmd_str = Bs.get_id_data_from_dict(Pa._cmd_dict, tmp[1])
         # 进入命令
         cmd = Bs.get_command(cmd_str, gl.InitDataLinkLayer['m0'])
+        if v9 == 1 and cmd:
+            if ('3E' in cmd[0:15]) | ('3e' in cmd[0:15]):
+                tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
+                      '进入命令有空值或为空闲，请确认。'
+                Bs.debug(Bs.Debug, tip)
+            gl._global_dict['ICMD'].append(cmd)
         if cmd == 0:
             tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
                   '进入命令部分，命令有空值，请查看程序SubsystemInterface.py。'
@@ -359,7 +370,7 @@ def Xml_GetInfoFromExitSys(file_list, fp):
                 cmd_str = Bs.get_id_data_from_dict(Pa._cmd_dict, tmp[1])
                 # 退出命令
                 cmd = Bs.get_command(cmd_str, gl.InitDataLinkLayer['m0'])
-                if ('3E' in cmd[0:15]) | ('3e' in cmd[0:15]):
+                if ('3E' in cmd[0:15]) or ('3e' in cmd[0:15]) or not cmd:
                     pass
                 else:
                     gl._global_dict['QCMD'].append(cmd)

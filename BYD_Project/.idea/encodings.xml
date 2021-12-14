@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/BYD/debug.txt" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/BYD/debug.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/ROEWE/校验读码方式系统.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/ROEWE/生成协议/rowe码库/0000443A.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/WULING/file/DTC.cs" charset="GBK" />
   </component>
 </project>
