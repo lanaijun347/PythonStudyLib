@@ -468,7 +468,7 @@ def FuncSelectInterface(file_list):
         gl.ds_menu_num = Bs.readlist_num(file_list, ds_fp + 1, 2)
         SubSystemFunDS(file_list, ds_fp)
 
-    # 动作测试/特殊功能/其他菜单
+    # # 动作测试/特殊功能/其他菜单
     # if len(gl.InitSubSystem['n9']) > 0:
     #     act_fp = 0
     #     menu_choose = 0

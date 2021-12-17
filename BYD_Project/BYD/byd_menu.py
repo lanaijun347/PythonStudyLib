@@ -1,10 +1,10 @@
 
 
 # 生成去除没用菜单
-def screen_BYD_menu():
+def screen_BYD_menu(in_path, out_path):
     tmp = []
     ids = []
-    with open(r'E:\BYD_Project\BYD\file\18.62\out.txt', 'r') as f:
+    with open(in_path, 'r') as f:
         for line in f.readlines():
             if ('\\快速测试\\' in line) or ('\\常用特殊功能\\' in line) or ('\\防盗系统\\' in line) or ('\\维护保养\\' in line):
                 pass
@@ -16,7 +16,7 @@ def screen_BYD_menu():
         else:
             ids.append(line[-6:].replace('\\\n', ''))
 
-    with open(r'E:\BYD_Project\BYD\file\menu.txt', 'w') as f1:
+    with open(out_path, 'w') as f1:
         for line in tmp:
             f1.writelines(line)
     print(len(ids))
@@ -63,4 +63,9 @@ if __name__ == '__main__':
     out_path = r'E:\BYD_Project\BYD\file\menu_0xf000.txt'
     dict_menu = r'E:\BYD_Project\BYD\file\menu_dict.txt'
     # screen_0xf00(in_path, out_path)
-    out_dict_menu(in_path, dict_menu)
+    in_path = r'D:\JBT\常开\比亚迪\解析_v18.90\menu\menu.txt'
+    out_path = r'D:\JBT\常开\比亚迪\解析_v18.90\menu\menu_new.txt'
+    in_path = r'D:\JBT\常开\比亚迪\EV_FLYER\解析_v18.90\menu\menu_EV.txt'
+    out_path = r'D:\JBT\常开\比亚迪\EV_FLYER\解析_v18.90\menu\menu_EV_NEW.txt'
+    screen_BYD_menu(in_path, out_path)
+    # out_dict_menu(in_path, dict_menu)

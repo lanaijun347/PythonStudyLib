@@ -180,6 +180,7 @@ def get_command(data_list, cmd_type, tmp=''):
             type_1 = re.findall(r'^[0-9,a-f]{12}0d88c6(.*)', line)
             type_3 = re.findall(r'^[0-9,a-f]{12}0d8840(.*)', line)
             type_4 = re.findall(r'^[0-9,a-f]{12}0988(.*)', line)
+            type_5 = re.findall(r'^[0-9,a-f]{12}0b08fbe0(.*)', line)
             if tmp == 'act':
                 type_2 = []
                 tmp_str = line[8:]
@@ -222,6 +223,13 @@ def get_command(data_list, cmd_type, tmp=''):
             elif type_4:
                 can_1 = re.findall(r'(.*)0988[0-9,a-f]{16}', type_4[0])
                 cmd_str = type_4[0].upper()
+                if can_1:
+                    cmd_str = can_1[0].upper()
+                cmd_str = cmd_insert_space_can(cmd_str)
+                cmd = cmd_str
+            elif type_5:
+                can_1 = re.findall(r'(.*)0b08fbe0[0-9,a-f]{16}', type_5[0])
+                cmd_str = type_5[0].upper()
                 if can_1:
                     cmd_str = can_1[0].upper()
                 cmd_str = cmd_insert_space_can(cmd_str)

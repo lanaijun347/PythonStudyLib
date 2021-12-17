@@ -294,7 +294,7 @@ def choose_dtc_mode(str1, dtc_type, cmds, offsets, byte_num, ctl_num, dtc_num_of
                 Bs.debug(Bs.Debug, tip)
         formula_str = '\t\t控制公式：\n' + formula_str + '\n'
     if str1:
-        if (dtc_type == 5) | (dtc_type == 3):
+        if (dtc_type == 5) | (dtc_type == 3) | (dtc_type == 1) :
             for i in range(be_len-1, len(cmds)):
                 if dtc_num_offsets[i] == 0:
                     str2 = formula_str + str1 + '从$#ANS' + str(i).rjust(3, '0') + '.' + 'BYTE' + str(offsets[i]).rjust(2, '0') + \
@@ -309,7 +309,7 @@ def choose_dtc_mode(str1, dtc_type, cmds, offsets, byte_num, ctl_num, dtc_num_of
                   '未编写' + str(dtc_type) + '该读码类型, 关注 rdtc.py 184行'
             Bs.debug(Bs.Debug, tip)
     else:
-        if (dtc_type == 5) | (dtc_type == 3) | (dtc_type == 38) | (dtc_type == 1) | (dtc_type == 34) | (dtc_type == 32) | (dtc_type == 4) | (dtc_type == 48):
+        if (dtc_type == 5) | (dtc_type == 3) | (dtc_type == 38) | (dtc_type == 1) | (dtc_type == 34) | (dtc_type == 32) | (dtc_type == 4) | (dtc_type == 48) | (dtc_type == 49):
             for i in range(len(cmds)):
                 if (dtc_num_offsets[i] > 0) & (dtc_num[i] > 1):
                     str2 = formula_str + 2*' ' + 'ANS' + str(i).rjust(3, '0') + '.' + 'BYTE' \
