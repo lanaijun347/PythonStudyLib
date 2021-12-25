@@ -6,6 +6,7 @@ import info
 import os
 import SubsystemInterface
 
+
 def SUBS_SBCS__PAIR__(num):
     R6 = num
     R3 = R6 - 1
@@ -45,10 +46,10 @@ def Xml_GetInfoFromDsSysInfo(file_list, fp, data):
     v4_12 = Bs.readlist_num(file_list, v6, 2)
     v10 = v6 + 2
     if v53 & 1:
-        tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + ' 暂不支持该数据流写入方式，详情请查看 ds.py 45行'
+        tip = '警告：车型ID为：' + gl.system_id + ' 暂不支持该数据流写入方式，详情请查看 ds.py 45行'
         Bs.debug(Bs.Debug, tip)
     elif v4_12:
-        tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + ' 暂不支持该数据流写入方式，详情请查看 ds.py 48行'
+        tip = '警告：车型ID为：' + gl.system_id + ' 暂不支持该数据流写入方式，详情请查看 ds.py 48行'
         Bs.debug(Bs.Debug, tip)
     v4_20 = Bs.readlist_num(file_list, v10, 1)
     v4_21 = Bs.readlist_num(file_list, v10+1, 1)
@@ -56,86 +57,163 @@ def Xml_GetInfoFromDsSysInfo(file_list, fp, data):
     v4_60 = Bs.readlist_num(file_list, v10+6, 2)
     v16 = v10 + 8
     if v53 & 2:
-        tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + ' 暂不支持该数据流写入方式，详情请查看 ds.py 56行'
+        tip = '警告：车型ID为：' + gl.system_id + ' 暂不支持该数据流写入方式，详情请查看 ds.py 56行'
         Bs.debug(Bs.Debug, tip)
     if v53 & 4:
-        tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + ' 暂不支持该数据流写入方式，详情请查看 ds.py 59行'
+        tip = '警告：车型ID为：' + gl.system_id + ' 暂不支持该数据流写入方式，详情请查看 ds.py 59行'
         Bs.debug(Bs.Debug, tip)
     if not v4_24:
-        tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + ' 暂不支持该数据流写入方式，详情请查看 ds.py 62行'
+        tip = '警告：车型ID为：' + gl.system_id + ' 暂不支持该数据流写入方式，详情请查看 ds.py 62行'
         Bs.debug(Bs.Debug, tip)
     v56 = 0
     v57 = 0
     v55 = 0
-    if v4_60 != 0xffff:
-        tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + ' 暂不支持该数据流写入方式，详情请查看 ds.py 68行'
-        Bs.debug(Bs.Debug, tip)
+    # if v4_60 != 0xffff:
+    #     tip = '警告：车型ID为：' + gl.system_id + ' 暂不支持该数据流写入方式，详情请查看 ds.py 68行'
+    #     Bs.debug(Bs.Debug, tip)
     ds_total = Bs.readlist_num(file_list, v4_24, 2)  # 数据流总数
-    i = 0
-    p = v4_24 + 2
-    names = []
-    cmds = []
-    offsets = []
-    formulas = []
-    units = []
-    while i < ds_total:
-        tmp = info.Xml_GetInfoFromVerItemInfo(file_list, p)
-        next_p = GetNextDsItemAddress(file_list, p, v5)
-        p = next_p
-        i += 1
-        name_id = tmp[1]
-        name_data = Bs.get_id_data_from_dict(Pa._ds_dict, name_id)
-        if name_data:
-            name_unit = Bs.spilt_ds_name_and_unit(name_data)
-            name = name_unit[0]
-            unit = name_unit[1]
-            names.append(name)
-            units.append(unit)
-            cmd_id = tmp[2]
-            cmd_str = Bs.get_id_data_from_dict(Pa._cmd_dict, cmd_id)
-            cmd = Bs.get_command(cmd_str, gl.InitDataLinkLayer['m0'])
-            if gl.InitDataLinkLayer['m0'] == 3 and gl._global_dict['ZH_ID'] == '0' and  not cmd:
-                cmd = cmd_str[0]
-            cmds.append(cmd)
-            offset = tmp[3]
-            if gl.InitDataLinkLayer['m0'] == 2:
-                offset = offset - 3
-            elif gl.InitDataLinkLayer['m0'] == 3:
-                if gl._global_dict['ZH_ID'] == '0':
-                    offset = offset
-                    # tip = '警告：请确认是否是侦听协议：' + hex(gl._global_dict['car_id'])
-                    # Bs.debug(Pa.Debug, tip)
+    if v4_60 != 0xffff:
+        ds_total = v4_60
+        i = 0
+        v54 = v4_60
+        p = v4_24 + 2
+        names = []
+        cmds = []
+        offsets = []
+        formulas = []
+        units = []
+        while i < ds_total:
+            v53 = Bs.readlist_num(file_list, v16, 2)
+            v16 += 2
+            j = 0
+            while True:
+                v50 = j
+                if j >= v54:
+                    break
+                v55 = Bs.readlist_num(file_list, p, 2)
+                if v55 == v53:
+                    tmp = info.Xml_GetInfoFromVerItemInfo(file_list, p)
+                    name_id = tmp[1]
+                    name_data = Bs.get_id_data_from_dict(Pa._ds_dict, name_id)
+                    if name_data:
+                        name_unit = Bs.spilt_ds_name_and_unit(name_data)
+                        name = name_unit[0]
+                        unit = name_unit[1]
+                        names.append(name)
+                        units.append(unit)
+                        cmd_id = tmp[2]
+                        cmd_str = Bs.get_id_data_from_dict(Pa._cmd_dict, cmd_id)
+                        cmd = Bs.get_command(cmd_str, gl.InitDataLinkLayer['m0'])
+                        if gl.InitDataLinkLayer['m0'] == 3 and gl._global_dict['ZH_ID'] == '0' and not cmd:
+                            cmd = cmd_str[0]
+                        cmds.append(cmd)
+                        offset = tmp[3]
+                        if gl.InitDataLinkLayer['m0'] == 2:
+                            offset = offset - 3
+                        elif gl.InitDataLinkLayer['m0'] == 3:
+                            if gl._global_dict['ZH_ID'] == '0':
+                                offset = offset
+                                # tip = '警告：请确认是否是侦听协议：' + gl.system_id
+                                # Bs.debug(Pa.Debug, tip)
+                            else:
+                                offset = offset - 5
+                        else:
+                            # X431 回复按80算
+                            if (cmds[0][0:2] == '80') | (cmds[0][0:2] == 'C0'):
+                                offset = offset
+                            else:
+                                offset = offset - 1
+                        if offset < 0:
+                            tip = '警告：' + str(offset) + ' 数据流偏移小于0：' + gl.system_id
+                            Bs.debug(Pa.Debug, tip)
+                        offsets.append(str(offset).rjust(3, '0'))
+                        formula_id = tmp[4]
+                        formula = Bs.get_id_data_from_dict(Pa._formula_dict, formula_id)
+                        # print(formula)
+                        if not formula:
+                            formula = ''
+                            tip = formula_id + '：数据流未找到公式ID，路径' + gl.system_id
+                            Bs.debug(Pa.Debug, tip)
+                        formula = Bs.str_remove_x00(formula)
+                        formulas.append(formula)
+                    break
+                next_p = GetNextDsItemAddress(file_list, p, v5)
+                p = next_p
+                j = v50 + 1
+            i += 1
+        if ds_total > 0:
+            re_tuple = Bs.cmd_to_dict(cmds)
+            req = re_tuple[0]
+            ans = re_tuple[1]
+            # adv_cmds = [" 02 10 03 00 00 00 00 00", " 02 10 03 01 00 00 00 00", " 02 10 03 02 00 00 00 00", " 02 10 03 03 00 00 00 00",]
+            # 菜单名称，命令，回复命令号，数据流名称，单位，偏移，公式，进入前预发命令
+            write_ds(menu_name, req, ans, names, units, offsets, formulas, adv_cmds)
+    else:
+        i = 0
+        p = v4_24 + 2
+        names = []
+        cmds = []
+        offsets = []
+        formulas = []
+        units = []
+        while i < ds_total:
+            tmp = info.Xml_GetInfoFromVerItemInfo(file_list, p)
+            next_p = GetNextDsItemAddress(file_list, p, v5)
+            p = next_p
+            i += 1
+            name_id = tmp[1]
+            name_data = Bs.get_id_data_from_dict(Pa._ds_dict, name_id)
+            if name_data:
+                name_unit = Bs.spilt_ds_name_and_unit(name_data)
+                name = name_unit[0]
+                unit = name_unit[1]
+                names.append(name)
+                units.append(unit)
+                cmd_id = tmp[2]
+                cmd_str = Bs.get_id_data_from_dict(Pa._cmd_dict, cmd_id)
+                cmd = Bs.get_command(cmd_str, gl.InitDataLinkLayer['m0'])
+                if gl.InitDataLinkLayer['m0'] == 3 and gl._global_dict['ZH_ID'] == '0' and  not cmd:
+                    cmd = cmd_str[0]
+                cmds.append(cmd)
+                offset = tmp[3]
+                if gl.InitDataLinkLayer['m0'] == 2:
+                    offset = offset - 3
+                elif gl.InitDataLinkLayer['m0'] == 3:
+                    if gl._global_dict['ZH_ID'] == '0':
+                        offset = offset
+                        # tip = '警告：请确认是否是侦听协议：' + gl.system_id
+                        # Bs.debug(Pa.Debug, tip)
+                    else:
+                        offset = offset - 5
                 else:
-                    offset = offset - 5
-            else:
-                # X431 回复按80算
-                if (cmds[0][0:2] == '80') | (cmds[0][0:2] == 'C0'):
-                    offset = offset
-                else:
-                    offset = offset - 1
-            if offset < 0:
-                tip = '警告：' + str(offset) + ' 数据流偏移小于0：' + hex(gl._global_dict['car_id'])
-                Bs.debug(Pa.Debug, tip)
-            offsets.append(str(offset).rjust(3, '0'))
-            formula_id = tmp[4]
-            formula = Bs.get_id_data_from_dict(Pa._formula_dict, formula_id)
-            # print(formula)
-            if not formula:
-                formula = ''
-                tip = formula_id + '：数据流未找到公式ID，路径' + hex(gl._global_dict['car_id'])
-                Bs.debug(Pa.Debug, tip)
-            formula = Bs.str_remove_x00(formula)
-            formulas.append(formula)
-        # 有版本信息再操作
-    if ds_total > 0:
-        re_tuple = Bs.cmd_to_dict(cmds)
-        req = re_tuple[0]
-        ans = re_tuple[1]
-        # adv_cmds = [" 02 10 03 00 00 00 00 00", " 02 10 03 01 00 00 00 00", " 02 10 03 02 00 00 00 00", " 02 10 03 03 00 00 00 00",]
-        # 菜单名称，命令，回复命令号，数据流名称，单位，偏移，公式，进入前预发命令
-        write_ds(menu_name, req, ans, names, units, offsets, formulas, adv_cmds)
-        # 数据流总条数，该层菜单名称，命令，ANS对应命令，名称，单位，偏移，公式
-        # return ds_total, menu_name, req, ans, names, units, offsets, formulas
+                    # X431 回复按80算
+                    if (cmds[0][0:2] == '80') | (cmds[0][0:2] == 'C0'):
+                        offset = offset
+                    else:
+                        offset = offset - 1
+                if offset < 0:
+                    tip = '警告：' + str(offset) + ' 数据流偏移小于0：' + gl.system_id
+                    Bs.debug(Pa.Debug, tip)
+                offsets.append(str(offset).rjust(3, '0'))
+                formula_id = tmp[4]
+                formula = Bs.get_id_data_from_dict(Pa._formula_dict, formula_id)
+                # print(formula)
+                if not formula:
+                    formula = ''
+                    tip = formula_id + '：数据流未找到公式ID，路径' + gl.system_id
+                    Bs.debug(Pa.Debug, tip)
+                formula = Bs.str_remove_x00(formula)
+                formulas.append(formula)
+            # 有版本信息再操作
+        if ds_total > 0:
+            re_tuple = Bs.cmd_to_dict(cmds)
+            req = re_tuple[0]
+            ans = re_tuple[1]
+            # adv_cmds = [" 02 10 03 00 00 00 00 00", " 02 10 03 01 00 00 00 00", " 02 10 03 02 00 00 00 00", " 02 10 03 03 00 00 00 00",]
+            # 菜单名称，命令，回复命令号，数据流名称，单位，偏移，公式，进入前预发命令
+            write_ds(menu_name, req, ans, names, units, offsets, formulas, adv_cmds)
+            # 数据流总条数，该层菜单名称，命令，ANS对应命令，名称，单位，偏移，公式
+            # return ds_total, menu_name, req, ans, names, units, offsets, formulas
 
 
 # 写入数据流信息(菜单名称，命令，ANS对应命令，名称，单位，偏移，公式，进入前预发命令)
@@ -153,7 +231,7 @@ def write_ds(menu_name, req, ans, names, units, offsets, formulas, adv_cmds):
                     if len(adv_cmds) > 0:  # 写入预发命令
                         symbol_0 = '  $IN_' + str(gl.flag).rjust(2, '0') + '  '
                         adv_cmd = Bs.write_info_or_ds_cmd(symbol_0, adv_cmds, gl.InitDataLinkLayer['m0'], gl.ds_flag)
-                        f.writelines(adv_cmd + '\n')
+                        f.writelines(adv_cmd[0] + '\n')
                     symbol_1 = '  $)  '
                     f.writelines(symbol_1 + str(gl.flag).rjust(2, '0') + '.' + menu_name + '\n')
                     f.writelines(symbol + str(gl.flag).rjust(2, '0') + '.' + menu_name + '\n')
@@ -163,13 +241,14 @@ def write_ds(menu_name, req, ans, names, units, offsets, formulas, adv_cmds):
                     if len(adv_cmds) > 0:  # 写入预发命令
                         symbol_0 = '  $IN  '
                         adv_cmd = Bs.write_info_or_ds_cmd(symbol_0, adv_cmds, gl.InitDataLinkLayer['m0'], gl.ds_flag)
-                        f.writelines(adv_cmd + '\n')
+                        f.writelines(adv_cmd[0] + '\n')
                 gl.flag = 0
                 # 写入命令
                 out_cmd = Bs.write_info_or_ds_cmd(symbol, req, gl.InitDataLinkLayer['m0'])
-                f.writelines(out_cmd + '\n')
+                f.writelines(out_cmd[0] + '\n')
                 # 写入每条数据
-                ds_str = Bs.write_ds_str(symbol, names, units, ans, offsets, formulas)
+                shield_cmd = out_cmd[1]
+                ds_str = Bs.write_ds_str(symbol, names, units, ans, offsets, formulas, shield_cmd)
                 f.writelines(ds_str + '\n')
                 f.writelines(';' + 150 * '*' + '\n\n')
             else:
@@ -179,15 +258,16 @@ def write_ds(menu_name, req, ans, names, units, offsets, formulas, adv_cmds):
                 if len(adv_cmds) > 0:  # 写入预发命令
                     symbol_0 = '  $IN_' + str(gl.flag-1).rjust(2, '0') + '  '
                     adv_cmd = Bs.write_info_or_ds_cmd(symbol_0, adv_cmds, gl.InitDataLinkLayer['m0'], gl.ds_flag)
-                    f.writelines(adv_cmd + '\n')
+                    f.writelines(adv_cmd[0] + '\n')
                 symbol_1 = '  $)  '
                 f.writelines(symbol_1 + str(gl.flag - 1).rjust(2, '0') + '.' + menu_name + '\n')
                 f.writelines(symbol + str(gl.flag - 1).rjust(2, '0') + '.' + menu_name + '\n')
                 # 写入命令
                 out_cmd = Bs.write_info_or_ds_cmd(symbol, req, gl.InitDataLinkLayer['m0'])
-                f.writelines(out_cmd + '\n')
+                f.writelines(out_cmd[0] + '\n')
                 # 写入每条数据
-                ds_str = Bs.write_ds_str(symbol, names, units, ans, offsets, formulas)
+                shield_cmd = out_cmd[1]
+                ds_str = Bs.write_ds_str(symbol, names, units, ans, offsets, formulas, shield_cmd)
                 f.writelines(ds_str + '\n')
 
 

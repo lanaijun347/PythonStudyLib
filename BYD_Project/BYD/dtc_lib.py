@@ -32,7 +32,9 @@ def dtc_out_lib(link_path, dtc_link_2byte, dict1, dict2):
         # path = 'd:\\BYD_Project\\HANTENG\\file\\码库\\DTC\\' + i + '.asm'
         # path = 'd:\\BYD_Project\\LINGTU\\file\\码库\\DTC\\' + i + '.asm'
         # path = 'd:\\BYD_Project\\SWM\\file\\码库\\DTC\\' + i + '.asm'
-        path = 'D:\\xiaolan\\PythonStudyLib\\BYD_Project\\BYD_v18.90\\file\\码库\\DTC\\' + i + '.asm'
+        # path = 'D:\\xiaolan\\PythonStudyLib\\BYD_Project\\BYD_v18.90\\file\\码库\\DTC\\' + i + '.asm'
+        # path = 'D:\\xiaolan\\PythonStudyLib\\BYD_Project\\BJQC\\file\\码库\\DTC\\' + i + '.asm'
+        path = 'D:\\xiaolan\\PythonStudyLib\\BYD_Project\\JILI\\file\\码库\\DTC\\' + i + '.asm'
         with open(path, 'w') as f1:
             print('正在执行：' + i + '.asm')
             symbol = '     $*     '
@@ -78,7 +80,9 @@ def two_byte_dtc_out_lib(dtc_link_2byte, dict1, dict2):
         # path = 'd:\\BYD_Project\\HANTENG\\file\\码库\\DTC\\' + i + '_2BYTE' + '.asm'
         # path = 'd:\\BYD_Project\\LINGTU\\file\\码库\\DTC\\' + i + '_2BYTE' + '.asm'
         # path = 'd:\\BYD_Project\\SWM\\file\\码库\\DTC\\' + i + '_2BYTE' + '.asm'
-        path = 'D:\\xiaolan\\PythonStudyLib\\BYD_Project\\BYD_v18.90\\file\\码库\\DTC\\' + i + '_2BYTE' + '.asm'
+        # path = 'D:\\xiaolan\\PythonStudyLib\\BYD_Project\\BYD_v18.90\\file\\码库\\DTC\\' + i + '_2BYTE' + '.asm'
+        # path = 'D:\\xiaolan\\PythonStudyLib\\BYD_Project\\BJQC\\ file\\码库\\DTC\\' + i + '_2BYTE' + '.asm'
+        path = 'D:\\xiaolan\\PythonStudyLib\\BYD_Project\\JILI\\file\\码库\\DTC\\' + i + '_2BYTE' + '.asm'
         with open(path, 'w') as f1:
             print('正在执行：' + i + '_2BYTE.asm')
             symbol = '     $*     '
@@ -123,7 +127,10 @@ if __name__ == '__main__':
     # tcode = Bs.file_to_dict(r'd:\BYD_Project\HANTENG\file\码库\TCODE_CN.txt')
     # tcode = Bs.file_to_dict(r'd:\BYD_Project\LINGTU\file\码库\TCODE_CN.txt')
     # tcode = Bs.file_to_dict(r'd:\BYD_Project\SWM\file\码库\TCODE_CN.txt')
-    tcode = Bs.file_to_dict(r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\TCODE_CN.txt')
-    tcode1 = Bs.file_to_dict(r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\TCODE1_CN.txt')
-    dtc_out_lib(Pa.dtc_link, Pa.dtc_link_2byte, tcode, tcode1)
+    # tcode = Bs.file_to_dict(r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\TCODE_CN.txt')
+    # tcode1 = Bs.file_to_dict(r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\TCODE1_CN.txt')
+    # tcode = Bs.file_to_dict(r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\码库\TCODE_CN.txt')
+    # tcode1 = Bs.file_to_dict(r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\码库\TCODE1_CN.txt')
+    tcode = Bs.file_to_dict(r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\码库\TCODE_CN.txt')
+    dtc_out_lib(Pa.dtc_link, Pa.dtc_link_2byte, tcode, {})
 

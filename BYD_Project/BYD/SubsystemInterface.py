@@ -52,24 +52,24 @@ def GetAndSetParameter(file_list, fp):
             elif gl.InitDataLinkLayer['m0'] == 2:
                 Com_SetParameter_CAN(gl.InitDataLinkLayer['m3'])
             elif gl.InitDataLinkLayer['m0'] == 4:
-                tip = '警告：车型ID ' + hex(gl._global_dict['car_id']) + ' 未编写 4 该类协议类型'
+                tip = '警告：车型ID ' + gl.system_id + ' 未编写 4 该类协议类型'
                 Bs.debug(Bs.Debug, tip)
             elif gl.InitDataLinkLayer['m0'] == 5:
-                tip = '警告：车型ID ' + hex(gl._global_dict['car_id']) + ' 未编写 5 该类协议类型'
+                tip = '警告：车型ID ' + gl.system_id + ' 未编写 5 该类协议类型'
                 Bs.debug(Bs.Debug, tip)
             elif gl.InitDataLinkLayer['m0'] == 3 or gl.InitDataLinkLayer['m0'] == 7:
                 Com_SetParameter_LONGCAN(gl.InitDataLinkLayer['m3'])
                 if gl.InitDataLinkLayer['m0'] == 7:
-                    tip = '警告：车型ID ' + hex(gl._global_dict['car_id']) + ' 未编写 7 该类协议类型'
+                    tip = '警告：车型ID ' + gl.system_id + ' 未编写 7 该类协议类型'
                     Bs.debug(Bs.Debug, tip)
             elif gl.InitDataLinkLayer['m0'] == 8:
-                tip = '警告：车型ID ' + hex(gl._global_dict['car_id']) + ' 未编写 8 该类协议类型'
+                tip = '警告：车型ID ' + gl.system_id + ' 未编写 8 该类协议类型'
                 Bs.debug(Bs.Debug, tip)
             elif gl.InitDataLinkLayer['m0'] == 6:
-                tip = '警告：车型ID ' + hex(gl._global_dict['car_id']) + ' 未编写 6 该类协议类型'
+                tip = '警告：车型ID ' + gl.system_id + ' 未编写 6 该类协议类型'
                 Bs.debug(Bs.Debug, tip)
             else:
-                tip = '警告：车型ID ' + hex(gl._global_dict['car_id']) + ' 未编写 ' + str(gl.InitDataLinkLayer['m0']) \
+                tip = '警告：车型ID ' + gl.system_id + ' 未编写 ' + str(gl.InitDataLinkLayer['m0']) \
                       + ' 该类协议类型'
                 Bs.debug(Bs.Debug, tip)
     else:
@@ -215,7 +215,7 @@ def Com_SetParameter_CAN(InitDataLinkLayer):
         bps = '125K'
     else:
         bps = '250K'
-        tip = '警告：车型ID ' + hex(gl._global_dict['car_id']) + ' 未找到合适波特率, 默认给了 250K ！'
+        tip = '警告：车型ID ' + gl.system_id + ' 未找到合适波特率, 默认给了 250K ！'
         Bs.debug(Bs.Debug, tip)
     if len(lv_id) > 1 and zh_id == lv_id[0]:
         lv_id = lv_id[1:]
@@ -236,7 +236,7 @@ def Com_SetParameter_GENRAL(InitDataLinkLayer):
         bps = '9600'
     else:
         bps = '16000'
-        tip = '警告：车型ID ' + hex(gl._global_dict['car_id']) + ' 未找到合适波特率, 默认给了 16000 ！'
+        tip = '警告：车型ID ' + gl.system_id + ' 未找到合适波特率, 默认给了 16000 ！'
         Bs.debug(Bs.Debug, tip)
     gl._global_dict['PIN1'] = pin1
     gl._global_dict['PIN2'] = pin2
@@ -263,7 +263,7 @@ def Com_SetParameter_LONGCAN(InitDataLinkLayer):
         bps = '125K'
     else:
         bps = '250K'
-        # tip = '警告：车型ID ' + hex(gl._global_dict['car_id']) + ' 未找到合适波特率, 默认给了 250K ！'
+        # tip = '警告：车型ID ' + gl.system_id + ' 未找到合适波特率, 默认给了 250K ！'
         # Bs.debug(Bs.Debug, tip)
     gl._global_dict['PIN1'] = pin1
     gl._global_dict['PIN2'] = pin2
@@ -271,7 +271,7 @@ def Com_SetParameter_LONGCAN(InitDataLinkLayer):
     gl._global_dict['LV_ID'] = lv_id
     gl._global_dict['Bps'] = bps
     if gl.InitDataLinkLayer['m0'] == 3 and gl._global_dict['ZH_ID'] == '0':
-        tip = '警告：请确认是否是侦听协议：' + hex(gl._global_dict['car_id'])
+        tip = '警告：请确认是否是侦听协议：' + gl.system_id
         Bs.debug(Pa.Debug, tip)
 
 
@@ -280,14 +280,14 @@ def SubSystemEnter(file_list, fp):
     v27 = Bs.readlist_num(file_list, fp, 2)
     v29 = Bs.readlist_num(file_list, fp + 2, 4)
     if v29:
-        tip = '警告：车型ID ' + hex(gl._global_dict['car_id']) + ' SubsystemInterface.py请关注程序 242行，进入命令位置，可忽略 ！'
+        tip = '警告：车型ID ' + gl.system_id + ' SubsystemInterface.py请关注程序 242行，进入命令位置，可忽略 ！'
         Bs.debug(Bs.Debug, tip)
     v26 = Bs.readlist_num(file_list, fp + 6, 1)
     if v26:
         pass
         '''
         gl.InitSubSystem['n9'].append(gl.InitSubSystem['n2'])
-        tip = '警告：车型ID ' + hex(gl._global_dict['car_id']) + ' SubsystemInterface.py请关注程序 247行，进入命令位置，可忽略 ！'
+        tip = '警告：车型ID ' + gl.system_id + ' SubsystemInterface.py请关注程序 247行，进入命令位置，可忽略 ！'
         Bs.debug(Bs.Debug, tip)
         '''
     v6 = fp + 8
@@ -326,12 +326,12 @@ def GetSaveCmdConunt(file_list, fp):
         cmd = Bs.get_command(cmd_str, gl.InitDataLinkLayer['m0'])
         if v9 == 1 and cmd:
             if ('3E' in cmd[0:15]) | ('3e' in cmd[0:15]):
-                tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
+                tip = '警告：车型ID为：' + gl.system_id + \
                       '进入命令有空值或为空闲，请确认。'
                 Bs.debug(Bs.Debug, tip)
             gl._global_dict['ICMD'].append(cmd)
         if cmd == 0:
-            tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
+            tip = '警告：车型ID为：' + gl.system_id + \
                   '进入命令部分，命令有空值，请查看程序SubsystemInterface.py。'
             Bs.debug(Bs.Debug, tip)
             continue
@@ -343,7 +343,7 @@ def GetSaveCmdConunt(file_list, fp):
         if gl.InitDataLinkLayer['m0'] == 2:
             gl._global_dict['KCMD'].append(' 02 3E 80 00 00 00 00 00')
         else:
-            tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
+            tip = '警告：车型ID为：' + gl.system_id + \
                   '未找到空闲命令，请查看程序SubsystemInterface.py 296行！'
             Bs.debug(Bs.Debug, tip)
     result = v2
@@ -358,9 +358,9 @@ def Xml_GetInfoFromExitSys(file_list, fp):
     if file_list:
         v2_0 = Bs.readlist_reverse(file_list, v3, 4)
         num = Bs.readlist_num(file_list, v3+4, 2)
-        if num:
+        if num and num < 100:
             v8 = 0
-            v7 = v3 +6
+            v7 = v3 + 6
             while v8 < num:
                 v2_8 = Bs.readlist_num(file_list, v7, 2)
                 v9 = v7 + 2
@@ -416,7 +416,7 @@ def Xml_GetInfoFromCmdDataType(file_list, fp):
                         cmd_id1 = Bs.readlist_reverse(file_list, v5, 4)
                         cmd_id2 = Bs.readlist_reverse(file_list, v5 + 4, 4)
                         cmd_offset = Bs.readlist_num(file_list, v5 + 8, 2)
-            tip = '警告：车型ID ' + hex(gl._global_dict['car_id']) + ' 未找到合适 命令ID ！'
+            tip = '警告：车型ID ' + gl.system_id + ' 未找到合适 命令ID ！'
             Bs.debug(Bs.Debug, tip)
     formula_id = Bs.readlist_reverse(file_list, v5, 4)  # 公式ID
     v35 = Bs.readlist_num(file_list, v30+6, 1)
@@ -484,7 +484,7 @@ def FuncSelectInterface(file_list):
 
 
     if not rdtc_fp and not cdtc_fp and not info_fp and not ds_fp:
-        tip = hex(gl._global_dict['car_id']).replace('0x', '') + ' 没有读码/清码/版本信息/数据流功能！'
+        tip = gl.system_id.replace('0x', '') + ' 没有读码/清码/版本信息/数据流功能！'
         Bs.debug(Pa.Debug, tip)
     # print(hex(info_fp),hex(rdtc_fp),hex(cdtc_fp),hex(ds_fp))
 

@@ -392,24 +392,24 @@ _formula_dict = {}
 # have_dtc_lib = r'D:\xiaolan\PythonStudyLib\BYD_Project\SWM\file\码库\have_dtc_lib.txt'  # 有码库系统
 
 # # 鑫源
-# SYSSCAN = r'D:\BYD_Project\XINYUAN\file\SYSSCAN.txt'
-# FUNCFG = r'D:\BYD_Project\XINYUAN\file\HCXY_FUNCFG.txt'
-# Debug = r'D:\BYD_Project\XINYUAN\file\debug.txt'
-# CMD = r'D:\BYD_Project\XINYUAN\file\H_COMMAND.txt'
-# TEXT = r'D:\BYD_Project\XINYUAN\file\TEXT_CN.txt'
-# DS = r'D:\BYD_Project\XINYUAN\file\DSTREAM_CN.txt'
-# Formula = r'D:\BYD_Project\XINYUAN\file\IMS_EXPRESS.txt'
-# out = r'D:\BYD_Project\XINYUAN\file\协议'
-# menu_ids = r'D:\BYD_Project\XINYUAN\file\menu_ev.txt'
+# SYSSCAN = r'D:\xiaolan\PythonStudyLib\BYD_Project\XINYUAN\file\SYSSCAN.txt'
+# FUNCFG = r'D:\xiaolan\PythonStudyLib\BYD_Project\XINYUAN\file\HCXY_FUNCFG.txt'
+# Debug = r'D:\xiaolan\PythonStudyLib\BYD_Project\XINYUAN\file\debug.txt'
+# CMD = r'D:\xiaolan\PythonStudyLib\BYD_Project\XINYUAN\file\H_COMMAND.txt'
+# TEXT = r'D:\xiaolan\PythonStudyLib\BYD_Project\XINYUAN\file\TEXT_CN.txt'
+# DS = r'D:\xiaolan\PythonStudyLib\BYD_Project\XINYUAN\file\DSTREAM_CN.txt'
+# Formula = r'D:\xiaolan\PythonStudyLib\BYD_Project\XINYUAN\file\IMS_EXPRESS.txt'
+# out = r'D:\xiaolan\PythonStudyLib\BYD_Project\XINYUAN\file\协议'
+# menu_ids = r'D:\xiaolan\PythonStudyLib\BYD_Project\XINYUAN\file\menu_ev.txt'
 #
 # # 码库
-# dtc_link_2byte = r'D:\BYD_Project\XINYUAN\file\码库\dtc_link_2byte.txt'
-# dtc_link_1byte = r'D:\BYD_Project\XINYUAN\file\码库\dtc_link_1byte.txt'
-# dtc_link = r'D:\BYD_Project\XINYUAN\file\码库\dtc_link.txt'
-# TCODE = r'D:\BYD_Project\XINYUAN\file\码库\TCODE_CN.txt'
-# TCODE1 = r'D:\BYD_Project\XINYUAN\file\码库\TCODE1_CN.txt'
-# no_dtc_lib = r'D:\BYD_Project\XINYUAN\file\码库\no_dtc_lib.txt'  # 无码库系统
-# have_dtc_lib = r'D:\BYD_Project\XINYUAN\file\码库\have_dtc_lib.txt'  # 有码库系统
+# dtc_link_2byte = r'D:\xiaolan\PythonStudyLib\BYD_Project\XINYUAN\file\码库\dtc_link_2byte.txt'
+# dtc_link_1byte = r'D:\xiaolan\PythonStudyLib\BYD_Project\XINYUAN\file\码库\dtc_link_1byte.txt'
+# dtc_link = r'D:\xiaolan\PythonStudyLib\BYD_Project\XINYUAN\file\码库\dtc_link.txt'
+# TCODE = r'D:\xiaolan\PythonStudyLib\BYD_Project\XINYUAN\file\码库\TCODE_CN.txt'
+# TCODE1 = r'D:\xiaolan\PythonStudyLib\BYD_Project\XINYUAN\file\码库\TCODE1_CN.txt'
+# no_dtc_lib = r'D:\xiaolan\PythonStudyLib\BYD_Project\XINYUAN\file\码库\no_dtc_lib.txt'  # 无码库系统
+# have_dtc_lib = r'D:\xiaolan\PythonStudyLib\BYD_Project\XINYUAN\file\码库\have_dtc_lib.txt'  # 有码库系统
 
 
 # # 知豆
@@ -432,26 +432,67 @@ _formula_dict = {}
 # no_dtc_lib = r'D:\xiaolan\PythonStudyLib\BYD_Project\ZHIDOU\file\码库\no_dtc_lib.txt'  # 无码库系统
 # have_dtc_lib = r'D:\xiaolan\PythonStudyLib\BYD_Project\ZHIDOU\file\码库\have_dtc_lib.txt'  # 有码库系统
 
-# 比亚迪v18.90
-SYSSCAN = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\SYSSCAN.txt'
-FUNCFG = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\FLYER_FUNCFG.txt'
-Debug = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\debug.txt'
-CMD = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\H_COMMAND.txt'
-TEXT = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\TEXT_CN.txt'
-DS = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\DSTREAM_CN.txt'
-Formula = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\IMS_EXPRESS.txt'
-out = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\协议'
-menu_ids = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\menu_new.txt'
+# # 比亚迪v18.90
+# SYSSCAN = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\SYSSCAN.txt'
+# FUNCFG = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\FLYER_FUNCFG.txt'
+# Debug = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\debug.txt'
+# CMD = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\H_COMMAND.txt'
+# TEXT = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\TEXT_CN.txt'
+# DS = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\DSTREAM_CN.txt'
+# Formula = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\IMS_EXPRESS.txt'
+# out = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\协议'
+# menu_ids = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\menu_new.txt'
+#
+# # 码库
+# dtc_link_2byte = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\dtc_link_2byte.txt'
+# dtc_link_1byte = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\dtc_link_1byte.txt'
+# dtc_link = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\dtc_link.txt'
+# TCODE = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\TCODE_CN.txt'
+# TCODE1 = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\TCODE1_CN.txt'
+# no_dtc_lib = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\no_dtc_lib.txt'  # 无码库系统
+# have_dtc_lib = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\have_dtc_lib.txt'  # 有码库系统
+
+# # 北京汽车
+# SYSSCAN = r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\SYSSCAN.txt'
+# FUNCFG = r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\BEIJING_FUNCFG.txt'
+# Debug = r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\debug.txt'
+# CMD = r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\H_COMMAND.txt'
+# TEXT = r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\TEXT_CN.txt'
+# DS = r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\DSTREAM_CN.txt'
+# Formula = r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\IMS_EXPRESS.txt'
+# out = r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\协议'
+# menu_ids = r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\menu_new.txt'
+#
+# # 码库
+# dtc_link_2byte = r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\码库\dtc_link_2byte.txt'
+# dtc_link_1byte = r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\码库\dtc_link_1byte.txt'
+# dtc_link = r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\码库\dtc_link.txt'
+# TCODE = r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\码库\TCODE_CN.txt'
+# TCODE1 = r'D:\xiaolan\PythonStudyLib\BYD_Project\BBJQC\file\码库\TCODE1_CN.txt'
+# no_dtc_lib = r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\码库\no_dtc_lib.txt'  # 无码库系统
+# have_dtc_lib = r'D:\xiaolan\PythonStudyLib\BYD_Project\BJQC\file\码库\have_dtc_lib.txt'  # 有码库系统
+
+
+# 吉利
+SYSSCAN = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\SYSSCAN.txt'
+FUNCFG = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\HAOQING_FUNCFG.txt'
+Debug = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\debug.txt'
+CMD = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\H_COMMAND.txt'
+TEXT = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\TEXT_CN.txt'
+DS = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\DSTREAM_CN.txt'
+Formula = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\IMS_EXPRESS.txt'
+out = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\协议'
+menu_ids = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\menu_new.txt'
+rdtc_type = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\rdtc_type.txt'
 
 # 码库
-dtc_link_2byte = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\dtc_link_2byte.txt'
-dtc_link_1byte = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\dtc_link_1byte.txt'
-dtc_link = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\dtc_link.txt'
-TCODE = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\TCODE_CN.txt'
-TCODE1 = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\TCODE1_CN.txt'
-no_dtc_lib = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\no_dtc_lib.txt'  # 无码库系统
-have_dtc_lib = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\码库\have_dtc_lib.txt'  # 有码库系统
-
+dtc_link_2byte = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\码库\dtc_link_2byte.txt'
+dtc_link_1byte = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\码库\dtc_link_1byte.txt'
+dtc_link = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\码库\dtc_link.txt'
+TCODE = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\码库\TCODE_CN.txt'
+TCODE1 = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\码库\TCODE1_CN.txt'
+no_dtc_lib = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\码库\no_dtc_lib.txt'  # 无码库系统
+have_dtc_lib = r'D:\xiaolan\PythonStudyLib\BYD_Project\JILI\file\码库\have_dtc_lib.txt'  # 有码库系统
 
 def init_data_file():
     global _ds_dict

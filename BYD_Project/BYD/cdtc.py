@@ -91,7 +91,7 @@ def clear_dtc_choose(type_mun, menu_name, cmds):
     tip_str = ''
     v12 = type_mun
     if v12 == 3:
-        tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
+        tip = '警告：车型ID为：' + gl.system_id + \
              '未编写该清码类型：case ' + str(v12)
         Bs.debug(Bs.Debug, tip)
     elif v12 > 3:
@@ -100,22 +100,22 @@ def clear_dtc_choose(type_mun, menu_name, cmds):
             #     cmds.append(cmd)
             write_clear_dtc(menu_name, cmds, tip_str)
         elif v12 < 5:
-            tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
+            tip = '警告：车型ID为：' + gl.system_id + \
                   '未编写该清码类型：case ' + str(v12)
             Bs.debug(Bs.Debug, tip)
         elif v12 != 240:
-            tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
+            tip = '警告：车型ID为：' + gl.system_id + \
                   '未编写该清码类型：case ' + str(v12)
             Bs.debug(Bs.Debug, tip)
         else:
-            tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
+            tip = '警告：车型ID为：' + gl.system_id + \
                   '未编写该清码类型：case ' + str(v12)
             Bs.debug(Bs.Debug, tip)
     else:  # 正常清码
         if v12 != 1:
             if v12 == 2:
                 tip_str = '\t\t$$$$ 1.点火开关打开（ON（给车内所有电器供电）挡），发动机不启动（电动车为非Ready（随时可以启程）状态）。\n\n'
-                # tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
+                # tip = '警告：车型ID为：' + gl.system_id + \
                 #       '未编写该清码类型：case ' + str(v12)
                 # Bs.debug(Bs.Debug, tip)
         # ClearDtcMode0001
@@ -138,7 +138,7 @@ def write_clear_dtc(menu_name, cmds, tip_str):
                 gl.flag = 0
                 # 写入命令
                 out_cmd = Bs.write_info_or_ds_cmd(symbol, cmds, gl.InitDataLinkLayer['m0'])
-                f.writelines(tip_str + out_cmd + '\n')
+                f.writelines(tip_str + out_cmd[0] + '\n')
                 f.writelines(';' + 150 * '*' + '\n\n')
             else:
                 if gl.flag == 0:
@@ -147,4 +147,4 @@ def write_clear_dtc(menu_name, cmds, tip_str):
                 f.writelines(symbol + str(gl.flag).rjust(2, '0') + '.' + menu_name + '\n')
                 # 写入命令
                 out_cmd = Bs.write_info_or_ds_cmd(symbol, cmds, gl.InitDataLinkLayer['m0'])
-                f.writelines(tip_str + out_cmd + '\n')
+                f.writelines(tip_str + out_cmd[0] + '\n')

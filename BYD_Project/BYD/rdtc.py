@@ -119,7 +119,7 @@ def Xml_GetInfoFromFunCfgReadDtc1(file_list, fp, data):
                 if formula:
                     formulas.append(formula)
                 # else:
-                #     print(hex(gl._global_dict['car_id']))
+                #     print(gl.system_id)
                 if gl.InitDataLinkLayer['m0'] == 2:
                     byte_off = byte_off - 3
                     if dtc_num_off != 0:
@@ -152,7 +152,7 @@ def Xml_GetInfoFromFunCfgReadDtc1(file_list, fp, data):
                     elif 'x1' in r_str:
                         ctl_num = 1
                     else:
-                        tip = hex(gl._global_dict['car_id']) + ' ：读码公式请关注 --> rdtc.py'
+                        tip = gl.system_id + ' ：读码公式请关注 --> rdtc.py'
                         Bs.debug(Pa.Debug, tip)
                 else:
                     if 'x3' in formula:
@@ -162,7 +162,7 @@ def Xml_GetInfoFromFunCfgReadDtc1(file_list, fp, data):
                     elif 'x1' in formula:
                         ctl_num = 1
                     else:
-                        tip = hex(gl._global_dict['car_id']) + ' ：读码公式请关注 --> rdtc.py'
+                        tip = gl.system_id + ' ：读码公式请关注 --> rdtc.py'
                         Bs.debug(Pa.Debug, tip)
 
                 # if ('x4' in formula_tmp) and ('x4/' not in formula_tmp) and ('x4*' not in formula_tmp) and ('x4&' not in formula_tmp) and ('x4+' not in formula_tmp) and ('x4-' not in formula_tmp) and ('x4|' not in formula_tmp) and ('x4>' not in formula_tmp) and ('x4<' not in formula_tmp):
@@ -179,7 +179,7 @@ def Xml_GetInfoFromFunCfgReadDtc1(file_list, fp, data):
                 # else:
                 #     file_mode = 'w'
                 # with open('./debug_dtc.txt', file_mode) as f:
-                #     f.writelines(hex(gl._global_dict['car_id']) + '\t' + repr(dtc_type) + '\t' + dtc_link + '\n')
+                #     f.writelines(gl.system_id + '\t' + repr(dtc_type) + '\t' + dtc_link + '\n')
                 if byte_nums[0] == 4 and dtc_type != 3:
                     ctl_num = 3
                 else:
@@ -196,7 +196,7 @@ def Xml_GetInfoFromFunCfgReadDtc1(file_list, fp, data):
         v27 = v21 + 1
         if v2_20:
             v29 = 0
-            tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
+            tip = '警告：车型ID为：' + gl.system_id + \
                   '未编写该读码类型, 关注 rdtc.py 72行'
             Bs.debug(Bs.Debug, tip)
             # while v29 < v2_20:
@@ -229,19 +229,19 @@ def Xml_GetInfoFromFunCfgReadDtc1(file_list, fp, data):
         else:
             dtc_str = str1 + '\n' + 2 * ' ' + '码库:\n\n' + 2 * ' ' + '$*$*DTC/' + dtc_link + '\n\n'
             if ctl_num == 0:
-                tip = hex(gl._global_dict['car_id']) + ' ：生成码库文件错误，显示字节为0 --> rdtc.py'
+                tip = gl.system_id + ' ：生成码库文件错误，显示字节为0 --> rdtc.py'
                 Bs.debug(Pa.Debug, tip)
         # 五菱码库用
-        # dtc_str = str1 + '\n' + 2 * ' ' + '码库:' + 2 * ' ' + '$*$*' + (hex(gl._global_dict['car_id']).replace('0x', '')).upper() + '\n\n'
+        # dtc_str = str1 + '\n' + 2 * ' ' + '码库:' + 2 * ' ' + '$*$*' + (gl.system_id.replace('0x', '')).upper() + '\n\n'
         # 菜单名称，命令，故障码控制字符串
         write_read_dtc(menu_name, cmds, dtc_str, adv_cmds)
         # return dtc_type, dtc_link, byte_num, offset, cmds
         if not iDtcOnLine:  # 码库不要联网
-            tip = hex(gl._global_dict['car_id']).replace('0x', '').upper()
+            tip = gl.system_id.replace('0x', '').upper()
             Bs.debug(Pa.have_dtc_lib, tip)
         else:  # 码库要联网
             dtc_str = str1 + '\n'
-            tip = hex(gl._global_dict['car_id']).replace('0x', '').upper()
+            tip = gl.system_id.replace('0x', '').upper()
             Bs.debug(Pa.no_dtc_lib, tip)
 
 
@@ -261,7 +261,7 @@ def choose_dtc_mode1(str1, cmds, dtc_num_offsets, dtc_nums, byte_off, formulas):
                     if (dtc_num_offsets[i] == 5) & ((dtc_num_offsets[i] + dtc_nums[i] - 1) == 6):
                         gl._dtc_xml['value'].append(2)
                     else:
-                        tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + ' 请关注该读码方式，程序中未添加-' + str2
+                        tip = '警告：车型ID为：' + gl.system_id + ' 请关注该读码方式，程序中未添加-' + str2
                         Bs.debug(Bs.Debug, tip)
                 elif dtc_nums[i] == 1:
                     str2 = 2*' ' + 'ANS' + str(i).rjust(3, '0') + '.' + 'BYTE' + str(dtc_num_offsets[i]).rjust(2, '0') \
@@ -272,7 +272,7 @@ def choose_dtc_mode1(str1, cmds, dtc_num_offsets, dtc_nums, byte_off, formulas):
                     elif ((byte_off - dtc_num_offsets[i]) == 2):
                         gl._dtc_xml['value'].append(10)
                     else:
-                        tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + ' 请关注该读码方式，程序中未添加-' + str2
+                        tip = '警告：车型ID为：' + gl.system_id + ' 请关注该读码方式，程序中未添加-' + str2
                         Bs.debug(Bs.Debug, tip)
                 else:
                     str2 = '帧长控制故障码个数，'
@@ -290,22 +290,25 @@ def choose_dtc_mode(str1, dtc_type, cmds, offsets, byte_num, ctl_num, dtc_num_of
                 flag = 1
             formula_str += '\t\t\t' + formula + '\n'
             if flag:
-                tip = hex(gl._global_dict['car_id']) + ' : 请根据车型 Protocol [读码] 程序自行处理控制公式。\n\t\t' + str(formulas)
+                tip = gl.system_id + ' : 请根据车型 Protocol [读码] 程序自行处理控制公式。\n\t\t' + str(formulas)
                 Bs.debug(Bs.Debug, tip)
         formula_str = '\t\t控制公式：\n' + formula_str + '\n'
     if str1:
-        if (dtc_type == 5) | (dtc_type == 3) | (dtc_type == 1) :
+        if (dtc_type == 5) | (dtc_type == 3) | (dtc_type == 1):
             for i in range(be_len-1, len(cmds)):
                 if dtc_num_offsets[i] == 0:
                     str2 = formula_str + str1 + '从$#ANS' + str(i).rjust(3, '0') + '.' + 'BYTE' + str(offsets[i]).rjust(2, '0') + \
                            '$#开始每$#' + str(byte_num[i]) + '$#个字节表示一个故障码，前$#' + str(ctl_num) + \
                            '$#表示码号。\n'
+                    type_str = '读码类型 1 ，系统ID：' + gl.system_id
+                    if type_str not in gl._dtc_type:
+                        gl._dtc_type.append(type_str)
                 else:
-                    tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
+                    tip = '警告：车型ID为：' + gl.system_id + \
                           '未编写' + str(dtc_type) + '该读码类型, 关注 rdtc.py 181行'
                     Bs.debug(Bs.Debug, tip)
         else:
-            tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
+            tip = '警告：车型ID为：' + gl.system_id + \
                   '未编写' + str(dtc_type) + '该读码类型, 关注 rdtc.py 184行'
             Bs.debug(Bs.Debug, tip)
     else:
@@ -317,11 +320,16 @@ def choose_dtc_mode(str1, dtc_type, cmds, offsets, byte_num, ctl_num, dtc_num_of
                            + '-' + str(dtc_num_offsets[i] + dtc_num[i] - 1).rjust(2, '0') \
                            + ' 控制故障码个数，从$#' + 'ANS' + str(i).rjust(3, '0') + '.' + 'BYTE' + str(offsets[i]) + '$#开始每$#' \
                            + str(byte_num[i]) + '$#个字节表示一个故障码，前$#' + str(ctl_num) + '$#表示码号。\n'
+
+                    type_str = '读码类型 2 ，系统ID：' + gl.system_id
+                    if type_str not in gl._dtc_type:
+                        gl._dtc_type.append(type_str)
+
                     # 两帧读码且第一帧byte5-6控制读码个数
                     if (dtc_num_offsets[i] == 5) & ((dtc_num_offsets[i] + dtc_num[i] - 1) == 6) & (len(cmds) == 2):
                         gl._dtc_xml['value'].append(2)
                     else:
-                        tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + ' 请关注该读码方式，程序中未添加-' + str2
+                        tip = '警告：车型ID为：' + gl.system_id + ' 请关注该读码方式，程序中未添加-' + str2
                         Bs.debug(Bs.Debug, tip)
                 elif (dtc_num_offsets[i] > 0) & (dtc_num[i] >= 0):
                     if dtc_type == 4:
@@ -331,19 +339,28 @@ def choose_dtc_mode(str1, dtc_type, cmds, offsets, byte_num, ctl_num, dtc_num_of
                            + str(dtc_num_offsets[i]).rjust(2, '0') \
                            + ' 控制故障码个数，从$#' + 'ANS' + str(i).rjust(3, '0') + '.' + 'BYTE' + str(offsets[i]) + '$#开始每$#' \
                            + str(byte_num[i]) + '$#个字节表示一个故障码，前$#' + str(ctl_num) + '$#表示码号。\n'
+
+                    type_str = '读码类型 3 ，系统ID：' + gl.system_id
+                    if type_str not in gl._dtc_type:
+                        gl._dtc_type.append(type_str)
+
                     # 一帧读码且字节控制故障码个数，故障码起始位置在控制位后一位
                     if ((offsets[i] - dtc_num_offsets[i]) == 1):
                         gl._dtc_xml['value'].append(1)
                     elif ((offsets[i] - dtc_num_offsets[i]) == 2):
                         gl._dtc_xml['value'].append(10)
                     else:
-                        tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + ' 请关注该读码方式，程序中未添加-' + str2
+                        tip = '警告：车型ID为：' + gl.system_id + ' 请关注该读码方式，程序中未添加-' + str2
                         Bs.debug(Bs.Debug, tip)
                 else:
                     str2 = formula_str + 2*' ' + '帧长控制故障码个数，从$#' + 'ANS' + str(i).rjust(3, '0') + '.' + 'BYTE' + str(offsets[i]) + '$#开始每$#' \
                            + str(byte_num[i]) + '$#个字节表示一个故障码，前$#' + str(ctl_num) + '$#表示码号。\n'
+
+                    type_str = '读码类型 0 ，系统ID：' + gl.system_id
+                    if type_str not in gl._dtc_type:
+                        gl._dtc_type.append(type_str)
         else:
-            tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
+            tip = '警告：车型ID为：' + gl.system_id + \
                   '未编写' + str(dtc_type) + '该读码类型, 关注 rdtc.py 204行'
             Bs.debug(Bs.Debug, tip)
     out = str2
@@ -363,7 +380,7 @@ def write_read_dtc(menu_name, cmds, dtc_str, adv_cmds):
                     if len(adv_cmds) > 0:  # 写入预发命令
                         symbol_0 = '  $#IN  '
                         adv_cmd = Bs.write_info_or_ds_cmd(symbol_0, adv_cmds, gl.InitDataLinkLayer['m0'], gl.ds_flag)
-                        f.writelines(adv_cmd + '\n')
+                        f.writelines(adv_cmd[0] + '\n')
                     # flag ！= 0 表示其他层菜单
                     f.writelines(symbol + str(gl.flag).rjust(2, '0') + '.' + menu_name + '\n')
                 else:
@@ -372,11 +389,11 @@ def write_read_dtc(menu_name, cmds, dtc_str, adv_cmds):
                     if len(adv_cmds) > 0:  # 写入预发命令
                         symbol_0 = '  $#IN  '
                         adv_cmd = Bs.write_info_or_ds_cmd(symbol_0, adv_cmds, gl.InitDataLinkLayer['m0'], gl.ds_flag)
-                        f.writelines(adv_cmd + '\n')
+                        f.writelines(adv_cmd[0] + '\n')
                 gl.flag = 0
                 # 写入命令
                 out_cmd = Bs.write_info_or_ds_cmd(symbol, cmds, gl.InitDataLinkLayer['m0'])
-                f.writelines(out_cmd + '\n')
+                f.writelines(out_cmd[0] + '\n')
                 f.writelines(dtc_str + '\n')
                 # 写入xml读码方式
                 if len(gl._dtc_xml['value']) > 0:
@@ -397,11 +414,11 @@ def write_read_dtc(menu_name, cmds, dtc_str, adv_cmds):
                 if len(adv_cmds) > 0:  # 写入预发命令
                     symbol_0 = '  $#IN  '
                     adv_cmd = Bs.write_info_or_ds_cmd(symbol_0, adv_cmds, gl.InitDataLinkLayer['m0'], gl.ds_flag)
-                    f.writelines(adv_cmd + '\n')
+                    f.writelines(adv_cmd[0] + '\n')
                 f.writelines(symbol + str(gl.flag-1).rjust(2, '0') + '.' + menu_name + '\n')
                 # 写入命令
                 out_cmd = Bs.write_info_or_ds_cmd(symbol, cmds, gl.InitDataLinkLayer['m0'])
-                f.writelines(out_cmd + '\n')
+                f.writelines(out_cmd[0] + '\n')
                 f.writelines(dtc_str + '\n')
             # # 威马花姐要求加入
             # rdct = '<RDTC>\n' + '\t<FUNCTION type="0" num="0">\n' + '\t\t<param type="string" value="0"/><!--方式0-->\n' + \

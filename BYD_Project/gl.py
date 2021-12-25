@@ -7,6 +7,7 @@ global BackDLaddrbuf
 global _Can_type
 global Spec_kwpid
 
+global system_id
 global info_menu_num
 global ds_menu_num
 global rdtc_menu_num
@@ -19,6 +20,7 @@ global dtc_lib
 global _dtc_xml
 global two_byte_dtc_lib
 global one_byte_dtc_lib
+global _dtc_type
 
 dtc_lib = []
 two_byte_dtc_lib = []
@@ -28,6 +30,7 @@ BackDLaddrbuf = []
 BackDLaddr_num = 0
 
 
+system_id = ''
 _global_dict = {'car_id': 0, 'PIN1': '', 'PIN2': '', 'ZH_ID': '', 'LV_ID': [], 'Bps': '',
                 'ICMD': [], 'KCMD': [], 'QCMD': [], 'CMD_30': []}
 # n0:汽车ID  n1：参数配置，协议类型偏移  n2:进入及空闲偏移   n3：退出命令偏移
@@ -39,6 +42,8 @@ InitDataLinkLayer = {'m0': -1, 'm1': 0, 'm2': bytearray(50), 'm3': bytearray(50)
 _Can_type = {'_CAN_0': [], '_CAN_1': []}
 
 _dtc_xml = {'value': []}
+
+_dtc_type = []
 
 
 

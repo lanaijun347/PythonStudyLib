@@ -40,7 +40,7 @@ def Xml_GetInfoFromVerSysInfo(file_list, fp, data):
             elif gl.InitDataLinkLayer['m0'] == 3:
                 if gl._global_dict['ZH_ID'] == '0':
                     offset = offset
-                    # tip = '警告：请确认是否是侦听协议：' + hex(gl._global_dict['car_id'])
+                    # tip = '警告：请确认是否是侦听协议：' + gl.system_id
                     # Bs.debug(Pa.Debug, tip)
                 else:
                     offset = offset - 5
@@ -55,7 +55,7 @@ def Xml_GetInfoFromVerSysInfo(file_list, fp, data):
             formula = Bs.get_id_data_from_dict(Pa._formula_dict, formula_id)
             if not formula:
                 formula = ''
-                tip = formula_id + '：版本信息未找到公式ID，路径' + hex(gl._global_dict['car_id'])
+                tip = formula_id + '：版本信息未找到公式ID，路径' + gl.system_id
                 Bs.debug(Pa.Debug, tip)
             formula = Bs.str_remove_x00(formula)
             formulas.append(formula)
@@ -85,7 +85,7 @@ def Xml_GetInfoFromVerItemInfo(file_list, fp):
         scan_off = tmp[2]
         scan_fla = tmp[3]
         if scan_off > 4:
-            # tip = '警告：超出列表范围,车型ID为：' + hex(gl._global_dict['car_id']) + \
+            # tip = '警告：超出列表范围,车型ID为：' + gl.system_id + \
             #       '存在扫描，请关注 info.py 76行。'
             # Bs.debug(Bs.Debug, tip)
             pass
@@ -116,9 +116,10 @@ def write_info(menu_name, req, ans, names, offsets, formulas):
                 gl.flag = 0
                 # 写入命令
                 out_cmd = Bs.write_info_or_ds_cmd(symbol, req, gl.InitDataLinkLayer['m0'])
-                f.writelines(out_cmd + '\n')
+                f.writelines(out_cmd[0] + '\n')
                 # 写入每条数据
-                info_str = Bs.write_info_str(symbol, names, ans, offsets, formulas)
+                shield_cmd = out_cmd[1]
+                info_str = Bs.write_info_str(symbol, names, ans, offsets, formulas, shield_cmd)
                 f.writelines(info_str + '\n')
                 f.writelines(';' + 150 * '*' + '\n\n')
             else:
@@ -128,7 +129,8 @@ def write_info(menu_name, req, ans, names, offsets, formulas):
                 f.writelines(symbol + str(gl.flag).rjust(2, '0') + '.' + menu_name + '\n')
                 # 写入命令
                 out_cmd = Bs.write_info_or_ds_cmd(symbol, req, gl.InitDataLinkLayer['m0'])
-                f.writelines(out_cmd + '\n')
+                f.writelines(out_cmd[0] + '\n')
                 # 写入每条数据
-                info_str = Bs.write_info_str(symbol, names, ans, offsets, formulas)
+                shield_cmd = out_cmd[1]
+                info_str = Bs.write_info_str(symbol, names, ans, offsets, formulas, shield_cmd)
                 f.writelines(info_str + '\n')

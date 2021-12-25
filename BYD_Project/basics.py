@@ -65,7 +65,7 @@ def readlist_reverse(file_list, offset, num):
         out = ''.join(list1)
         return out
     except IndexError:
-        tip = '警告：超出列表范围,车型ID为：' + hex(gl._global_dict['car_id'])
+        tip = '警告：超出列表范围,车型ID为：' + gl.system_id
         debug(Debug, tip)
 
 
@@ -78,7 +78,7 @@ def readlist_positive_sequence(file_list, offset, num):
         out = ''.join(list1)
         return out
     except IndexError:
-        tip = '警告：超出列表范围,车型ID为：' + hex(gl._global_dict['car_id'])
+        tip = '警告：超出列表范围,车型ID为：' + gl.system_id
         debug(Debug, tip)
 
 
@@ -92,7 +92,7 @@ def get_token(arr, offset, num):
         out = ''.join(list1)
         return int(out, 16)
     except IndexError:
-        tip = '警告：超出token范围,车型ID为：' + hex(gl._global_dict['car_id'])
+        tip = '警告：超出token范围,车型ID为：' + gl.system_id
         debug(Debug, tip)
 
 
@@ -139,7 +139,7 @@ def get_id_data(path, id1):
                             str_list.append(str1.strip())
                             break
                         if count1 >= count:
-                            tip = '警告：超出列表范围,车型ID为：' + hex(gl._global_dict['car_id']) + '在 ' + \
+                            tip = '警告：超出列表范围,车型ID为：' + gl.system_id + '在 ' + \
                                   path + ' 中未找到--->' + i
                             debug(Debug, tip)
             return str_list
@@ -152,7 +152,7 @@ def get_id_data(path, id1):
                         str_out = str1.strip()
                         break
                     if count1 >= count:
-                        tip = '警告：超出列表范围,车型ID为：' + hex(gl._global_dict['car_id']) +\
+                        tip = '警告：超出列表范围,车型ID为：' + gl.system_id +\
                               '在 ' + path + ' 中未找到--->' + id1
                         debug(Debug, tip)
             return str_out
@@ -241,7 +241,7 @@ def get_command(data_list, cmd_type, tmp=''):
                 if can_1:
                     cmd_str = can_1[0].upper()
                 if len(cmd_str) != 16:
-                    tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
+                    tip = '警告：车型ID为：' + gl.system_id + \
                           'CAN型命令获取错误，请查看程序basics.py -> get_command()--type_1'
                     debug(Debug, tip)
                 cmd_str = cmd_insert_space_can(cmd_str)
@@ -253,7 +253,7 @@ def get_command(data_list, cmd_type, tmp=''):
                 if can_1:
                     cmd_str = can_1[0].upper()
                 if len(cmd_str) != 16:
-                    tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
+                    tip = '警告：车型ID为：' + gl.system_id + \
                           'CAN型命令获取错误，请查看程序basics.py -> get_command()--type_3'
                     debug(Debug, tip)
                 cmd_str = cmd_insert_space_can(cmd_str)
@@ -299,12 +299,12 @@ def get_command(data_list, cmd_type, tmp=''):
                 if can_1:
                     cmd = cmd_insert_space_can(can_1.upper())
                 else:
-                    tip = '警告：超出列表范围,车型ID为：' + hex(gl._global_dict['car_id']) + \
+                    tip = '警告：超出列表范围,车型ID为：' + gl.system_id + \
                           'CAN型命令获取错误，请查看程序basics.py -> get_command()'
                     debug(Debug, tip)
 
             else:
-                tip = '警告：超出列表范围,车型ID为：' + hex(gl._global_dict['car_id']) + \
+                tip = '警告：超出列表范围,车型ID为：' + gl.system_id + \
                       'CAN型命令获取错误，请查看程序basics.py -> get_command() ' + repr(data_list)
                 debug(Debug, tip)
     # KW2000
@@ -343,7 +343,7 @@ def get_command(data_list, cmd_type, tmp=''):
             elif (2 * (int(line[0:2], 16)) + 2) == len(line):
                 cmd_str = line[2:].upper()
             else:
-                tip = '警告：超出列表范围,车型ID为：' + hex(gl._global_dict['car_id']) + \
+                tip = '警告：超出列表范围,车型ID为：' + gl.system_id + \
                       ' 串型 命令获取错误，请查看程序basics.py-> get_command()' + repr(data_list)
                 debug(Debug, tip)
                 return 0
@@ -352,7 +352,7 @@ def get_command(data_list, cmd_type, tmp=''):
             cmd = cmd_str
     else:
         print('未编写该类型协议命令（get_command）：case ' + str(cmd_type))
-        tip = '警告：命令（get_command）超出列表范围,车型ID为：' + hex(gl._global_dict['car_id']) + \
+        tip = '警告：命令（get_command）超出列表范围,车型ID为：' + gl.system_id + \
               '未编写该类型命令获取：case ' + str(cmd_type)
         debug(Debug, tip)
     return cmd
@@ -478,8 +478,8 @@ def get_id_data_from_dict(dict_name, str1):
                 name = dict_name[line]
                 str_list.append(name)
             else:
-                tip = '警告：超出列表范围,车型ID为：' + hex(gl._global_dict['car_id']) + \
-                      '未找到字符串转ID' + str(line)
+                tip = '警告：车型ID为：' + gl.system_id + \
+                      ' 文件未找到对应字符串转ID：' + str(line)
                 debug(Debug, tip)
         return str_list
     else:
@@ -487,14 +487,15 @@ def get_id_data_from_dict(dict_name, str1):
             name = dict_name[str1]
             return name
         else:
-            tip = '警告：超出列表范围,车型ID为：' + hex(gl._global_dict['car_id']) + \
-                  '未找到字符串转ID' + str(str1)
+            tip = '警告：车型ID为：' + gl.system_id + \
+                  ' 文件未找到对应字符串转ID：' + str(str1)
             debug(Debug, tip)
 
 
 # 写入版本信息、数据流命令 （符号:($%、$) , 命令列表， 命令类型 ）
 def write_info_or_ds_cmd(symbol, cmd_list, cmd_type, flag=0):
     cmd_str = ''
+    shield_cmd = []
     # 标准CAN型
     if cmd_type == 2 or cmd_type == 3:
         i = 0
@@ -508,13 +509,19 @@ def write_info_or_ds_cmd(symbol, cmd_list, cmd_type, flag=0):
                 lv = gl._global_dict['LV_ID'][0]
             else:
                 lv = ''
-                tip = '警告：滤波ID为空：' + hex(gl._global_dict['car_id'])
+                tip = '警告：滤波ID为空：' + gl.system_id
                 debug(Debug, tip)
-            str_cmd = symbol + 'REQ' + str(num).rjust(3, '0') + ':' + gl._global_dict['ZH_ID'] + cmd + 5 * ' ' + \
-                      symbol + 'ANS' + str(num).rjust(3, '0') + ':' + lv + cmd + '\n'
+            if cmd:
+                str_cmd = symbol + 'REQ' + str(num).rjust(3, '0') + ':' + gl._global_dict['ZH_ID'] + cmd + 5 * ' ' + \
+                          symbol + 'ANS' + str(num).rjust(3, '0') + ':' + lv + cmd + '\n'
+            else:
+                str_cmd = ';' + symbol + 'REQ' + str(num).rjust(3, '0') + ':' + gl._global_dict['ZH_ID'] + cmd + 5 * ' ' + \
+                          symbol + 'ANS' + str(num).rjust(3, '0') + ':' + lv + cmd + '\n'
+                if ('ANS' + str(num).rjust(3, '0')) not in shield_cmd:
+                    shield_cmd.append('ANS' + str(num).rjust(3, '0'))
             cmd_str += str_cmd
             i += 1
-        return cmd_str
+        return cmd_str, shield_cmd
     else:
         i = 0
         for cmd in cmd_list:
@@ -523,15 +530,21 @@ def write_info_or_ds_cmd(symbol, cmd_list, cmd_type, flag=0):
                 gl.ds_flag += 1
             else:
                 num = i
-            str_cmd = symbol + 'REQ' + str(num).rjust(3, '0') + ':' + cmd + 5 * ' ' + \
-                      symbol + 'ANS' + str(num).rjust(3, '0') + ':' + cmd + '\n'
+            if cmd:
+                str_cmd = symbol + 'REQ' + str(num).rjust(3, '0') + ':' + cmd + 5 * ' ' + \
+                          symbol + 'ANS' + str(num).rjust(3, '0') + ':' + cmd + '\n'
+            else:
+                str_cmd = ';' + symbol + 'REQ' + str(num).rjust(3, '0') + ':' + cmd + 5 * ' ' + \
+                          symbol + 'ANS' + str(num).rjust(3, '0') + ':' + cmd + '\n'
+                if ('ANS' + str(num).rjust(3, '0')) not in shield_cmd:
+                    shield_cmd.append('ANS' + str(num).rjust(3, '0'))
             cmd_str += str_cmd
             i += 1
-        return cmd_str
+        return cmd_str, shield_cmd
 
 
 # 写入版本信息、数据流字符串（即：每条数据）  （符号：（$%、$）， 名称, 命令偏移, 字节偏移， 公式
-def write_info_str(symbol, names, ans, offsets, formulas):
+def write_info_str(symbol, names, ans, offsets, formulas, *args):
     a = len(names)
     b = len(ans)
     c = len(offsets)
@@ -543,10 +556,15 @@ def write_info_str(symbol, names, ans, offsets, formulas):
     max_len = lens[0]
     len_list = lens[1]
     out = ''
+    shield_cmd = args[0]
     for i in range(len(names)):
         n_len = max_len - len_list[i] + 5
-        line = symbol + str(i).rjust(3, '0') + ':' + names[i] + n_len*' ' + symbol + symbol + 'ANS' + \
-               ans[i] + '.' + 'BYTE' + offsets[i] + symbol + formulas[i] + '\n'
+        if names[i] and ('-' not in offsets[i]) and formulas[i] and ('ANS' + ans[i] not in shield_cmd):
+            line = symbol + str(i).rjust(3, '0') + ':' + names[i] + n_len*' ' + symbol + symbol + 'ANS' + \
+                   ans[i] + '.' + 'BYTE' + offsets[i] + symbol + formulas[i] + '\n'
+        else:
+            line = ';' + symbol + str(i).rjust(3, '0') + ':' + names[i] + n_len * ' ' + symbol + symbol + 'ANS' + \
+                   ans[i] + '.' + 'BYTE' + offsets[i] + symbol + formulas[i] + '\n'
         out += line
     return out
 
@@ -564,7 +582,7 @@ def ds_or_info_name_unit_len(name_list):
 
 
 # 写入数据流字符串（即：每条数据）  （符号：（$%、$）， 名称, 单位，命令偏移, 字节偏移， 公式
-def write_ds_str(symbol, names, units, ans, offsets, formulas):
+def write_ds_str(symbol, names, units, ans, offsets, formulas, *args):
     n_lens = ds_or_info_name_unit_len(names)
     u_lens = ds_or_info_name_unit_len(units)
     n_max_len = n_lens[0]
@@ -572,12 +590,18 @@ def write_ds_str(symbol, names, units, ans, offsets, formulas):
     u_max_len = u_lens[0]
     u_len_list = u_lens[1]
     out = ''
+    shield_cmd = args[0]
     for i in range(len(names)):
         n_len = n_max_len - n_len_list[i] + 5
         u_len = u_max_len - u_len_list[i] + 3
-        line = symbol + str(i).rjust(3, '0') + '.' + names[i] + n_len * ' ' + symbol + symbol + units[i] +\
-               u_len * ' ' + symbol + symbol + 'ANS' + ans[i] + '.' + 'BYTE' + offsets[i] + symbol + \
-               formulas[i] + '\n'
+        if names[i] and ('-' not in offsets[i]) and formulas[i] and ('ANS' + ans[i] not in shield_cmd):
+            line = symbol + str(i).rjust(3, '0') + '.' + names[i] + n_len * ' ' + symbol + symbol + units[i] +\
+                   u_len * ' ' + symbol + symbol + 'ANS' + ans[i] + '.' + 'BYTE' + offsets[i] + symbol + \
+                   formulas[i] + '\n'
+        else:
+            line = ';' + symbol + str(i).rjust(3, '0') + '.' + names[i] + n_len * ' ' + symbol + symbol + units[i] + \
+                   u_len * ' ' + symbol + symbol + 'ANS' + ans[i] + '.' + 'BYTE' + offsets[i] + symbol + \
+                   formulas[i] + '\n'
         out += line
     return out
 
@@ -631,7 +655,7 @@ def intToBin32(i):
 def write_fc_cmd(cmd, path):
     symbol = '  $FC '
     if len(cmd) > 1:
-        tip = '警告：车型ID为：' + hex(gl._global_dict['car_id']) + \
+        tip = '警告：车型ID为：' + gl.system_id + \
               '存在多个30帧,请关注...'
         debug(Debug, tip)
     with open(path, 'a', encoding='gbk') as f:

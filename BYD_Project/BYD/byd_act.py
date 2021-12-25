@@ -93,11 +93,11 @@ def GetACTShowData(file_list, byte_list, act_name_id):
             # ctl_byte_num = Bs.readlist_num(file_list, v3 + 23, 1)  # 字节控制数
             v4 = v3 + 23
         elif ((v5 - 5) & 0xffff) > 3:
-            tip = '动作测试 ((v5 - 5) & 0xffff) > 3, 路径：' + hex(gl._global_dict['car_id'])
+            tip = '动作测试 ((v5 - 5) & 0xffff) > 3, 路径：' + gl.system_id
             Bs.debug(Pa.Debug, tip)
             print(tip)
             if v5 == 9:
-                tip = '动作测试 9, 路径：' + hex(gl._global_dict['car_id'])
+                tip = '动作测试 9, 路径：' + gl.system_id
                 Bs.debug(Pa.Debug, tip)
                 print(tip)
                 tip_id = Bs.readlist_reverse(file_list, v3 + 7, 4)  # 输入提示
@@ -110,7 +110,7 @@ def GetACTShowData(file_list, byte_list, act_name_id):
                 v3_24 = Bs.readlist_reverse(file_list, v3 + 24, 4)
                 v4 = v3 + 28
             else:
-                tip = '动作测试 其他, 路径：' + hex(gl._global_dict['car_id'])
+                tip = '动作测试 其他, 路径：' + gl.system_id
                 Bs.debug(Pa.Debug, tip)
                 print(tip)
                 tip_id = Bs.readlist_reverse(file_list, v3 + 7, 4)
@@ -142,7 +142,7 @@ def GetACTShowData(file_list, byte_list, act_name_id):
             j += 1
         tmp_19 = v1_8800 - 4098
         if tmp_19 & 0xffff <= 1:
-            tip = '动作测试 tmp_19 & 0xffff <= 1, 路径：' + hex(gl._global_dict['car_id'])
+            tip = '动作测试 tmp_19 & 0xffff <= 1, 路径：' + gl.system_id
             Bs.debug(Pa.Debug, tip)
             print(tip)
             v10 = v8

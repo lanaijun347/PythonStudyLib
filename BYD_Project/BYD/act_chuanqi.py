@@ -26,7 +26,7 @@ def DiagActFunc(file_list, fp):
             cmd_str = Bs.get_id_data_from_dict(Pa._cmd_dict, act_in_id)
             cmd = Bs.get_command(cmd_str, gl.InitDataLinkLayer['m0'])
             in_cmd_list.append(cmd)
-            tip = '动作测试有进入命令，路径：' + hex(gl._global_dict['car_id'])
+            tip = '动作测试有进入命令，路径：' + gl.system_id
             Bs.debug(Pa.Debug, tip)
             print(tip + act_in_id + ' ' + cmd)
         v20 += 1
@@ -38,16 +38,16 @@ def DiagActFunc(file_list, fp):
             v12 = Bs.token_4_int(byte_list, v21 + 2704)
             Bs.int_to_bytearray(v12, 4, 0xac, byte_list)
             if v12 == 1:
-                tip = '动作测试 v12 = 1, 路径：' + hex(gl._global_dict['car_id'])
+                tip = '动作测试 v12 = 1, 路径：' + gl.system_id
                 Bs.debug(Pa.Debug, tip)
                 print(tip)
             elif v12 == 192:
-                tip = '动作测试 v12 = 192, 路径：' + hex(gl._global_dict['car_id'])
+                tip = '动作测试 v12 = 192, 路径：' + gl.system_id
                 Bs.debug(Pa.Debug, tip)
                 print(tip)
             elif v12 != 0x1083 and v12 != 0x1003:
                 # SecurityAccess()
-                tip = '动作测试 加密, 路径：' + hex(gl._global_dict['car_id'])
+                tip = '动作测试 加密, 路径：' + gl.system_id
                 Bs.debug(Pa.Debug, tip)
                 print(tip)
             v13 += 1
@@ -82,7 +82,7 @@ def ActiveTestShowNextMenu(file_list, byte_list, fp, system_id, in_cmd_list):
             if not Bs.get_token(byte_list, v3 + 4032, 1):
                 break
             else:
-                tip = '动作测试 有多层菜单, 路径：' + hex(gl._global_dict['car_id'])
+                tip = '动作测试 有多层菜单, 路径：' + gl.system_id
                 Bs.debug(Pa.Debug, tip)
                 print(tip)
                 break
@@ -117,7 +117,7 @@ def GetACTShowData0(file_list, byte_list, act_name_id):
         v4 = v3 + 7
         v5 = tmp_2
         if v5 == 2:  # 仅有输入、退出
-            # tip = '动作测试 2, 路径：' + hex(gl._global_dict['car_id'])
+            # tip = '动作测试 2, 路径：' + gl.system_id
             # Bs.debug(Pa.Debug, tip)
             # print(tip)
             tip_id = Bs.readlist_reverse(file_list, v3 + 7, 4)
@@ -154,7 +154,7 @@ def GetACTShowData0(file_list, byte_list, act_name_id):
             i += 1
         tmp_18 = Bs.readlist_num(file_list, v6, 1)
         if tmp_18 != 1:
-            tip = '动作测试 ds_id 不为1, 路径：' + hex(gl._global_dict['car_id'])
+            tip = '动作测试 ds_id 不为1, 路径：' + gl.system_id
             Bs.debug(Pa.Debug, tip)
             print(tip)
         v8 = v6 + 1
@@ -184,7 +184,7 @@ def GetACTShowData0(file_list, byte_list, act_name_id):
                             s += 1
                 else:
                     formula = 'y=x;'
-                    tip = '动作测试 输入公式为空, 路径：' + hex(gl._global_dict['car_id'])
+                    tip = '动作测试 输入公式为空, 路径：' + gl.system_id
                     Bs.debug(Pa.Debug, tip)
                 ctl_byte_num = s
             offset = Bs.readlist_num(file_list, v11 + 8, 1)
@@ -197,7 +197,7 @@ def GetACTShowData0(file_list, byte_list, act_name_id):
             while l < cmd_num:
                 tmp_29 = Bs.readlist_num(file_list, v11, 2)
                 if tmp_29 != 0:
-                    tip = '动作测试 tmp_29 不为0, 路径：' + hex(gl._global_dict['car_id'])
+                    tip = '动作测试 tmp_29 不为0, 路径：' + gl.system_id
                     Bs.debug(Pa.Debug, tip)
                     print(tip)
                 v13 = v11 + 2
@@ -413,7 +413,7 @@ def out_act_data(act_data):
                 cmd_data = act_name + cmd_data
             else:
                 cmd_data = ''
-                tip = ' 该动作测试类型未编写,请确认， 路径：' + hex(gl._global_dict['car_id'])
+                tip = ' 该动作测试类型未编写,请确认， 路径：' + gl.system_id
                 Bs.debug(Pa.Debug, tip)
             out_str += cmd_data
         n += 1
@@ -475,10 +475,10 @@ def act_input_key(tip_id, section_min, section_max, key_one, ctl_byte_num, ds_id
             offset = data['offset']
             cmd_data = ''
             if gl.InitDataLinkLayer['m0'] != 2:
-                tip = repr(gl.InitDataLinkLayer['m0']) + ' 该协议类型动作测试偏移未编写, 路径：' + hex(gl._global_dict['car_id'])
+                tip = repr(gl.InitDataLinkLayer['m0']) + ' 该协议类型动作测试偏移未编写, 路径：' + gl.system_id
                 Bs.debug(Pa.Debug, tip)
             if len(cmd_id_list) != 1:
-                tip = ' 该动作测试输入命令为' + repr(len(cmd_id_list)) + '条,请确认偏移是那条， 路径：' + hex(gl._global_dict['car_id'])
+                tip = ' 该动作测试输入命令为' + repr(len(cmd_id_list)) + '条,请确认偏移是那条， 路径：' + gl.system_id
                 Bs.debug(Pa.Debug, tip)
             else:
                 cmds = []
@@ -493,7 +493,7 @@ def act_input_key(tip_id, section_min, section_max, key_one, ctl_byte_num, ds_id
                     elif offset == 11:
                         offset = 7
                     else:
-                        tip = ' 该动作测试偏移为' + repr(offset) + '请确认偏移， 路径：' + hex(gl._global_dict['car_id'])
+                        tip = ' 该动作测试偏移为' + repr(offset) + '请确认偏移， 路径：' + gl.system_id
                         Bs.debug(Pa.Debug, tip)
                         print(tip)
                     cmd = Bs.get_command(cmd_str, gl.InitDataLinkLayer['m0'], 'act')
@@ -502,13 +502,13 @@ def act_input_key(tip_id, section_min, section_max, key_one, ctl_byte_num, ds_id
                 cmd_data = Bs.write_act_cmd('$^', cmds, gl.InitDataLinkLayer['m0']) + '\n'
             if not formula:
                 formula = 'y=x;'
-                tip = '动作测试 输入公式为空默认给了y=x，请确认, 路径：' + hex(gl._global_dict['car_id'])
+                tip = '动作测试 输入公式为空默认给了y=x，请确认, 路径：' + gl.system_id
                 Bs.debug(Pa.Debug, tip)
             out_str += '$^IN_F:' + formula + '\n' + '$^RANGE:' + '[' + repr(section_min) + ',' + repr(section_max) + ']' + '\n\n'
             out_str += '$^BUTTON:' + key_name + '\n' + cmd_data
         else:
             if '退出' not in key_name:
-                tip = 'TYPE_2 动作测试输入按键为: ' + key_name + '请确认， 路径：' + hex(gl._global_dict['car_id'])
+                tip = 'TYPE_2 动作测试输入按键为: ' + key_name + '请确认， 路径：' + gl.system_id
                 Bs.debug(Pa.Debug, tip)
                 print(tip)
             out_str += '$^BUTTON:' + key_name + '\n'
@@ -553,7 +553,7 @@ def act_input_key_1(tip_id, section_min, section_max, ctl_byte_num, ds_id_list, 
         elif offset == 11:
             offset = 7
         else:
-            tip = ' 该动作测试偏移为' + repr(offset) + '请确认偏移， 路径：' + hex(gl._global_dict['car_id'])
+            tip = ' 该动作测试偏移为' + repr(offset) + '请确认偏移， 路径：' + gl.system_id
             Bs.debug(Pa.Debug, tip)
             print(tip)
         cmds = []
@@ -567,14 +567,14 @@ def act_input_key_1(tip_id, section_min, section_max, ctl_byte_num, ds_id_list, 
         cmd_data = Bs.write_act_cmd('$^', cmds, gl.InitDataLinkLayer['m0']) + '\n'
         if not formula:
             formula = 'y=x;'
-            tip = '动作测试 输入公式为空默认给了y=x，请确认, 路径：' + hex(gl._global_dict['car_id'])
+            tip = '动作测试 输入公式为空默认给了y=x，请确认, 路径：' + gl.system_id
             Bs.debug(Pa.Debug, tip)
         out_str += '$^IN_F:' + formula + '\n' + '$^RANGE:' + '[' + repr(section_min) + ',' + repr(
             section_max) + ']' + '\n\n'
         out_str += '$^BUTTON:' + key_name + '\n'
         out_str += cmd_data
     else:
-        tip = 'TYPE_1 动作测试输入按键命令为空，请确认， 路径：' + hex(gl._global_dict['car_id'])
+        tip = 'TYPE_1 动作测试输入按键命令为空，请确认， 路径：' + gl.system_id
         Bs.debug(Pa.Debug, tip)
     for data in key_data_list:
         key_id = data['key_id']
@@ -582,7 +582,7 @@ def act_input_key_1(tip_id, section_min, section_max, ctl_byte_num, ds_id_list, 
         key_name = Bs.get_id_data_from_dict(Pa._text_dict, key_id)
         key_name = Bs.str_remove_x00(key_name)
         if '退出' not in key_name:
-            tip = 'TYPE_1 动作测试按键为' + key_name +'，请确认， 路径：' + hex(gl._global_dict['car_id'])
+            tip = 'TYPE_1 动作测试按键为' + key_name +'，请确认， 路径：' + gl.system_id
             Bs.debug(Pa.Debug, tip)
             print(key_name)
         else:

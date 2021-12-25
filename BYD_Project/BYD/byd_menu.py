@@ -6,7 +6,8 @@ def screen_BYD_menu(in_path, out_path):
     ids = []
     with open(in_path, 'r') as f:
         for line in f.readlines():
-            if ('\\快速测试\\' in line) or ('\\常用特殊功能\\' in line) or ('\\防盗系统\\' in line) or ('\\维护保养\\' in line):
+            if ('\\快速测试\\' in line) or ('\\常用特殊功能\\' in line) or ('\\防盗系统\\' in line) or ('\\维护保养\\' in line) \
+                    or('\\扫描全车系统\\' in line) or('\\扫描全车故障码\\' in line) or('\\ADAS校准功能\\' in line):
                 pass
             else:
                 tmp.append(line)
@@ -67,5 +68,9 @@ if __name__ == '__main__':
     out_path = r'D:\JBT\常开\比亚迪\解析_v18.90\menu\menu_new.txt'
     in_path = r'D:\JBT\常开\比亚迪\EV_FLYER\解析_v18.90\menu\menu_EV.txt'
     out_path = r'D:\JBT\常开\比亚迪\EV_FLYER\解析_v18.90\menu\menu_EV_NEW.txt'
+    in_path = r'D:\JBT\常开\北京汽车\BAIC\解析_v11.50\menu\menu.txt'
+    out_path = r'D:\JBT\常开\北京汽车\BAIC\解析_v11.50\menu\menu_new.txt'
+    in_path = r'D:\JBT\常开\吉利\HAOQING\解析_v21.95\menu\menu.txt'
+    out_path = r'D:\JBT\常开\吉利\HAOQING\解析_v21.95\menu\menu_new.txt'
     screen_BYD_menu(in_path, out_path)
     # out_dict_menu(in_path, dict_menu)

@@ -1,0 +1,54 @@
+北京汽车\BEIJING X5\EMS(发动机管理系统)\5781\
+北京汽车\BEIJING X5\TCU(变速箱控制单元)\5782\
+北京汽车\BEIJING X5\PEPS(无钥匙进入启动系统)\5783\
+北京汽车\BEIJING X5\BCM(车身电控模块)\5784\
+北京汽车\BEIJING X5\ESP(车身电子稳定系统)\5785\
+北京汽车\BEIJING X5\ICM(组合仪表)\5786\
+北京汽车\BEIJING X5\EPS(电动助力转向系统)\5787\
+北京汽车\BEIJING X5\SDM(安全气囊系统)\5788\
+北京汽车\BEIJING X5\ESCL(电子转向柱锁)\5789\
+北京汽车\BEIJING X5\GW(网关系统)\578A\
+北京汽车\BEIJING X5\TPMS(胎压监测系统)\578B\
+北京汽车\BEIJING X5\空调系统\ATC(自动空调系统)\578C\
+北京汽车\BEIJING X5\空调系统\EAC(电动空调系统)\578D\
+北京汽车\BEIJING X5\HUM(DVD 主机)\578E\
+北京汽车\BEIJING X5\FSH(前座椅加热控制系统)\578F\
+北京汽车\BEIJING X5\EPB(电子驻车制动系统)\5790\
+北京汽车\BEIJING X5\AVM(全景影像系统)\5791\
+北京汽车\BEIJING X5\T_BOX(远程监控系统)\5792\
+北京汽车\BEIJING X7\EMS(发动机管理系统)\57A1\
+北京汽车\BEIJING X7\BCM(车身电控模块)\57A2\
+北京汽车\BEIJING X7\PEPS(无钥匙进入启动系统)\57A3\
+北京汽车\BEIJING X7\ESP(车身电子稳定系统)\57A4\
+北京汽车\BEIJING X7\TCU(变速箱控制单元)\57A5\
+北京汽车\BEIJING X7\ICM(组合仪表)\57A6\
+北京汽车\BEIJING X7\EPS(电动助力转向系统)\57A7\
+北京汽车\BEIJING X7\ESCL(电子转向柱锁)\57A8\
+北京汽车\BEIJING X7\SDM(安全气囊系统)\57A9\
+北京汽车\BEIJING X7\HUM(DVD 主机)\57AA\
+北京汽车\BEIJING X7\TPMS(胎压监测系统)\57AB\
+北京汽车\BEIJING X7\AAC(自动空调系统)\57AC\
+北京汽车\BEIJING X7\APC(空调控制面板)\57AD\
+北京汽车\BEIJING X7\GW(网关系统)\57AE\
+北京汽车\BEIJING X7\AVM(全景影像系统)\57AF\
+北京汽车\BEIJING X7\DVR(行车记录仪)\57B0\
+北京汽车\BEIJING X7\PAS(倒车雷达)\PAS(倒车雷达)(4_8 通道)\57B1\
+北京汽车\BEIJING X7\PAS(倒车雷达)\PAS(倒车雷达)(12 通道)\57B2\
+北京汽车\BEIJING X7\MPC(前置摄像头控制器)\57B3\
+北京汽车\BEIJING X7\MRR(中距离毫米波雷达)\57B4\
+北京汽车\BEIJING X7\T_BOX(远程监控系统)\57B5\
+北京汽车\BEIJING X7\ALC(氛围灯)\57B6\
+北京汽车\BEIJING X7\LCFL(左前灯)\57B7\
+北京汽车\BEIJING X7\LCFR(右前灯)\57B8\
+北京汽车\BEIJING X7\LCRL(左后灯)\57B9\
+北京汽车\BEIJING X7\LCRR(右后灯)\57BA\
+北京汽车\BEIJING X7\LCRM(中后灯)\57BB\
+北京汽车\BEIJING X7\APA(一键泊车)\57BC\
+北京汽车\BEIJING X7\DSM(座椅记忆模块)\57BD\
+北京汽车\BEIJING X7\FSHVM(座椅通风加热)\57BE\
+北京汽车\BEIJING X7\PTM(智能尾门)\57BF\
+北京汽车\BEIJING X7\WCM(无线充电)\57C0\
+北京汽车\BEIJING X7\AMP(功放)\57C1\
+北京汽车\BEIJING X7\CCP(中央控制面板)\57C2\
+北京汽车\BEIJING X7\VCS(车辆控制屏)\57C3\
+北京汽车\BEIJING X7\SBW(电子换挡)\57C4\

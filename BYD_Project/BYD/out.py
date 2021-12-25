@@ -145,15 +145,16 @@ Bs.init_debug()
 Bs.init_debug(Pa.no_dtc_lib)
 Bs.init_debug(Pa.have_dtc_lib)
 Bs.init_debug(Pa.Debug)
+Bs.init_debug(Pa.rdtc_type)
 # 加载发文件命令，名称等文件，存成字典形式
 Pa.init_data_file()
 # 输入菜单ID
 id1 = Bs.return_menu_id(Pa.menu_ids)
 # id1 = [0x1068]  # 0xD301, 0x1c02, 0xa901, 0xA30E
 # id1 = [0x1b07]  # 0xD301, 0x1c02, 0xa901, 0xA30E
-# id1 = [0x3c6e]
-# id1 = [0x0a51]
-# id1 = [0x9b98]
+# id1 = [0x0631]
+# id1 = [0x0857]
+id1 = [0x06b0]
 yu_id = []
 tmp_11 = []
 # 剔除老系统
@@ -171,6 +172,7 @@ for idd in id1:
     # 设置汽车id
     gl.set_value('car_id', idd)
     car_id = gl._global_dict['car_id']
+    gl.system_id = hex(idd).replace('0x', '') .rjust(4, '0')
     print('正在执行-->' + hex(car_id).replace('0x', '').rjust(4, '0'))
     # 把FunCfg文件转成列表
     file_list = Bs.bin_to_list(Pa.FUNCFG)
@@ -207,4 +209,8 @@ with open(Pa.dtc_link_2byte, 'w') as ff:
 with open(Pa.dtc_link_1byte, 'w') as ff:
     for line in gl.one_byte_dtc_lib:
         ff.writelines(line + '\n')
+with open(Pa.rdtc_type, 'w') as f:
+    for line in gl._dtc_type:
+        f.writelines(line + '\n')
+
 print('OVER!!!')
