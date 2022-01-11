@@ -9,6 +9,60 @@ import rdtc
 import act_chuanqi
 
 
+def Xml_GetFileStartData(sys_list, car_id):
+    v1 = gl.StartData
+    a1 = 0
+    v6 = 0
+    Bs.MoveLibData(sys_list, 0, a1, 4, v1)
+    Bs.MoveLibData(sys_list, 4, a1 + 4, 4, v1)
+    Bs.MoveLibData(sys_list, 8, a1 + 12, 4, v1)
+    Bs.MoveLibData(sys_list, 12, a1 + 20, 4, v1)
+    v5 = Bs.token_4_int(v1, a1 + 20)
+    if v5 == -1:
+        return -1
+    elif v5:
+        while True:
+            v16 = Bs.readlist_num(sys_list, v5, 4)
+            v6 = v5 + 4
+            if car_id == v16:
+                break
+            v15 = Bs.readlist_num(sys_list, v6, 1)
+            v10 = v15 + 5 + v5
+            Bs.MoveLibData(sys_list, v10, a1 + 276, 1, v1)
+            v11 = 4 * (Bs.get_token(v1, a1 + 276, 1)) + 1 + v10
+            Bs.MoveLibData(sys_list, v11, a1 + 404, 1, v1)
+            v5 = Bs.get_token(v1, a1 + 404, 1) + 1 + v11
+        v15 = Bs.readlist_num(sys_list, v6, 1)
+        v7 = v5 + 5
+        i = 0
+        while i < v15:
+            i += 1
+            Bs.MoveLibData(sys_list, v7, a1 + i + 148, 1, v1)
+            v7 += 1
+        Bs.MoveLibData(sys_list, v7, a1 + 276, 1, v1)
+        v8 = v7 + 1
+        i = 0
+        v14 = Bs.get_token(v1, a1 + 276, 1)
+        while i < v14:
+            Bs.MoveLibData(sys_list, v8, a1 + 4 * (i + 70), 4, v1)
+            v8 += 4
+            i += 1
+        Bs.MoveLibData(sys_list, v8, a1 + 404, 1, v1)
+        sacn_num = Bs.get_token(v1, a1 + 404, 1)
+        fp = v8 + 1
+        j = 0
+        while j < sacn_num:
+            Bs.MoveLibData(sys_list, fp, a1 + 1 + j + 404, 1, v1)
+            pin = Bs.get_token(v1, a1 + 1 + j + 404, 1)
+            if pin not in gl._global_dict['scan_pin']:
+                gl._global_dict['scan_pin'].append(pin)
+            fp += 1
+            j += 1
+        return 1
+    else:
+        return -1
+
+
 # 获取对应车型的功能配置信息
 def Xml_GetInfoFromFunCfgSystem(file_list, car_id):
     if file_list:
@@ -122,6 +176,9 @@ def Xml_GetInfoFromDataLinkGeneral(file_list, fp, list2):
     Bs.MoveLibData(file_list, v4 + 23, v5 + 30, 1, list2)
     Bs.MoveLibData(file_list, v4 + 24, v5 + 32, 2, list2)
     Bs.MoveLibData(file_list, v4 + 26, v5 + 34, 2, list2)
+    # 字节时间间隔
+    byte_time = Bs.readlist_num(file_list, v4 + 26, 2) // 10
+    gl._global_dict['byte_time'] = byte_time
     Bs.MoveLibData(file_list, v4 + 28, v5 + 36, 2, list2)
     Bs.MoveLibData(file_list, v4 + 30, v5 + 38, 2, list2)
     Bs.MoveLibData(file_list, v4 + 32, v5 + 40, 2, list2)

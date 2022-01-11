@@ -355,7 +355,8 @@ def choose_dtc_mode(str1, dtc_type, cmds, offsets, byte_num, ctl_num, dtc_num_of
                 else:
                     str2 = formula_str + 2*' ' + '帧长控制故障码个数，从$#' + 'ANS' + str(i).rjust(3, '0') + '.' + 'BYTE' + str(offsets[i]) + '$#开始每$#' \
                            + str(byte_num[i]) + '$#个字节表示一个故障码，前$#' + str(ctl_num) + '$#表示码号。\n'
-
+                    # 吉利要求增加
+                    # gl._dtc_xml['value'].append(0)
                     type_str = '读码类型 0 ，系统ID：' + gl.system_id
                     if type_str not in gl._dtc_type:
                         gl._dtc_type.append(type_str)
@@ -402,8 +403,23 @@ def write_read_dtc(menu_name, cmds, dtc_str, adv_cmds):
                     xml_str_2 = ''
                     for i in range(len(gl._dtc_xml['value'])):
                         xml_str_2 += '  <FUNCTION type="0" num="' + str(i) + '">\n' + \
-                                     '     <param type="string" value="' + str(gl._dtc_xml['value'][i]) + '"/>\n' +\
+                                     '     <param type="string" value="' + str(gl._dtc_xml['value'][i]) + '"/>\n' + \
                                      '   </FUNCTION>\n'
+                        # 吉利要求增加
+                        # if gl._dtc_xml['value'][i] == 2:
+                        #     xml_str_2 += '  <FUNCTION type="0" num="' + str(i) + '">\n' + \
+                        #                  '     <param type="string" value="' + str(gl._dtc_xml['value'][i]) + '"/>\n' + \
+                        #                  '     <param type="string" value="5,1"/>\n' +\
+                        #                  '   </FUNCTION>\n'
+                        # elif gl._dtc_xml['value'][i] == 1:
+                        #     xml_str_2 += '  <FUNCTION type="0" num="' + str(i) + '">\n' + \
+                        #                  '     <param type="string" value="' + str(gl._dtc_xml['value'][i]) + '"/>\n' + \
+                        #                  '     <param type="string" value="1,1"/>\n' + \
+                        #                  '   </FUNCTION>\n'
+                        # else:
+                        #     xml_str_2 += '  <FUNCTION type="0" num="' + str(i) + '">\n' + \
+                        #                  '     <param type="string" value="' + str(gl._dtc_xml['value'][i]) + '"/>\n' +\
+                        #                  '   </FUNCTION>\n'
                     xml_str = xml_str_0 + xml_str_2 + xml_str_1
                     f.writelines(xml_str)
                 f.writelines(';' + 150 * '*' + '\n\n')

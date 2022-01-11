@@ -23,7 +23,7 @@ def write_in_cmd_list(cmd_list, symbol, zh_id='', lv_id=''):
     for i in range(len(cmd_list)):
         if ('27 01' in cmd_list[i]) | ('27 02' in cmd_list[i]):
             symbol = '  $~~ '
-            tip = hex(gl._global_dict['car_id']).replace('0x', '') + ' 激活有加密！'
+            tip = gl.system_id + ' 激活有加密！'
             Bs.debug(Pa.Debug, tip)
         else:
             symbol = tmp
@@ -124,6 +124,23 @@ def write_file(path):
         else:
             f.writelines('    通讯线: ' + '$~' + gl._global_dict['PIN1'] +
                          '$~' + gl._global_dict['PIN2'] + '$~' + gl._global_dict['Bps'] + '\n\n')
+            if gl._global_dict['byte_time'] != 0:
+                time_str = '$JSON{"P4":' + str(gl._global_dict['byte_time']) + "}\n\n"
+                f.writelines(time_str)
+            if len(gl._global_dict['scan_pin']):
+                tip = '警告：' + ' 注意引脚扫描节点格式是否正确：' + gl.system_id
+                Bs.debug(Pa.Debug, tip)
+                pin_str = '<VCI>\n\t<ACTIVE_ADDNODE type="0" num="0">\n\t<param type="string" value="1"/>\n'
+                pin_str1 = ''
+                for pin in gl._global_dict['scan_pin']:
+                   if pin == int(gl._global_dict['PIN1'], 16):
+                       pass
+                   else:
+                       pin_str1 += str(pin) + ','
+                pin_str = pin_str + "\t<param type=\"string\" value="
+                pin_str += "\"" + pin_str1[0:-1] + "\"/>\n\t</ACTIVE_ADDNODE>\n</VCI>\n\n"
+                f.writelines(pin_str)
+
             f.writelines(head_1)
             icmd_str = write_cmd_list(gl._global_dict['ICMD'], symbol_0)
             f.writelines(icmd_str + '\n')
@@ -152,9 +169,9 @@ Pa.init_data_file()
 id1 = Bs.return_menu_id(Pa.menu_ids)
 # id1 = [0x1068]  # 0xD301, 0x1c02, 0xa901, 0xA30E
 # id1 = [0x1b07]  # 0xD301, 0x1c02, 0xa901, 0xA30E
-# id1 = [0x0631]
+# id1 = [0x106b]
 # id1 = [0x0857]
-id1 = [0x06b0]
+# id1 = [0x06a0]
 yu_id = []
 tmp_11 = []
 # 剔除老系统
@@ -176,6 +193,10 @@ for idd in id1:
     print('正在执行-->' + hex(car_id).replace('0x', '').rjust(4, '0'))
     # 把FunCfg文件转成列表
     file_list = Bs.bin_to_list(Pa.FUNCFG)
+    # 把SYSSCAN文件转成列表
+    sysscan_list = Bs.bin_to_list(Pa.SYSSCAN)
+    # 加载起始数据（引脚扫描数据）
+    sub.Xml_GetFileStartData(sysscan_list, car_id)
     # 比对车型id获取对应配置文件指针偏移
     sub.Xml_GetInfoFromFunCfgSystem(file_list, car_id)
     # 获取和配置参数信息

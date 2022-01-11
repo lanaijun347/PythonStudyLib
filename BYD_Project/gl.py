@@ -21,6 +21,7 @@ global _dtc_xml
 global two_byte_dtc_lib
 global one_byte_dtc_lib
 global _dtc_type
+global StartData
 
 dtc_lib = []
 two_byte_dtc_lib = []
@@ -28,11 +29,13 @@ one_byte_dtc_lib = []
 Spec_kwpid = 0
 BackDLaddrbuf = []
 BackDLaddr_num = 0
+StartData = bytearray(1000)
+
 
 
 system_id = ''
 _global_dict = {'car_id': 0, 'PIN1': '', 'PIN2': '', 'ZH_ID': '', 'LV_ID': [], 'Bps': '',
-                'ICMD': [], 'KCMD': [], 'QCMD': [], 'CMD_30': []}
+                'ICMD': [], 'KCMD': [], 'QCMD': [], 'CMD_30': [], 'scan_pin': [], 'byte_time': 0}
 # n0:汽车ID  n1：参数配置，协议类型偏移  n2:进入及空闲偏移   n3：退出命令偏移
 InitSubSystem = {'n0': 0, 'n1': 0, 'n2': 0, 'n3': 0, 'n4': 0, 'n5': 0, 'n6': 0, 'n7': 0, 'n8': 0, 'n9': []}
 # m0:协议类型
@@ -72,6 +75,7 @@ def init_global_dict():
     global write_path
     global ds_flag
     global dtc_flag
+    global StartData
 
     _global_dict['car_id'] = 0
     _global_dict['PIN1'] = ''
@@ -106,6 +110,7 @@ def init_global_dict():
     InitDataLinkLayer['m4'] = bytearray(50)
     InitDataLinkLayer['m5'] = bytearray(50)
     InitDataLinkLayer['m6'] = bytearray(50)
+    StartData = bytearray(1000)
 
     _Can_type['_CAN_0'] = []
     _Can_type['_CAN_1'] = []
