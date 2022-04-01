@@ -1,0 +1,23 @@
+[USER_INFO]
+USERNAME=LAUNCH;
+CC_CODE=0xCCCC;
+
+[SOFTWARE_INFO]
+SOFTWARENAME=POCCO;
+FOLDERNAME=EV_POCCO;
+
+
+[CAR_INFO]
+VIN=11111111111111111;
+SEARCH_ID=0;<!--164.186 ML350-->
+SEARCH_INFO=;
+
+[DEBUG]
+DPU_MODE=2;MYCARÄ£Ê½µ÷ÊÔ
+
+[COMMON_VIN]
+READVIN=1;
+
+[ODO]
+READODO=1;
+                                                                                         

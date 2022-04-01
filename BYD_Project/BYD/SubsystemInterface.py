@@ -7,6 +7,7 @@ import ds
 import cdtc
 import rdtc
 import act_chuanqi
+import action_byd
 
 
 def Xml_GetFileStartData(sys_list, car_id):
@@ -386,19 +387,23 @@ def GetSaveCmdConunt(file_list, fp):
                 tip = '警告：车型ID为：' + gl.system_id + \
                       '进入命令有空值或为空闲，请确认。'
                 Bs.debug(Bs.Debug, tip)
-            gl._global_dict['ICMD'].append(cmd)
+            if cmd not in gl._global_dict['ICMD']:
+                gl._global_dict['ICMD'].append(cmd)
         if cmd == 0:
             tip = '警告：车型ID为：' + gl.system_id + \
                   '进入命令部分，命令有空值，请查看程序SubsystemInterface.py。'
             Bs.debug(Bs.Debug, tip)
             continue
         if ('3E' in cmd[0:15]) | ('3e' in cmd[0:15]):
-            gl._global_dict['KCMD'].append(cmd)
+            if cmd not in gl._global_dict['KCMD']:
+                gl._global_dict['KCMD'].append(cmd)
         else:
-            gl._global_dict['ICMD'].append(cmd)
+            if cmd not in gl._global_dict['ICMD']:
+                gl._global_dict['ICMD'].append(cmd)
     if not gl._global_dict['KCMD']:
         if gl.InitDataLinkLayer['m0'] == 2:
-            gl._global_dict['KCMD'].append(' 02 3E 80 00 00 00 00 00')
+            if ' 02 3E 80 00 00 00 00 00' not in gl._global_dict['KCMD']:
+                gl._global_dict['KCMD'].append(' 02 3E 80 00 00 00 00 00')
         else:
             tip = '警告：车型ID为：' + gl.system_id + \
                   '未找到空闲命令，请查看程序SubsystemInterface.py 296行！'
@@ -430,7 +435,8 @@ def Xml_GetInfoFromExitSys(file_list, fp):
                 if ('3E' in cmd[0:15]) or ('3e' in cmd[0:15]) or not cmd:
                     pass
                 else:
-                    gl._global_dict['QCMD'].append(cmd)
+                    if cmd not in gl._global_dict['QCMD']:
+                        gl._global_dict['QCMD'].append(cmd)
 
 
 # 获取 命令, 返回一个长度为2列表 [0] 为下一个偏移   [1]为命令ID
@@ -525,6 +531,24 @@ def FuncSelectInterface(file_list):
         gl.ds_menu_num = Bs.readlist_num(file_list, ds_fp + 1, 2)
         SubSystemFunDS(file_list, ds_fp)
 
+    # BYD动作测试/特殊功能/其他菜单
+    if len(gl.InitSubSystem['n9']) > 0:
+        act_fp = 0
+        menu_choose = 0
+        # if gl.system_id - 0x1615 > 1:
+        #     fun_id = 'fffd0004'
+        # else:
+        #     fun_id = 'fffd000a'
+        for i in range(len(gl.InitSubSystem['n9'])):
+            name_id = Bs.readlist_reverse(file_list, gl.InitSubSystem['n9'][i] + 7, 4)
+            name = Bs.get_id_data_from_dict(Pa._text_dict, name_id).replace('\x00', '')
+            if '动作测试' in name:
+                act_fp = gl.InitSubSystem['n9'][i]
+                menu_choose = 4
+                break
+        if act_fp:
+            action_byd.SystemDispose(file_list, act_fp, menu_choose)
+
     # # 动作测试/特殊功能/其他菜单
     # if len(gl.InitSubSystem['n9']) > 0:
     #     act_fp = 0
@@ -538,7 +562,6 @@ def FuncSelectInterface(file_list):
     #             break
     #     if act_fp:
     #         act_chuanqi.SystemDispose(file_list, act_fp, menu_choose)
-
 
     if not rdtc_fp and not cdtc_fp and not info_fp and not ds_fp:
         tip = gl.system_id.replace('0x', '') + ' 没有读码/清码/版本信息/数据流功能！'

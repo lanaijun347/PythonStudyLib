@@ -1,0 +1,8 @@
+[Name]
+Chinese=\u5FA1\u6377\u6C7D\u8F66\u65B0\u80FD\u6E90
+HKChinese=\u5FA1\u6377\u6C7D\u8ECA\u65B0\u80FD\u6E90
+English=YOGOMO
+[AbbrName]
+Chinese=YUJIEQICHE
+HKChinese=YOGOMO
+English=YOGOMO

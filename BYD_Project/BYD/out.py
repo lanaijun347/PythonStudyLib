@@ -167,10 +167,11 @@ Bs.init_debug(Pa.rdtc_type)
 Pa.init_data_file()
 # 输入菜单ID
 id1 = Bs.return_menu_id(Pa.menu_ids)
+A = len(id1)
 # id1 = [0x1068]  # 0xD301, 0x1c02, 0xa901, 0xA30E
 # id1 = [0x1b07]  # 0xD301, 0x1c02, 0xa901, 0xA30E
-# id1 = [0x106b]
-# id1 = [0x0857]
+id1 = [0xad03]
+# id1 = [0x0964]
 # id1 = [0x06a0]
 yu_id = []
 tmp_11 = []
@@ -181,6 +182,10 @@ for ii in id1:
     else:
         tmp_11.append(ii)
 id1 = tmp_11
+# 把FunCfg文件转成列表
+file_list = Bs.bin_to_list(Pa.FUNCFG)
+# 把SYSSCAN文件转成列表
+sysscan_list = Bs.bin_to_list(Pa.SYSSCAN)
 i = 0
 for idd in id1:
     i += 1
@@ -191,10 +196,6 @@ for idd in id1:
     car_id = gl._global_dict['car_id']
     gl.system_id = hex(idd).replace('0x', '') .rjust(4, '0')
     print('正在执行-->' + hex(car_id).replace('0x', '').rjust(4, '0'))
-    # 把FunCfg文件转成列表
-    file_list = Bs.bin_to_list(Pa.FUNCFG)
-    # 把SYSSCAN文件转成列表
-    sysscan_list = Bs.bin_to_list(Pa.SYSSCAN)
     # 加载起始数据（引脚扫描数据）
     sub.Xml_GetFileStartData(sysscan_list, car_id)
     # 比对车型id获取对应配置文件指针偏移

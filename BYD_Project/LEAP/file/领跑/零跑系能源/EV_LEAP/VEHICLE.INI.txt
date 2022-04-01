@@ -1,0 +1,8 @@
+[Name]
+Chinese=\u96F6\u8DD1\u65B0\u80FD\u6E90
+HKChinese=\u96F6\u8DD1\u65B0\u80FD\u6E90
+English=LEAP
+[AbbrName]
+Chinese=LEAP
+HKChinese=LEAP
+English=LEAP

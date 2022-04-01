@@ -1,0 +1,34 @@
+[SOFTWARE_INFO]
+VERSION=V10.01
+LANGUAGE=CN
+SOFTWARENAME=NETA;
+FOLDERNAME=NETA;
+
+[CAR_INFO]
+CAR_NAME=NeZha
+SEARCH_ID=0x5800
+;VIN=LUZBGACC0LA******
+
+[OBD_VIN]
+READVIN=0
+;libReadOBDVIN.so
+
+[COMMON_VIN]
+READVIN=1
+;libCarInfo.so
+;以下模式为调试时使用
+[DIAG_MODE]
+;远程诊断模式(27模式),简单诊断模式(2A模式)
+MAIN_MODE=0x2a
+;简单诊断模式时使用的子模式.
+;0x00: OBD+全系统扫描,并获取系统信息.强制系统扫描
+;0x01: OBD+全系统扫描,并获取系统信息.已扫描过系统则不扫描
+;0x02: 读取指定系统类型的故障码,先执行系统强制扫描
+;0x03: 读取指定系统类型的故障码,先执行系统扫描,已扫描则不扫描
+;0x04: 读取指定系统的故障码,先执行系统强制扫描
+;0x05: 读取指定系统的故障码,先执行系统扫描,已扫描则不扫描
+;0x06: 指定系统类型清码
+;0x07: 指定系统ID清码
+SUB_MODE=0x02
+;系统个数或者系统类型个数,0xFF表示全部.咱不支持其它数据
+CNT=0xFF;

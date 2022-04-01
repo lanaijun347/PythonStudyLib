@@ -1,0 +1,8 @@
+[Name]
+Chinese=\u901F\u8FBE\u65B0\u80FD\u6E90
+HKChinese=\u901F\u9054\u65B0\u80FD\u6E90
+English=SUDA
+[AbbrName]
+Chinese=SUDA
+HKChinese=SUDA
+English=SUDA

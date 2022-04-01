@@ -6,9 +6,10 @@ def screen_BYD_menu(in_path, out_path):
     ids = []
     with open(in_path, 'r') as f:
         for line in f.readlines():
-            if ('\\快速测试\\' in line) or ('\\常用特殊功能\\' in line) or ('\\防盗系统\\' in line) or ('\\维护保养\\' in line) \
-                    or('\\扫描全车系统\\' in line) or('\\扫描全车故障码\\' in line) or ('\\ADAS校准功能\\' in line) or\
-                    ('\\系统扫描\\' in line):
+            # if ('\\快速测试\\' in line) or ('\\常用特殊功能\\' in line) or ('\\防盗系统\\' in line) or ('\\维护保养\\' in line) \
+            #         or('\\扫描全车系统\\' in line) or('\\扫描全车故障码\\' in line) or ('\\ADAS校准功能\\' in line) or\
+            #         ('\\系统扫描\\' in line):
+            if ('\\快速测试\\' in line):
                 pass
             else:
                 tmp.append(line)
@@ -89,5 +90,13 @@ if __name__ == '__main__':
     out_path = r'D:\JBT\常开\xinnengyuan\速达新能源\EV_SUDA\解析_v10.01\menu\menu_new.txt'
     in_path = r'D:\JBT\常开\xinnengyuan\御捷新能源\EV_YOGOMO\解析_v10.01\menu\menu.txt'
     out_path = r'D:\JBT\常开\xinnengyuan\御捷新能源\EV_YOGOMO\解析_v10.01\menu\menu_new.txt'
+    in_path = r'D:\JBT\常开\东风风神\DONGFENGFS\解析_v10.34\menu\menu.txt'
+    out_path = r'D:\JBT\常开\东风风神\DONGFENGFS\解析_v10.34\menu\menu_new.txt'
+    in_path = r'D:\JBT\常开\比亚迪\FLYER_18.80\BIN_解析\menu\menu.txt'
+    out_path = r'D:\JBT\常开\比亚迪\FLYER_18.80\BIN_解析\menu\menu_new.txt'
+    in_path = r'D:\JBT\诊断项目\JBT_汽油车型\W_033_五菱\资源\menu_code.txt'
+    out_path = r'D:\JBT\诊断项目\JBT_汽油车型\W_033_五菱\资源\menu_code_new.txt'
+    in_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\Vehicle Protocol\Data\D117\81_menucode.txt'
+    out_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\Vehicle Protocol\Data\D117\81_menucode_new.txt'
     screen_BYD_menu(in_path, out_path)
     # out_dict_menu(in_path, dict_menu)

@@ -1,0 +1,8 @@
+[Name]
+Chinese=\u670B\u514B\u6C7D\u8F66
+HKChinese=\u670B\u514B\u6C7D\u8ECA
+English=POCCO
+[AbbrName]
+Chinese=PENGKEQICHE
+HKChinese=POCCO
+English=POCCO

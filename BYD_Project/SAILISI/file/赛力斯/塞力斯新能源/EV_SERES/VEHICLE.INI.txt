@@ -1,0 +1,8 @@
+[Name]
+Chinese=\u8D5B\u529B\u65AF\u65B0\u80FD\u6E90
+HKChinese=\u8CFD\u529B\u65AF\u80FD\u6E90
+English=SERES
+[AbbrName]
+Chinese=SERES
+HKChinese=SERES
+English=SERES

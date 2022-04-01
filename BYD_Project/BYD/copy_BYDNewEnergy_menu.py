@@ -78,7 +78,51 @@ if __name__ == '__main__':
     # menu_id = get_menu_id(new_energy_menu_path)
     # copy_file_to_BYDNewEnergy(menu_id, byd_path, bydne_path)
 
-    menu = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\menu_EV.txt'
-    file_path = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\协议 - 副本'
-    out_path = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\新能源协议'
-    copy_files_via_menu(menu, file_path, out_path)
+    # menu = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\menu_EV.txt'
+    # file_path = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\协议 - 副本'
+    # out_path = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.90\file\新能源协议'
+    # copy_files_via_menu(menu, file_path, out_path)
+
+    # 奇瑞
+    # new_energy_menu_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\IMS-Decoder\资源\China\CHERY\Menu.xml'
+    # byd_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\Vehicle Protocol\Protocol\XML'
+    # bydne_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\IMS-Decoder\资源\China\CHERY\DATA'
+
+    # 奇瑞新能源
+    # new_energy_menu_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\IMS-Decoder\资源\China\奇瑞新能源\QIRUIXNY\Menu.xml'
+    # byd_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\Vehicle Protocol\Protocol\XML'
+    # bydne_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\IMS-Decoder\资源\China\奇瑞新能源\QIRUIXNY\DATA'
+
+    # 开瑞
+    # new_energy_menu_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\IMS-Decoder\资源\开瑞\China\KARRY\Menu.xml'
+    # byd_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\Vehicle Protocol\Protocol\XML'
+    # bydne_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\IMS-Decoder\资源\开瑞\China\KARRY\DATA'
+
+    # 瑞麟
+    # new_energy_menu_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\IMS-Decoder\资源\瑞麟\China\Riich\Menu.xml'
+    # byd_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\Vehicle Protocol\Protocol\XML'
+    # bydne_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\IMS-Decoder\资源\瑞麟\China\Riich\DATA'
+
+    # 威麟
+    # new_energy_menu_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\IMS-Decoder\资源\威麟\China\Rely\Menu.xml'
+    # byd_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\Vehicle Protocol\Protocol\XML'
+    # bydne_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\IMS-Decoder\资源\威麟\China\Rely\DATA'
+
+    # 星途
+    # new_energy_menu_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\IMS-Decoder\资源\星途\China\EXEED\Menu.xml'
+    # byd_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\Vehicle Protocol\Protocol\XML'
+    # bydne_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\IMS-Decoder\资源\星途\China\EXEED\DATA'
+
+    # 捷途
+    # new_energy_menu_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\IMS-Decoder\资源\捷途\China\JETOUR\Menu.xml'
+    # byd_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\Vehicle Protocol\Protocol\XML'
+    # bydne_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\IMS-Decoder\资源\捷途\China\JETOUR\DATA'
+
+    # 捷途新能源
+    new_energy_menu_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\IMS-Decoder\资源\捷途新能源\China\JETOUR_EV\Menu.xml'
+    byd_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\Vehicle Protocol\Protocol\XML'
+    bydne_path = r'D:\JBT\诊断项目\奇瑞(D117)研发文档V1.0\IMS-Decoder\资源\捷途新能源\China\JETOUR_EV\DATA'
+
+    menu_id = get_menu_id(new_energy_menu_path)
+    copy_file_to_BYDNewEnergy(menu_id, byd_path, bydne_path)
+    pass

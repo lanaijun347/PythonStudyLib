@@ -1,0 +1,8 @@
+[Name]
+Chinese=\u745E\u9A70\u65B0\u80FD\u6E90
+HKChinese=\u745E\u9A70\u65B0\u80FD\u6E90
+English=RUICHI
+[AbbrName]
+Chinese=RUICHI
+HKChinese=RUICHI
+English=RUICHI

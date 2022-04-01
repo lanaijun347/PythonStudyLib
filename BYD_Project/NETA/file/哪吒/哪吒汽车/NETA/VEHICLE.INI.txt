@@ -1,0 +1,7 @@
+[Name]
+Chinese=\u54EA\u5412
+HKChinese=\u54EA\u5412
+English=NETA
+[AbbrName]
+Chinese=NETA
+English=NETA

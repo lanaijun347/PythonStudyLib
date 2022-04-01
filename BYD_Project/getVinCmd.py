@@ -21,8 +21,8 @@ if __name__ == '__main__':
     vinCfgIdWord = "vin_cfg_id"
     # rootPath = "F:\\popoWork\\JBT\\codeDebug\\TRUMPCHI\\NEWGUANGQICHUANQI\\"
     # rootPath = "D:\\JBT\\诊断项目\\JBT_汽油车型\\M_039_名爵\\上汽名爵-研发文档\\IMS-Decoder\\调试版-名爵\\DiagnosisProgram\\China\\MG\\NEW\\"
-    rootPath = 'D:\\JBT\\诊断项目\\JBT_汽油车型\\凯翼汽车-研发文档\\IMS-Decoder\\调试版-凯翼\\China\\Cowin\\'
-    vinKeyWordList = ["VIN", "车辆识别号", "车架号"]
+    rootPath = 'D:\\JBT\\诊断项目\\奇瑞(D117)研发文档V1.0\\IMS-Decoder\\资源\\捷途\\China\\JETOUR\\'
+    vinKeyWordList = ["VIN", "车辆识别号", "车架号", "车辆识别码"]
     pinList = []
     enterList = []
     scanFileList = []
