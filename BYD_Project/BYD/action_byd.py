@@ -99,7 +99,6 @@ def GetFunData(file_list, fp):
 
 
 def ActiveTestShowNextMenu(file_list, byte_list, fp, act_id_list):
-    text_dict = Bs.file_to_dict(Pa.TEXT)
     count = 0
     v3 = 0
     act_list = []
@@ -110,22 +109,32 @@ def ActiveTestShowNextMenu(file_list, byte_list, fp, act_id_list):
         Bs.int_to_bytearray(b, 4, v3 + 8092, byte_list)
         byte_list = GetACTNextMenuData(file_list, byte_list)
         if not Bs.get_token(byte_list, v3 + 6036, 1):
-            pass
+            dict_data = ActiveTestShow(file_list, byte_list, act_id_list[count], Pa._text_dict)
+            act_list.append(dict_data)
         else:
-            tip = '动作测试 有多层菜单, 路径：' + gl.system_id
-            Bs.debug(Pa.Debug, tip)
-        dict_data = ActiveTestShow(file_list, byte_list, act_id_list[count], text_dict)
-        act_list.append(dict_data)
+            menu_num = Bs.get_token(byte_list, v3 + 6036, 1)
+            menu_head = Bs.get_id_data_from_dict(Pa._text_dict, act_id_list[count])
+            n = 0
+            while n < menu_num:
+                act_name_id = Bs.token_4(byte_list, n * 4 + 6040)
+                Bs.int_to_bytearray(n, 1, v3 + 8088, byte_list)
+                tmp = Bs.token_4_int(byte_list, 4 * (n + 1766))
+                Bs.int_to_bytearray(tmp, 4, v3 + 8092, byte_list)
+                dict_data = ActiveTestShow(file_list, byte_list, act_name_id, Pa._text_dict, menu_head)
+                act_list.append(dict_data)
+                n += 1
+            # tip = '动作测试 有多层菜单, 路径：' + gl.system_id
+            # Bs.debug(Pa.Debug, tip)
         count += 1
     return act_list
 
 
-def ActiveTestShow(file_list, byte_list, act_name_id, text_dict):
-    dict_data = GetACTShowData(file_list, byte_list, act_name_id, text_dict)
+def ActiveTestShow(file_list, byte_list, act_name_id, text_dict, menu_head=''):
+    dict_data = GetACTShowData(file_list, byte_list, act_name_id, text_dict, menu_head)
     return dict_data
 
 
-def GetACTShowData(file_list, byte_list, act_name_id, text_dict):
+def GetACTShowData(file_list, byte_list, act_name_id, text_dict, menu_head=''):
     out_dict = {}
     act_name_str = Bs.get_id_data_from_dict(text_dict, act_name_id)
     v1 = 0
@@ -160,8 +169,8 @@ def GetACTShowData(file_list, byte_list, act_name_id, text_dict):
             section_max = Bs.get_s32(section_max)
             v4 = v3 + 19
         elif v5 == 3:
-            tip = '警告：动作测试功能未编写 tip5 -- ' + gl.system_id + ' <name> ' + act_name_str
-            Bs.debug(Pa.Debug, tip)
+            # tip = '警告：动作测试功能未编写 tip5 -- ' + gl.system_id + ' <name> ' + act_name_str
+            # Bs.debug(Pa.Debug, tip)
             tip_id = Bs.readlist_reverse(file_list, v3 + 7, 4)  # 输入提示
             section_min = Bs.readlist_num(file_list, v3 + 11, 4)  # 输入范围最小值
             section_min = Bs.get_s32(section_min)
@@ -198,6 +207,7 @@ def GetACTShowData(file_list, byte_list, act_name_id, text_dict):
         while i < tmp_5:
             tmp_6 = Bs.readlist_num(file_list, v6, 2)  # 等于2有加密
             if tmp_6 == 2:
+                pass
                 tip = '警告：动作测试功能未编写 加密 -- ' + gl.system_id + ' <name> ' + act_name_str
                 Bs.debug(Pa.Debug, tip)
             input_cmd_id = Bs.readlist_reverse(file_list, v6 + 2, 4)  # 命令id
@@ -215,23 +225,25 @@ def GetACTShowData(file_list, byte_list, act_name_id, text_dict):
             if display_msg_id not in display_msg_id_list:
                 display_msg_id_list.append(display_msg_id)
             tmp_9 = Bs.readlist_num(file_list, v8 + 4, 4)
-            if tmp_9:
-                tip = '警告：动作测试功能未编写 tip8_0 -- ' + gl.system_id + ' <name> ' + act_name_str
-                Bs.debug(Pa.Debug, tip)
+            # if tmp_9:   # 一般为0xffffffff 不明所以
+            #     pass
+            #     tip = '警告：动作测试功能未编写 tip8_0 -- ' + gl.system_id + ' <name> ' + act_name_str + hex(tmp_9)
+            #     Bs.debug(Pa.Debug, tip)
             tmp_10 = Bs.readlist_num(file_list, v8 + 8, 1)
             tmp_11 = Bs.readlist_num(file_list, v8 + 9, 2)
             tmp_12 = Bs.readlist_num(file_list, v8 + 11, 4)
-            if tmp_10 or tmp_11 or tmp_12:
-                tip = '警告：动作测试功能未编写 tip8_1 -- ' + gl.system_id + ' <name> ' + act_name_str
-                Bs.debug(Pa.Debug, tip)
+            # if tmp_10 or tmp_11 or tmp_12:   # X431 存在两条或以上的显示控制内容,一条是输入控制，其他应该来自数据流
+            #     pass
+            #     tip = '警告：动作测试功能未编写 tip8_1 -- ' + gl.system_id + ' <name> ' + act_name_str + repr(hex(tmp_10)) + ' ' + repr(hex(tmp_11)) + ' ' + repr(hex(tmp_12))
+            #     Bs.debug(Pa.Debug, tip)
             v8 += 15
             j += 1
         if (v5 - 4098) & 0xFFFF <= 1:
-            tip = '警告：动作测试功能未编写 tip9 -- ' + gl.system_id + ' <name> ' + act_name_str
-            Bs.debug(Pa.Debug, tip)
             v10 = v8
             v8 += 4
             tmp_13 = Bs.readlist_reverse(file_list, v10, 4)
+            tip = '警告：动作测试功能未编写 tip9 -- ' + gl.system_id + ' <name> ' + act_name_str + tmp_13
+            Bs.debug(Pa.Debug, tip)
         v11 = Bs.readlist_num(file_list, v8, 1)
         v12 = v8 + 1
         k = 0
@@ -254,9 +266,10 @@ def GetACTShowData(file_list, byte_list, act_name_id, text_dict):
             l = 0
             while l < key_cmd_num:
                 tmp_20 = Bs.readlist_num(file_list, v12, 2)
-                if tmp_20:
-                    tip = '警告：动作测试功能未编写 tip10<tmp20 看看有啥用> -- ' + gl.system_id + ' <name> ' + act_name_str
-                    Bs.debug(Pa.Debug, tip)
+                # if tmp_20:
+                #     pass
+                #     tip = '警告：动作测试功能未编写 tip10<tmp20 看看有啥用> -- ' + gl.system_id + ' <name> ' + act_name_str
+                #     Bs.debug(Pa.Debug, tip)
                 v15 = v12 + 2
                 v12 += 6
                 cmd_id = Bs.readlist_reverse(file_list, v15, 4)
@@ -266,6 +279,7 @@ def GetACTShowData(file_list, byte_list, act_name_id, text_dict):
             dict_key['key_cmd_id_list'] = key_cmd_id_list
             key_data_list.append(dict_key)
             k += 1
+    out_dict['menu_head'] = menu_head
     out_dict['act_name_str'] = act_name_str   # 动作测试类型
     out_dict['key_type'] = v5   # 动作测试类型
     out_dict['box_tip_id'] = box_tip_id  # 弹框提示ID
@@ -386,10 +400,14 @@ def GetACTNextMenuData(file_list, byte_list):
 
 def out_act_data(act_data_list):
     out_str = '动作测试:\n\n'
+    count = 0
+    menu_head_list = []
     for data_dict in act_data_list:
         box_tip_str = ''
         tip_str = ''
         msg_str = ''
+        unit = ''
+        menu_head = data_dict['menu_head']
         name_str = data_dict['act_name_str']
         act_type = data_dict['key_type']
         box_tip_id = data_dict['box_tip_id']
@@ -402,32 +420,54 @@ def out_act_data(act_data_list):
         section_max = data_dict['section_max']
         key_one_add = data_dict['key_one']
         display_msg_id_list = data_dict['display_msg_id_list']
-        if len(display_msg_id_list) > 1:
-            tip = '警告：显示提示超过两种 -- ' + gl.system_id + ' <name> ' + name_str
-            Bs.debug(Pa.Debug, tip)
+        # if len(display_msg_id_list) > 1:
+        #     tip = '警告：显示提示超过两种 -- ' + gl.system_id + ' <name> ' + name_str
+        #     Bs.debug(Pa.Debug, tip)
         for msg_id in display_msg_id_list:  # 获取显示界面提示字符串
             msg_str = Bs.get_id_data_from_dict(Pa._ds_dict, msg_id)
-            name_unit = Bs.spilt_ds_name_and_unit(msg_str)
-            msg_str = name_unit[0]
-            unit = name_unit[1]
+            if msg_str:
+                name_unit = Bs.spilt_ds_name_and_unit(msg_str)
+                msg_str = name_unit[0]
+                unit = name_unit[1]
+            break
         input_cmd_id_list = data_dict['input_cmd_id_list']
         in_cmd_list = []
         for in_cmd_id in input_cmd_id_list:  # 获取点击进入命令
             cmd_str = Bs.get_id_data_from_dict(Pa._cmd_dict, in_cmd_id)
+            if not cmd_str:
+                continue
             cmd = Bs.get_command(cmd_str, gl.InitDataLinkLayer['m0'], 'act')
             cmd = cmd_interval_inset_space(cmd)
-            in_cmd_list.append(cmd)
+            if cmd and cmd not in in_cmd_list:
+                in_cmd_list.append(cmd)
         key_data_list = data_dict['key_data_list']
-        print(key_data_list)
+        str2 = ''
         if act_type == 2:
-            pass
+            str2 = act_type2_write(box_tip_str, tip_str, msg_str, unit, key_data_list, section_min, section_max,
+                                   key_one_add)
         elif act_type == 3:
-            pass
+            str2 = act_type2_write(box_tip_str, tip_str, msg_str, unit, key_data_list, section_min, section_max, key_one_add)
         elif (act_type - 5) & 0xFFFF > 3:
-            pass
+            if act_type == 9:
+                str2 = act_type2_write(box_tip_str, tip_str, msg_str, unit, key_data_list, section_min, section_max, key_one_add)
+            else:
+                str2 = act_type0_write(box_tip_str, tip_str, msg_str, unit, key_data_list)
         else:
-            pass
-        pass
+            str2 = act_type2_write(box_tip_str, tip_str, msg_str, unit, key_data_list, section_min, section_max, key_one_add)
+        in_cmd_str = ''
+        if menu_head:
+            if menu_head not in menu_head_list:
+                menu_head_list.append(menu_head)
+                str1 = '$^ ' + menu_head + '\n' + '$^$^ ' + name_str + '\n'
+            else:
+                str1 = '$^$^ ' + name_str + '\n'
+        else:
+            str1 = '$^ ' + str(count).rjust(2, '0') + '.' + name_str + '\n'
+        if len(in_cmd_list) > 0:
+            in_cmd_str = Bs.write_act_cmd('$^IN  ', in_cmd_list, gl.InitDataLinkLayer['m0']) + '\n'
+
+        out_str = out_str + str1 + in_cmd_str + str2
+        count += 1
     if os.path.exists(gl.write_path):
         with open(gl.write_path, 'a', encoding='gbk') as f:
             f.writelines(out_str)
@@ -438,4 +478,177 @@ def cmd_interval_inset_space(cmd_str):
         while len(cmd_str) < 24:
             cmd_str = cmd_str.rstrip()
             cmd_str += ' 00'
+    return cmd_str
+
+
+def act_type0_write(box_tip_str, tip_str, msg_str, unit, key_data_list):
+    """
+    动作测试，仅按钮发送命令
+    :param box_tip_str: 提示字符串
+    :param tip_str: 提示字符串
+    :param msg_str: 显示名称
+    :param unit: 显示单位
+    :param key_data_list: 按钮数据列表
+    :return:
+    """
+    out_str = '$^TYPE0\n'
+    key_out = ''
+    # if unit:
+    #     dsp_str = '$^DSP:' + msg_str + '->' + unit + '\n'
+    # else:
+    #     dsp_str = '$^DSP:' + msg_str + '\n'
+    tip_str_out = ''
+    if box_tip_str:
+        tip_str_out = tip_str_out + '$^TIP:' + box_tip_str + '\n'
+    if tip_str:
+        tip_str_out = tip_str_out + '$^TIP:' + tip_str + '\n'
+    for data_dict in key_data_list:
+        key_name = ''
+        key_formula = ''
+        cmd_str = ''
+        key_name_id = data_dict['key_name_id']
+        if key_name_id and key_name_id != '00000000':   # 获取按键名称
+            key_name = Bs.get_id_data_from_dict(Pa._text_dict, key_name_id)
+        key_cmd_id_list = data_dict['key_cmd_id_list']
+        cmd_list = []
+        for cmd_id in key_cmd_id_list:
+            cmd_str = Bs.get_id_data_from_dict(Pa._cmd_dict, cmd_id)
+            if not cmd_str:
+                continue
+            cmd = Bs.get_command(cmd_str, gl.InitDataLinkLayer['m0'], 'act')
+            if gl.InitDataLinkLayer['m0'] == 2 or gl.InitDataLinkLayer['m0'] == 3:
+                cmd = cmd_interval_inset_space(cmd)
+            elif gl.InitDataLinkLayer['m0'] == 1:
+                pass
+            else:
+                tip = '警告：动作测试 TYPE0 中，该协议模式未编写 -- ' + key_name + '--' + gl.system_id + ' <name> ' + msg_str
+                Bs.debug(Pa.Debug, tip)
+            cmd_list.append(cmd)
+        if len(cmd_list) > 0:
+            cmd_str = Bs.write_act_cmd('$^', cmd_list, gl.InitDataLinkLayer['m0']) + '\n'
+        if cmd_str:
+            key_out = key_out + '$^BUTTON:' + key_name + '\n' + cmd_str
+    out_str = out_str + key_out + tip_str_out + ';' + 100 * '-' + '\n\n'
+    return out_str
+
+
+def act_type2_write(box_tip_str, tip_str, msg_str, unit, key_data_list, section_min, section_max, key_one_add):
+    """
+    动作测试，仅输入退出
+    :param box_tip_str:提示
+    :param tip_str:提示
+    :param msg_str:显示名称
+    :param unit:显示单位
+    :param key_data_list:按键数据
+    :param section_min:最小值
+    :param section_max:最大值
+    :param key_one_add:累加一次的值
+    :return:
+    """
+    base_name_list = ['输入', '执行', '测试值', '+']
+    base_name_list_out = ['退出']
+    base_name_list_out1 = ['-', '变量', '快速增加', '快速减少', '减少']
+    out_str = ' $^TYPE:2\n'
+    key_out = ''
+    formula_str = ''
+    range_str = '$^RANGE:' + repr(section_min) + ',' + repr(section_max) + '\n'
+    if unit:
+        dsp_str = '$^DSP:' + msg_str + '->' + unit + '\n'
+    else:
+        dsp_str = '$^DSP:' + msg_str + '\n'
+    tip_str_out = ''
+    if box_tip_str:
+        tip_str_out = tip_str_out + '$^TIP:' + box_tip_str + '\n'
+    if tip_str:
+        tip_str_out = tip_str_out + '$^TIP:' + tip_str + '\n'
+    for data_dict in key_data_list:
+        key_name = ''
+        cmd_str = ''
+        key_name_id = data_dict['key_name_id']
+        key_cmd_id_list = data_dict['key_cmd_id_list']
+        if key_name_id and key_name_id != '00000000':   # 获取按键名称
+            key_name = Bs.get_id_data_from_dict(Pa._text_dict, key_name_id)
+            key_name = key_name.replace('\x00', '')
+        # 只取基准名称的数据，如：公式、偏移
+        if key_name in base_name_list:
+            if key_name == '+':
+                key_name = '输入'
+            key_formula_id = data_dict['key_formula_id']
+            if key_formula_id and key_formula_id != '00000000':   # 获取按键公式
+                key_formula = Bs.get_id_data_from_dict(Pa._formula_dict, key_formula_id)
+                formula_str = '$^IN_F:' + key_formula + '\n'
+            key_offset = data_dict['key_offset']
+            if len(key_cmd_id_list) > 1:
+                tip = '警告：动作测试 TYPE2 中，按键命令2条或以上 -- ' + gl.system_id + ' <name> ' + msg_str
+                Bs.debug(Pa.Debug, tip)
+            cmd_list = []
+            for cmd_id in key_cmd_id_list:
+                cmd_str = Bs.get_id_data_from_dict(Pa._cmd_dict, cmd_id)
+                cmd = Bs.get_command(cmd_str, gl.InitDataLinkLayer['m0'], 'act')
+                cmd = cmd_interval_inset_space(cmd)
+                cmd = cmd_inset_xx(cmd, key_offset, gl.InitDataLinkLayer['m0'])
+                cmd_list.append(cmd)
+            if len(cmd_list) > 0:
+                cmd_str = Bs.write_act_cmd('$^', cmd_list, gl.InitDataLinkLayer['m0']) + '\n'
+        else:
+            if key_name == '回退':
+                key_name = '退出'
+            if key_name not in base_name_list_out:
+                if key_name not in base_name_list_out1:
+                    tip = '警告：动作测试 TYPE2 中，按键命名未处理 -- ' + key_name + '--' + gl.system_id + ' <name> ' + msg_str
+                    Bs.debug(Pa.Debug, tip)
+                continue
+            cmd_list = []
+            for cmd_id in key_cmd_id_list:
+                cmd_str = Bs.get_id_data_from_dict(Pa._cmd_dict, cmd_id)
+                cmd = Bs.get_command(cmd_str, gl.InitDataLinkLayer['m0'], 'act')
+                if gl.InitDataLinkLayer['m0'] == 2 or gl.InitDataLinkLayer['m0'] == 3:
+                    cmd = cmd_interval_inset_space(cmd)
+                elif gl.InitDataLinkLayer['m0'] == 1:
+                    pass
+                else:
+                    tip = '警告：动作测试 TYPE2 中，该协议模式未编写 -- ' + key_name + '--' + gl.system_id + ' <name> ' + msg_str
+                    Bs.debug(Pa.Debug, tip)
+                cmd_list.append(cmd)
+            if len(cmd_list) > 0:
+                cmd_str = Bs.write_act_cmd('$^', cmd_list, gl.InitDataLinkLayer['m0']) + '\n'
+        if cmd_str:
+            key_out = key_out + '$^BUTTON:' + key_name + '\n' + cmd_str
+    out_str = out_str + key_out + dsp_str + tip_str_out + formula_str + range_str + ';' + 100 * '-' + '\n\n'
+    return out_str
+
+
+def cmd_inset_xx(cmd_str, offset, cmd_type):
+    num = 0
+    inset_offset = 0
+    cmd_str = cmd_str.replace(' ', '')
+    if cmd_type == 2:
+        cmd_len = int(cmd_str[0:2], 16)
+        num = cmd_len + 4 + 1 - offset   # +4 帧ID 算4位 +1 从0开始数
+        inset_offset = (offset - 4) * 2
+    elif cmd_type == 1:
+        head = int(cmd_str[0:2], 16)
+        if 0x80 < head < 0xC0:
+            cmd_len = head - 0x80
+            num = cmd_len + 3 + 1 - offset
+            inset_offset = (offset - 1) * 2
+        elif 0xC0 < head < 0xFF:
+            cmd_len = head - 0xC0
+            num = cmd_len + 3 + 1 - offset
+            inset_offset = (offset - 1) * 2
+        else:
+            cmd_len = int(cmd_str[7:8], 16)
+            num = cmd_len + 4 + 1 - offset
+            inset_offset = (offset - 1) * 2
+    else:
+        tip = ' 该动作测试未编写该协议类型，请确认偏移， 路径：' + gl.system_id
+        Bs.debug(Pa.Debug, tip)
+    tmp = 'XX' * num
+    cmd_str = cmd_str[:inset_offset] + tmp + cmd_str[num * 2 + inset_offset:]
+    if cmd_type == 2:
+        cmd_str = Bs.cmd_insert_space_can_len16(cmd_str)
+    elif cmd_type == 1:
+        cmd_str = Bs.str_insert_space(cmd_str, ' ')
+    else:
+        pass
     return cmd_str

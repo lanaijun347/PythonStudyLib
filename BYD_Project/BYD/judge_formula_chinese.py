@@ -5,7 +5,7 @@ chinese_list = []
 
 def judge_file_chinese_in_string(file_path, formula_out, str_out, debug_file):
     line_list = []
-    with open(file_path, 'r') as f:
+    with open(file_path, 'r', encoding='utf-8') as f:
         for line in f.readlines():
             line = line.replace('Y=', 'y=').replace('Y = ', 'y=').replace('Y =', 'y=').replace('Y= ', 'y=')\
                 .replace('y =', 'y=').replace('y = ', 'y=').replace('y= ', 'y=')
@@ -75,8 +75,14 @@ def judge_list_chinese_in_string(list1):
 
 
 if __name__ == "__main__":
-    file_path = r'D:\JBT\常开\xinnengyuan\哪吒汽车\NETA\解析_v10.01\IMS_EXPRESS.txt'
-    formula_out = r'D:\JBT\常开\xinnengyuan\哪吒汽车\NETA\解析_v10.01\out.txt'
-    str_out = r'D:\JBT\常开\xinnengyuan\哪吒汽车\NETA\解析_v10.01\str_out.txt'
-    debug_file = r'D:\JBT\常开\xinnengyuan\哪吒汽车\NETA\解析_v10.01\debug.txt'
+    # file_path = r'D:\JBT\常开\xinnengyuan\哪吒汽车\NETA\解析_v10.01\IMS_EXPRESS.txt'
+    # formula_out = r'D:\JBT\常开\xinnengyuan\哪吒汽车\NETA\解析_v10.01\out.txt'
+    # str_out = r'D:\JBT\常开\xinnengyuan\哪吒汽车\NETA\解析_v10.01\str_out.txt'
+    # debug_file = r'D:\JBT\常开\xinnengyuan\哪吒汽车\NETA\解析_v10.01\debug.txt'
+    # judge_file_chinese_in_string(file_path, formula_out, str_out, debug_file)
+
+    file_path = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.80\file\formula\IMS_EXPRESS.txt'
+    formula_out = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.80\file\formula\out.txt'
+    str_out = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.80\file\formula\str_out.txt'
+    debug_file = r'D:\xiaolan\PythonStudyLib\BYD_Project\BYD_v18.80\file\formula\debug.txt'
     judge_file_chinese_in_string(file_path, formula_out, str_out, debug_file)

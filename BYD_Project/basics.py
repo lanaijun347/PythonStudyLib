@@ -162,11 +162,16 @@ def get_id_data(path, id1):
 
 
 def get_command(data_list, cmd_type, tmp=''):
-    if len(data_list) > 2:
-        print(data_list)
+    # if len(data_list) > 2:
+    #     print(data_list)
     cmd = ''
     # CAN
     if cmd_type == 2 or cmd_type == 3:
+        if type(data_list) == str:
+            if tmp == 'act':
+                tmp_str = data_list[8:]
+                cmd_str = cmd_insert_space_can(tmp_str)
+                return cmd_str
         for line in data_list:
             # 取出30帧，存入全局变量
             if len(line) > 32:
@@ -309,6 +314,12 @@ def get_command(data_list, cmd_type, tmp=''):
                 debug(Debug, tip)
     # KW2000
     elif cmd_type == 1:
+        if type(data_list) == str:
+            if tmp == 'act':
+                str_len = int(data_list[0:2], 16)
+                tmp_str = data_list[2: str_len * 2 + 2]
+                cmd_str = cmd_insert_space_can(tmp_str)
+                return cmd_str
         for line in data_list:
             if '0201400000011919' in line:
                 cmd_str = line.replace('0201400000011919', '').upper()
@@ -483,13 +494,14 @@ def get_id_data_from_dict(dict_name, str1):
                 debug(Debug, tip)
         return str_list
     else:
+        name = ''
         if str1 in dict_name:
             name = dict_name[str1]
-            return name
         else:
             tip = '警告：车型ID为：' + gl.system_id + \
                   ' 文件未找到对应字符串转ID：' + str(str1)
             debug(Debug, tip)
+        return name
 
 
 # 写入版本信息、数据流命令 （符号:($%、$) , 命令列表， 命令类型 ）
@@ -923,7 +935,7 @@ def write_act_cmd(symbol, cmd_list, cmd_type, flag=0):
     # 标准CAN型
     if cmd_type == 2 or cmd_type == 3:
         i = 0
-
+        count = 0
         for cmd in cmd_list:
             if flag != 0:
                 num = gl.ds_flag
@@ -931,14 +943,16 @@ def write_act_cmd(symbol, cmd_list, cmd_type, flag=0):
             else:
                 num = i
             if cmd:
-                str_cmd = symbol + ':' + gl._global_dict['ZH_ID'] + cmd + 5 * ' ' + symbol + '\n'
+                str_cmd = symbol + 'REQ' + str(count).rjust(2, '0') + ':' + gl._global_dict['ZH_ID'] + cmd + 5 * ' ' + symbol + '\n'
             else:
                 str_cmd = '\n'
             cmd_str += str_cmd
             i += 1
+            count += 1
         return cmd_str
     else:
         i = 0
+        count = 0
         for cmd in cmd_list:
             if flag != 0:
                 num = gl.ds_flag
@@ -946,11 +960,12 @@ def write_act_cmd(symbol, cmd_list, cmd_type, flag=0):
             else:
                 num = i
             if cmd:
-                str_cmd = symbol + ':' + cmd + 5 * ' ' + symbol + '\n'
+                str_cmd = symbol + 'REQ' + str(count).rjust(2, '0') + ':' + cmd + 5 * ' ' + symbol + '\n'
             else:
                 str_cmd = '\n'
             cmd_str += str_cmd
             i += 1
+            count += 1
         return cmd_str
 
 
